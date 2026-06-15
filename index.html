@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nerya · self-evolving trading agent runtime</title>
+    <meta
+      name="description"
+      content="Nerya is a self-evolving, skill-first, trading-native autonomous agent runtime. Paper-by-default. Live trades stay under a Risk Gate. Memory rewrites the kernel."
+    />
+    <meta name="theme-color" content="#0a081a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nerya · self-evolving trading agent runtime" />
+    <meta
+      property="og:description"
+      content="Skill-first. Trading-native. Self-evolving. The agent rewrites itself between sessions."
+    />
+    <meta property="og:image" content="assets/nerya-star.png" />
+    <link rel="icon" href="assets/nerya-logo.png" />
+    <link rel="apple-touch-icon" href="assets/nerya-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="signal-field" class="signal-field" aria-hidden="true"></canvas>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="loader" data-loader aria-live="polite">
+      <div class="loader-core" aria-hidden="true">
+        <img class="loader-mark" src="assets/nerya-logo.png" alt="" />
+      </div>
+      <div class="loader-copy">
+        <span data-loader-count>/00</span>
+        <p>warming kernel · loading skills · binding memory</p>
+      </div>
+      <div class="loader-line"><span data-loader-line></span></div>
+    </div>
+
+    <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+    <div class="cursor-label" data-cursor-label aria-hidden="true">signal</div>
+
+    <header class="topbar" data-reveal>
+      <a class="brand magnetic" href="#origin" aria-label="Nerya home">
+        <img class="brand-mark" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <span class="brand-word">NERYA</span>
+        <span class="brand-version">v0.1.0</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a class="magnetic" href="#evolve">Evolve</a>
+        <a class="magnetic" href="#guard">Risk</a>
+        <a class="magnetic" href="#authors">Author</a>
+        <a class="magnetic" href="#rituals">Team</a>
+        <a class="magnetic" href="#docs">Docs</a>
+      </nav>
+      <a
+        class="nav-cta magnetic"
+        href="https://github.com/NeryaAI/Nerya"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.12-1.5-1.12-1.5-.91-.64.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.58 2.36 1.12 2.93.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.66-.34 2.51-.34s1.71.11 2.51.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49C19.14 20.61 22 16.77 22 12.25 22 6.59 17.52 2 12 2z"
+          />
+        </svg>
+        Star on GitHub
+      </a>
+    </header>
+
+    <main>
+      <!-- ─────────── HERO / ORIGIN ─────────── -->
+      <section class="hero" id="origin" aria-labelledby="hero-title">
+        <div class="ascii-cloud" data-ascii aria-hidden="true"></div>
+
+        <div class="hero-orbit" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <img
+          class="hero-cutout"
+          src="assets/nerya-cutout.png"
+          alt="Nerya, the self-evolving trading agent, drawn as a violet-haired operator who runs the console"
+          loading="eager"
+          decoding="async"
+          data-parallax-pointer="0.02"
+        />
+
+        <div class="hero-inner" data-reveal>
+          <p class="eyebrow">
+            operator console <span class="dot-sep"></span> self-evolving runtime
+            <span class="dot-sep"></span> paper by default
+          </p>
+          <h1 id="hero-title" data-scramble="EVOLVE OR FADE">EVOLVE OR FADE</h1>
+          <p class="hero-lede">
+            Nerya ships its own agent kernel, LLM gateway, sub-agents, typed
+            memory, triggers, a durable team, a trading kernel, and an evolution
+            pipeline. Every external call is mediated by a <em>SKILL.md</em>.
+            Paper by default. Live trades stay under a Risk Gate.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="primary-cta magnetic"
+              href="https://github.com/NeryaAI/Nerya"
+              target="_blank"
+              rel="noopener"
+              data-pulse
+            >
+              ★ Star the repo
+            </a>
+            <a class="secondary-cta magnetic" href="#docs">Read the docs</a>
+          </div>
+          <nav class="hero-query" aria-label="Jump to a chapter">
+            <a href="#evolve">→ closed evolution loop</a>
+            <a href="#guard">→ risk-first execution</a>
+            <a href="#authors">→ "make me a strategy"</a>
+            <a href="#rituals">→ durable agent team</a>
+          </nav>
+        </div>
+
+        <div class="status-strip" aria-hidden="true">
+          <span><b data-frame>frame 0001</b></span>
+          <span>paper mode · safe</span>
+          <span>risk gate ✓ active</span>
+          <span>★ stars wake the kernel</span>
+        </div>
+      </section>
+
+      <!-- ─────────── 01 · EVOLVES (full-bleed band) ─────────── -->
+      <section class="evolve" id="evolve" aria-labelledby="evolve-title">
+        <div class="wrap">
+          <div class="section-index" data-reveal>01 / closed evolution loop</div>
+          <div class="evolve-head" data-reveal>
+            <p class="eyebrow">self-improving</p>
+            <h2 id="evolve-title">
+              Every observation rewrites <em class="hot">the kernel</em>.
+            </h2>
+            <p>
+              After every session, the reflection engine reads the journal,
+              drafts patch proposals (prompt deltas, new scripts, tuned configs,
+              fresh skills), runs them through backtest and risk gates, then
+              promotes the winners as the next agent version.
+            </p>
+          </div>
+        </div>
+
+        <figure class="evolve-bleed bleed" data-reveal>
+          <img
+            class="bleed-img"
+            src="assets/nerya-evolver.png"
+            alt="Nerya standing in front of stacked v1.1, v1.2, v1.3 ghost versions of herself ascending, ringed by adapt, outplay, optimize and evolve readouts"
+            loading="lazy"
+            decoding="async"
+            data-parallax="0.08"
+          />
+          <figcaption class="bleed-tag">
+            <span>v1.1 → v1.3</span> +49% promoted per cycle
+          </figcaption>
+        </figure>
+
+        <div class="wrap">
+          <div class="evolve-detail">
+            <ol class="evolve-list" data-reveal>
+              <li>
+                <span class="bullet">observe</span>
+                <span>journal every decision, fill, drift, miss.</span>
+              </li>
+              <li>
+                <span class="bullet">reflect</span>
+                <span>postmortem with the analyst sub-agent.</span>
+              </li>
+              <li>
+                <span class="bullet">propose</span>
+                <span>diff against the live kernel.</span>
+              </li>
+              <li>
+                <span class="bullet">validate</span>
+                <span>backtest gate, risk gate, structured output check.</span>
+              </li>
+              <li>
+                <span class="bullet">promote</span>
+                <span>versioned rollout, snapshot, rollback ready.</span>
+              </li>
+            </ol>
+
+            <div class="evolve-counter" data-reveal aria-hidden="true">
+              <div class="counter-row">
+                <span>auto-promotions / week</span>
+                <strong data-count-to="42">00</strong>
+              </div>
+              <div class="counter-row">
+                <span>backtest coverage</span>
+                <strong data-count-to="98">00</strong><span class="suffix">.4%</span>
+              </div>
+              <div class="counter-row">
+                <span>self-improvements logged</span>
+                <strong data-count-to="1247">0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 02 · GUARD (full-bleed scene) ─────────── -->
+      <section class="guard" id="guard" aria-labelledby="guard-title">
+        <img
+          class="guard-bg"
+          src="assets/nerya-guard.png"
+          alt="Nerya holding up a hexagonal policy / approval / limit shield that absorbs incoming risk runes"
+          loading="lazy"
+          decoding="async"
+          data-parallax="0.05"
+        />
+        <div class="guard-scrim" aria-hidden="true"></div>
+
+        <div class="wrap guard-inner" data-reveal>
+          <div class="section-index">02 / risk-first execution</div>
+          <p class="eyebrow">paper-by-default</p>
+          <h2 id="guard-title">
+            Mistakes go into <em class="hot">memory</em>, not into your wallet.
+          </h2>
+          <p>
+            Live trading stays off unless <code>runtime.live_trading_enabled</code>
+            is true <em>and</em> the Approval Gate signs off. The runtime ships
+            with a Risk Gate, a typed mistake ledger, a virtual ledger, and
+            reconciliation. Every external call is mediated by a <em>SKILL.md</em>.
+          </p>
+
+          <div class="guard-pills" role="list">
+            <span role="listitem">vault-only secrets</span>
+            <span role="listitem">prompt firewall</span>
+            <span role="listitem">structured output schema</span>
+            <span role="listitem">script sandbox</span>
+            <span role="listitem">drift detection</span>
+            <span role="listitem">rollback snapshot</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 03 · AUTHORS (editorial tile) ─────────── -->
+      <section class="authors" id="authors" aria-labelledby="authors-title">
+        <figure class="authors-tile">
+          <img
+            src="assets/nerya-author.png"
+            alt="Nerya at a holographic strategy editor, pointing at an entry / filter / risk flow while cradling a glowing brain-orb beside a live BTC/USDT order book"
+            loading="lazy"
+            decoding="async"
+            data-parallax="0.04"
+          />
+          <figcaption>strategy_author · trigger · candle · ledger</figcaption>
+        </figure>
+
+        <div class="authors-inner">
+          <div class="section-index" data-reveal>03 / strategy author skill</div>
+
+          <div class="quote-block" data-reveal>
+            <p class="eyebrow">one sentence</p>
+            <blockquote>
+              <p>
+                "I have <em class="hot">$500</em> in a paper account. Make me
+                money on BTC. <em>Don't blow it up.</em>"
+              </p>
+            </blockquote>
+            <p class="quote-attr">→ what a one-line prompt becomes</p>
+          </div>
+
+          <div class="authors-copy" data-reveal>
+            <h2 id="authors-title">
+              <span class="line line-1">Skills</span>
+              <span class="line line-2">compose.</span>
+              <span class="line line-3">Strategies</span>
+              <span class="line line-4">learn.</span>
+            </h2>
+            <p>
+              The <code>strategy_author</code> skill turns that sentence into a
+              working strategy package in one chat turn: trigger, sub-agent
+              prompt library, candle source, account binding, risk limits,
+              session ledger. You approve. It runs. It journals. It evolves.
+            </p>
+            <a class="ghost-cta" href="https://github.com/NeryaAI/Nerya#skills" target="_blank" rel="noopener">
+              <span>read the skill catalog</span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <div class="authors-baseline" data-reveal>
+            <div class="micro-copy">
+              paper-mode<br />single-turn<br />operator-signed
+            </div>
+            <span class="baseline-rule"></span>
+            <div class="micro-copy">
+              74 builtin skills<br />zero yaml<br />SKILL.md only
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 04 · RITUALS (pinned scroll) ─────────── -->
+      <section class="rituals" id="rituals" aria-labelledby="rituals-title">
+        <div class="ritual-sticky">
+          <div class="ritual-track" data-ritual-track>
+            <article class="ritual-panel ritual-team">
+              <img
+                class="ritual-bg"
+                src="assets/nerya-team.png"
+                alt="Four Nerya operators around a glowing strategy table: lead, analyst, risk critic, and memory scribe working a market-read to execution flow"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="ritual-scrim" aria-hidden="true"></div>
+              <div class="ritual-text">
+                <p class="eyebrow">04 · ritual / agent team</p>
+                <h2 id="rituals-title">
+                  A durable team, not a chain of function calls.
+                </h2>
+                <p>
+                  Lead, analyst, risk critic, scribe. Shared blackboard, task
+                  board, mailbox, gates. Every turn leaves a record. Every
+                  record feeds the next session.
+                </p>
+                <ul class="ritual-list">
+                  <li><b>LEAD</b><span>plans, routes, schedules</span></li>
+                  <li><b>ANALYST</b><span>reads the chart, drafts the thesis</span></li>
+                  <li><b>RISK</b><span>blocks the trade if the math is off</span></li>
+                  <li><b>MEMORY</b><span>writes mistakes into the ledger</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="ritual-panel ritual-cyan">
+              <div class="memory-card" aria-hidden="true">
+                <div class="memory-bar">
+                  <span></span><span></span><span></span>
+                  <strong>memory.ledger</strong>
+                </div>
+                <div class="memory-grid">
+                  <span>global.md</span><b>house rules · style · tone</b>
+                  <span>mistakes.md</span><b>postmortems · -PnL events</b>
+                  <span>regimes.md</span><b>market structure · regimes</b>
+                  <span>skills.md</span><b>tool-learning · trade-offs</b>
+                  <span>strategies.md</span><b>per-strategy journal</b>
+                </div>
+              </div>
+              <div class="ritual-text">
+                <p class="eyebrow">05 · ritual / typed memory</p>
+                <h2>Five surfaces. Plain markdown. No vector blob.</h2>
+                <p>
+                  Memory is not a fuzzy embedding. It is five typed markdown
+                  surfaces the reflection engine can read, write, and diff.
+                  Audit it. Grep it. Edit it by hand if you want.
+                </p>
+              </div>
+            </article>
+
+            <article class="ritual-panel ritual-paper">
+              <div class="ritual-text">
+                <p class="eyebrow">06 · ritual / self-rewriter</p>
+                <h2>The kernel writes its own next version.</h2>
+                <p>
+                  Reflection drafts a patch. The Approval Gate signs the diff
+                  or rejects it. The runtime applies it with a rollback
+                  snapshot. Mistakes are no longer dead weight, they are
+                  fuel.
+                </p>
+                <div class="ritual-diff">
+                  <span class="diff-add">+ self.reflect(session)</span>
+                  <span class="diff-del">- self.guess(market)</span>
+                  <span class="diff-add">+ patch_proposal.apply()</span>
+                </div>
+              </div>
+              <img
+                class="ritual-image ritual-image-paper"
+                src="assets/nerya-rewriter.png"
+                alt="Nerya mascot writing into a glowing brain-notebook with floating diff patches"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 07 · ARCHITECTURE (closed loop) ─────────── -->
+      <section class="loop" id="loop" aria-labelledby="loop-title">
+        <div class="section-index" data-reveal>07 / closed loop</div>
+
+        <div class="loop-head" data-reveal>
+          <p class="eyebrow">architecture</p>
+          <h2 id="loop-title">
+            Market turns the agent.<br />
+            The agent turns itself.
+          </h2>
+        </div>
+
+        <svg
+          class="loop-diagram"
+          viewBox="0 0 800 420"
+          preserveAspectRatio="xMidYMid meet"
+          aria-hidden="true"
+          data-reveal
+        >
+          <defs>
+            <filter id="loop-glow">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" /><feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <linearGradient id="loop-line" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="oklch(0.62 0.24 295)" />
+              <stop offset="100%" stop-color="oklch(0.82 0.16 290)" />
+            </linearGradient>
+          </defs>
+
+          <g class="loop-edges" stroke="url(#loop-line)" stroke-width="1.5" fill="none" stroke-dasharray="4 5">
+            <line x1="130" y1="120" x2="400" y2="80" />
+            <line x1="400" y1="80" x2="670" y2="120" />
+            <line x1="670" y1="120" x2="670" y2="300" />
+            <line x1="670" y1="300" x2="400" y2="340" />
+            <line x1="400" y1="340" x2="130" y2="300" />
+            <line x1="130" y1="300" x2="130" y2="120" />
+            <line x1="130" y1="300" x2="400" y2="80" stroke-dasharray="2 6" opacity="0.5" />
+          </g>
+
+          <g class="loop-nodes" font-family="JetBrains Mono, monospace" font-size="11">
+            <g transform="translate(130,120)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">market</text>
+              <text dy="60" text-anchor="middle" class="sub">ticks · news · feeds</text>
+            </g>
+            <g transform="translate(400,80)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">agent</text>
+              <text dy="60" text-anchor="middle" class="sub">route · think · act</text>
+            </g>
+            <g transform="translate(670,120)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">skills</text>
+              <text dy="60" text-anchor="middle" class="sub">SKILL.md · scripts</text>
+            </g>
+            <g transform="translate(670,300)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">risk</text>
+              <text dy="60" text-anchor="middle" class="sub">policy · approval · limit</text>
+            </g>
+            <g transform="translate(400,340)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">execute</text>
+              <text dy="60" text-anchor="middle" class="sub">paper · live · ledger</text>
+            </g>
+            <g transform="translate(130,300)" class="loop-node">
+              <circle r="40" />
+              <text dy="4" text-anchor="middle">evolve</text>
+              <text dy="60" text-anchor="middle" class="sub">propose · validate · promote</text>
+            </g>
+          </g>
+
+          <g class="loop-pulse" fill="oklch(0.82 0.16 290)" filter="url(#loop-glow)">
+            <circle r="5">
+              <animateMotion
+                dur="9s"
+                repeatCount="indefinite"
+                path="M 130 120 L 400 80 L 670 120 L 670 300 L 400 340 L 130 300 L 130 120"
+              />
+            </circle>
+          </g>
+        </svg>
+
+        <div class="loop-legend" data-reveal>
+          <span><i class="dot dot-violet"></i> agents operate the loop</span>
+          <span><i class="dot dot-cyan"></i> skills are the atoms</span>
+          <span><i class="dot dot-mint"></i> evolution rewrites the agent</span>
+        </div>
+      </section>
+
+      <!-- ─────────── 08 · DOCS GALLERY ─────────── -->
+      <section class="docs" id="docs" aria-labelledby="docs-title">
+        <div class="section-index" data-reveal>08 / read deeper</div>
+
+        <div class="docs-head" data-reveal>
+          <p class="eyebrow">product docs</p>
+          <h2 id="docs-title">Take the kernel apart.</h2>
+          <p class="docs-sub">
+            The README is the front door. The skills, the agent kernel, the
+            trading kernel, and the SDK each have their own playbook. Open the
+            one that matches what you want to build.
+          </p>
+        </div>
+
+        <div class="docs-grid">
+          <a
+            class="doc-card doc-feature"
+            href="https://github.com/NeryaAI/Nerya#readme"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">01</span>
+            <h3>README · the front door</h3>
+            <p>
+              Six pillars, screenshots, install, quickstart, the whole product
+              tour in one file.
+            </p>
+            <span class="doc-arrow">→ read on GitHub</span>
+          </a>
+
+          <a
+            class="doc-card"
+            href="https://github.com/NeryaAI/Nerya/blob/main/AGENTS.md"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">02</span>
+            <h3>AGENTS.md · ground truth</h3>
+            <p>
+              Where every module lives, the rules you must follow before
+              editing, the safe mocks, and the test contract.
+            </p>
+            <span class="doc-arrow">→ ground rules</span>
+          </a>
+
+          <a
+            class="doc-card"
+            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/skills/builtin"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">03</span>
+            <h3>Skill catalog</h3>
+            <p>
+              74 built-in skills. Every one is a directory with
+              <code>SKILL.md</code> as the only definition surface.
+            </p>
+            <span class="doc-arrow">→ browse skills</span>
+          </a>
+
+          <a
+            class="doc-card"
+            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/trading"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">04</span>
+            <h3>Trading kernel</h3>
+            <p>
+              Risk Gate, Approval Gate, accounts, virtual ledger,
+              reconciliation, drift detection.
+            </p>
+            <span class="doc-arrow">→ open trading/</span>
+          </a>
+
+          <a
+            class="doc-card"
+            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/evolution"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">05</span>
+            <h3>Evolution engine</h3>
+            <p>
+              Reflection, strategy mutation, learning writer, patch proposals,
+              promote / rollback flow.
+            </p>
+            <span class="doc-arrow">→ open evolution/</span>
+          </a>
+
+          <a
+            class="doc-card"
+            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/sdk"
+            target="_blank"
+            rel="noopener"
+            data-reveal
+          >
+            <span class="doc-tag">06</span>
+            <h3>SDK · Python + TS</h3>
+            <p>
+              The surface your scripts import. Trading SDK, trigger SDK,
+              connectors, secret refs, structured output.
+            </p>
+            <span class="doc-arrow">→ open sdk/</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ─────────── 09 · LAUNCH / STAR CTA (cut-out) ─────────── -->
+      <section class="launch" id="launch" aria-labelledby="launch-title">
+        <div class="launch-stage">
+          <img
+            class="launch-cutout"
+            src="assets/nerya-star-cutout.png"
+            alt="Nerya leaning on a glowing five-point star, giving a thumbs up"
+            loading="lazy"
+            decoding="async"
+            data-parallax-pointer="0.024"
+          />
+          <div class="launch-copy" data-reveal>
+            <p class="eyebrow">09 / launch console</p>
+            <h2 id="launch-title">
+              The next edge is
+              <em class="hot">an evolution</em>
+              away.
+            </h2>
+            <p>
+              Paper mode is free. Bring your own models. The runtime ships its
+              own kernel, gateway, team, trading kernel, and evolution pipeline.
+              If a star helps the signal travel, drop one.
+            </p>
+
+            <div class="launch-actions">
+              <a
+                class="primary-cta giant magnetic"
+                href="https://github.com/NeryaAI/Nerya"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <span>Star Nerya on GitHub</span>
+              </a>
+              <a class="secondary-cta magnetic" href="#docs">
+                Read the docs
+              </a>
+              <a
+                class="ghost-cta"
+                href="https://github.com/NeryaAI/Nerya/blob/main/README.md#run-locally"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>install in one line</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="launch-readouts">
+          <article data-reveal>
+            <span>runtime</span>
+            <strong>kernel</strong>
+            <p>
+              own agent loop, planner, context builder, memory, reflection. No
+              external agent framework.
+            </p>
+          </article>
+          <article data-reveal>
+            <span>safety</span>
+            <strong>paper</strong>
+            <p>
+              paper-by-default. Live trades stay under Risk Gate and Approval
+              Gate. Vault-only secrets.
+            </p>
+          </article>
+          <article data-reveal>
+            <span>evolution</span>
+            <strong>diff</strong>
+            <p>
+              reflection drafts patches. Operator signs the diff. Runtime
+              applies with rollback snapshot.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="foot-left">
+        <img class="brand-mark small" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <span class="foot-word">NERYA</span>
+        <span class="foot-meta">evolutionary brain · v0.1.0</span>
+      </div>
+      <div class="foot-right">
+        <a href="https://github.com/NeryaAI/Nerya" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/NeryaAI/Nerya/blob/main/README.md" target="_blank" rel="noopener">README</a>
+        <a href="https://github.com/NeryaAI/Nerya/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS</a>
+        <a href="https://github.com/NeryaAI/Nerya/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+      </div>
+    </footer>
+
+    <div class="scroll-meter" aria-hidden="true">
+      <span data-scroll-meter></span>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
