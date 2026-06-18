@@ -409,6 +409,14 @@ main { position: relative; z-index: 1; }
   animation: heroFloat 7.5s var(--ease) infinite;
 }
 
+/* Shared safety for every <video> standing in for a scene still:
+   keep them block-level and give a dark base so first paint is never
+   a transparent flash before the poster/stream lands. */
+.scene-video {
+  display: block;
+  background: var(--ink, #0a081a);
+}
+
 .ascii-cloud {
   position: absolute;
   inset: 14vh 18vw auto;
@@ -652,6 +660,18 @@ h1 {
   font-style: normal;
 }
 
+/* Accent words breathe a soft violet glow so headings never sit dead. */
+em.hot {
+  animation: hotGlow 3.4s var(--ease) infinite;
+}
+@keyframes hotGlow {
+  0%, 100% { text-shadow: 0 0 0 transparent; }
+  50%      { text-shadow: 0 0 22px oklch(0.7 0.22 300 / 0.55), 0 0 6px oklch(0.78 0.16 300 / 0.4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  em.hot { animation: none; }
+}
+
 .evolve-head p,
 .guard-inner p,
 .authors-copy p,
@@ -701,6 +721,62 @@ h1 {
 
 .bleed-tag span { color: var(--iris); }
 
+/* ── Kinetic ticker · the self-evolution loop scrolls forever ─────── */
+.kinetic-ticker {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding: 18px 0;
+  border-block: 1px solid var(--ink-line);
+  background:
+    linear-gradient(90deg, var(--void) 0%, transparent 8%, transparent 92%, var(--void) 100%),
+    oklch(0.08 0.03 290 / 0.5);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.ticker-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: tickerScroll 36s linear infinite;
+}
+
+.kinetic-ticker:hover .ticker-row { animation-play-state: paused; }
+
+.ticker-row .tk {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.1vw, 1.7rem);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: oklch(0.92 0.02 290 / 0.62);
+}
+
+.ticker-row .tk-hot {
+  color: var(--text);
+  text-shadow: 0 0 22px oklch(0.7 0.22 300 / 0.5);
+}
+
+.ticker-row .tk-sep {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--iris);
+  opacity: 0.7;
+}
+
+@keyframes tickerScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-row { animation: none; }
+}
+
 /* ── Detail strip beneath the band ───────────────────────────────── */
 .evolve-detail {
   margin-top: 52px;
@@ -735,6 +811,22 @@ h1 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--violet-soft);
+  transition: color 240ms var(--ease), text-shadow 240ms var(--ease);
+}
+
+/* anime.js walks .is-active down the pipeline to show the cycle running */
+.evolve-list li {
+  transition: color 240ms var(--ease), background 240ms var(--ease);
+}
+
+.evolve-list li.is-active {
+  color: var(--text);
+  background: linear-gradient(90deg, oklch(0.62 0.24 290 / 0.12), transparent 60%);
+}
+
+.evolve-list li.is-active .bullet {
+  color: var(--iris);
+  text-shadow: 0 0 12px oklch(0.78 0.15 288 / 0.7);
 }
 
 .evolve-counter {
@@ -1402,10 +1494,11 @@ h1 {
   border: 1px solid var(--ink-line);
   background: oklch(0.07 0.015 290 / 0.7);
   color: var(--text);
+  transform-style: preserve-3d;
+  /* transform is pointer-driven from JS (3D tilt), so it must not lag */
   transition:
     border-color 220ms var(--ease),
-    background 220ms var(--ease),
-    transform 220ms var(--ease);
+    background 220ms var(--ease);
 }
 
 .doc-card:hover {
@@ -1492,7 +1585,7 @@ h1 {
 .launch-copy {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: min(600px, 50%);
 }
 
 /* Full-body cut-out leaning on a hollow star, bleeding off the bottom. */
@@ -1508,6 +1601,29 @@ h1 {
   -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 99.5%);
           mask-image: linear-gradient(180deg, #000 88%, transparent 99.5%);
   transform: translate3d(var(--px, 0px), var(--py, 0px), 0);
+  transition: transform 240ms var(--ease);
+  will-change: transform;
+}
+
+/* The launch celebration is a 16:9 loop, not a portrait cut-out. It is a
+   self-contained framed panel pinned to the right half of the stage and
+   feathered on every edge, so it never collides with the copy column. */
+.launch-video {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  width: min(46%, 540px);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 22px;
+  -webkit-mask-image: radial-gradient(134% 126% at 58% 46%, #000 54%, transparent 88%);
+          mask-image: radial-gradient(134% 126% at 58% 46%, #000 54%, transparent 88%);
+  filter: drop-shadow(0 26px 60px oklch(0.05 0.01 290 / 0.62))
+          drop-shadow(0 0 54px oklch(0.62 0.24 295 / 0.2));
+  transform: translate3d(var(--px, 0px), calc(-50% + var(--py, 0px)), 0);
   transition: transform 240ms var(--ease);
   will-change: transform;
 }
@@ -1597,18 +1713,571 @@ h1 {
 .foot-right a:hover { color: var(--iris); }
 
 /* ─────────────────────────────────────────────────────────────────────
-   REVEAL ANIMATIONS + KEYFRAMES
+   SECTION: 00 / EVOLUTION REACTOR (live video feed)
    ─────────────────────────────────────────────────────────────────────*/
 
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 900ms var(--ease), transform 900ms var(--ease);
+.reactor {
+  position: relative;
+  padding: clamp(86px, 12vh, 150px) clamp(16px, 5vw, 80px) clamp(86px, 12vh, 150px);
+  background:
+    radial-gradient(circle at 50% 16%, oklch(0.62 0.24 290 / 0.16), transparent 56%),
+    var(--void);
+  overflow: hidden;
 }
 
-[data-reveal].is-visible {
+.reactor-aura {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  z-index: 0;
+  width: min(1100px, 120vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background:
+    radial-gradient(circle, oklch(0.62 0.24 290 / 0.22), transparent 60%);
+  filter: blur(20px);
+  animation: reactorAura 9s var(--ease) infinite;
+}
+
+.reactor-head {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.reactor .section-index { color: var(--iris); }
+.reactor-head .eyebrow { margin-top: 14px; }
+.reactor-head h2 {
+  margin: 12px auto 0;
+  max-width: 18ch;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.024em;
+  color: var(--text);
+}
+.reactor-head em.hot { color: var(--violet-soft); font-style: normal; }
+
+.reactor-lede {
+  margin: 20px auto 0;
+  max-width: 62ch;
+  color: var(--text-mute);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.reactor-lede .mono {
+  font-family: var(--font-mono);
+  color: var(--iris);
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.reactor-stage {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: clamp(38px, 6vh, 64px) auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* The holographic monitor */
+.reactor-screen {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid oklch(0.62 0.24 290 / 0.42);
+  border-radius: 8px;
+  background: oklch(0.05 0.02 285);
+  box-shadow:
+    0 0 0 1px oklch(0.05 0.01 290 / 0.8),
+    0 30px 80px oklch(0.04 0.01 290 / 0.7),
+    0 0 60px oklch(0.62 0.24 290 / 0.22);
+  transform: perspective(1400px) rotateX(0deg) rotateY(0deg);
+  transition: box-shadow 400ms var(--ease);
+  will-change: transform;
+}
+
+.reactor-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: var(--ink) url("assets/nerya-evolution-keyframe.jpg") center / cover no-repeat;
+}
+
+/* Vignette + brand edge glow over the footage */
+.reactor-screen-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 60px oklch(0.05 0.01 290 / 0.75),
+    inset 0 0 120px oklch(0.05 0.01 290 / 0.45);
+  background:
+    radial-gradient(circle at 50% 120%, oklch(0.62 0.24 290 / 0.22), transparent 55%);
+  mix-blend-mode: screen;
+}
+
+.reactor-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: 26%;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    oklch(0.82 0.16 290 / 0.10) 60%,
+    oklch(0.82 0.16 290 / 0.22)
+  );
+  mix-blend-mode: screen;
+  animation: reactorScan 5.5s linear infinite;
+}
+
+.reactor-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image:
+    repeating-linear-gradient(0deg, oklch(0.96 0.01 85 / 0.4) 0 1px, transparent 1px 3px);
+}
+
+.reactor-brackets {
+  position: absolute;
+  inset: 8px;
+  z-index: 3;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  pointer-events: none;
+}
+
+.reactor-brackets .bk {
+  fill: none;
+  stroke: var(--iris);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 4px oklch(0.78 0.15 288 / 0.7));
+}
+
+.reactor-tag {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: oklch(0.05 0.01 290 / 0.66);
+  border: 1px solid oklch(0.96 0.01 85 / 0.16);
+  backdrop-filter: blur(8px);
+}
+
+.reactor-tag-live {
+  left: 16px;
+  top: 16px;
+  color: var(--text);
+}
+
+.reactor-tag-live i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: oklch(0.65 0.23 25);
+  box-shadow: 0 0 8px oklch(0.65 0.23 25);
+  animation: recBlink 1.4s steps(1) infinite;
+}
+
+.reactor-version {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 4;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--iris);
+  box-shadow: 0 0 20px oklch(0.78 0.15 288 / 0.5);
+}
+
+/* Floating HUD chips around the screen edges */
+.hud {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 2px;
+  padding: 9px 12px;
+  min-width: 108px;
+  background: oklch(0.06 0.02 285 / 0.72);
+  border: 1px solid oklch(0.62 0.24 290 / 0.32);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px oklch(0.04 0.01 290 / 0.5);
+}
+
+.hud span {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.hud b {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--iris);
+}
+
+.hud b.ok { color: var(--mint); }
+
+.hud-tl { left: -14px; top: 22%; }
+.hud-tr { right: -14px; top: 14%; text-align: right; }
+.hud-tr span, .hud-tr b { justify-self: end; }
+.hud-bl { left: -14px; bottom: 16%; }
+.hud-br { right: -14px; bottom: 26%; text-align: right; }
+.hud-br span, .hud-br b { justify-self: end; }
+
+/* Telemetry rail */
+.reactor-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 18px;
+  border: 1px solid var(--ink-line);
+  background: oklch(0.07 0.015 290 / 0.6);
+}
+
+.rail-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.rail-feed {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+
+.rail-feed li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-mute);
+  opacity: 0.4;
+  transition: opacity 300ms var(--ease), color 300ms var(--ease), transform 300ms var(--ease);
+}
+
+.rail-feed li.is-active {
   opacity: 1;
-  transform: translateY(0);
+  color: var(--text);
+  transform: translateX(2px);
+}
+
+.rail-feed li .t {
+  color: var(--iris);
+  flex-shrink: 0;
+}
+
+.rail-meter { display: grid; gap: 8px; }
+
+.rail-meter-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.rail-meter-bar {
+  display: block;
+  height: 4px;
+  background: oklch(0.96 0.01 85 / 0.08);
+  overflow: hidden;
+}
+
+.rail-meter-bar i {
+  display: block;
+  width: 8%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--violet), var(--iris));
+  box-shadow: 0 0 12px oklch(0.62 0.24 290 / 0.7);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   SECTION: 03 / AGENT TEAM (interactive console)
+   ─────────────────────────────────────────────────────────────────────*/
+
+.team {
+  position: relative;
+  padding: clamp(90px, 13vh, 150px) 0;
+  background:
+    radial-gradient(circle at 50% 40%, oklch(0.62 0.24 290 / 0.10), transparent 60%),
+    var(--ink);
+}
+
+.team .section-index { color: var(--iris); }
+
+.team-head {
+  max-width: 720px;
+  margin-top: 22px;
+}
+
+.team-head h2 {
+  margin: 12px 0 18px;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.024em;
+  color: var(--text);
+}
+
+.team-head em.hot { color: var(--violet-soft); font-style: normal; }
+
+.team-head p {
+  color: var(--text-mute);
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 64ch;
+}
+
+.team-grid {
+  position: relative;
+  margin-top: clamp(40px, 7vh, 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 26px 34px;
+  align-items: stretch;
+}
+
+.team-wires {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.team-wires .wire {
+  fill: none;
+  stroke: oklch(0.62 0.24 290 / 0.45);
+  stroke-width: 1.4;
+  stroke-dasharray: 5 9;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 4px oklch(0.62 0.24 290 / 0.4));
+  animation: wireFlow 1.3s linear infinite;
+}
+
+.agent-card {
+  position: relative;
+  z-index: 2;
+  grid-column: var(--agent-col, auto);
+  grid-row: var(--agent-row, auto);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 22px 20px;
+  border: 1px solid var(--ink-line);
+  background: oklch(0.08 0.02 290 / 0.86);
+  backdrop-filter: blur(6px);
+  transition:
+    border-color 260ms var(--ease),
+    background 260ms var(--ease),
+    transform 260ms var(--ease),
+    box-shadow 260ms var(--ease);
+}
+
+.agent-card:hover {
+  border-color: var(--violet);
+  background: oklch(0.13 0.035 290 / 0.92);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px oklch(0.04 0.01 290 / 0.55), 0 0 30px oklch(0.62 0.24 290 / 0.22);
+}
+
+.agent-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.agent-id { color: var(--text-soft); }
+
+.agent-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mint);
+}
+
+.agent-state.risk { color: var(--warn); }
+
+.agent-state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  animation: statePulse 1.8s var(--ease) infinite;
+}
+
+.agent-card h3 {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.agent-role {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--violet-soft);
+}
+
+.agent-feed {
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid var(--ink-line);
+}
+
+.agent-feed li {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--text-mute);
+}
+
+/* Per-agent accent edges */
+.agent-lead { border-left: 1px solid oklch(0.62 0.24 290 / 0.5); }
+.agent-analyst { border-left: 1px solid oklch(0.78 0.15 288 / 0.5); }
+.agent-risk { border-left: 1px solid oklch(0.78 0.16 75 / 0.5); }
+.agent-memory { border-left: 1px solid oklch(0.78 0.17 165 / 0.5); }
+
+/* The lead "passes the turn" — one card holds the floor at a time. */
+.agent-card.is-turn {
+  border-color: var(--violet);
+  background: oklch(0.14 0.04 290 / 0.94);
+  box-shadow: 0 0 30px oklch(0.62 0.24 290 / 0.34);
+}
+
+/* The blackboard core */
+.team-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: clamp(118px, 13vw, 158px);
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, oklch(0.16 0.05 290 / 0.95), oklch(0.08 0.02 290 / 0.92));
+  border: 1px solid oklch(0.62 0.24 290 / 0.55);
+  box-shadow: 0 0 40px oklch(0.62 0.24 290 / 0.4), inset 0 0 26px oklch(0.62 0.24 290 / 0.25);
+}
+
+.team-core strong {
+  font-family: var(--font-display);
+  font-size: clamp(0.86rem, 1.5vw, 1.05rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--text);
+}
+
+.team-core small {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--iris);
+}
+
+.core-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid oklch(0.72 0.18 290 / 0.4);
+  animation: coreRing 3.4s var(--ease) infinite;
+}
+
+.core-ring:nth-child(2) { animation-delay: 1.7s; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   KINETIC LAYER (anime.js · anime-fx.js)
+   Reveals are owned by anime.js: it writes the hidden pre-state inline,
+   then animates each element in. Everything is visible by default so the
+   page degrades gracefully if the engine never loads.
+   ─────────────────────────────────────────────────────────────────────*/
+
+/* Char split — hero title flies in letter by letter, flipping up on X. */
+.hero h1.is-split { perspective: 760px; }
+/* Keep each word intact so the headline only wraps at spaces, never mid-word.
+   inline-block makes the word atomic to the parent line box (no internal break);
+   no white-space:nowrap — that fights the per-letter transforms + perspective. */
+.hero h1 .word { display: inline-block; }
+.hero h1 .c {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* Word split — section headlines rise word by word. */
+.is-split .w,
+h2.is-split .w {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 @keyframes loaderMorph {
@@ -1634,8 +2303,59 @@ h1 {
 /* The hero / launch cut-outs breathe; pointer parallax composes on top
    via a CSS variable so the keyframe and the JS don't fight. */
 @keyframes heroFloat {
-  0%, 100% { transform: translate3d(var(--px, 0px), -6px, 0); }
-  50%      { transform: translate3d(var(--px, 0px), 10px, 0); }
+  0%, 100% {
+    transform: translate3d(var(--px, 0px), -6px, 0);
+    filter: drop-shadow(0 28px 60px oklch(0.05 0.01 290 / 0.65))
+            drop-shadow(0 0 18px oklch(0.62 0.24 295 / 0.08));
+  }
+  50% {
+    transform: translate3d(var(--px, 0px), 10px, 0);
+    filter: drop-shadow(0 30px 64px oklch(0.05 0.01 290 / 0.65))
+            drop-shadow(0 0 46px oklch(0.66 0.26 300 / 0.34));
+  }
+}
+
+/* Reactor + agent-team motion */
+@keyframes reactorAura {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.7; }
+  50%      { transform: translate(-50%, -50%) scale(1.06); opacity: 1; }
+}
+
+@keyframes reactorScan {
+  0%   { transform: translateY(-120%); }
+  100% { transform: translateY(460%); }
+}
+
+@keyframes recBlink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0.2; }
+}
+
+@keyframes wireFlow {
+  to { stroke-dashoffset: -14; }
+}
+
+@keyframes statePulse {
+  0%, 100% { transform: scale(0.82); opacity: 0.65; }
+  50%      { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes coreRing {
+  0%   { transform: scale(0.7); opacity: 0.8; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* Star-burst particles spawned on CTA click (anime.js drives transform) */
+.spark {
+  position: fixed;
+  z-index: 80;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: var(--iris);
+  box-shadow: 0 0 10px var(--iris);
+  will-change: transform, opacity;
 }
 
 /* ─────────────────────────────────────────────────────────────────────
@@ -1687,14 +2407,69 @@ h1 {
 
   .launch-stage { min-height: clamp(440px, 64vh, 640px); }
   .launch-cutout { height: min(62vh, 620px); right: clamp(-56px, -2vw, 0px); opacity: 0.9; }
+  .launch-video { width: min(50%, 480px); }
   .launch-readouts { grid-template-columns: 1fr; gap: 26px; }
   .launch-readouts article { max-width: 540px; }
+}
+
+/* 13" laptops & short windows: keep the entire hero on one screen */
+@media (min-width: 769px) and (max-height: 920px) {
+  :root { --hero-title: clamp(2.3rem, 5.2vw, 3.7rem); }
+  .hero { padding-top: 92px; padding-bottom: 64px; }
+  .hero-lede { margin: 14px 0 18px; font-size: 15px; line-height: 1.55; }
+  .hero-actions { gap: 10px; }
+  .hero-query { margin-top: 16px; padding-top: 14px; }
+  .status-strip { bottom: 14px; }
+}
+
+/* Reactor + team adapt before the phone breakpoint */
+@media (max-width: 1024px) {
+  .reactor-stage { grid-template-columns: 1fr; gap: 18px; }
+  .hud-tl, .hud-bl { left: 8px; }
+  .hud-tr, .hud-br { right: 8px; }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 18px;
+  }
+  .agent-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  .team-wires { display: none; }
+  .team-core {
+    position: static;
+    transform: none;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: center;
+    order: 5;
+    margin-top: 4px;
+  }
 }
 
 @media (max-width: 768px) {
   body { cursor: auto; }
   a, button { cursor: pointer; }
   .cursor-dot, .cursor-label { display: none; }
+
+  /* Reactor: keep the telemetry chips, drop the overlapping corner tags. */
+  .reactor { padding: 70px 16px; }
+  .reactor-head h2 { font-size: clamp(2.1rem, 10vw, 3.4rem); }
+  .hud { min-width: 0; padding: 7px 9px; }
+  .hud b { font-size: 14px; }
+  .hud-tl { top: 10px; }
+  .hud-tr { top: 10px; }
+  .hud-bl { bottom: 10px; }
+  .hud-br { bottom: 10px; }
+  .reactor-tag-live,
+  .reactor-version { display: none; }
+  .reactor-rail { padding: 16px; }
+
+  .team { padding: 70px 0; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-head h2 { font-size: clamp(2.1rem, 10vw, 3.4rem); }
 
   .topbar { left: 14px; right: 14px; top: 14px; font-size: 10px; }
   .brand        { min-height: 40px; padding: 0 10px; gap: 8px; }
@@ -1768,6 +2543,15 @@ h1 {
   .launch { padding: 76px 18px 72px; }
   .launch-stage { display: flex; flex-direction: column; min-height: auto; }
   .launch-copy { order: 1; max-width: 100%; }
+  .launch-video {
+    order: 2;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(100%, 460px);
+    margin: 26px auto 0;
+    transform: none;
+  }
   .launch-cutout {
     order: 2;
     position: relative;

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nerya · Examples &amp; recipes</title>
+    <meta
+      name="description"
+      content="Runnable Nerya recipes: ask the agent for a strategy, add an exchange, schedule reports, wire alerts, and drive the daemon from the Python and TypeScript SDKs."
+    />
+    <meta name="theme-color" content="#0a081a" />
+    <link rel="icon" href="assets/nerya-logo.png" />
+    <link rel="stylesheet" href="docs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "./assets/vendor/anime.esm.min.js"
+        }
+      }
+    </script>
+  </head>
+  <body class="docs-body">
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora-blob a"></span>
+      <span class="aurora-blob b"></span>
+      <span class="aurora-blob c"></span>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="read-meter" aria-hidden="true"><span data-read-bar></span></div>
+
+    <header class="docs-topbar">
+      <a class="brand" href="index.html" aria-label="Nerya home">
+        <img class="brand-mark" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <span class="brand-word">NERYA</span>
+        <span class="brand-tag">recipes</span>
+      </a>
+      <button class="menu-btn" type="button" data-menu aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <label class="doc-search" aria-label="Filter recipes">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4.2-4.2" />
+        </svg>
+        <input type="search" placeholder="Filter recipes…" data-filter autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <nav class="topbar-links" aria-label="Site">
+        <a href="index.html">Home</a>
+        <a class="topbar-cta" href="https://github.com/NeryaAI/Nerya/tree/main/sdk/python/examples" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.12-1.5-1.12-1.5-.91-.64.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.58 2.36 1.12 2.93.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.66-.34 2.51-.34s1.71.11 2.51.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49C19.14 20.61 22 16.77 22 12.25 22 6.59 17.52 2 12 2z" />
+          </svg>
+          Examples
+        </a>
+      </nav>
+    </header>
+
+    <div class="docs-shell">
+      <aside class="docs-sidebar" data-sidebar aria-label="Recipe navigation">
+        <div class="page-switch" role="tablist" aria-label="Documentation areas">
+          <a href="docs.html">Manual</a>
+          <a href="skills.html">Skills</a>
+          <a class="is-current" href="recipes.html">Recipes</a>
+        </div>
+        <nav class="side-nav">
+          <p class="side-group">Talk to the agent</p>
+          <a href="#ask-strategy" data-spy>Ask for a strategy</a>
+          <a href="#add-exchange" data-spy>Add an exchange</a>
+          <a href="#schedule-report" data-spy>Schedule a report</a>
+          <a href="#telegram-alert" data-spy>Wire a Telegram alert</a>
+          <a href="#reflect-evolve" data-spy>Reflect &amp; evolve</a>
+
+          <p class="side-group">SDK scripts · Python</p>
+          <a href="#price-breakout" data-spy>Price-breakout slice</a>
+          <a href="#direct-order" data-spy>Direct order</a>
+          <a href="#news-alpha" data-spy>Tiered news alpha</a>
+          <a href="#funding-spike" data-spy>Funding spike</a>
+          <a href="#whale-wallet" data-spy>Whale wallet</a>
+
+          <p class="side-group">TypeScript</p>
+          <a href="#ts-quickstart" data-spy>TS quickstart</a>
+        </nav>
+        <div class="side-foot"><span class="dot live"></span> live · risk-gated · copy &amp; run</div>
+      </aside>
+      <div class="sidebar-scrim" data-scrim aria-hidden="true"></div>
+
+      <main class="docs-main">
+        <header class="doc-hero">
+          <p class="eyebrow" data-fx>Examples &amp; recipes · copy, paste, run</p>
+          <h1 data-hero-title>From a sentence<br />to a <em>live fill</em>.</h1>
+          <p class="hero-lede" data-fx>
+            Every recipe below is something you can run: the natural-language
+            prompts the agent acts on, and the SDK scripts that ship under
+            <code>sdk/python/examples/</code>. Scripts never touch keys or
+            exchanges; they talk to the local daemon, which enforces every skill
+            permission, Risk Gate, and Approval Gate.
+          </p>
+          <div class="hero-actions" data-fx>
+            <a class="btn btn-primary" href="#price-breakout">Jump to the SDK demos</a>
+            <a class="btn btn-ghost" href="skills.html">Browse the skills</a>
+          </div>
+          <div class="stat-strip" data-fx>
+            <div class="stat"><strong data-count-to="11">0</strong><span>runnable recipes</span></div>
+            <div class="stat"><strong data-count-to="6">0</strong><span>SDK demos</span></div>
+            <div class="stat"><strong data-count-to="1">0</strong><span>Risk Gate / order</span></div>
+            <div class="stat"><strong data-count-to="0">0</strong><span>keys in your scripts</span></div>
+          </div>
+        </header>
+
+        <!-- ASK FOR A STRATEGY -->
+        <section class="doc-section" id="ask-strategy">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">01 · one sentence to a strategy</p>
+            <h2>Ask the agent for a strategy</h2>
+          </div>
+          <p class="lead" data-reveal>One sentence is enough: the <code>strategy_author</code> skill scaffolds a full package, you approve it, and it runs.</p>
+          <div class="chat" data-reveal>
+            <p class="chat-you"><span>you</span>I have $500 in a live account. Make me money on BTC. Don't blow it up.</p>
+            <p class="chat-nerya"><span>nerya</span>Drafts a <code>demo_btc_5m_scalper</code> package, wires <code>binance:BTCUSDT</code> candles, binds <code>paper_main</code>, sets a 0.4% max-drawdown guard, schedules the trigger every 5 minutes, and asks you to approve.</p>
+          </div>
+          <p data-reveal>Under the hood the skill walks a fixed flow and writes nothing live until you sign:</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">strategy_author flow</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>DEFINE    markets, accounts, timeframe, trigger, risk limits, goal
+SCAFFOLD  strategy_draft_proposal      → stages files under a proposal
+AUTHOR    edit the staged package files at the returned proposal paths
+VALIDATE  strategy_validate            → fix blockers until ok = true
+SUBMIT    strategy_submit_proposal     → enters the pending-review queue
+BACKTEST  strategy_backtest            → evidence over historical candles</code></pre>
+          </div>
+          <div class="callout callout-safe" data-reveal>
+            <span class="callout-tag">Proposal-only</span>
+            <p>The package is staged under <code>evolution/proposals/&lt;id&gt;/after/strategies/&lt;id&gt;/</code>. The live <code>strategies/&lt;id&gt;/</code> tree is proposal-only; the workspace guard refuses direct writes. Nothing papers, shadows, or goes live unless you ask for that gate.</p>
+          </div>
+        </section>
+
+        <!-- ADD AN EXCHANGE -->
+        <section class="doc-section" id="add-exchange">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">02 · teach it a new venue</p>
+            <h2>Add an exchange the agent doesn't know</h2>
+          </div>
+          <p class="lead" data-reveal>If your venue isn't in the list, don't wait for a release. Hand the agent the API docs.</p>
+          <div class="chat" data-reveal>
+            <p class="chat-you"><span>you</span>Add Bitget perpetual futures. Here are the API docs: https://bitgetlimited.github.io/apidoc/en/</p>
+          </div>
+          <p data-reveal>The <code>coding</code> skill checks the CCXT bridge first (100+ venues already wired). If your venue is there, it registers an alias and you're done. If not, it drops a provider spec, hot-reloads, and verifies, with no daemon restart and no source-tree commit:</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">workspace provider (hot-reload)</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code># workspace/providers/bitget/provider.py
+SPEC = {
+    "id": "bitget",
+    "kind": "cex",
+    "markets": ["perp"],
+    # endpoints, auth, symbol mapping, order shapes …
+}
+
+# then, from the runtime:
+ConnectorRegistry.reload_providers()   # picks up the new SPEC live
+connector_view("bitget")               # verify capabilities before trading</code></pre>
+          </div>
+          <div class="callout" data-reveal>
+            <span class="callout-tag">Promotion path</span>
+            <p>Once the venue stabilises, a maintainer can lift the workspace file into <code>nerya/connectors/</code>. Until then it lives entirely in your workspace.</p>
+          </div>
+        </section>
+
+        <!-- SCHEDULE A REPORT -->
+        <section class="doc-section" id="schedule-report">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">03 · a report on a schedule</p>
+            <h2>Schedule a recurring report</h2>
+          </div>
+          <p class="lead" data-reveal>For background and recurring work, the <code>tasks</code> skill writes a durable schedule and can route the output to a gateway channel like Telegram.</p>
+          <div class="chat" data-reveal>
+            <p class="chat-you"><span>you</span>Every morning at 09:00, post a BTC + ETH market summary to my Telegram.</p>
+            <p class="chat-nerya"><span>nerya</span>Writes a schedule with <code>session_kind="agent"</code> and a durable <code>generated_prompt</code> spelling out the source checks, output format, language, and delivery target, then confirms next run.</p>
+          </div>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">tasks</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code># the agent runs this for you; you can inspect it too
+python scripts/create_task.py \
+  --kind agent \
+  --schedule "cron:0 9 * * *" \
+  --deliver telegram \
+  --prompt "Summarise BTC and ETH: price, 24h change, funding, 1 risk note."
+
+python scripts/list_tasks.py        # see schedule, last run, next run</code></pre>
+          </div>
+        </section>
+
+        <!-- TELEGRAM ALERT -->
+        <section class="doc-section" id="telegram-alert">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">04 · alerts to your channel</p>
+            <h2>Wire a Telegram alert</h2>
+          </div>
+          <p class="lead" data-reveal>Channel setup is config-proposal work, so the <code>notify</code> skill lands it as one <code>evolve_core_config_patch</code> against <code>messages/channels.yml</code>. Your token is stored as a vault ref, never plaintext.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">messages/channels.yml</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>channels:
+  telegram:
+    kind: telegram
+    bot_token_ref: vault://telegram/bot_token   # never a plaintext token
+    chat_id: 123456789
+    topics: [trade_execution, critical_risk]     # which events to push
+
+severity_routes:
+  critical_risk: [telegram]</code></pre>
+          </div>
+          <div class="callout callout-warn" data-reveal>
+            <span class="callout-tag">Secrets discipline</span>
+            <p>Plaintext tokens submitted anywhere are rewritten as <code>vault://</code> refs on submit. The token never sits in the channel config or reaches an agent prompt.</p>
+          </div>
+        </section>
+
+        <!-- REFLECT & EVOLVE -->
+        <section class="doc-section" id="reflect-evolve">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">05 · turn sessions into upgrades</p>
+            <h2>Reflect &amp; evolve between sessions</h2>
+          </div>
+          <p class="lead" data-reveal>After a strategy session closes, turn its journal into memory, then into typed upgrade proposals you can sign or reject.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>python -m nerya.cli.app reflect        --workspace ~/.nerya   # write memory entries
+python -m nerya.cli.app evolve         --workspace ~/.nerya   # produce typed proposals
+python -m nerya.cli.app proposals list --workspace ~/.nerya   # review what's pending</code></pre>
+          </div>
+          <p data-reveal>Proposals are typed: <code>learning_update</code>, <code>prompt_patch</code>, <code>script_proposal</code>, <code>skill_proposal</code>, <code>trigger_route_patch</code>, <code>strategy_config_patch</code>, and advisory <code>risk_limit_suggestion</code>. You sign the diff; the runtime applies it with a <code>rollback.py</code> snapshot. Protected scopes are never touched.</p>
+        </section>
+
+        <!-- PRICE BREAKOUT -->
+        <section class="doc-section" id="price-breakout">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">06 · classify, then trigger</p>
+            <h2>Price-breakout vertical slice</h2>
+          </div>
+          <p class="lead" data-reveal>A light-tier LLM decides breakout vs. noise, then emits a trigger to a sub-agent. The main agent picks it up and submits a <code>TradeIntent</code> that flows through the Risk Gate to paper execution.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">python · price_tracker.py</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>from nerya_sdk import connect
+
+client = connect()
+tick = {"market": "PAPER:BTCUSDT", "price": 82_140.0, "change_pct": 0.013}
+
+# cheap, light-tier classification first
+cls = client.llm.classify(
+    prompt=str(tick), labels=["breakout", "noise"],
+    caller="script:price_tracker",
+)
+
+if (cls.get("result") or {}).get("label") == "breakout":
+    client.triggers.emit(
+        source="script", kind="price.breakout",
+        payload={"symbol": "BTC", **tick},
+        target="subagent:market_analyst", strategy_id="btc_momentum",
+        idempotency_key=f"btc-bo-{int(time.time())}",
+    )
+    # main agent → TradeIntent → Risk Gate → PaperExecution</code></pre>
+          </div>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">run</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>python sdk/python/examples/price_tracker.py</code></pre>
+          </div>
+        </section>
+
+        <!-- DIRECT ORDER -->
+        <section class="doc-section" id="direct-order">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">07 · gated without an LLM</p>
+            <h2>Direct order, still gated</h2>
+          </div>
+          <p class="lead" data-reveal>No LLM involved. The intent still flows through the Risk Gate, the Approval Gate, and paper execution, then triggers an immediate strategy review.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">python · direct_order_strategy.py</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>result = client.trading.submit_intent(
+    strategy_id="btc_momentum", account_id="paper_main",
+    market="PAPER:BTCUSDT", side="buy",
+    size=250, size_unit="usd", order_type="market",
+    confidence=0.6, reasoning="direct SDK buy, smoke test", source="sdk",
+)
+
+if result.get("status") in ("filled", "partial", "accepted"):
+    client.strategy.review(
+        "btc_momentum", result["session_id"], stage="immediate",
+    )</code></pre>
+          </div>
+        </section>
+
+        <!-- NEWS ALPHA -->
+        <section class="doc-section" id="news-alpha">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">08 · cheap filter, costly survivors</p>
+            <h2>Tiered news-alpha watcher</h2>
+          </div>
+          <p class="lead" data-reveal>Spend cheap tokens to filter, expensive tokens only on the survivors. The light tier classifies; only <code>alpha</code> items pay for the high tier; anything actionable emits a trigger; scripts never trade directly.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">python · news_alpha_watcher.py</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>for headline in headlines:
+    # 1. light tier filters noise (cheap)
+    cls = client.llm.classify(
+        prompt=headline, labels=["alpha", "noise", "risk"], caller=CALLER,
+    )
+    if (cls.get("result") or {}).get("label") != "alpha":
+        continue
+
+    # 2. only alpha pays for the high tier
+    analysis = client.llm.analyze_signal(context=headline, caller=CALLER)
+    parsed = analysis.get("parsed")
+
+    # 3. emit a trigger, never place trades from a script
+    if isinstance(parsed, dict) and parsed.get("recommended_action"):
+        client.triggers.emit(
+            source="script", kind="news.alpha",
+            payload={"headline": headline, "analysis": parsed},
+            target="main", strategy_id="btc_momentum",
+            idempotency_key=f"news-alpha-{abs(hash(headline))}",
+        )</code></pre>
+          </div>
+          <div class="callout" data-reveal>
+            <span class="callout-tag">Budget enforced</span>
+            <p>Every LLM call is checked against the script's <code>llm_policy</code>. If the manifest sets <code>allowed_tiers: [light]</code>, the high-tier step is rejected by the gateway before a dollar is spent.</p>
+          </div>
+        </section>
+
+        <!-- FUNDING SPIKE -->
+        <section class="doc-section" id="funding-spike">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">09 · wake on a funding spike</p>
+            <h2>Funding-rate spike trigger</h2>
+          </div>
+          <p class="lead" data-reveal>Watch a perp funding feed and wake the agent when funding crosses a threshold. The trigger carries no order; it leaves the call to the <code>risk_critic</code> and <code>execution_planner</code> sub-agents.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">python · funding_spike_trigger.py</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>for row in pull_funding():     # [{market, funding_rate_bps, ts}, …]
+    if abs(row["funding_rate_bps"]) < 30:
+        continue
+    client.triggers.emit(
+        source="script", kind="funding.spike",
+        payload=row, target="main", strategy_id="btc_momentum",
+        idempotency_key=f"fund-{row['market']}-{int(row['ts'])}",
+    )</code></pre>
+          </div>
+        </section>
+
+        <!-- WHALE WALLET -->
+        <section class="doc-section" id="whale-wallet">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">10 · follow the whale wallets</p>
+            <h2>Whale-wallet watcher</h2>
+          </div>
+          <p class="lead" data-reveal>Mock a chain watcher and route large transfers to the <code>onchain_watcher</code> sub-agent, which computes cluster heuristics and escalates only when the activity is relevant to an active strategy.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">python · whale_wallet_trigger.py</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>for tx in transfers:          # chain watcher output
+    if tx["amount_usd"] < 1_000_000:
+        continue
+    client.triggers.emit(
+        source="script", kind="whale.transfer",
+        payload=tx, target="subagent:onchain_watcher",
+        strategy_id="btc_momentum",
+        idempotency_key=f"whale-{tx['from']}-{int(time.time())}",
+    )</code></pre>
+          </div>
+        </section>
+
+        <!-- TS QUICKSTART -->
+        <section class="doc-section" id="ts-quickstart">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">11 · the same surface in TypeScript</p>
+            <h2>TypeScript quickstart</h2>
+          </div>
+          <p class="lead" data-reveal>Same surface, Node / Bun / Edge friendly. Probe a route with <code>dryRun</code>, emit for real, or submit an intent; every call is forwarded to the local daemon, which enforces the Risk Gate server-side.</p>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>npm install @nerya/sdk</code></pre>
+          </div>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">typescript</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>import { connect } from "@nerya/sdk";
+
+const nerya = connect({
+  baseUrl: "http://127.0.0.1:18317",
+  caller: "script:my_bot",
+});
+
+// probe a route without firing it
+const dry = await nerya.triggers.dryRun({
+  source: "script", kind: "price.breakout",
+  payload: { symbol: "BTC", price: 82_000 },
+  target: "subagent:market_analyst", strategy_id: "btc_momentum",
+});
+
+// emit for real
+await nerya.triggers.emit({
+  source: "script", kind: "price.breakout",
+  payload: { symbol: "BTC", price: 82_000 },
+  target: "subagent:market_analyst", strategy_id: "btc_momentum",
+  idempotency_key: "btc-" + Date.now(),
+});
+
+// direct intent, still passes the Risk Gate server-side
+await nerya.trading.submitIntent({
+  strategy_id: "btc_momentum", account_id: "paper_main",
+  market: "PAPER:BTCUSDT", side: "buy", size: 0.01,
+  size_unit: "base", order_type: "market",
+  confidence: 0.6, reasoning: "ts-sdk demo",
+});</code></pre>
+          </div>
+          <div class="end-cta" data-reveal>
+            <h3>That's the whole loop.</h3>
+            <p>Trigger in, skills decide, the Risk Gate guards, memory and evolution carry the lesson forward. Read the manual for the architecture behind it.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="docs.html#architecture">See the architecture</a>
+              <a class="btn btn-ghost" href="skills.html">Browse the skills</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="docs-footer">
+          <span>Nerya · Evolutionary Brain</span>
+          <span>scripts never hold keys · the daemon enforces every gate</span>
+        </footer>
+      </main>
+    </div>
+
+    <button class="to-top" type="button" data-top aria-label="Back to top">↑</button>
+    <script type="module" src="docs-fx.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <title>Nerya · self-evolving trading agent runtime</title>
     <meta
       name="description"
-      content="Nerya is a self-evolving, skill-first, trading-native autonomous agent runtime. Paper-by-default. Live trades stay under a Risk Gate. Memory rewrites the kernel."
+      content="Nerya is a self-evolving, skill-first, trading-native autonomous agent runtime. Trades live under a Risk Gate and Approval Gate. Memory rewrites the kernel."
     />
     <meta name="theme-color" content="#0a081a" />
     <meta property="og:type" content="website" />
@@ -25,6 +25,14 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- anime.js v4 (vendored locally) drives the kinetic layer -->
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "./assets/vendor/anime.esm.min.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <canvas id="signal-field" class="signal-field" aria-hidden="true"></canvas>
@@ -52,11 +60,11 @@
         <span class="brand-version">v0.1.0</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a class="magnetic" href="#reactor">Live</a>
         <a class="magnetic" href="#evolve">Evolve</a>
+        <a class="magnetic" href="#team">Team</a>
         <a class="magnetic" href="#guard">Risk</a>
-        <a class="magnetic" href="#authors">Author</a>
-        <a class="magnetic" href="#rituals">Team</a>
-        <a class="magnetic" href="#docs">Docs</a>
+        <a class="magnetic" href="docs.html">Docs</a>
       </nav>
       <a
         class="nav-cta magnetic"
@@ -79,10 +87,6 @@
       <section class="hero" id="origin" aria-labelledby="hero-title">
         <div class="ascii-cloud" data-ascii aria-hidden="true"></div>
 
-        <div class="hero-orbit" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-
         <img
           class="hero-cutout"
           src="assets/nerya-cutout.png"
@@ -95,14 +99,14 @@
         <div class="hero-inner" data-reveal>
           <p class="eyebrow">
             operator console <span class="dot-sep"></span> self-evolving runtime
-            <span class="dot-sep"></span> paper by default
+            <span class="dot-sep"></span> live, risk-gated
           </p>
-          <h1 id="hero-title" data-scramble="EVOLVE OR FADE">EVOLVE OR FADE</h1>
+          <h1 id="hero-title" data-scramble="EVOLVE EVERY TRADE">EVOLVE EVERY TRADE</h1>
           <p class="hero-lede">
             Nerya ships its own agent kernel, LLM gateway, sub-agents, typed
             memory, triggers, a durable team, a trading kernel, and an evolution
-            pipeline. Every external call is mediated by a <em>SKILL.md</em>.
-            Paper by default. Live trades stay under a Risk Gate.
+            pipeline. Every external call goes through a <em>SKILL.md</em>. It
+            trades live, with every order held under a Risk Gate and Approval Gate.
           </p>
           <div class="hero-actions">
             <a
@@ -114,23 +118,124 @@
             >
               ★ Star the repo
             </a>
-            <a class="secondary-cta magnetic" href="#docs">Read the docs</a>
+            <a class="secondary-cta magnetic" href="docs.html">Read the docs</a>
           </div>
           <nav class="hero-query" aria-label="Jump to a chapter">
+            <a href="#reactor">→ live evolution feed</a>
             <a href="#evolve">→ closed evolution loop</a>
+            <a href="#team">→ durable agent team</a>
             <a href="#guard">→ risk-first execution</a>
-            <a href="#authors">→ "make me a strategy"</a>
-            <a href="#rituals">→ durable agent team</a>
           </nav>
         </div>
 
         <div class="status-strip" aria-hidden="true">
           <span><b data-frame>frame 0001</b></span>
-          <span>paper mode · safe</span>
+          <span>live · risk-gated</span>
           <span>risk gate ✓ active</span>
           <span>★ stars wake the kernel</span>
         </div>
       </section>
+
+      <!-- ─────────── 00 · EVOLUTION REACTOR (live video feed) ─────────── -->
+      <section class="reactor" id="reactor" aria-labelledby="reactor-title">
+        <div class="reactor-aura" aria-hidden="true"></div>
+
+        <div class="wrap reactor-head" data-reveal>
+          <div class="section-index">∞ / live evolution feed</div>
+          <p class="eyebrow">self-evolving runtime · captured in motion</p>
+          <h2 id="reactor-title">
+            Watch the kernel <em class="hot">rewrite itself</em>.
+          </h2>
+          <p class="reactor-lede">
+            One evolution cycle, in motion. The reflection engine drafts
+            patches, the team votes, and versions
+            <span class="mono">v1.1 → v1.2 → v1.3</span> compile behind her
+            while the Risk Gate holds the line.
+          </p>
+        </div>
+
+        <div class="reactor-stage" data-reactor>
+          <figure class="reactor-screen" data-tilt>
+            <video
+              class="reactor-video"
+              poster="assets/nerya-evolution-keyframe.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Nerya, the self-evolving trading agent, animating her own evolution: holographic strategy panels, a DNA helix, and ascending v1.1 to v1.3 versions of herself"
+            >
+              <source src="assets/nerya-evolution.mp4?v=hires" type="video/mp4" />
+            </video>
+
+            <div class="reactor-screen-glow" aria-hidden="true"></div>
+            <div class="reactor-scanline" aria-hidden="true"></div>
+            <div class="reactor-noise" aria-hidden="true"></div>
+
+            <svg
+              class="reactor-brackets"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path class="bk" d="M2,16 L2,2 L16,2" />
+              <path class="bk" d="M84,2 L98,2 L98,16" />
+              <path class="bk" d="M98,84 L98,98 L84,98" />
+              <path class="bk" d="M16,98 L2,98 L2,84" />
+            </svg>
+
+            <span class="reactor-tag reactor-tag-live" aria-hidden="true">
+              <i></i> REC · live kernel
+            </span>
+          </figure>
+
+          <aside class="reactor-rail" data-reactor-rail aria-hidden="true">
+            <p class="rail-title">cycle telemetry</p>
+            <ul class="rail-feed" data-rail-feed>
+              <li><span class="t">00:00</span> observe · journal sealed</li>
+              <li><span class="t">00:03</span> reflect · analyst postmortem</li>
+              <li><span class="t">00:07</span> propose · diff vs live kernel</li>
+              <li><span class="t">00:11</span> validate · backtest + risk gate</li>
+              <li><span class="t">00:14</span> promote · v1.3 rolled out</li>
+            </ul>
+            <div class="rail-meter">
+              <span class="rail-meter-label">generation progress</span>
+              <span class="rail-meter-bar"><i data-rail-bar></i></span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ─────────── KINETIC TICKER (self-evolution marquee) ─────────── -->
+      <div class="kinetic-ticker" aria-hidden="true">
+        <div class="ticker-row" data-ticker>
+          <span class="tk">observe</span><span class="tk-sep">→</span>
+          <span class="tk">reflect</span><span class="tk-sep">→</span>
+          <span class="tk">propose</span><span class="tk-sep">→</span>
+          <span class="tk">validate</span><span class="tk-sep">→</span>
+          <span class="tk">promote</span><span class="tk-sep">✦</span>
+          <span class="tk tk-hot">v1.1 → v1.2 → v1.3</span><span class="tk-sep">✦</span>
+          <span class="tk">live · risk-gated</span><span class="tk-sep">→</span>
+          <span class="tk">risk gate holds</span><span class="tk-sep">→</span>
+          <span class="tk">memory rewrites the kernel</span><span class="tk-sep">✦</span>
+          <span class="tk">25 skills</span><span class="tk-sep">→</span>
+          <span class="tk">durable team</span><span class="tk-sep">→</span>
+          <span class="tk tk-hot">evolve or fade</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true">observe</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">reflect</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">propose</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">validate</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">promote</span><span class="tk-sep">✦</span>
+          <span class="tk tk-hot" aria-hidden="true">v1.1 → v1.2 → v1.3</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true">live · risk-gated</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">risk gate holds</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">memory rewrites the kernel</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true">25 skills</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true">durable team</span><span class="tk-sep">→</span>
+          <span class="tk tk-hot" aria-hidden="true">evolve or fade</span><span class="tk-sep">✦</span>
+        </div>
+      </div>
 
       <!-- ─────────── 01 · EVOLVES (full-bleed band) ─────────── -->
       <section class="evolve" id="evolve" aria-labelledby="evolve-title">
@@ -151,14 +256,19 @@
         </div>
 
         <figure class="evolve-bleed bleed" data-reveal>
-          <img
-            class="bleed-img"
-            src="assets/nerya-evolver.png"
-            alt="Nerya standing in front of stacked v1.1, v1.2, v1.3 ghost versions of herself ascending, ringed by adapt, outplay, optimize and evolve readouts"
-            loading="lazy"
-            decoding="async"
+          <video
+            class="bleed-img scene-video"
+            poster="assets/nerya-evolve.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
             data-parallax="0.08"
-          />
+            aria-label="Nerya animating her own evolution: ghost versions v1.1, v1.2, v1.3 ascending while adapt, outplay, optimize and evolve readouts pulse"
+          >
+            <source src="assets/nerya-evolve.mp4?v=hires" type="video/mp4" />
+          </video>
           <figcaption class="bleed-tag">
             <span>v1.1 → v1.3</span> +49% promoted per cycle
           </figcaption>
@@ -166,24 +276,24 @@
 
         <div class="wrap">
           <div class="evolve-detail">
-            <ol class="evolve-list" data-reveal>
-              <li>
+            <ol class="evolve-list" data-reveal data-pipeline>
+              <li data-step>
                 <span class="bullet">observe</span>
                 <span>journal every decision, fill, drift, miss.</span>
               </li>
-              <li>
+              <li data-step>
                 <span class="bullet">reflect</span>
                 <span>postmortem with the analyst sub-agent.</span>
               </li>
-              <li>
+              <li data-step>
                 <span class="bullet">propose</span>
                 <span>diff against the live kernel.</span>
               </li>
-              <li>
+              <li data-step>
                 <span class="bullet">validate</span>
                 <span>backtest gate, risk gate, structured output check.</span>
               </li>
-              <li>
+              <li data-step>
                 <span class="bullet">promote</span>
                 <span>versioned rollout, snapshot, rollback ready.</span>
               </li>
@@ -209,27 +319,32 @@
 
       <!-- ─────────── 02 · GUARD (full-bleed scene) ─────────── -->
       <section class="guard" id="guard" aria-labelledby="guard-title">
-        <img
-          class="guard-bg"
-          src="assets/nerya-guard.png"
-          alt="Nerya holding up a hexagonal policy / approval / limit shield that absorbs incoming risk runes"
-          loading="lazy"
-          decoding="async"
+        <video
+          class="guard-bg scene-video"
+          poster="assets/nerya-guard-kf.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
           data-parallax="0.05"
-        />
+          aria-label="Nerya raising a hexagonal policy / approval / limit shield that absorbs and dissolves incoming red risk runes"
+        >
+          <source src="assets/nerya-guard.mp4?v=hires" type="video/mp4" />
+        </video>
         <div class="guard-scrim" aria-hidden="true"></div>
 
         <div class="wrap guard-inner" data-reveal>
           <div class="section-index">02 / risk-first execution</div>
-          <p class="eyebrow">paper-by-default</p>
+          <p class="eyebrow">live, risk-gated</p>
           <h2 id="guard-title">
             Mistakes go into <em class="hot">memory</em>, not into your wallet.
           </h2>
           <p>
-            Live trading stays off unless <code>runtime.live_trading_enabled</code>
-            is true <em>and</em> the Approval Gate signs off. The runtime ships
-            with a Risk Gate, a typed mistake ledger, a virtual ledger, and
-            reconciliation. Every external call is mediated by a <em>SKILL.md</em>.
+            Go live the moment <code>runtime.live_trading_enabled</code>
+            is true <em>and</em> the Approval Gate signs off. Every order ships
+            through a Risk Gate, a typed mistake ledger, a virtual ledger, and
+            reconciliation. A <em>SKILL.md</em> gates every external call.
           </p>
 
           <div class="guard-pills" role="list">
@@ -243,7 +358,98 @@
         </div>
       </section>
 
-      <!-- ─────────── 03 · AUTHORS (editorial tile) ─────────── -->
+      <!-- ─────────── 03 · AGENT TEAM (interactive console) ─────────── -->
+      <section class="team" id="team" aria-labelledby="team-title">
+        <div class="wrap">
+          <div class="section-index" data-reveal>03 / durable agent team</div>
+          <div class="team-head" data-reveal>
+            <p class="eyebrow">persistent multi-agent crew</p>
+            <h2 id="team-title">
+              Four minds wired to one <em class="hot">blackboard</em>.
+            </h2>
+            <p>
+              Four roles stay resident across every turn. The Lead routes the
+              work, the Analyst reads the tape, the Risk critic can veto, and
+              the Memory scribe records the lesson. They share a blackboard, a
+              task board, and a mailbox, so each turn compounds into the next.
+            </p>
+          </div>
+
+          <div class="team-grid" data-team>
+            <svg class="team-wires" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+              <path class="wire" d="M250,150 C390,150 420,235 500,260" />
+              <path class="wire" d="M750,150 C610,150 580,235 500,260" />
+              <path class="wire" d="M250,400 C390,400 420,300 500,260" />
+              <path class="wire" d="M750,400 C610,400 580,300 500,260" />
+            </svg>
+
+            <article class="agent-card agent-lead" data-agent style="--agent-col: 1; --agent-row: 1;">
+              <header>
+                <span class="agent-id">A-01</span>
+                <span class="agent-state"><i></i> routing</span>
+              </header>
+              <h3>LEAD</h3>
+              <p class="agent-role">plans · routes · schedules</p>
+              <ul class="agent-feed">
+                <li>→ open session 0x9f</li>
+                <li>→ dispatch analyst</li>
+                <li>→ await risk sign-off</li>
+              </ul>
+            </article>
+
+            <article class="agent-card agent-analyst" data-agent style="--agent-col: 3; --agent-row: 1;">
+              <header>
+                <span class="agent-id">A-02</span>
+                <span class="agent-state"><i></i> reading</span>
+              </header>
+              <h3>ANALYST</h3>
+              <p class="agent-role">reads chart · drafts thesis</p>
+              <ul class="agent-feed">
+                <li>→ regime: trend-up</li>
+                <li>→ edge: +1.4R</li>
+                <li>→ thesis drafted</li>
+              </ul>
+            </article>
+
+            <article class="agent-card agent-risk" data-agent style="--agent-col: 1; --agent-row: 2;">
+              <header>
+                <span class="agent-id">A-03</span>
+                <span class="agent-state risk"><i></i> guarding</span>
+              </header>
+              <h3>RISK</h3>
+              <p class="agent-role">vetoes if the math is off</p>
+              <ul class="agent-feed">
+                <li>→ size ≤ 2% checked</li>
+                <li>→ corr clamp ok</li>
+                <li>→ veto held in reserve</li>
+              </ul>
+            </article>
+
+            <article class="agent-card agent-memory" data-agent style="--agent-col: 3; --agent-row: 2;">
+              <header>
+                <span class="agent-id">A-04</span>
+                <span class="agent-state"><i></i> writing</span>
+              </header>
+              <h3>MEMORY</h3>
+              <p class="agent-role">writes mistakes to the ledger</p>
+              <ul class="agent-feed">
+                <li>→ postmortem saved</li>
+                <li>→ regimes.md +1</li>
+                <li>→ feeds next cycle</li>
+              </ul>
+            </article>
+
+            <div class="team-core" data-core aria-hidden="true">
+              <span class="core-ring"></span>
+              <span class="core-ring"></span>
+              <strong>BLACK<br />BOARD</strong>
+              <small>shared memory</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 04 · AUTHORS (editorial tile) ─────────── -->
       <section class="authors" id="authors" aria-labelledby="authors-title">
         <figure class="authors-tile">
           <img
@@ -257,13 +463,13 @@
         </figure>
 
         <div class="authors-inner">
-          <div class="section-index" data-reveal>03 / strategy author skill</div>
+          <div class="section-index" data-reveal>04 / strategy author skill</div>
 
           <div class="quote-block" data-reveal>
             <p class="eyebrow">one sentence</p>
             <blockquote>
               <p>
-                "I have <em class="hot">$500</em> in a paper account. Make me
+                "I have <em class="hot">$500</em> in a live account. Make me
                 money on BTC. <em>Don't blow it up.</em>"
               </p>
             </blockquote>
@@ -281,7 +487,8 @@
               The <code>strategy_author</code> skill turns that sentence into a
               working strategy package in one chat turn: trigger, sub-agent
               prompt library, candle source, account binding, risk limits,
-              session ledger. You approve. It runs. It journals. It evolves.
+              session ledger. You approve it once, then it runs, journals, and
+              rewrites itself from there.
             </p>
             <a class="ghost-cta" href="https://github.com/NeryaAI/Nerya#skills" target="_blank" rel="noopener">
               <span>read the skill catalog</span>
@@ -291,11 +498,11 @@
 
           <div class="authors-baseline" data-reveal>
             <div class="micro-copy">
-              paper-mode<br />single-turn<br />operator-signed
+              live-ready<br />single-turn<br />operator-signed
             </div>
             <span class="baseline-rule"></span>
             <div class="micro-copy">
-              74 builtin skills<br />zero yaml<br />SKILL.md only
+              25 builtin skills<br />zero yaml<br />SKILL.md only
             </div>
           </div>
         </div>
@@ -306,29 +513,34 @@
         <div class="ritual-sticky">
           <div class="ritual-track" data-ritual-track>
             <article class="ritual-panel ritual-team">
-              <img
-                class="ritual-bg"
-                src="assets/nerya-team.png"
-                alt="Four Nerya operators around a glowing strategy table: lead, analyst, risk critic, and memory scribe working a market-read to execution flow"
-                loading="lazy"
-                decoding="async"
-              />
+              <video
+                class="ritual-bg scene-video"
+                poster="assets/nerya-team-kf.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Four Nerya operators around a glowing strategy table: lead, analyst, risk critic and memory scribe working a market-read to execution flow"
+              >
+                <source src="assets/nerya-team.mp4?v=hires" type="video/mp4" />
+              </video>
               <div class="ritual-scrim" aria-hidden="true"></div>
               <div class="ritual-text">
-                <p class="eyebrow">04 · ritual / agent team</p>
+                <p class="eyebrow">05 · ritual / war room</p>
                 <h2 id="rituals-title">
-                  A durable team, not a chain of function calls.
+                  The war room never sleeps.
                 </h2>
                 <p>
-                  Lead, analyst, risk critic, scribe. Shared blackboard, task
-                  board, mailbox, gates. Every turn leaves a record. Every
-                  record feeds the next session.
+                  Same four operators, now at the table. Shared blackboard,
+                  task board, mailbox, gates. Every turn leaves a record, and
+                  each record feeds the next session and the next version.
                 </p>
                 <ul class="ritual-list">
-                  <li><b>LEAD</b><span>plans, routes, schedules</span></li>
-                  <li><b>ANALYST</b><span>reads the chart, drafts the thesis</span></li>
-                  <li><b>RISK</b><span>blocks the trade if the math is off</span></li>
-                  <li><b>MEMORY</b><span>writes mistakes into the ledger</span></li>
+                  <li><b>MARKET-READ</b><span>analyst frames the regime</span></li>
+                  <li><b>DEBATE</b><span>lead and risk argue the trade</span></li>
+                  <li><b>EXECUTE</b><span>live orders, gated by risk</span></li>
+                  <li><b>JOURNAL</b><span>memory seals the lesson</span></li>
                 </ul>
               </div>
             </article>
@@ -348,25 +560,24 @@
                 </div>
               </div>
               <div class="ritual-text">
-                <p class="eyebrow">05 · ritual / typed memory</p>
+                <p class="eyebrow">06 · ritual / typed memory</p>
                 <h2>Five surfaces. Plain markdown. No vector blob.</h2>
                 <p>
-                  Memory is not a fuzzy embedding. It is five typed markdown
-                  surfaces the reflection engine can read, write, and diff.
-                  Audit it. Grep it. Edit it by hand if you want.
+                  Memory is five typed markdown surfaces the reflection engine
+                  can read, write, and diff. Audit them, grep them, or edit
+                  them by hand.
                 </p>
               </div>
             </article>
 
             <article class="ritual-panel ritual-paper">
               <div class="ritual-text">
-                <p class="eyebrow">06 · ritual / self-rewriter</p>
+                <p class="eyebrow">07 · ritual / self-rewriter</p>
                 <h2>The kernel writes its own next version.</h2>
                 <p>
-                  Reflection drafts a patch. The Approval Gate signs the diff
-                  or rejects it. The runtime applies it with a rollback
-                  snapshot. Mistakes are no longer dead weight, they are
-                  fuel.
+                  Reflection drafts a patch, the Approval Gate signs or rejects
+                  the diff, and the runtime applies it with a rollback snapshot.
+                  Each logged mistake feeds the next proposal.
                 </p>
                 <div class="ritual-diff">
                   <span class="diff-add">+ self.reflect(session)</span>
@@ -388,7 +599,7 @@
 
       <!-- ─────────── 07 · ARCHITECTURE (closed loop) ─────────── -->
       <section class="loop" id="loop" aria-labelledby="loop-title">
-        <div class="section-index" data-reveal>07 / closed loop</div>
+        <div class="section-index" data-reveal>08 / closed loop</div>
 
         <div class="loop-head" data-reveal>
           <p class="eyebrow">architecture</p>
@@ -452,7 +663,7 @@
             <g transform="translate(400,340)" class="loop-node">
               <circle r="40" />
               <text dy="4" text-anchor="middle">execute</text>
-              <text dy="60" text-anchor="middle" class="sub">paper · live · ledger</text>
+              <text dy="60" text-anchor="middle" class="sub">live · risk · ledger</text>
             </g>
             <g transform="translate(130,300)" class="loop-node">
               <circle r="40" />
@@ -481,7 +692,7 @@
 
       <!-- ─────────── 08 · DOCS GALLERY ─────────── -->
       <section class="docs" id="docs" aria-labelledby="docs-title">
-        <div class="section-index" data-reveal>08 / read deeper</div>
+        <div class="section-index" data-reveal>09 / read deeper</div>
 
         <div class="docs-head" data-reveal>
           <p class="eyebrow">product docs</p>
@@ -494,100 +705,64 @@
         </div>
 
         <div class="docs-grid">
-          <a
-            class="doc-card doc-feature"
-            href="https://github.com/NeryaAI/Nerya#readme"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card doc-feature" href="docs.html#overview" data-reveal>
             <span class="doc-tag">01</span>
             <h3>README · the front door</h3>
             <p>
-              Six pillars, screenshots, install, quickstart, the whole product
-              tour in one file.
+              Six pillars, install, quickstart, and the whole product tour, now
+              a full operator manual.
             </p>
-            <span class="doc-arrow">→ read on GitHub</span>
+            <span class="doc-arrow">→ open the manual</span>
           </a>
 
-          <a
-            class="doc-card"
-            href="https://github.com/NeryaAI/Nerya/blob/main/AGENTS.md"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card" href="docs.html#architecture" data-reveal>
             <span class="doc-tag">02</span>
-            <h3>AGENTS.md · ground truth</h3>
+            <h3>Architecture · ground truth</h3>
             <p>
-              Where every module lives, the rules you must follow before
-              editing, the safe mocks, and the test contract.
+              Where every module lives, the runtime topology, and how the
+              workspace holds all state on disk.
             </p>
-            <span class="doc-arrow">→ ground rules</span>
+            <span class="doc-arrow">→ runtime map</span>
           </a>
 
-          <a
-            class="doc-card"
-            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/skills/builtin"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card" href="docs.html#skills" data-reveal>
             <span class="doc-tag">03</span>
             <h3>Skill catalog</h3>
             <p>
-              74 built-in skills. Every one is a directory with
+              25 built-in skills. Every one is a directory with
               <code>SKILL.md</code> as the only definition surface.
             </p>
             <span class="doc-arrow">→ browse skills</span>
           </a>
 
-          <a
-            class="doc-card"
-            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/trading"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card" href="docs.html#trading" data-reveal>
             <span class="doc-tag">04</span>
             <h3>Trading kernel</h3>
             <p>
               Risk Gate, Approval Gate, accounts, virtual ledger,
               reconciliation, drift detection.
             </p>
-            <span class="doc-arrow">→ open trading/</span>
+            <span class="doc-arrow">→ open trading</span>
           </a>
 
-          <a
-            class="doc-card"
-            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/evolution"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card" href="docs.html#self-evolution" data-reveal>
             <span class="doc-tag">05</span>
             <h3>Evolution engine</h3>
             <p>
               Reflection, strategy mutation, learning writer, patch proposals,
               promote / rollback flow.
             </p>
-            <span class="doc-arrow">→ open evolution/</span>
+            <span class="doc-arrow">→ open evolution</span>
           </a>
 
-          <a
-            class="doc-card"
-            href="https://github.com/NeryaAI/Nerya/tree/main/nerya/sdk"
-            target="_blank"
-            rel="noopener"
-            data-reveal
-          >
+          <a class="doc-card" href="docs.html#sdk" data-reveal>
             <span class="doc-tag">06</span>
             <h3>SDK · Python + TS</h3>
             <p>
               The surface your scripts import. Trading SDK, trigger SDK,
               connectors, secret refs, structured output.
             </p>
-            <span class="doc-arrow">→ open sdk/</span>
+            <span class="doc-arrow">→ open sdk</span>
           </a>
         </div>
       </section>
@@ -595,23 +770,28 @@
       <!-- ─────────── 09 · LAUNCH / STAR CTA (cut-out) ─────────── -->
       <section class="launch" id="launch" aria-labelledby="launch-title">
         <div class="launch-stage">
-          <img
-            class="launch-cutout"
-            src="assets/nerya-star-cutout.png"
-            alt="Nerya leaning on a glowing five-point star, giving a thumbs up"
-            loading="lazy"
-            decoding="async"
+          <video
+            class="launch-video"
+            poster="assets/nerya-launch-kf.png"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
             data-parallax-pointer="0.024"
-          />
+            aria-label="Nerya leaning on a glowing five-point star, throwing a cheerful double thumbs up with a wink amid drifting sparkles and confetti"
+          >
+            <source src="assets/nerya-launch.mp4" type="video/mp4" />
+          </video>
           <div class="launch-copy" data-reveal>
-            <p class="eyebrow">09 / launch console</p>
+            <p class="eyebrow">10 / launch console</p>
             <h2 id="launch-title">
               The next edge is
               <em class="hot">an evolution</em>
               away.
             </h2>
             <p>
-              Paper mode is free. Bring your own models. The runtime ships its
+              Free and open-source. Bring your own models. The runtime ships its
               own kernel, gateway, team, trading kernel, and evolution pipeline.
               If a star helps the signal travel, drop one.
             </p>
@@ -631,7 +811,7 @@
                 </svg>
                 <span>Star Nerya on GitHub</span>
               </a>
-              <a class="secondary-cta magnetic" href="#docs">
+              <a class="secondary-cta magnetic" href="docs.html">
                 Read the docs
               </a>
               <a
@@ -658,10 +838,10 @@
           </article>
           <article data-reveal>
             <span>safety</span>
-            <strong>paper</strong>
+            <strong>gated</strong>
             <p>
-              paper-by-default. Live trades stay under Risk Gate and Approval
-              Gate. Vault-only secrets.
+              Live trades run under a Risk Gate and Approval Gate. Typed mistake
+              ledger. Vault-only secrets.
             </p>
           </article>
           <article data-reveal>
@@ -695,5 +875,6 @@
     </div>
 
     <script src="main.js"></script>
+    <script type="module" src="anime-fx.js"></script>
   </body>
 </html>

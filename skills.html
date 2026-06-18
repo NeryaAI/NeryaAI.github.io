@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nerya · Skill reference</title>
+    <meta
+      name="description"
+      content="The Nerya skill reference: 25 built-in skills across trading, market data, research, agents, memory, and build, every one defined by a single SKILL.md."
+    />
+    <meta name="theme-color" content="#0a081a" />
+    <link rel="icon" href="assets/nerya-logo.png" />
+    <link rel="stylesheet" href="docs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "./assets/vendor/anime.esm.min.js"
+        }
+      }
+    </script>
+  </head>
+  <body class="docs-body">
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora-blob a"></span>
+      <span class="aurora-blob b"></span>
+      <span class="aurora-blob c"></span>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="read-meter" aria-hidden="true"><span data-read-bar></span></div>
+
+    <header class="docs-topbar">
+      <a class="brand" href="index.html" aria-label="Nerya home">
+        <img class="brand-mark" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <span class="brand-word">NERYA</span>
+        <span class="brand-tag">skills</span>
+      </a>
+      <button class="menu-btn" type="button" data-menu aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <label class="doc-search" aria-label="Filter skills">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4.2-4.2" />
+        </svg>
+        <input type="search" placeholder="Filter 25 skills…" data-filter autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <nav class="topbar-links" aria-label="Site">
+        <a href="index.html">Home</a>
+        <a class="topbar-cta" href="https://github.com/NeryaAI/Nerya/tree/main/nerya/skills/builtin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.12-1.5-1.12-1.5-.91-.64.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.58 2.36 1.12 2.93.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.66-.34 2.51-.34s1.71.11 2.51.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49C19.14 20.61 22 16.77 22 12.25 22 6.59 17.52 2 12 2z" />
+          </svg>
+          Source
+        </a>
+      </nav>
+    </header>
+
+    <div class="docs-shell">
+      <aside class="docs-sidebar" data-sidebar aria-label="Skill navigation">
+        <div class="page-switch" role="tablist" aria-label="Documentation areas">
+          <a href="docs.html">Manual</a>
+          <a class="is-current" href="skills.html">Skills</a>
+          <a href="recipes.html">Recipes</a>
+        </div>
+        <nav class="side-nav">
+          <p class="side-group">Families</p>
+          <a href="#trading-skills" data-spy>Trading &amp; strategy</a>
+          <a href="#data-skills" data-spy>Market &amp; data</a>
+          <a href="#research-skills" data-spy>Research &amp; valuation</a>
+          <a href="#agent-skills" data-spy>Agents, memory &amp; growth</a>
+          <a href="#build-skills" data-spy>Build &amp; connect</a>
+        </nav>
+        <div class="side-foot"><span class="dot live"></span> 25 skills · SKILL.md-defined</div>
+      </aside>
+      <div class="sidebar-scrim" data-scrim aria-hidden="true"></div>
+
+      <main class="docs-main">
+        <header class="doc-hero">
+          <p class="eyebrow" data-fx>Skill reference · SKILL.md is the only definition</p>
+          <h1 data-hero-title>Every capability<br />is a <em>skill</em>.</h1>
+          <p class="hero-lede" data-fx>
+            Each skill is a directory: a <code>SKILL.md</code> that says when to
+            use it and how it flows, <code>scripts/</code> for JSON-in / JSON-out
+            helpers, <code>references/</code> for lazy-loaded playbooks, and
+            <code>templates/</code>. Viewing a skill unlocks its specialized tools
+            for the rest of the session. These are the 25 that ship today.
+          </p>
+          <div class="hero-actions" data-fx>
+            <a class="btn btn-primary" href="recipes.html">See them in action</a>
+            <a class="btn btn-ghost" href="docs.html#skills">Back to the manual</a>
+          </div>
+          <div class="stat-strip" data-fx>
+            <div class="stat"><strong data-count-to="25">0</strong><span>built-in skills</span></div>
+            <div class="stat"><strong data-count-to="5">0</strong><span>skill families</span></div>
+            <div class="stat"><strong data-count-to="1">0</strong><span>SKILL.md per skill</span></div>
+            <div class="stat"><strong data-count-to="0">0</strong><span>runtime frameworks</span></div>
+          </div>
+        </header>
+
+        <!-- TRADING & STRATEGY -->
+        <section class="doc-section" id="trading-skills">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">01 · move the money safely</p>
+            <h2>Trading &amp; strategy</h2>
+          </div>
+          <div class="skill-grid" data-grid>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>trading</h3><span class="skill-when">trade · risk · lifecycle</span></header>
+              <p class="skill-desc">Size positions, place trades, review portfolio state, manage open risk, and move strategies through lifecycle gates.</p>
+              <p class="skill-flow"><span>flow</span> market → portfolio → intent → risk check → approval gate → submit → reconcile</p>
+              <p class="skill-note">The agent can never switch live trading on by itself — a “go live” request gets an explicit reject and waits for a human operator at the Approval Gate.</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>strategy_author</h3><span class="skill-when">strategy · backtest · sdk</span></header>
+              <p class="skill-desc">Author, validate, refactor, or backtest a full strategy package before proposal promotion.</p>
+              <p class="skill-flow"><span>flow</span> define → scaffold proposal → author files → validate → submit → backtest</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>backtest</h3><span class="skill-when">replay · evidence</span></header>
+              <p class="skill-desc">Replay strategy packages or in-flight proposals over historical candles before promotion.</p>
+              <p class="skill-flow"><span>flow</span> pick strategy / proposal → run preset → report metrics &amp; confidence</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>triggers</h3><span class="skill-when">schedule · event · watcher</span></header>
+              <p class="skill-desc">Create or inspect scheduled tasks, event hooks, condition watchers, price alerts, and route explanations.</p>
+              <p class="skill-flow"><span>flow</span> classify → define target / key / cooldown → dry-run → create → verify</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>tasks</h3><span class="skill-when">automation · schedules</span></header>
+              <p class="skill-desc">Create, schedule, inspect, or manage operator tasks, recurring reports, and non-strategy agent / script jobs.</p>
+              <p class="skill-flow"><span>flow</span> classify → write durable prompt → create_task → deliver via gateway → inspect</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- MARKET & DATA -->
+        <section class="doc-section" id="data-skills">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">02 · know before you act</p>
+            <h2>Market &amp; data</h2>
+          </div>
+          <div class="skill-grid" data-grid>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>markets</h3><span class="skill-when">quotes · books · wallets</span></header>
+              <p class="skill-desc">Current or historical market data, order books, symbol metadata, wallet balances, and on-chain activity reads.</p>
+              <p class="skill-flow"><span>flow</span> normalize VENUE:SYMBOL → read quote / book / candles → check freshness → pass on</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>market_data_routing</h3><span class="skill-when">router · sources</span></header>
+              <p class="skill-desc">Choose symbols, venues, data sources, freshness checks, and fallbacks before research, backtests, or reports.</p>
+              <p class="skill-flow"><span>flow</span> identify asset class → map symbol → check freshness → pick source + fallback</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>news_social</h3><span class="skill-when">news · rss</span></header>
+              <p class="skill-desc">Latest economy / finance / market news and crypto headlines: an RSS first pass before broad web search.</p>
+              <p class="skill-flow"><span>flow</span> RSS pass → respect freshness window → summarise returned items only</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>research</h3><span class="skill-when">web · fetch</span></header>
+              <p class="skill-desc">External info: web search, page fetch, news, social posts, blog content, and current facts outside the workspace.</p>
+              <p class="skill-flow"><span>flow</span> search → fetch full pages → track source / method / time → summarise</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>analysis</h3><span class="skill-when">tables · logs · profiling</span></header>
+              <p class="skill-desc">Local data, logs, tables, databases, charts, profiling, disk inspection, and one-off evidence extraction.</p>
+              <p class="skill-flow"><span>flow</span> classify input → read schema / sample → run narrow script → summarise</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- RESEARCH & VALUATION -->
+        <section class="doc-section" id="research-skills">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">03 · build a defensible view</p>
+            <h2>Research &amp; valuation</h2>
+          </div>
+          <div class="skill-grid" data-grid>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>market_research</h3><span class="skill-when">coordinator · thesis</span></header>
+              <p class="skill-desc">Professional market or single-name research combining price, fundamentals, news, sentiment, macro, flows, and risk.</p>
+              <p class="skill-flow"><span>flow</span> gather evidence → load equity / quant / lenses → synthesize thesis, risks, invalidation</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>quant_research</h3><span class="skill-when">factors · validation</span></header>
+              <p class="skill-desc">Factor research, statistical analysis, leakage checks, signal validation, backtest diagnostics, and attribution.</p>
+              <p class="skill-flow"><span>flow</span> hypothesis → clean data → check leakage → measure IC / turnover / drawdown → baseline</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>equity_research</h3><span class="skill-when">stocks · memo</span></header>
+              <p class="skill-desc">Deep research on a US-listed stock: financials, filings, estimates, news, valuation, and memo output.</p>
+              <p class="skill-flow"><span>flow</span> normalize ticker → fetch statements / estimates → load filings + DCF → memo</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>dcf_valuation</h3><span class="skill-when">intrinsic value</span></header>
+              <p class="skill-desc">Intrinsic value, DCF, fair value, valuation sensitivity, and price-target analysis.</p>
+              <p class="skill-flow"><span>flow</span> require fundamentals → choose assumptions → run dcf_calc → sensitivity</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>sec_filings</h3><span class="skill-when">10-K · 10-Q · 8-K</span></header>
+              <p class="skill-desc">List, fetch, and read SEC filing sections: risk factors, MD&amp;A, business, notes, and financial statements.</p>
+              <p class="skill-flow"><span>flow</span> normalize ticker / type → list → read needed section → cite filing / date</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>research_report</h3><span class="skill-when">report artifact</span></header>
+              <p class="skill-desc">Turn gathered evidence into a professional market, stock, sector, strategy, backtest, or flash report.</p>
+              <p class="skill-flow"><span>flow</span> confirm evidence → choose type → structure conclusion / evidence / risks / action</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>expert_investors</h3><span class="skill-when">lenses · checklists</span></header>
+              <p class="skill-desc">Apply named investor lenses, value / growth-quality checklists, macro allocation, and portfolio risk views.</p>
+              <p class="skill-flow"><span>flow</span> start from evidence → select lens → compare emphasis / rejects / monitors</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- AGENTS, MEMORY & GROWTH -->
+        <section class="doc-section" id="agent-skills">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">04 · coordinate, remember, grow up</p>
+            <h2>Agents, memory &amp; growth</h2>
+          </div>
+          <div class="skill-grid" data-grid>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>agents</h3><span class="skill-when">delegation · workers</span></header>
+              <p class="skill-desc">Decide whether to keep work local, delegate one bounded subtask, or form a coordinated team.</p>
+              <p class="skill-flow"><span>flow</span> tiny → do locally · independent → spawn worker · 2+ lanes → load team</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>team</h3><span class="skill-when">committee · multi-role</span></header>
+              <p class="skill-desc">An Agent Team, committee, multi-role research pass, or coordinated low-frequency strategy decision.</p>
+              <p class="skill-flow"><span>flow</span> objective / roles / stop → split lanes → run → collect → leader synthesis → verify</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>memory</h3><span class="skill-when">recall · durable facts</span></header>
+              <p class="skill-desc">Remember, recall, audit, or reconstruct durable facts and prior decisions across sessions.</p>
+              <p class="skill-flow"><span>flow</span> write smallest durable fact → search before re-deriving → procedures become skills</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>evolve</h3><span class="skill-when">proposals · growth</span></header>
+              <p class="skill-desc">Proposal-first capability growth: new skills, workflow-to-skill conversion, self-reflection, and config-change proposals.</p>
+              <p class="skill-flow"><span>flow</span> capture workflow → stage proposal → never self-activate</p>
+              <p class="skill-note">Protected scopes (risk limits, live trading, kill switch, signer / secrets) are never editable.</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>llm</h3><span class="skill-when">summarize · translate</span></header>
+              <p class="skill-desc">A separate one-shot LLM helper that transforms supplied content: summarize, translate, rewrite, label, or draft.</p>
+              <p class="skill-flow"><span>flow</span> define transform → bound IO → pass needed text → check drift → return</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- BUILD & CONNECT -->
+        <section class="doc-section" id="build-skills">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">05 · extend the runtime</p>
+            <h2>Build &amp; connect</h2>
+          </div>
+          <div class="skill-grid" data-grid>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>coding</h3><span class="skill-when">code · shell · source</span></header>
+              <p class="skill-desc">Workspace code reading, editing, search, shell, focused plans, background processes, verification, and Nerya source changes.</p>
+              <p class="skill-flow"><span>flow</span> read + search patterns → plan if multi-step → edit narrowly → prove → report</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>browser</h3><span class="skill-when">DOM · screenshots</span></header>
+              <p class="skill-desc">Operate, inspect, or verify a live browser session: JavaScript, clicks, forms, screenshots, and console / network evidence.</p>
+              <p class="skill-flow"><span>flow</span> prefer fetch if it proves it → open session → act minimally → verify with DOM / shot</p>
+            </article>
+            <article class="skill-card" data-card data-filter-item>
+              <header><h3>notify</h3><span class="skill-when">outbound · channels</span></header>
+              <p class="skill-desc">Send a message out to an operator, channel, webhook, or email, rather than the current chat reply.</p>
+              <p class="skill-flow"><span>flow</span> identify recipient / urgency → ensure channel config (vault refs) → send → status</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="skill-anatomy">
+          <div class="doc-head" data-reveal>
+            <p class="eyebrow">how a skill is built</p>
+            <h2>Anatomy of a skill</h2>
+          </div>
+          <div class="code" data-code data-reveal>
+            <div class="code-bar"><span class="code-lang">nerya/skills/builtin/&lt;name&gt;/</span><button class="copy" type="button" data-copy>copy</button></div>
+<pre><code>SKILL.md       frontmatter (name, description, tags) + when to use + flow
+scripts/       executable helpers, JSON in, JSON out, sandboxed
+references/    lazy-loaded methodology and research playbooks
+templates/     code and config templates</code></pre>
+          </div>
+          <div class="callout callout-safe" data-reveal>
+            <span class="callout-tag">Progressive disclosure</span>
+            <p>
+              Until a skill is viewed, only a small core toolset is advertised
+              (file read / edit / write, shell, search, skill discovery). Viewing
+              a skill unlocks its specialized tools for the rest of the session,
+              so context stays small and permissions stay tight.
+            </p>
+          </div>
+          <div class="end-cta" data-reveal>
+            <h3>Want to see them work together?</h3>
+            <p>The recipes page wires these skills into runnable triggers, SDK scripts, and operator one-liners.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="recipes.html">Open the recipes</a>
+              <a class="btn btn-ghost" href="docs.html">Back to the manual</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="docs-footer">
+          <span>Nerya · Evolutionary Brain</span>
+          <span>25 skills · SKILL.md is the only definition</span>
+        </footer>
+      </main>
+    </div>
+
+    <button class="to-top" type="button" data-top aria-label="Back to top">↑</button>
+    <script type="module" src="docs-fx.js"></script>
+  </body>
+</html>

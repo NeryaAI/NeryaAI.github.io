@@ -1,8 +1,9 @@
 // ───────────────────────────────────────────────────────────────────
 // Nerya Landing · main.js
-// WebGL2 shader hero + loader + custom cursor + magnetic targets
-// + spotlight masks + scroll meter + pinned ritual scroll + reveals
-// + frame counter + count-up + reduced-motion fallback.
+// Canvas2D market field — DNA double-helix (evolution) + scrolling
+// candlestick / K-line tape (trading) + loader + custom cursor
+// + magnetic targets + spotlight masks + scroll meter + pinned ritual
+// scroll + reveals + frame counter + count-up + reduced-motion fallback.
 // ───────────────────────────────────────────────────────────────────
 
 const canvas = document.querySelector("#signal-field");
@@ -30,151 +31,39 @@ let dpr = 1;
 let scrollProgress = 0;
 let pulse = 0;
 let startedAt = performance.now();
-let glState = null;
 let frameTick = 0;
+let ctx = null;
 
 // ───────────────────────────────────────────────────────────────────
-// Fragment shader — Nerya signal field
+// Procedural market field — tiny deterministic helpers
 // ───────────────────────────────────────────────────────────────────
 
-const vertexSource = `#version 300 es
-in vec2 a_position;
-out vec2 v_uv;
-void main() {
-  v_uv = a_position * 0.5 + 0.5;
-  gl_Position = vec4(a_position, 0.0, 1.0);
-}`;
-
-const fragmentSource = `#version 300 es
-precision highp float;
-in vec2 v_uv;
-out vec4 outColor;
-uniform vec2  u_resolution;
-uniform vec2  u_mouse;
-uniform float u_time;
-uniform float u_scroll;
-uniform float u_pulse;
-
-float hash(vec2 p) {
-  p = fract(p * vec2(123.34, 456.21));
-  p += dot(p, p + 45.32);
-  return fract(p.x * p.y);
+const fract = (x) => x - Math.floor(x);
+const hash1 = (n) => fract(Math.sin(n * 127.1) * 43758.5453123);
+// smooth 1D value noise
+function vnoise(x) {
+  const i = Math.floor(x);
+  const f = x - i;
+  const u = f * f * (3 - 2 * f);
+  return hash1(i) * (1 - u) + hash1(i + 1) * u;
 }
-
-float noise(vec2 p) {
-  vec2 i = floor(p);
-  vec2 f = fract(p);
-  vec2 u = f * f * (3.0 - 2.0 * f);
-  return mix(
-    mix(hash(i),                hash(i + vec2(1.0, 0.0)), u.x),
-    mix(hash(i + vec2(0.0,1.0)), hash(i + vec2(1.0, 1.0)), u.x),
-    u.y
+// a gently trending price walk, ~[-1.4, 1.4]
+function priceAt(i) {
+  return (
+    (vnoise(i * 0.3) - 0.5) * 1.1 +
+    (vnoise(i * 0.11 + 19) - 0.5) * 1.3 +
+    Math.sin(i * 0.18) * 0.18
   );
 }
 
-float lineField(vec2 uv, float t) {
-  float a = atan(uv.y, uv.x);
-  float d = length(uv);
-  float f = sin(a * 9.0 + t * 0.9 + noise(uv * 2.0 + t * 0.06) * 4.0);
-  float g = sin((uv.x * 6.0 - uv.y * 3.5) + t * 0.7);
-  return smoothstep(0.98, 1.0, abs(f * g)) * smoothstep(1.4, 0.05, d);
-}
-
-void main() {
-  vec2 res = u_resolution;
-  vec2 uv = (gl_FragCoord.xy * 2.0 - res) / min(res.x, res.y);
-  vec2 mouse = (u_mouse * 2.0 - res) / min(res.x, res.y);
-  uv -= mouse * 0.07;
-
-  float t = u_time;
-  float d = length(uv);
-  float angle = atan(uv.y, uv.x);
-  float n  = noise(uv * 3.8 + t * 0.08);
-  float n2 = noise(vec2(angle * 2.0, d * 5.0 - t * 0.22));
-
-  float core   = smoothstep(0.22, 0.02, d + sin(angle * 5.0 + t) * 0.018 + n * 0.035);
-  float shell  = smoothstep(0.46, 0.18, abs(d - 0.34 + n * 0.06));
-  float ring   = smoothstep(0.014, 0.0, abs(sin(d * 26.0 - t * 1.6 + n2 * 2.0)) * 0.025);
-  float fila   = lineField(uv, t);
-  float scan   = smoothstep(0.996, 1.0, sin((uv.y + t * 0.07) * 340.0)) * 0.18;
-  float stars  = smoothstep(0.992, 1.0, noise(uv * 94.0 + t * 0.018)) * smoothstep(1.8, 0.1, d);
-  float pulseW = u_pulse * smoothstep(0.9, 0.08, d);
-  float sHeat  = clamp(u_scroll, 0.0, 1.0);
-
-  // Palette mapped to the Nerya brand tokens: violet primary,
-  // brand-300 highlight, periwinkle filament. No amber, the operator
-  // console only uses amber for warnings, never identity.
-  vec3 violet      = vec3(0.545, 0.361, 0.965);  // #8b5cf6 brand-500
-  vec3 violetLight = vec3(0.706, 0.545, 1.000);  // #b48bff brand-300
-  vec3 iris        = vec3(0.640, 0.600, 1.000);  // periwinkle highlight (violet family)
-
-  vec3 color = vec3(0.0);
-  color += violet      * shell * 0.95;
-  color += iris        * ring  * 0.42;
-  color += iris        * fila  * 0.30;
-  color += vec3(1.0)   * core  * (1.10 + pulseW * 1.5);
-  color += violet      * stars * 0.65;
-  color += mix(violet, violetLight, sHeat) * scan * smoothstep(1.55, 0.08, d);
-  color += violetLight * pulseW * 0.22;
-  color *= 1.0 - smoothstep(0.62, 1.6, d) * 0.66;
-
-  float alpha = clamp(core + shell * 0.7 + ring * 0.6 + fila * 0.7 + stars + scan, 0.0, 1.0);
-  outColor = vec4(color, alpha);
-}`;
-
-// ───────────────────────────────────────────────────────────────────
-// WebGL boilerplate
-// ───────────────────────────────────────────────────────────────────
-
-function compileShader(gl, type, source) {
-  const shader = gl.createShader(type);
-  gl.shaderSource(shader, source);
-  gl.compileShader(shader);
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    throw new Error(gl.getShaderInfoLog(shader) || "shader failed");
-  }
-  return shader;
-}
-
-function initWebGL() {
-  const gl = canvas.getContext("webgl2", {
-    alpha: true,
-    antialias: true,
-    preserveDrawingBuffer: true,
-  });
-  if (!gl) return null;
-
-  const program = gl.createProgram();
-  gl.attachShader(program, compileShader(gl, gl.VERTEX_SHADER, vertexSource));
-  gl.attachShader(program, compileShader(gl, gl.FRAGMENT_SHADER, fragmentSource));
-  gl.linkProgram(program);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    throw new Error(gl.getProgramInfoLog(program) || "program failed");
-  }
-
-  const buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.bufferData(
-    gl.ARRAY_BUFFER,
-    new Float32Array([-1, -1, 3, -1, -1, 3]),
-    gl.STATIC_DRAW
-  );
-  const position = gl.getAttribLocation(program, "a_position");
-  gl.enableVertexAttribArray(position);
-  gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
-
-  return {
-    gl,
-    program,
-    uniforms: {
-      resolution: gl.getUniformLocation(program, "u_resolution"),
-      mouse:      gl.getUniformLocation(program, "u_mouse"),
-      time:       gl.getUniformLocation(program, "u_time"),
-      scroll:     gl.getUniformLocation(program, "u_scroll"),
-      pulse:      gl.getUniformLocation(program, "u_pulse"),
-    },
-  };
-}
+// Brand palette (violet identity — no amber, that is reserved for warnings)
+const C = {
+  violet: [139, 92, 246], // #8b5cf6 brand-500
+  light: [180, 139, 255], // #b48bff brand-300
+  iris: [170, 156, 255], // periwinkle highlight
+  deep: [122, 74, 210], // recessed violet (down candles)
+};
+const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
 
 function resizeCanvas() {
   dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -184,46 +73,133 @@ function resizeCanvas() {
   canvas.height = Math.floor(height * dpr);
   canvas.style.width = `${width}px`;
   canvas.style.height = `${height}px`;
-  if (glState) glState.gl.viewport(0, 0, canvas.width, canvas.height);
+  if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 
 // ───────────────────────────────────────────────────────────────────
-// 2D fallback (no WebGL2 available)
+// K-line / candlestick tape — a market chart that streams leftward
 // ───────────────────────────────────────────────────────────────────
 
-function render2DFallback(time) {
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, width, height);
-  const x = pointer.x;
-  const y = pointer.y;
-  const gradient = ctx.createRadialGradient(
-    x,
-    y,
-    0,
-    x,
-    y,
-    Math.max(width, height) * 0.5
-  );
-  gradient.addColorStop(0, `rgba(220, 200, 255, ${0.55 + pulse})`);
-  gradient.addColorStop(0.14, "rgba(139, 92, 246, 0.34)");
-  gradient.addColorStop(0.66, "rgba(150, 140, 255, 0.05)");
-  gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, width, height);
-  ctx.strokeStyle = "rgba(139, 92, 246, 0.38)";
-  for (let i = 0; i < 9; i += 1) {
+function drawCandles(t, ox, oy) {
+  const spacing = 26;
+  const cw = 12;
+  const baseY = height * 0.7;
+  const amp = Math.min(height * 0.13, 150);
+  const drift = t * 0.0011; // candle indexes per ms
+  const cols = Math.ceil(width / spacing) + 4;
+  const frac = drift - Math.floor(drift);
+
+  ctx.save();
+  ctx.translate(ox * 0.6, oy * 0.6);
+  for (let k = -3; k < cols; k += 1) {
+    const idx = k + Math.floor(drift);
+    const x = k * spacing - frac * spacing + spacing * 0.5;
+    const o = priceAt(idx);
+    const c = priceAt(idx + 1);
+    const hi = Math.max(o, c) + (0.12 + hash1(idx * 1.7) * 0.5);
+    const lo = Math.min(o, c) - (0.12 + hash1(idx * 2.3) * 0.5);
+    const yO = baseY - o * amp;
+    const yC = baseY - c * amp;
+    const yH = baseY - hi * amp;
+    const yL = baseY - lo * amp;
+    const up = c >= o;
+    const col = up ? C.iris : C.deep;
+    const edge = up ? C.light : C.violet;
+
+    // wick
+    ctx.strokeStyle = rgba(col, 0.22);
+    ctx.lineWidth = 1.4;
     ctx.beginPath();
-    ctx.ellipse(
-      x,
-      y,
-      100 + i * 48,
-      32 + i * 22,
-      time * 0.0004 + i,
-      0,
-      Math.PI * 2
-    );
+    ctx.moveTo(x, yH);
+    ctx.lineTo(x, yL);
+    ctx.stroke();
+
+    // body
+    const top = Math.min(yO, yC);
+    const h = Math.max(2, Math.abs(yC - yO));
+    ctx.fillStyle = rgba(col, 0.16);
+    ctx.fillRect(x - cw / 2, top, cw, h);
+    ctx.strokeStyle = rgba(edge, 0.26);
+    ctx.lineWidth = 1;
+    ctx.strokeRect(x - cw / 2, top, cw, h);
+  }
+  ctx.restore();
+}
+
+// ───────────────────────────────────────────────────────────────────
+// DNA double helix — two strands + base-pair rungs, slowly travelling
+// ───────────────────────────────────────────────────────────────────
+
+function drawHelix(t, ox, oy) {
+  const cy = height * 0.44;
+  const amp = Math.min(height * 0.12, 150);
+  const wavelength = Math.min(width * 0.5, 620);
+  const freq = (Math.PI * 2) / wavelength;
+  const phase = t * 0.0011;
+  const step = 8;
+
+  ctx.save();
+  ctx.translate(ox, oy);
+
+  // base-pair rungs + nodes (fake glow via stacked translucent discs)
+  for (let x = -24; x <= width + 24; x += 24) {
+    const ang = phase + x * freq;
+    const y1 = cy + Math.sin(ang) * amp;
+    const y2 = cy + Math.sin(ang + Math.PI) * amp;
+    const depth = (Math.cos(ang) + 1) * 0.5; // 0 back … 1 front
+
+    ctx.strokeStyle = rgba(C.iris, 0.05 + depth * 0.12);
+    ctx.lineWidth = 1 + depth * 0.8;
+    ctx.beginPath();
+    ctx.moveTo(x, y1);
+    ctx.lineTo(x, y2);
+    ctx.stroke();
+
+    drawNode(x, y1, 1.5 + depth * 2.8, C.light, 0.2 + depth * 0.45);
+    drawNode(x, y2, 1.5 + (1 - depth) * 2.8, C.violet, 0.2 + (1 - depth) * 0.45);
+  }
+
+  // the two phosphate strands
+  for (const off of [0, Math.PI]) {
+    ctx.beginPath();
+    for (let x = -24; x <= width + 24; x += step) {
+      const y = cy + Math.sin(phase + x * freq + off) * amp;
+      x === -24 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = rgba(off ? C.violet : C.iris, 0.24);
+    ctx.lineWidth = 2;
     ctx.stroke();
   }
+  ctx.restore();
+}
+
+function drawNode(x, y, r, col, a) {
+  ctx.fillStyle = rgba(col, a * 0.16);
+  ctx.beginPath();
+  ctx.arc(x, y, r * 2.6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = rgba(col, a);
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawGlow(ox, oy) {
+  const gx = width * 0.62 + ox * 2;
+  const gy = height * 0.48 + oy * 2;
+  const g = ctx.createRadialGradient(
+    gx,
+    gy,
+    0,
+    gx,
+    gy,
+    Math.max(width, height) * 0.62
+  );
+  g.addColorStop(0, rgba(C.violet, 0.16 + pulse * 0.2));
+  g.addColorStop(0.42, rgba(C.violet, 0.05));
+  g.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, width, height);
 }
 
 // ───────────────────────────────────────────────────────────────────
@@ -235,20 +211,17 @@ function render(time) {
   pointer.y += (pointer.ty - pointer.y) * 0.08;
   pulse *= 0.93;
 
-  if (glState) {
-    const { gl, program, uniforms } = glState;
-    gl.clearColor(0.02, 0.02, 0.06, 1);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.useProgram(program);
-    gl.uniform2f(uniforms.resolution, canvas.width, canvas.height);
-    gl.uniform2f(uniforms.mouse, pointer.x * dpr, (height - pointer.y) * dpr);
-    gl.uniform1f(uniforms.time, (time - startedAt) * 0.001);
-    gl.uniform1f(uniforms.scroll, scrollProgress);
-    gl.uniform1f(uniforms.pulse, pulse);
-    gl.drawArrays(gl.TRIANGLES, 0, 3);
-  } else {
-    render2DFallback(time);
-  }
+  const t = time - startedAt;
+  const ox = (pointer.x - width / 2) * -0.012;
+  const oy = (pointer.y - height / 2) * -0.012;
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.globalCompositeOperation = "source-over";
+  drawGlow(ox, oy);
+  ctx.globalCompositeOperation = "lighter";
+  drawCandles(t, ox, oy);
+  drawHelix(t, ox, oy);
+  ctx.globalCompositeOperation = "source-over";
 
   // Hero frame counter — operator feel
   frameTick += 1;
@@ -275,7 +248,6 @@ function bootLoader() {
       window.setTimeout(() => document.body.classList.add("is-loaded"), 260);
       window.setTimeout(() => {
         pulse = 1;
-        startCountUps();
       }, 620);
     }
   }, 70);
@@ -303,68 +275,6 @@ function makeAsciiCloud() {
     rows.push(row);
   }
   target.textContent = rows.join("\n");
-}
-
-// ───────────────────────────────────────────────────────────────────
-// Title scramble
-// ───────────────────────────────────────────────────────────────────
-
-function scrambleText(element, finalText) {
-  if (prefersReducedMotion) {
-    element.textContent = finalText;
-    return;
-  }
-  const chars = "01/<>-_+·";
-  let frame = 0;
-  const total = 26;
-  const run = () => {
-    const output = finalText
-      .split("")
-      .map((char, index) => {
-        if (char === " ") return " ";
-        if (index < frame / 1.4) return char;
-        return chars[(index + frame) % chars.length];
-      })
-      .join("");
-    element.textContent = output;
-    frame += 1;
-    if (frame <= total) requestAnimationFrame(run);
-    else element.textContent = finalText;
-  };
-  run();
-}
-
-function setupScramble() {
-  const title = document.querySelector("[data-scramble]");
-  if (!title) return;
-  window.setTimeout(() => scrambleText(title, title.dataset.scramble), 900);
-  title.addEventListener("pointerenter", () =>
-    scrambleText(title, title.dataset.scramble)
-  );
-}
-
-// ───────────────────────────────────────────────────────────────────
-// Reveal observer
-// ───────────────────────────────────────────────────────────────────
-
-function setupReveal() {
-  const items = document.querySelectorAll("[data-reveal]");
-  if (!("IntersectionObserver" in window)) {
-    items.forEach((item) => item.classList.add("is-visible"));
-    return;
-  }
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  items.forEach((item) => observer.observe(item));
 }
 
 // ───────────────────────────────────────────────────────────────────
@@ -425,25 +335,6 @@ function setupCursor() {
         cursorLabel.textContent = "signal";
       });
     });
-}
-
-// ───────────────────────────────────────────────────────────────────
-// Magnetic buttons
-// ───────────────────────────────────────────────────────────────────
-
-function setupMagnetic() {
-  if (window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
-  document.querySelectorAll(".magnetic").forEach((item) => {
-    item.addEventListener("pointermove", (event) => {
-      const rect = item.getBoundingClientRect();
-      const x = event.clientX - rect.left - rect.width / 2;
-      const y = event.clientY - rect.top - rect.height / 2;
-      item.style.transform = `translate(${x * 0.1}px, ${y * 0.14}px)`;
-    });
-    item.addEventListener("pointerleave", () => {
-      item.style.transform = "";
-    });
-  });
 }
 
 // ───────────────────────────────────────────────────────────────────
@@ -509,38 +400,14 @@ function updatePointerParallax() {
 }
 
 // ───────────────────────────────────────────────────────────────────
-// Star pulse / hero scramble re-trigger
+// Star pulse — CTA clicks kick the field bloom
 // ───────────────────────────────────────────────────────────────────
 
 function setupPulse() {
   document.querySelectorAll("[data-pulse]").forEach((btn) => {
     btn.addEventListener("click", () => {
       pulse = 1;
-      const title = document.querySelector("[data-scramble]");
-      if (title) scrambleText(title, title.dataset.scramble);
     });
-  });
-}
-
-// ───────────────────────────────────────────────────────────────────
-// Count-up — kicks off after loader hides
-// ───────────────────────────────────────────────────────────────────
-
-function startCountUps() {
-  document.querySelectorAll("[data-count-to]").forEach((el) => {
-    const target = parseInt(el.getAttribute("data-count-to") || "0", 10);
-    const dur = 1200;
-    const start = performance.now();
-    const initial = parseInt(el.textContent || "0", 10) || 0;
-    const tick = (now) => {
-      const p = Math.min(1, (now - start) / dur);
-      // ease-out-quart
-      const e = 1 - Math.pow(1 - p, 4);
-      const value = Math.round(initial + (target - initial) * e);
-      el.textContent = value.toLocaleString();
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
   });
 }
 
@@ -549,31 +416,18 @@ function startCountUps() {
 // ───────────────────────────────────────────────────────────────────
 
 function init() {
-  resizeCanvas();
-  try {
-    glState = initWebGL();
-  } catch (error) {
-    console.warn("WebGL shader fallback:", error.message);
-    glState = null;
-  }
+  ctx = canvas.getContext("2d");
   resizeCanvas();
   makeAsciiCloud();
-  setupReveal();
   setupCursor();
-  setupMagnetic();
   setupSpotlight();
   setupParallax();
   setupPulse();
-  setupScramble();
   updateScroll();
   bootLoader();
-  if (prefersReducedMotion) {
-    // Still draw one frame so the canvas isn't blank
-    render(performance.now());
-    startCountUps();
-  } else {
-    render(performance.now());
-  }
+  // The kinetic layer (reveals, hero title, magnetic buttons, counters,
+  // section choreography) is owned by anime.js in anime-fx.js.
+  render(performance.now());
 }
 
 window.addEventListener("resize", () => {
