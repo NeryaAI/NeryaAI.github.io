@@ -1810,7 +1810,7 @@ em.hot {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  background: var(--ink) url("assets/nerya-evolution-keyframe.jpg") center / cover no-repeat;
+  background: var(--ink) url("assets/nerya-evolution-keyframe.webp") center / cover no-repeat;
 }
 
 /* Vignette + brand edge glow over the footage */

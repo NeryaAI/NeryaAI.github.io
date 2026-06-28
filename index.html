@@ -24,7 +24,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- Preload the LCP / hero image so it doesn't wait behind the canvas + fonts -->
+    <link rel="preload" as="image" href="assets/nerya-cutout.webp" fetchpriority="high" />
     <!-- anime.js v4 (vendored locally) drives the kinetic layer -->
     <script type="importmap">
       {
@@ -41,7 +51,7 @@
 
     <div class="loader" data-loader aria-live="polite">
       <div class="loader-core" aria-hidden="true">
-        <img class="loader-mark" src="assets/nerya-logo.png" alt="" />
+        <img class="loader-mark" src="assets/nerya-logo.webp" alt="" />
       </div>
       <div class="loader-copy">
         <span data-loader-count>/00</span>
@@ -55,7 +65,7 @@
 
     <header class="topbar" data-reveal>
       <a class="brand magnetic" href="#origin" aria-label="Nerya home">
-        <img class="brand-mark" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <img class="brand-mark" src="assets/nerya-logo.webp" alt="" aria-hidden="true" />
         <span class="brand-word">NERYA</span>
         <span class="brand-version">v0.1.0</span>
       </a>
@@ -87,14 +97,21 @@
       <section class="hero" id="origin" aria-labelledby="hero-title">
         <div class="ascii-cloud" data-ascii aria-hidden="true"></div>
 
-        <img
-          class="hero-cutout"
-          src="assets/nerya-cutout.png"
-          alt="Nerya, the self-evolving trading agent, drawn as a violet-haired operator who runs the console"
-          loading="eager"
-          decoding="async"
-          data-parallax-pointer="0.02"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="assets/nerya-cutout.webp"
+          />
+          <img
+            class="hero-cutout"
+            src="assets/nerya-cutout.png"
+            alt="Nerya, the self-evolving trading agent, drawn as a violet-haired operator who runs the console"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            data-parallax-pointer="0.02"
+          />
+        </picture>
 
         <div class="hero-inner" data-reveal>
           <p class="eyebrow">
@@ -158,12 +175,12 @@
           <figure class="reactor-screen" data-tilt>
             <video
               class="reactor-video"
-              poster="assets/nerya-evolution-keyframe.jpg"
-              autoplay
+              poster="assets/nerya-evolution-keyframe.webp"
               muted
               loop
               playsinline
-              preload="metadata"
+              preload="none"
+              data-lazy-video
               aria-label="Nerya, the self-evolving trading agent, animating her own evolution: holographic strategy panels, a DNA helix, and ascending v1.1 to v1.3 versions of herself"
             >
               <source src="assets/nerya-evolution.mp4?v=hires" type="video/mp4" />
@@ -258,12 +275,12 @@
         <figure class="evolve-bleed bleed" data-reveal>
           <video
             class="bleed-img scene-video"
-            poster="assets/nerya-evolve.jpg"
-            autoplay
+            poster="assets/nerya-evolve.webp"
             muted
             loop
             playsinline
-            preload="metadata"
+            preload="none"
+            data-lazy-video
             data-parallax="0.08"
             aria-label="Nerya animating her own evolution: ghost versions v1.1, v1.2, v1.3 ascending while adapt, outplay, optimize and evolve readouts pulse"
           >
@@ -321,12 +338,12 @@
       <section class="guard" id="guard" aria-labelledby="guard-title">
         <video
           class="guard-bg scene-video"
-          poster="assets/nerya-guard-kf.jpg"
-          autoplay
+          poster="assets/nerya-guard-kf.webp"
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="none"
+          data-lazy-video
           data-parallax="0.05"
           aria-label="Nerya raising a hexagonal policy / approval / limit shield that absorbs and dissolves incoming red risk runes"
         >
@@ -452,13 +469,16 @@
       <!-- ─────────── 04 · AUTHORS (editorial tile) ─────────── -->
       <section class="authors" id="authors" aria-labelledby="authors-title">
         <figure class="authors-tile">
-          <img
-            src="assets/nerya-author.png"
-            alt="Nerya at a holographic strategy editor, pointing at an entry / filter / risk flow while cradling a glowing brain-orb beside a live BTC/USDT order book"
-            loading="lazy"
-            decoding="async"
-            data-parallax="0.04"
-          />
+          <picture>
+            <source type="image/webp" srcset="assets/nerya-author.webp" />
+            <img
+              src="assets/nerya-author.png"
+              alt="Nerya at a holographic strategy editor, pointing at an entry / filter / risk flow while cradling a glowing brain-orb beside a live BTC/USDT order book"
+              loading="lazy"
+              decoding="async"
+              data-parallax="0.04"
+            />
+          </picture>
           <figcaption>strategy_author · trigger · candle · ledger</figcaption>
         </figure>
 
@@ -515,12 +535,12 @@
             <article class="ritual-panel ritual-team">
               <video
                 class="ritual-bg scene-video"
-                poster="assets/nerya-team-kf.jpg"
-                autoplay
+                poster="assets/nerya-team-kf.webp"
                 muted
                 loop
                 playsinline
-                preload="metadata"
+                preload="none"
+                data-lazy-video
                 aria-label="Four Nerya operators around a glowing strategy table: lead, analyst, risk critic and memory scribe working a market-read to execution flow"
               >
                 <source src="assets/nerya-team.mp4?v=hires" type="video/mp4" />
@@ -585,13 +605,16 @@
                   <span class="diff-add">+ patch_proposal.apply()</span>
                 </div>
               </div>
-              <img
-                class="ritual-image ritual-image-paper"
-                src="assets/nerya-rewriter.png"
-                alt="Nerya mascot writing into a glowing brain-notebook with floating diff patches"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source type="image/webp" srcset="assets/nerya-rewriter.webp" />
+                <img
+                  class="ritual-image ritual-image-paper"
+                  src="assets/nerya-rewriter.png"
+                  alt="Nerya mascot writing into a glowing brain-notebook with floating diff patches"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </article>
           </div>
         </div>
@@ -772,12 +795,12 @@
         <div class="launch-stage">
           <video
             class="launch-video"
-            poster="assets/nerya-launch-kf.png"
-            autoplay
+            poster="assets/nerya-launch-kf.webp"
             muted
             loop
             playsinline
-            preload="metadata"
+            preload="none"
+            data-lazy-video
             data-parallax-pointer="0.024"
             aria-label="Nerya leaning on a glowing five-point star, throwing a cheerful double thumbs up with a wink amid drifting sparkles and confetti"
           >
@@ -858,7 +881,7 @@
 
     <footer class="site-foot">
       <div class="foot-left">
-        <img class="brand-mark small" src="assets/nerya-logo.png" alt="" aria-hidden="true" />
+        <img class="brand-mark small" src="assets/nerya-logo.webp" alt="" aria-hidden="true" />
         <span class="foot-word">NERYA</span>
         <span class="foot-meta">evolutionary brain · v0.1.0</span>
       </div>
@@ -874,7 +897,7 @@
       <span data-scroll-meter></span>
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script type="module" src="anime-fx.js"></script>
   </body>
 </html>

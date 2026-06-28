@@ -412,6 +412,49 @@ function setupPulse() {
 }
 
 // ───────────────────────────────────────────────────────────────────
+// Lazy video — below-the-fold <video data-lazy-video> start fetching
+// and playing only when they scroll near the viewport. This stops 13MB
+// of mp4 from competing with the hero on first paint.
+// ───────────────────────────────────────────────────────────────────
+
+function setupLazyVideo() {
+  const videos = document.querySelectorAll("[data-lazy-video]");
+  if (!videos.length) return;
+
+  // prefers-reduced-motion users get the poster only — no autoplay.
+  if (prefersReducedMotion) return;
+
+  const start = (video) => {
+    // preload="none" + no autoplay means the source was never fetched.
+    // Force a load, then play.
+    video.preload = "auto";
+    video.load();
+    const play = () => video.play().catch(() => {});
+    if (video.readyState >= 2) play();
+    else video.addEventListener("loadeddata", play, { once: true });
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    videos.forEach(start);
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        start(entry.target);
+        io.unobserve(entry.target);
+      }
+    },
+    // begin loading slightly before the video is on screen
+    { rootMargin: "300px 0px", threshold: 0.01 }
+  );
+
+  videos.forEach((v) => io.observe(v));
+}
+
+// ───────────────────────────────────────────────────────────────────
 // Init
 // ───────────────────────────────────────────────────────────────────
 
@@ -423,11 +466,19 @@ function init() {
   setupSpotlight();
   setupParallax();
   setupPulse();
+  setupLazyVideo();
   updateScroll();
   bootLoader();
   // The kinetic layer (reveals, hero title, magnetic buttons, counters,
   // section choreography) is owned by anime.js in anime-fx.js.
-  render(performance.now());
+  // Defer the heavy render loop until the browser is idle so the hero,
+  // fonts, and LCP image get bandwidth first.
+  const startRender = () => render(performance.now());
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(startRender, { timeout: 1500 });
+  } else {
+    window.setTimeout(startRender, 200);
+  }
 }
 
 window.addEventListener("resize", () => {
