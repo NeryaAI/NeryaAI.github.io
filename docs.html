@@ -3,16 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nerya · Operator manual</title>
+    <!-- i18n: resolve language before first paint (localStorage > navigator) -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("nerya-lang");
+          var l =
+            s === "zh" || s === "en"
+              ? s
+              : ((navigator.language || "en") + "").toLowerCase().indexOf("zh") === 0
+              ? "zh"
+              : "en";
+          var d = document.documentElement;
+          d.lang = l;
+          d.classList.add("lang-" + l);
+          window.__NERYA_LANG__ = l;
+        } catch (e) {}
+      })();
+    </script>
+    <script defer src="i18n.zh.js"></script>
+    <script defer src="i18n.js"></script>
+    <title data-i18n="d.meta.title">Nerya · Operator manual</title>
     <meta
       name="description"
+      data-i18n-attr="content:d.meta.desc"
       content="The Nerya operator manual: install, architecture, agent team, self-evolution, memory, skills, trading kernel, connectors, triggers, gateway, SDKs, and safety."
     />
     <meta name="theme-color" content="#0a081a" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nerya · Operator manual" />
+    <meta property="og:title" data-i18n-attr="content:d.meta.title" content="Nerya · Operator manual" />
     <meta
       property="og:description"
+      data-i18n-attr="content:d.meta.ogDesc"
       content="Run a self-evolving trading agent on your laptop. The full operator manual: live under a Risk Gate and Approval Gate."
     />
     <meta property="og:image" content="assets/nerya-star.png" />
@@ -65,16 +87,28 @@
         <span></span><span></span><span></span>
       </button>
 
-      <label class="doc-search" aria-label="Filter documentation">
+      <label class="doc-search" aria-label="Filter documentation" data-i18n-attr="aria-label:d.search.aria">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
           <path fill="none" stroke="currentColor" stroke-width="2" d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4.2-4.2" />
         </svg>
-        <input type="search" placeholder="Filter the manual…" data-filter autocomplete="off" />
+        <input type="search" placeholder="Filter the manual…" data-filter autocomplete="off" data-i18n-attr="placeholder:d.search.ph" />
         <kbd>/</kbd>
       </label>
 
       <nav class="topbar-links" aria-label="Site">
-        <a href="index.html">Home</a>
+        <a href="index.html" data-i18n="dz.home">Home</a>
+        <div class="lang-switch" data-lang-switch>
+          <button class="lang-toggle" type="button" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language / 语言">
+            <svg class="lang-globe" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.6 2.4 2.6 15.6 0 18m0-18c-2.6 2.4-2.6 15.6 0 18M3.5 9h17M3.5 15h17" />
+            </svg>
+            <span data-lang-current>EN</span>
+          </button>
+          <ul class="lang-menu" data-lang-menu role="listbox">
+            <li><button type="button" data-lang-set="en" role="option">English</button></li>
+            <li><button type="button" data-lang-set="zh" role="option">中文</button></li>
+          </ul>
+        </div>
         <a
           class="topbar-cta"
           href="https://github.com/NeryaAI/Nerya"
@@ -96,39 +130,39 @@
       <!-- ─────────── SIDEBAR ─────────── -->
       <aside class="docs-sidebar" data-sidebar aria-label="Documentation navigation">
         <div class="page-switch" role="tablist" aria-label="Documentation areas">
-          <a class="is-current" href="docs.html">Manual</a>
+          <a class="is-current" href="docs.html" data-i18n="dz.sw.manual">Manual</a>
           <a href="skills.html">Skills</a>
-          <a href="recipes.html">Recipes</a>
+          <a href="recipes.html" data-i18n="dz.sw.recipes">Recipes</a>
         </div>
         <nav class="side-nav">
-          <p class="side-group">Get started</p>
-          <a href="#overview" data-spy>Overview</a>
-          <a href="#pillars" data-spy>The six pillars</a>
-          <a href="#quickstart" data-spy>Quick start</a>
-          <a href="#architecture" data-spy>Architecture</a>
+          <p class="side-group" data-i18n="dz.sg.start">Get started</p>
+          <a href="#overview" data-spy data-i18n="d.nav.overview">Overview</a>
+          <a href="#pillars" data-spy data-i18n="d.nav.pillars">The six pillars</a>
+          <a href="#quickstart" data-spy data-i18n="d.nav.quickstart">Quick start</a>
+          <a href="#architecture" data-spy data-i18n="d.nav.architecture">Architecture</a>
 
-          <p class="side-group">Core concepts</p>
-          <a href="#agent-team" data-spy>Agent Team</a>
-          <a href="#self-evolution" data-spy>Self-evolution</a>
-          <a href="#memory" data-spy>Memory</a>
+          <p class="side-group" data-i18n="dz.sg.core">Core concepts</p>
+          <a href="#agent-team" data-spy data-i18n="d.nav.team">Agent Team</a>
+          <a href="#self-evolution" data-spy data-i18n="d.nav.evolution">Self-evolution</a>
+          <a href="#memory" data-spy data-i18n="d.nav.memory">Memory</a>
           <a href="#skills" data-spy>Skills</a>
 
-          <p class="side-group">Trading</p>
-          <a href="#trading" data-spy>Trading kernel</a>
-          <a href="#connectors" data-spy>Connectors</a>
-          <a href="#triggers" data-spy>Triggers</a>
+          <p class="side-group" data-i18n="dz.sg.trading">Trading</p>
+          <a href="#trading" data-spy data-i18n="d.nav.tradingKernel">Trading kernel</a>
+          <a href="#connectors" data-spy data-i18n="d.nav.connectors">Connectors</a>
+          <a href="#triggers" data-spy data-i18n="d.nav.triggers">Triggers</a>
 
-          <p class="side-group">Integrate</p>
-          <a href="#gateway" data-spy>Gateway</a>
+          <p class="side-group" data-i18n="dz.sg.integrate">Integrate</p>
+          <a href="#gateway" data-spy data-i18n="d.nav.gateway">Gateway</a>
           <a href="#sdk" data-spy>SDKs</a>
 
-          <p class="side-group">Operate</p>
-          <a href="#security" data-spy>Security</a>
-          <a href="#cli" data-spy>CLI reference</a>
-          <a href="#modules" data-spy>Module map</a>
-          <a href="#status" data-spy>Status &amp; license</a>
+          <p class="side-group" data-i18n="dz.sg.operate">Operate</p>
+          <a href="#security" data-spy data-i18n="d.nav.security">Security</a>
+          <a href="#cli" data-spy data-i18n="d.nav.cli">CLI reference</a>
+          <a href="#modules" data-spy data-i18n="d.nav.modules">Module map</a>
+          <a href="#status" data-spy data-i18n="d.nav.status">Status &amp; license</a>
         </nav>
-        <div class="side-foot">
+        <div class="side-foot" data-i18n-html="d.sidefoot">
           <span class="dot live"></span> live · risk-gated · v0.1.0
         </div>
       </aside>
@@ -138,9 +172,9 @@
       <main class="docs-main">
         <!-- HERO -->
         <header class="doc-hero">
-          <p class="eyebrow" data-fx>Operator manual · self-evolving runtime</p>
-          <h1 data-hero-title>Run an agent that<br /><em>rewrites itself</em>.</h1>
-          <p class="hero-lede" data-fx>
+          <p class="eyebrow" data-fx data-i18n="d.hero.eyebrow">Operator manual · self-evolving runtime</p>
+          <h1 data-hero-title data-i18n-html="d.hero.title">Run an agent that<br /><em>rewrites itself</em>.</h1>
+          <p class="hero-lede" data-fx data-i18n="d.hero.lede">
             Nerya ships its own agent kernel, LLM gateway, sub-agents, typed
             memory, triggers, an Agent Team orchestrator, a trading kernel, and an
             evolution pipeline, with no external framework attached at runtime.
@@ -148,35 +182,35 @@
             evolution diff.
           </p>
           <div class="hero-actions" data-fx>
-            <a class="btn btn-primary" href="#quickstart">Install in one line</a>
-            <a class="btn btn-ghost" href="https://github.com/NeryaAI/Nerya" target="_blank" rel="noopener">Read the source</a>
+            <a class="btn btn-primary" href="#quickstart" data-i18n="d.hero.install">Install in one line</a>
+            <a class="btn btn-ghost" href="https://github.com/NeryaAI/Nerya" target="_blank" rel="noopener" data-i18n="d.hero.source">Read the source</a>
           </div>
 
           <div class="stat-strip" data-fx>
-            <div class="stat"><strong data-count-to="25">0</strong><span>built-in skills</span></div>
-            <div class="stat"><strong data-count-to="100" data-suffix="+">0</strong><span>venues via CCXT</span></div>
-            <div class="stat"><strong data-count-to="500" data-suffix="+">0</strong><span>tests, no network</span></div>
-            <div class="stat"><strong data-count-to="1">0</strong><span>local port · 18317</span></div>
+            <div class="stat"><strong data-count-to="25">0</strong><span data-i18n="d.hero.s1">built-in skills</span></div>
+            <div class="stat"><strong data-count-to="100" data-suffix="+">0</strong><span data-i18n="d.hero.s2">venues via CCXT</span></div>
+            <div class="stat"><strong data-count-to="500" data-suffix="+">0</strong><span data-i18n="d.hero.s3">tests, no network</span></div>
+            <div class="stat"><strong data-count-to="1">0</strong><span data-i18n="d.hero.s4">local port · 18317</span></div>
           </div>
         </header>
 
         <!-- OVERVIEW -->
         <section class="doc-section" id="overview">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">01 · README front door</p>
-            <h2>No strategy? Ask the agent for one.</h2>
+            <p class="eyebrow" data-i18n="d.ov.eyebrow">01 · README front door</p>
+            <h2 data-i18n="d.ov.h2">No strategy? Ask the agent for one.</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n="d.ov.lead">
             Nerya is a self-evolving AI trading team that runs on your laptop.
-            Skill-first, trading-native, self-evolving. One sentence is enough to
-            get a working strategy package.
+            Skill-first and trading-native. One sentence is enough to get a
+            working strategy package.
           </p>
 
           <figure class="quote" data-reveal>
-            <p>“I have <em>$500</em> in a live account. Make me money on BTC. Don't blow it up.”</p>
+            <p data-i18n-html="d.ov.quote">“I have <em>$500</em> in a live account. Make me money on BTC. Don't blow it up.”</p>
           </figure>
 
-          <p data-reveal>
+          <p data-reveal data-i18n-html="d.ov.p">
             The <code>strategy_author</code> skill turns that prompt into a working
             strategy package in a single chat turn: trigger, sub-agent prompt
             library, candle source, account binding, risk limits, session ledger.
@@ -186,8 +220,8 @@
           </p>
 
           <div class="callout callout-safe" data-reveal>
-            <span class="callout-tag">Safe by default</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.ov.safeTag">Safe by default</span>
+            <p data-i18n="d.ov.safeP">
               Live trading stays off until you sign for it. Mistakes go into
               memory, not into your wallet.
             </p>
@@ -197,57 +231,57 @@
         <!-- PILLARS -->
         <section class="doc-section" id="pillars">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">02 · what carries the product</p>
-            <h2>The six pillars</h2>
+            <p class="eyebrow" data-i18n="d.pil.eyebrow">02 · what carries the product</p>
+            <h2 data-i18n="d.pil.h2">The six pillars</h2>
           </div>
 
           <div class="card-grid" data-grid>
             <article class="info-card" data-card>
               <span class="card-idx">01</span>
-              <h3>Agent Team</h3>
-              <p>A durable, role-typed team with a leader, analysts, a risk critic, a shared blackboard, a task board, a mailbox, and gates.</p>
+              <h3 data-i18n="d.pil.c1.h3">Agent Team</h3>
+              <p data-i18n="d.pil.c1.p">A durable, role-typed team with a leader, analysts, a risk critic, a shared blackboard, a task board, a mailbox, and gates.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">02</span>
-              <h3>Self-evolution</h3>
-              <p>Reflection writes typed proposals between sessions. The operator signs. The runtime applies with a rollback snapshot.</p>
+              <h3 data-i18n="d.pil.c2.h3">Self-evolution</h3>
+              <p data-i18n="d.pil.c2.p">Reflection writes typed proposals between sessions. The operator signs. The runtime applies with a rollback snapshot.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">03</span>
-              <h3>Typed memory</h3>
-              <p>Five typed markdown surfaces: global, mistakes, market regimes, skill learnings, and per-strategy. Read it, diff it, version it.</p>
+              <h3 data-i18n="d.pil.c3.h3">Typed memory</h3>
+              <p data-i18n="d.pil.c3.p">Five typed markdown surfaces: global, mistakes, market regimes, skill learnings, and per-strategy. Read it, diff it, version it.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">04</span>
-              <h3><code>SKILL.md</code> first</h3>
-              <p>Every capability is a directory with <code>SKILL.md</code> as the only definition surface. 25 ship today.</p>
+              <h3 data-i18n-html="d.pil.c4.h3"><code>SKILL.md</code> first</h3>
+              <p data-i18n-html="d.pil.c4.p">Every capability is a directory with <code>SKILL.md</code> as the only definition surface. 25 ship today.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">05</span>
-              <h3>Trading kernel</h3>
-              <p>Trading primitives instead of raw tool calls: Risk Gate, Approval Gate, live/paper separation, virtual ledger, reconciliation.</p>
+              <h3 data-i18n="d.pil.c5.h3">Trading kernel</h3>
+              <p data-i18n="d.pil.c5.p">Trading primitives instead of raw tool calls: Risk Gate, Approval Gate, live/paper separation, virtual ledger, reconciliation.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">06</span>
-              <h3>SDK + gateway</h3>
-              <p>Thin Python &amp; TypeScript clients over the local daemon, plus a universal messaging gateway across eight platforms.</p>
+              <h3 data-i18n="d.pil.c6.h3">SDK + gateway</h3>
+              <p data-i18n="d.pil.c6.p">Thin Python &amp; TypeScript clients over the local daemon, plus a universal messaging gateway across eight platforms.</p>
             </article>
           </div>
 
-          <h3 class="sub" data-reveal>Why Nerya is different</h3>
+          <h3 class="sub" data-reveal data-i18n="d.pil.whyH3">Why Nerya is different</h3>
           <div class="table-wrap" data-reveal>
             <table class="cmp">
               <thead>
-                <tr><th>Concern</th><th>Most agent frameworks</th><th>Nerya</th></tr>
+                <tr><th data-i18n="d.pil.th1">Concern</th><th data-i18n="d.pil.th2">Most agent frameworks</th><th data-i18n="d.pil.th3">Nerya</th></tr>
               </thead>
               <tbody>
-                <tr><td>Trading primitives</td><td>Tool calls against exchange SDKs</td><td>Risk Gate, Approval Gate, live/paper separation, virtual ledger, reconciliation</td></tr>
-                <tr><td>Memory</td><td>A vector blob, maybe</td><td>5 typed markdown surfaces</td></tr>
-                <tr><td>Self-improvement</td><td>You write the prompts</td><td>Reflection writes proposals; operator signs; runtime applies with rollback</td></tr>
-                <tr><td>Multi-agent</td><td>Loose function calls</td><td>Durable team with leader, analysts, risk critic, blackboard, gates</td></tr>
-                <tr><td>Connectors</td><td>One SDK per venue</td><td>6 native venues + 100+ via CCXT; ask the agent to author a missing one</td></tr>
-                <tr><td>Security</td><td>“Don't log keys”</td><td>Vault-only secrets, <code>vault://</code> refs, prompt firewall, signer policy, sandbox</td></tr>
-                <tr><td>Ops</td><td>Write your own supervisor</td><td>One-liner installer + systemd / launchd / NSSM service</td></tr>
+                <tr><td data-i18n="d.pil.r1a">Trading primitives</td><td data-i18n="d.pil.r1b">Tool calls against exchange SDKs</td><td data-i18n="d.pil.r1c">Risk Gate, Approval Gate, live/paper separation, virtual ledger, reconciliation</td></tr>
+                <tr><td data-i18n="d.pil.r2a">Memory</td><td data-i18n="d.pil.r2b">A vector blob, maybe</td><td data-i18n="d.pil.r2c">5 typed markdown surfaces</td></tr>
+                <tr><td data-i18n="d.pil.r3a">Self-improvement</td><td data-i18n="d.pil.r3b">You write the prompts</td><td data-i18n="d.pil.r3c">Reflection writes proposals; operator signs; runtime applies with rollback</td></tr>
+                <tr><td data-i18n="d.pil.r4a">Multi-agent</td><td data-i18n="d.pil.r4b">Loose function calls</td><td data-i18n="d.pil.r4c">Durable team with leader, analysts, risk critic, blackboard, gates</td></tr>
+                <tr><td data-i18n="d.pil.r5a">Connectors</td><td data-i18n="d.pil.r5b">One SDK per venue</td><td data-i18n="d.pil.r5c">6 native venues + 100+ via CCXT; ask the agent to author a missing one</td></tr>
+                <tr><td data-i18n="d.pil.r6a">Security</td><td data-i18n="d.pil.r6b">“Don't log keys”</td><td data-i18n-html="d.pil.r6c">Vault-only secrets, <code>vault://</code> refs, prompt firewall, signer policy, sandbox</td></tr>
+                <tr><td data-i18n="d.pil.r7a">Ops</td><td data-i18n="d.pil.r7b">Write your own supervisor</td><td data-i18n="d.pil.r7c">One-liner installer + systemd / launchd / NSSM service</td></tr>
               </tbody>
             </table>
           </div>
@@ -256,62 +290,62 @@
         <!-- QUICK START -->
         <section class="doc-section" id="quickstart">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">03 · zero to a first fill</p>
-            <h2>Quick start</h2>
+            <p class="eyebrow" data-i18n="d.qs.eyebrow">03 · zero to a first fill</p>
+            <h2 data-i18n="d.qs.h2">Quick start</h2>
           </div>
 
-          <h3 class="sub" data-reveal>One-liner install</h3>
+          <h3 class="sub" data-reveal data-i18n="d.qs.install">One-liner install</h3>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code># macOS / Linux
+            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code># <span data-i18n="d.qs.cmtMac">macOS / Linux</span>
 curl -LsSf https://raw.githubusercontent.com/NeryaAI/Nerya/main/install/install.sh | sh
 
-# Windows PowerShell
+# <span data-i18n="d.qs.cmtWin">Windows PowerShell</span>
 iwr https://raw.githubusercontent.com/NeryaAI/Nerya/main/install/install.ps1 -UseBasicParsing | iex</code></pre>
           </div>
 
-          <p data-reveal>The installer is idempotent. It:</p>
+          <p data-reveal data-i18n="d.qs.idem">The installer is idempotent. It:</p>
           <ol class="step-list" data-grid>
-            <li data-card>installs <a href="https://github.com/astral-sh/uv" target="_blank" rel="noopener"><code>uv</code></a> if missing,</li>
-            <li data-card>clones Nerya into <code>~/.nerya/src</code> and runs <code>uv sync --extra trading</code>,</li>
-            <li data-card>drops a <code>nerya</code> shim into <code>~/.local/bin</code>,</li>
-            <li data-card>initialises a workspace at <code>~/nerya-ws</code>,</li>
-            <li data-card>registers a host service so the local API boots with the machine on port <code>18317</code>.</li>
+            <li data-card data-i18n-html="d.qs.s1">installs <a href="https://github.com/astral-sh/uv" target="_blank" rel="noopener"><code>uv</code></a> if missing,</li>
+            <li data-card data-i18n-html="d.qs.s2">clones Nerya into <code>~/.nerya/src</code> and runs <code>uv sync --extra trading</code>,</li>
+            <li data-card data-i18n-html="d.qs.s3">drops a <code>nerya</code> shim into <code>~/.local/bin</code>,</li>
+            <li data-card data-i18n-html="d.qs.s4">initialises a workspace at <code>~/nerya-ws</code>,</li>
+            <li data-card data-i18n-html="d.qs.s5">registers a host service so the local API boots with the machine on port <code>18317</code>.</li>
           </ol>
 
-          <h3 class="sub" data-reveal>Beginner mode</h3>
+          <h3 class="sub" data-reveal data-i18n="d.qs.beginner">Beginner mode</h3>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code>nerya setup --tui      # rich text wizard: password, LLM key, gateway, memory, account
-nerya setup --web      # same wizard in the browser at http://127.0.0.1:18317/setup</code></pre>
+            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code>nerya setup --tui      # <span data-i18n="d.qs.cmtTui">rich text wizard: password, LLM key, gateway, memory, account</span>
+nerya setup --web      # <span data-i18n="d.qs.cmtWeb">same wizard in the browser at http://127.0.0.1:18317/setup</span></code></pre>
           </div>
-          <p data-reveal>
+          <p data-reveal data-i18n="d.qs.defaults">
             Every domain except the LLM model carries a safe default. Hit Enter
             through every prompt and you get a working install. Then open the
             dashboard and chat.
           </p>
 
           <div class="chat" data-reveal>
-            <p class="chat-you"><span>you</span>I have $500 in a live account. Make me money on BTC. Don't blow it up.</p>
-            <p class="chat-nerya"><span>nerya</span>Drafts a <code>demo_btc_5m_scalper</code> package, wires up <code>binance:BTCUSDT</code> candles, binds <code>paper_main</code>, sets a 0.4% max-drawdown guard, schedules the trigger every 5 minutes, and asks you to approve.</p>
+            <p class="chat-you" data-i18n-html="d.qs.chatYou"><span>you</span>I have $500 in a live account. Make me money on BTC. Don't blow it up.</p>
+            <p class="chat-nerya" data-i18n-html="d.qs.chatNerya"><span>nerya</span>Drafts a <code>demo_btc_5m_scalper</code> package, wires up <code>binance:BTCUSDT</code> candles, binds <code>paper_main</code>, sets a 0.4% max-drawdown guard, schedules the trigger every 5 minutes, and asks you to approve.</p>
           </div>
 
-          <h3 class="sub" data-reveal>Manual quick start (no installer)</h3>
+          <h3 class="sub" data-reveal data-i18n="d.qs.manual">Manual quick start (no installer)</h3>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code># 1. create a workspace
+            <div class="code-bar"><span class="code-lang">bash</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code># 1. <span data-i18n="d.qs.m1">create a workspace</span>
 python -m nerya.cli.app init --workspace ~/.nerya
 
-# 2. inspect installed skills
+# 2. <span data-i18n="d.qs.m2">inspect installed skills</span>
 python -m nerya.cli.app skill list
 
-# 3. run the vertical slice demo (simulation, no live keys)
+# 3. <span data-i18n="d.qs.m3">run the vertical slice demo (simulation, no live keys)</span>
 python sdk/python/examples/price_tracker.py --workspace ~/.nerya
 
-# 4. review the resulting strategy session
+# 4. <span data-i18n="d.qs.m4">review the resulting strategy session</span>
 python -m nerya.cli.app strategy history btc_momentum --workspace ~/.nerya
 
-# 5. reflect and generate evolution proposals
+# 5. <span data-i18n="d.qs.m5">reflect and generate evolution proposals</span>
 python -m nerya.cli.app reflect    --workspace ~/.nerya
 python -m nerya.cli.app evolve     --workspace ~/.nerya
 python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
@@ -321,10 +355,10 @@ python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
         <!-- ARCHITECTURE -->
         <section class="doc-section" id="architecture">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">04 · ground truth</p>
-            <h2>Architecture</h2>
+            <p class="eyebrow" data-i18n="d.arch.eyebrow">04 · ground truth</p>
+            <h2 data-i18n="d.arch.h2">Architecture</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n-html="d.arch.lead">
             Code lives in the repo. Runtime state (strategies, journals, sessions,
             approvals, memory, vault, proposals) lives in your workspace
             directory. Tarball it, grep it, or <code>rm -rf</code> it.
@@ -365,25 +399,25 @@ python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
         <!-- AGENT TEAM -->
         <section class="doc-section" id="agent-team">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">05 · a durable standing team</p>
-            <h2>Agent Team</h2>
+            <p class="eyebrow" data-i18n="d.team.eyebrow">05 · a durable standing team</p>
+            <h2 data-i18n="d.team.h2">Agent Team</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n-html="d.team.lead">
             A <code>TeamRun</code> is a durable team config that persists across
             turns. It carries the whole standing team and the rules that keep it
             honest.
           </p>
           <ul class="check-list" data-grid>
-            <li data-card>Typed members: strategy lead, market / on-chain / news / technical analysts, risk critic, execution planner, portfolio manager.</li>
-            <li data-card>Per-role skill allowlist + denylist. <code>execution_planner</code> cannot touch <code>trading</code>.</li>
-            <li data-card>Task board with dependencies, locks, priorities, owners.</li>
-            <li data-card>Mailbox for inter-agent messaging, plus a shared blackboard for evidence.</li>
-            <li data-card>Leader synthesis: the lead waits for required reports, resolves conflicts, emits a decision memo.</li>
-            <li data-card>Gates: plan-artefact, all-tasks-complete, verification, optional human approval.</li>
+            <li data-card data-i18n="d.team.l1">Typed members: strategy lead, market / on-chain / news / technical analysts, risk critic, execution planner, portfolio manager.</li>
+            <li data-card data-i18n-html="d.team.l2">Per-role skill allowlist + denylist. <code>execution_planner</code> cannot touch <code>trading</code>.</li>
+            <li data-card data-i18n="d.team.l3">Task board with dependencies, locks, priorities, owners.</li>
+            <li data-card data-i18n="d.team.l4">Mailbox for inter-agent messaging, plus a shared blackboard for evidence.</li>
+            <li data-card data-i18n="d.team.l5">Leader synthesis: the lead waits for required reports, resolves conflicts, emits a decision memo.</li>
+            <li data-card data-i18n="d.team.l6">Gates: plan-artefact, all-tasks-complete, verification, optional human approval.</li>
           </ul>
           <div class="callout" data-reveal>
-            <span class="callout-tag">Templates</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.team.tplTag">Templates</span>
+            <p data-i18n-html="d.team.tplP">
               Three ship today: <code>market_analysis_team</code>,
               <code>strategy_design_team</code>, and <code>trade_decision_committee</code>.
               Drop new ones under <code>nerya/teams/templates</code>.
@@ -394,27 +428,27 @@ python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
         <!-- SELF-EVOLUTION -->
         <section class="doc-section" id="self-evolution">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">06 · the loop closes</p>
-            <h2>Self-evolution</h2>
+            <p class="eyebrow" data-i18n="d.evo.eyebrow">06 · the loop closes</p>
+            <h2 data-i18n="d.evo.h2">Self-evolution</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n-html="d.evo.lead">
             After each closed session, <code>reflection.py</code> writes memory
             entries. <code>nerya/evolution/</code> reads those entries and produces
             typed proposals.
           </p>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">proposal types</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code>learning_update         markdown patch to memory
-prompt_patch            unified diff of an agent / subagent prompt
-script_proposal         new script + manifest in workspace/scripts/pending/
-skill_proposal          new skill directory in workspace/skills/pending/
-trigger_route_patch     unified diff to workspace/triggers/routes.yml
-strategy_config_patch   unified diff to strategies/&lt;id&gt;/strategy.yml
-risk_limit_suggestion   advisory only; never overwrites limits.yml</code></pre>
+            <div class="code-bar"><span class="code-lang">proposal types</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code>learning_update         <span data-i18n="d.evo.pt1">markdown patch to memory</span>
+prompt_patch            <span data-i18n="d.evo.pt2">unified diff of an agent / subagent prompt</span>
+script_proposal         <span data-i18n="d.evo.pt3">new script + manifest in workspace/scripts/pending/</span>
+skill_proposal          <span data-i18n="d.evo.pt4">new skill directory in workspace/skills/pending/</span>
+trigger_route_patch     <span data-i18n="d.evo.pt5">unified diff to workspace/triggers/routes.yml</span>
+strategy_config_patch   <span data-i18n="d.evo.pt6">unified diff to strategies/&lt;id&gt;/strategy.yml</span>
+risk_limit_suggestion   <span data-i18n="d.evo.pt7">advisory only; never overwrites limits.yml</span></code></pre>
           </div>
           <div class="callout callout-warn" data-reveal>
-            <span class="callout-tag">Code-enforced immutables</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.evo.immTag">Code-enforced immutables</span>
+            <p data-i18n-html="d.evo.immP">
               No agent-authored patch touches <code>accounts.yml</code>,
               <code>limits.yml</code>, the vault, signer policy, or
               <code>live_trading_enabled</code>. <code>promotion.py</code> rejects
@@ -427,19 +461,19 @@ risk_limit_suggestion   advisory only; never overwrites limits.yml</code></pre>
         <!-- MEMORY -->
         <section class="doc-section" id="memory">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">07 · plain markdown, no black box</p>
-            <h2>Memory</h2>
+            <p class="eyebrow" data-i18n="d.mem.eyebrow">07 · plain markdown, no black box</p>
+            <h2 data-i18n="d.mem.h2">Memory</h2>
           </div>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">workspace/memory/</span><button class="copy" type="button" data-copy>copy</button></div>
+            <div class="code-bar"><span class="code-lang">workspace/memory/</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
 <pre><code>workspace/memory/
-├── global.md                    runtime-wide
-├── mistakes.md                  reflection writes, agent reads
-├── market_regimes.md            weekly review + news skill
-├── skill_learnings.md           per-skill insights
-└── strategy_learnings/&lt;id&gt;.md    per-strategy</code></pre>
+├── global.md                    <span data-i18n="d.mem.t1">runtime-wide</span>
+├── mistakes.md                  <span data-i18n="d.mem.t2">reflection writes, agent reads</span>
+├── market_regimes.md            <span data-i18n="d.mem.t3">weekly review + news skill</span>
+├── skill_learnings.md           <span data-i18n="d.mem.t4">per-skill insights</span>
+└── strategy_learnings/&lt;id&gt;.md    <span data-i18n="d.mem.t5">per-strategy</span></code></pre>
           </div>
-          <p data-reveal>
+          <p data-reveal data-i18n-html="d.mem.p">
             Plain markdown. You can read it, diff it, version-control it. Nothing
             reaches a prompt without passing the firewall first. The built-in
             notebook is always on; optional plug-ins add <code>memsearch</code>
@@ -450,21 +484,21 @@ risk_limit_suggestion   advisory only; never overwrites limits.yml</code></pre>
         <!-- SKILLS -->
         <section class="doc-section" id="skills">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">08 · SKILL.md is the only definition</p>
+            <p class="eyebrow" data-i18n="d.sk.eyebrow">08 · SKILL.md is the only definition</p>
             <h2>Skills</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n-html="d.sk.lead">
             Every capability lives under
             <code>nerya/skills/builtin/&lt;name&gt;_skill/</code>.
           </p>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">skill layout</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code>SKILL.md       when to use, workflow, examples
-scripts/       executable helpers, JSON in, JSON out
-references/    lazy-loaded methodology and research playbooks
-templates/     code and config templates</code></pre>
+            <div class="code-bar"><span class="code-lang">skill layout</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code>SKILL.md       <span data-i18n="d.sk.t1">when to use, workflow, examples</span>
+scripts/       <span data-i18n="d.sk.t2">executable helpers, JSON in, JSON out</span>
+references/    <span data-i18n="d.sk.t3">lazy-loaded methodology and research playbooks</span>
+templates/     <span data-i18n="d.sk.t4">code and config templates</span></code></pre>
           </div>
-          <p data-reveal>All 25 built-ins ship today:</p>
+          <p data-reveal data-i18n="d.sk.all25">All 25 built-ins ship today:</p>
           <div class="chip-cloud" data-grid>
             <span data-card>trading</span><span data-card>strategy_author</span><span data-card>backtest</span>
             <span data-card>triggers</span><span data-card>tasks</span><span data-card>markets</span>
@@ -476,7 +510,7 @@ templates/     code and config templates</code></pre>
             <span data-card>llm</span><span data-card>coding</span><span data-card>browser</span>
             <span data-card>notify</span>
           </div>
-          <p data-reveal>
+          <p data-reveal data-i18n-html="d.sk.see">
             See the <a href="skills.html">full skill reference</a>: all 25
             built-ins grouped by family, with when-to-use and flow for each.
           </p>
@@ -485,8 +519,8 @@ templates/     code and config templates</code></pre>
         <!-- TRADING -->
         <section class="doc-section" id="trading">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">09 · every order earns its fill</p>
-            <h2>Trading kernel</h2>
+            <p class="eyebrow" data-i18n="d.tr.eyebrow">09 · every order earns its fill</p>
+            <h2 data-i18n="d.tr.h2">Trading kernel</h2>
           </div>
           <div class="code code-wide" data-reveal>
             <div class="code-bar"><span class="code-lang">order path</span></div>
@@ -496,24 +530,24 @@ templates/     code and config templates</code></pre>
                           VirtualLedger · positions · PnL · reconciliation</code></pre>
           </div>
           <ul class="check-list" data-grid>
-            <li data-card>Risk Gate checks live status, limits, ledger, confidence, slippage, staleness, duplicates, conflicts. One failure stops the order.</li>
-            <li data-card>Approval Gate routes over-threshold intents to the operator queue.</li>
-            <li data-card>One JSONL session per run records trigger, context, decision, intent, risk verdict, execution, messages, outcome, review, and reflection.</li>
-            <li data-card>CCXT adapter for Binance, Bybit, OKX, Hyperliquid. On-chain: BSC (PancakeSwap v2), Solana (Jupiter), generic EVM via <code>eth_account</code>.</li>
+            <li data-card data-i18n="d.tr.l1">Risk Gate checks live status, limits, ledger, confidence, slippage, staleness, duplicates, conflicts. One failure stops the order.</li>
+            <li data-card data-i18n="d.tr.l2">Approval Gate routes over-threshold intents to the operator queue.</li>
+            <li data-card data-i18n="d.tr.l3">One JSONL session per run records trigger, context, decision, intent, risk verdict, execution, messages, outcome, review, and reflection.</li>
+            <li data-card data-i18n-html="d.tr.l4">CCXT adapter for Binance, Bybit, OKX, Hyperliquid. On-chain: BSC (PancakeSwap v2), Solana (Jupiter), generic EVM via <code>eth_account</code>.</li>
           </ul>
         </section>
 
         <!-- CONNECTORS -->
         <section class="doc-section" id="connectors">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">10 · author a missing venue</p>
-            <h2>Adding a new exchange</h2>
+            <p class="eyebrow" data-i18n="d.conn.eyebrow">10 · author a missing venue</p>
+            <h2 data-i18n="d.conn.h2">Adding a new exchange</h2>
           </div>
-          <p class="lead" data-reveal>You don't have to wait for a release. Ask the agent.</p>
+          <p class="lead" data-reveal data-i18n="d.conn.lead">You don't have to wait for a release. Ask the agent.</p>
           <div class="chat" data-reveal>
-            <p class="chat-you"><span>you</span>Add Bitget perpetual futures. Here are the API docs: https://bitgetlimited.github.io/apidoc/en/</p>
+            <p class="chat-you" data-i18n-html="d.conn.chat"><span>you</span>Add Bitget perpetual futures. Here are the API docs: https://bitgetlimited.github.io/apidoc/en/</p>
           </div>
-          <p data-reveal>
+          <p data-reveal data-i18n-html="d.conn.p">
             The <code>coding</code> skill checks the CCXT bridge first (100+ venues
             already wired). If your venue is one of them, the agent registers an
             alias and you're done. If not, the agent drops a new
@@ -528,40 +562,40 @@ templates/     code and config templates</code></pre>
         <!-- TRIGGERS -->
         <section class="doc-section" id="triggers">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">11 · what wakes the agent</p>
-            <h2>Triggers</h2>
+            <p class="eyebrow" data-i18n="d.trg.eyebrow">11 · what wakes the agent</p>
+            <h2 data-i18n="d.trg.h2">Triggers</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n-html="d.trg.lead">
             <code>workspace/triggers/routes.yml</code> maps a <code>kind</code> to a
             target: the main agent, a sub-agent, or a direct skill.
           </p>
           <div class="chip-cloud" data-grid>
-            <span data-card>cron</span><span data-card>webhook</span><span data-card>gateway inbound</span>
-            <span data-card>price breakout</span><span data-card>funding spike</span><span data-card>news keyword</span>
-            <span data-card>whale wallet</span><span data-card>session close</span><span data-card>manual operator</span>
+            <span data-card>cron</span><span data-card>webhook</span><span data-card data-i18n="d.trg.k1">gateway inbound</span>
+            <span data-card data-i18n="d.trg.k2">price breakout</span><span data-card data-i18n="d.trg.k3">funding spike</span><span data-card data-i18n="d.trg.k4">news keyword</span>
+            <span data-card data-i18n="d.trg.k5">whale wallet</span><span data-card data-i18n="d.trg.k6">session close</span><span data-card data-i18n="d.trg.k7">manual operator</span>
           </div>
-          <p data-reveal>Idempotency keys, dry-run, and dedupe are built in.</p>
+          <p data-reveal data-i18n="d.trg.idem">Idempotency keys, dry-run, and dedupe are built in.</p>
         </section>
 
         <!-- GATEWAY -->
         <section class="doc-section" id="gateway">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">12 · one contract per platform</p>
-            <h2>Gateway</h2>
+            <p class="eyebrow" data-i18n="d.gw.eyebrow">12 · one contract per platform</p>
+            <h2 data-i18n="d.gw.h2">Gateway</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n="d.gw.lead">
             Telegram, Discord, Slack, Feishu, WeCom, DingTalk, WhatsApp, and a
             generic webhook share one universal messaging surface.
           </p>
           <div class="code" data-code data-reveal>
-            <div class="code-bar"><span class="code-lang">http</span><button class="copy" type="button" data-copy>copy</button></div>
-<pre><code>GET  /gateway/platforms     # support matrix
-POST /gateway/inbound       # normalized inbound messages
-POST /gateway/send          # outbound via native or webhook channels</code></pre>
+            <div class="code-bar"><span class="code-lang">http</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
+<pre><code>GET  /gateway/platforms     # <span data-i18n="d.gw.c1">support matrix</span>
+POST /gateway/inbound       # <span data-i18n="d.gw.c2">normalized inbound messages</span>
+POST /gateway/send          # <span data-i18n="d.gw.c3">outbound via native or webhook channels</span></code></pre>
           </div>
           <div class="callout callout-safe" data-reveal>
-            <span class="callout-tag">Tokens never sit in config</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.gw.tokTag">Tokens never sit in config</span>
+            <p data-i18n-html="d.gw.tokP">
               Plaintext tokens get rewritten as <code>vault://</code> refs the
               moment you submit them. Trade notifications fan out through
               <code>messaging/pipeline.py</code> to every configured channel.
@@ -572,10 +606,10 @@ POST /gateway/send          # outbound via native or webhook channels</code></pr
         <!-- SDK -->
         <section class="doc-section" id="sdk">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">13 · the surface your scripts import</p>
+            <p class="eyebrow" data-i18n="d.sdk.eyebrow">13 · the surface your scripts import</p>
             <h2>SDKs</h2>
           </div>
-          <p class="lead" data-reveal>
+          <p class="lead" data-reveal data-i18n="d.sdk.lead">
             The SDKs never touch keys, exchanges, or RPCs. They are thin clients
             over the local daemon, which enforces every skill permission, risk
             gate, and approval gate.
@@ -583,7 +617,7 @@ POST /gateway/send          # outbound via native or webhook channels</code></pr
 
           <div class="code-cols">
             <div class="code" data-code data-reveal>
-              <div class="code-bar"><span class="code-lang">python</span><button class="copy" type="button" data-copy>copy</button></div>
+              <div class="code-bar"><span class="code-lang">python</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
 <pre><code>from nerya_sdk import connect
 
 client = connect()
@@ -597,7 +631,7 @@ client.triggers.emit(
             </div>
 
             <div class="code" data-code data-reveal>
-              <div class="code-bar"><span class="code-lang">typescript</span><button class="copy" type="button" data-copy>copy</button></div>
+              <div class="code-bar"><span class="code-lang">typescript</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>
 <pre><code>import { connect } from "@nerya/sdk";
 
 const nerya = connect({
@@ -620,16 +654,16 @@ await nerya.trading.submitIntent({
 
           <div class="table-wrap" data-reveal>
             <table class="cmp">
-              <thead><tr><th>Surface</th><th>Path</th><th>What it does</th></tr></thead>
+              <thead><tr><th data-i18n="d.sdk.th1">Surface</th><th data-i18n="d.sdk.th2">Path</th><th data-i18n="d.sdk.th3">What it does</th></tr></thead>
               <tbody>
-                <tr><td>Python</td><td><code>sdk/python/nerya_sdk/</code></td><td>Thin client: triggers, trading, LLM, strategy, memory.</td></tr>
-                <tr><td>TypeScript</td><td><code>@nerya/sdk</code></td><td>Same surface. Node, Bun, and Edge friendly.</td></tr>
-                <tr><td>MCP</td><td><code>nerya/mcp/</code></td><td>Exposes every skill as an MCP tool for Claude Desktop, Cursor, etc.</td></tr>
-                <tr><td>ACP</td><td><code>nerya/acp/</code></td><td>Agent-to-agent bridges for inter-swarm communication.</td></tr>
+                <tr><td>Python</td><td><code>sdk/python/nerya_sdk/</code></td><td data-i18n="d.sdk.r1">Thin client: triggers, trading, LLM, strategy, memory.</td></tr>
+                <tr><td>TypeScript</td><td><code>@nerya/sdk</code></td><td data-i18n="d.sdk.r2">Same surface. Node, Bun, and Edge friendly.</td></tr>
+                <tr><td>MCP</td><td><code>nerya/mcp/</code></td><td data-i18n="d.sdk.r3">Exposes every skill as an MCP tool for Claude Desktop, Cursor, etc.</td></tr>
+                <tr><td>ACP</td><td><code>nerya/acp/</code></td><td data-i18n="d.sdk.r4">Agent-to-agent bridges for inter-swarm communication.</td></tr>
               </tbody>
             </table>
           </div>
-          <p data-reveal>
+          <p data-reveal data-i18n-html="d.sdk.see">
             The <a href="recipes.html">recipes page</a> has runnable Python and
             TypeScript examples: price-breakout slices, tiered news watchers,
             funding and whale triggers, and more.
@@ -639,43 +673,43 @@ await nerya.trading.submitIntent({
         <!-- SECURITY -->
         <section class="doc-section" id="security">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">14 · the hot keys stay cold</p>
-            <h2>Security &amp; safety</h2>
+            <p class="eyebrow" data-i18n="d.sec.eyebrow">14 · the hot keys stay cold</p>
+            <h2 data-i18n="d.sec.h2">Security &amp; safety</h2>
           </div>
           <ul class="check-list" data-grid>
-            <li data-card>Go live the moment <code>runtime.live_trading_enabled: true</code> <em>and</em> the Approval Gate signs off — until then, orders fill in simulation.</li>
-            <li data-card>No raw secrets reach agent context, only <code>secret_ref</code> and redacted previews. <code>SecretVault</code> resolves <code>vault://</code> refs in-memory for one call, then discards them.</li>
-            <li data-card>No direct exchange calls from agent-authored code. Every external call goes through a registered skill, then a connector, then a signer.</li>
-            <li data-card>Scripts run in a sandbox: whitelisted imports, JSON I/O, manual approval before first run, no bypass of the Trading SDK or Risk Gate.</li>
-            <li data-card>Evolution can mutate prompts, scripts, skills, routes, and strategy configs, but never <code>limits.yml</code>, <code>live_trading_enabled</code>, signer policy, or secret policy.</li>
+            <li data-card data-i18n-html="d.sec.l1">Go live the moment <code>runtime.live_trading_enabled: true</code> <em>and</em> the Approval Gate signs off. Until then, orders fill in simulation.</li>
+            <li data-card data-i18n-html="d.sec.l2">No raw secrets reach agent context, only <code>secret_ref</code> and redacted previews. <code>SecretVault</code> resolves <code>vault://</code> refs in-memory for one call, then discards them.</li>
+            <li data-card data-i18n="d.sec.l3">No direct exchange calls from agent-authored code. Every external call goes through a registered skill, then a connector, then a signer.</li>
+            <li data-card data-i18n="d.sec.l4">Scripts run in a sandbox: whitelisted imports, JSON I/O, manual approval before first run, no bypass of the Trading SDK or Risk Gate.</li>
+            <li data-card data-i18n-html="d.sec.l5">Evolution can mutate prompts, scripts, skills, routes, and strategy configs, but never <code>limits.yml</code>, <code>live_trading_enabled</code>, signer policy, or secret policy.</li>
           </ul>
         </section>
 
         <!-- CLI -->
         <section class="doc-section" id="cli">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">15 · drive it from the terminal</p>
-            <h2>CLI reference</h2>
+            <p class="eyebrow" data-i18n="d.cli.eyebrow">15 · drive it from the terminal</p>
+            <h2 data-i18n="d.cli.h2">CLI reference</h2>
           </div>
           <div class="table-wrap" data-reveal>
             <table class="cmp">
-              <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+              <thead><tr><th data-i18n="d.cli.th1">Command</th><th data-i18n="d.cli.th2">What it does</th></tr></thead>
               <tbody>
-                <tr><td><code>nerya setup --tui</code></td><td>Rich text setup wizard (password, LLM, gateway, memory, account).</td></tr>
-                <tr><td><code>nerya setup --web</code></td><td>Same wizard in the browser at <code>:18317/setup</code>.</td></tr>
-                <tr><td><code>nerya serve --port 18317</code></td><td>Boot the local daemon (host service, dashboard proxy, SDK target).</td></tr>
-                <tr><td><code>nerya … init --workspace ~/.nerya</code></td><td>Create a fresh workspace.</td></tr>
-                <tr><td><code>nerya … skill list</code></td><td>Inspect installed skills.</td></tr>
-                <tr><td><code>nerya … strategy history &lt;id&gt;</code></td><td>Review a strategy's session ledger.</td></tr>
-                <tr><td><code>nerya … reflect</code></td><td>Write memory entries from closed sessions.</td></tr>
-                <tr><td><code>nerya … evolve</code></td><td>Produce typed evolution proposals.</td></tr>
-                <tr><td><code>nerya … proposals list</code></td><td>List pending proposals awaiting your signature.</td></tr>
+                <tr><td><code>nerya setup --tui</code></td><td data-i18n="d.cli.r1">Rich text setup wizard (password, LLM, gateway, memory, account).</td></tr>
+                <tr><td><code>nerya setup --web</code></td><td data-i18n-html="d.cli.r2">Same wizard in the browser at <code>:18317/setup</code>.</td></tr>
+                <tr><td><code>nerya serve --port 18317</code></td><td data-i18n="d.cli.r3">Boot the local daemon (host service, dashboard proxy, SDK target).</td></tr>
+                <tr><td><code>nerya … init --workspace ~/.nerya</code></td><td data-i18n="d.cli.r4">Create a fresh workspace.</td></tr>
+                <tr><td><code>nerya … skill list</code></td><td data-i18n="d.cli.r5">Inspect installed skills.</td></tr>
+                <tr><td><code>nerya … strategy history &lt;id&gt;</code></td><td data-i18n="d.cli.r6">Review a strategy's session ledger.</td></tr>
+                <tr><td><code>nerya … reflect</code></td><td data-i18n="d.cli.r7">Write memory entries from closed sessions.</td></tr>
+                <tr><td><code>nerya … evolve</code></td><td data-i18n="d.cli.r8">Produce typed evolution proposals.</td></tr>
+                <tr><td><code>nerya … proposals list</code></td><td data-i18n="d.cli.r9">List pending proposals awaiting your signature.</td></tr>
               </tbody>
             </table>
           </div>
           <div class="callout" data-reveal>
-            <span class="callout-tag">Ports</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.cli.portsTag">Ports</span>
+            <p data-i18n-html="d.cli.portsP">
               One local port by default: <code>18317</code> (daemon, host service,
               dashboard proxy, SDK target). The dashboard ships under
               <code>dashboard/</code> on <code>:18380</code>. Point clients at a new
@@ -687,25 +721,25 @@ await nerya.trading.submitIntent({
         <!-- MODULES -->
         <section class="doc-section" id="modules">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">16 · what ships in nerya/* today</p>
-            <h2>Module map</h2>
+            <p class="eyebrow" data-i18n="d.mod.eyebrow">16 · what ships in nerya/* today</p>
+            <h2 data-i18n="d.mod.h2">Module map</h2>
           </div>
           <div class="table-wrap" data-reveal>
             <table class="cmp">
-              <thead><tr><th>Module</th><th>What it owns</th></tr></thead>
+              <thead><tr><th data-i18n="d.mod.th1">Module</th><th data-i18n="d.mod.th2">What it owns</th></tr></thead>
               <tbody>
-                <tr><td><code>agent/</code></td><td>Kernel, planner, context builder, memory, working memory, reflection.</td></tr>
-                <tr><td><code>subagents/</code></td><td>Per-role runtimes with allow/denylists, budget caps, parallel dispatcher, aggregator.</td></tr>
-                <tr><td><code>teams/</code></td><td>Durable Agent Team: config, store, mailbox, blackboard, templates, orchestrator, gates.</td></tr>
-                <tr><td><code>triggers/</code></td><td>Cron + trigger router, <code>schedules.yml</code>, idempotency, dry-run.</td></tr>
-                <tr><td><code>skills/</code></td><td><code>SKILL.md</code> kernel + 25 built-in skills.</td></tr>
-                <tr><td><code>trading/</code></td><td>TradeIntent, RiskGate, ApprovalGate, paper execution, virtual ledger, PnL, reconciliation.</td></tr>
-                <tr><td><code>connectors/</code></td><td>CCXT adapter, native EVM/BSC/Solana, dynamic provider spec.</td></tr>
-                <tr><td><code>llm/</code></td><td>ModelRouter, OpenAI/Anthropic/Gemini/Ollama adapters, credential pool, tiers, budget.</td></tr>
-                <tr><td><code>security/</code></td><td>Vault, signer, prompt firewall, redaction, output validator, script sandbox.</td></tr>
-                <tr><td><code>evolution/</code></td><td>Reflection engine, typed proposals, operator-signed promotion, snapshot rollback.</td></tr>
-                <tr><td><code>messaging/</code></td><td>Universal gateway across Telegram, Discord, Slack, Feishu, WeCom, DingTalk, WhatsApp, webhooks.</td></tr>
-                <tr><td><code>mcp/</code>, <code>acp/</code></td><td>FastMCP server + ACP adapter for external agent ecosystems.</td></tr>
+                <tr><td><code>agent/</code></td><td data-i18n="d.mod.r1">Kernel, planner, context builder, memory, working memory, reflection.</td></tr>
+                <tr><td><code>subagents/</code></td><td data-i18n="d.mod.r2">Per-role runtimes with allow/denylists, budget caps, parallel dispatcher, aggregator.</td></tr>
+                <tr><td><code>teams/</code></td><td data-i18n="d.mod.r3">Durable Agent Team: config, store, mailbox, blackboard, templates, orchestrator, gates.</td></tr>
+                <tr><td><code>triggers/</code></td><td data-i18n-html="d.mod.r4">Cron + trigger router, <code>schedules.yml</code>, idempotency, dry-run.</td></tr>
+                <tr><td><code>skills/</code></td><td data-i18n-html="d.mod.r5"><code>SKILL.md</code> kernel + 25 built-in skills.</td></tr>
+                <tr><td><code>trading/</code></td><td data-i18n="d.mod.r6">TradeIntent, RiskGate, ApprovalGate, paper execution, virtual ledger, PnL, reconciliation.</td></tr>
+                <tr><td><code>connectors/</code></td><td data-i18n="d.mod.r7">CCXT adapter, native EVM/BSC/Solana, dynamic provider spec.</td></tr>
+                <tr><td><code>llm/</code></td><td data-i18n="d.mod.r8">ModelRouter, OpenAI/Anthropic/Gemini/Ollama adapters, credential pool, tiers, budget.</td></tr>
+                <tr><td><code>security/</code></td><td data-i18n="d.mod.r9">Vault, signer, prompt firewall, redaction, output validator, script sandbox.</td></tr>
+                <tr><td><code>evolution/</code></td><td data-i18n="d.mod.r10">Reflection engine, typed proposals, operator-signed promotion, snapshot rollback.</td></tr>
+                <tr><td><code>messaging/</code></td><td data-i18n="d.mod.r11">Universal gateway across Telegram, Discord, Slack, Feishu, WeCom, DingTalk, WhatsApp, webhooks.</td></tr>
+                <tr><td><code>mcp/</code>, <code>acp/</code></td><td data-i18n="d.mod.r12">FastMCP server + ACP adapter for external agent ecosystems.</td></tr>
               </tbody>
             </table>
           </div>
@@ -714,22 +748,22 @@ await nerya.trading.submitIntent({
         <!-- STATUS -->
         <section class="doc-section" id="status">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow">17 · what works, what's next</p>
-            <h2>Status &amp; license</h2>
+            <p class="eyebrow" data-i18n="d.st.eyebrow">17 · what works, what's next</p>
+            <h2 data-i18n="d.st.h2">Status &amp; license</h2>
           </div>
           <ul class="status-list" data-grid>
-            <li class="ok" data-card>Vertical slice end-to-end: init → skill list → trigger → sub-agent turn → TradeIntent → Risk Gate → first fill → history → review → reflect → proposals.</li>
-            <li class="ok" data-card>Agent Team Phase 1–4 live: durable core, templates, orchestrator, planner/kernel integration, skill + HTTP surface.</li>
-            <li class="ok" data-card>CEX live-signed orders for Binance, Bybit, OKX, Hyperliquid. DEX swaps for BSC PancakeSwap v2 and Solana Jupiter.</li>
-            <li class="ok" data-card>Cross-platform one-line installer with service registration.</li>
-            <li class="ok" data-card>Dashboard (Next.js 14): Setup, Chat, Strategies, Self-Evolution, Memory, Skills, Workflows, Inbox, Portfolio, Gateway, Env Vault, Settings.</li>
-            <li class="wip" data-card>Agent Team Phase 5: snapshot and replay.</li>
-            <li class="wip" data-card>More native gateway adapters: Feishu rich cards, Discord slash commands, WhatsApp Business.</li>
+            <li class="ok" data-card data-i18n="d.st.l1">Vertical slice end-to-end: init → skill list → trigger → sub-agent turn → TradeIntent → Risk Gate → first fill → history → review → reflect → proposals.</li>
+            <li class="ok" data-card data-i18n="d.st.l2">Agent Team Phase 1-4 live: durable core, templates, orchestrator, planner/kernel integration, skill + HTTP surface.</li>
+            <li class="ok" data-card data-i18n="d.st.l3">CEX live-signed orders for Binance, Bybit, OKX, Hyperliquid. DEX swaps for BSC PancakeSwap v2 and Solana Jupiter.</li>
+            <li class="ok" data-card data-i18n="d.st.l4">Cross-platform one-line installer with service registration.</li>
+            <li class="ok" data-card data-i18n="d.st.l5">Dashboard (Next.js 14): Setup, Chat, Strategies, Self-Evolution, Memory, Skills, Workflows, Inbox, Portfolio, Gateway, Env Vault, Settings.</li>
+            <li class="wip" data-card data-i18n="d.st.l6">Agent Team Phase 5: snapshot and replay.</li>
+            <li class="wip" data-card data-i18n="d.st.l7">More native gateway adapters: Feishu rich cards, Discord slash commands, WhatsApp Business.</li>
           </ul>
 
           <div class="callout" data-reveal>
-            <span class="callout-tag">License</span>
-            <p>
+            <span class="callout-tag" data-i18n="d.st.licTag">License</span>
+            <p data-i18n-html="d.st.licP">
               Nerya is released under the
               <a href="https://polyformproject.org/licenses/noncommercial/1.0.0" target="_blank" rel="noopener">PolyForm Noncommercial License 1.0.0</a>.
               Free for personal use, research, nonprofits, and schools. Commercial
@@ -739,18 +773,18 @@ await nerya.trading.submitIntent({
           </div>
 
           <div class="end-cta" data-reveal>
-            <h3>Ready to run it?</h3>
-            <p>Built for operators who want an agent that thinks, trades, remembers, and grows up without ever holding the hot keys.</p>
+            <h3 data-i18n="d.st.ctaH3">Ready to run it?</h3>
+            <p data-i18n="d.st.ctaP">Built for operators who want an agent that thinks, trades, remembers, and grows up without ever holding the hot keys.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#quickstart">Back to install</a>
-              <a class="btn btn-ghost" href="index.html">Back to the landing</a>
+              <a class="btn btn-primary" href="#quickstart" data-i18n="d.st.ctaInstall">Back to install</a>
+              <a class="btn btn-ghost" href="index.html" data-i18n="d.st.ctaLanding">Back to the landing</a>
             </div>
           </div>
         </section>
 
         <footer class="docs-footer">
-          <span>Nerya · Evolutionary Brain</span>
-          <span>live under a Risk Gate and Approval Gate</span>
+          <span data-i18n="dz.foot.brand">Nerya · Evolutionary Brain</span>
+          <span data-i18n="d.foot.tag">live under a Risk Gate and Approval Gate</span>
         </footer>
       </main>
     </div>

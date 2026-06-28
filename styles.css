@@ -342,6 +342,82 @@ body.is-loaded .loader {
   border-color: var(--iris);
 }
 
+/* ── Language switcher (topbar dropdown) ─────────────────────────────
+   Reuses the topbar's mono / blur / sharp-edge visual language. The CTA
+   and the switcher share one grid cell (.topbar-end) so the switcher
+   stays visible on mobile, where .nav-links is hidden. */
+.topbar-end {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-switch { position: relative; }
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 0 13px;
+  border: 1px solid oklch(0.96 0.01 85 / 0.18);
+  background: oklch(0.05 0.01 290 / 0.7);
+  backdrop-filter: blur(18px);
+  color: var(--text-mute);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 220ms var(--ease), background 220ms var(--ease), border-color 220ms var(--ease);
+}
+
+.lang-toggle:hover { color: var(--text); border-color: oklch(0.96 0.01 85 / 0.32); }
+.lang-globe { display: block; opacity: 0.85; }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 80;
+  margin: 0;
+  padding: 4px;
+  min-width: 134px;
+  list-style: none;
+  border: 1px solid oklch(0.96 0.01 85 / 0.18);
+  background: var(--ink);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px oklch(0.04 0.01 290 / 0.62);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 180ms var(--ease), transform 180ms var(--ease), visibility 180ms;
+}
+
+.lang-switch.is-open .lang-menu { opacity: 1; visibility: visible; transform: none; }
+
+.lang-menu li { margin: 0; }
+
+.lang-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 38px;
+  padding: 0 12px;
+  color: var(--text-mute);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  transition: color 160ms var(--ease), background 160ms var(--ease);
+}
+
+.lang-menu button:hover { color: var(--text); background: oklch(0.62 0.23 290 / 0.18); }
+.lang-menu button.is-active { color: var(--text); }
+.lang-menu button.is-active::after { content: "✓"; color: var(--iris); }
+
 /* ─────────────────────────────────────────────────────────────────────
    HERO
    ─────────────────────────────────────────────────────────────────────*/

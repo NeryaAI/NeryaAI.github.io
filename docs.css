@@ -168,6 +168,40 @@ img { display: block; max-width: 100%; }
 }
 .topbar-cta:hover { background: var(--violet-mist) !important; color: var(--text) !important; }
 
+/* ── Language switcher (topbar dropdown) ───────────────────────────── */
+.lang-switch { position: relative; display: inline-flex; }
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 7px;
+  min-height: 36px; padding: 0 12px; border-radius: 10px;
+  border: 1px solid var(--ink-line); background: oklch(0.09 0.02 280 / 0.7);
+  color: var(--text-mute);
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: color 180ms var(--ease), background 180ms var(--ease), border-color 180ms var(--ease);
+}
+.lang-toggle:hover { color: var(--text); border-color: var(--violet); }
+.lang-globe { display: block; opacity: 0.85; }
+.lang-menu {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+  margin: 0; padding: 4px; min-width: 134px; list-style: none;
+  border: 1px solid var(--ink-line); border-radius: 11px;
+  background: oklch(0.08 0.022 282 / 0.97); backdrop-filter: blur(16px);
+  box-shadow: 0 18px 44px oklch(0.03 0.01 280 / 0.7);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity 180ms var(--ease), transform 180ms var(--ease), visibility 180ms;
+}
+.lang-switch.is-open .lang-menu { opacity: 1; visibility: visible; transform: none; }
+.lang-menu li { margin: 0; }
+.lang-menu button {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; min-height: 36px; padding: 0 12px; border-radius: 8px;
+  color: var(--text-mute);
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-align: left;
+  transition: color 160ms var(--ease), background 160ms var(--ease);
+}
+.lang-menu button:hover { color: var(--text); background: var(--violet-mist); }
+.lang-menu button.is-active { color: var(--text); }
+.lang-menu button.is-active::after { content: "✓"; color: var(--iris); }
+
 /* ── Shell layout ──────────────────────────────────────────────────── */
 .docs-shell {
   position: relative; z-index: 5;

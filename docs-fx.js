@@ -293,7 +293,8 @@ function setupCopy() {
         ta.remove();
       }
       const prev = btn.textContent;
-      btn.textContent = "copied";
+      btn.textContent =
+        window.NeryaLang && window.NeryaLang.t ? window.NeryaLang.t("dz.copied", "copied") : "copied";
       btn.classList.add("is-done");
       window.setTimeout(() => {
         btn.textContent = prev;
@@ -381,22 +382,29 @@ function setupFilter() {
 }
 
 // ── boot ────────────────────────────────────────────────────────────
-const runs = [
-  setupHero,
-  setupReveals,
-  setupGrids,
-  setupCounters,
-  setupSpy,
-  setupReadMeter,
-  setupToTop,
-  setupCopy,
-  setupDrawer,
-  setupFilter,
-];
-for (const fn of runs) {
-  try {
-    fn();
-  } catch (err) {
-    console.warn(`[docs-fx] ${fn.name || "fx"} skipped:`, err);
+// Wait for i18n to apply the active language before splitting/animating, so
+// the kinetic layer runs on the translated copy (not the English source).
+const i18nReady =
+  window.NeryaLang && window.NeryaLang.ready ? window.NeryaLang.ready : Promise.resolve();
+
+i18nReady.then(() => {
+  const runs = [
+    setupHero,
+    setupReveals,
+    setupGrids,
+    setupCounters,
+    setupSpy,
+    setupReadMeter,
+    setupToTop,
+    setupCopy,
+    setupDrawer,
+    setupFilter,
+  ];
+  for (const fn of runs) {
+    try {
+      fn();
+    } catch (err) {
+      console.warn(`[docs-fx] ${fn.name || "fx"} skipped:`, err);
+    }
   }
-}
+});

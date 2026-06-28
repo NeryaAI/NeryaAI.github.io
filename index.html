@@ -3,16 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nerya · self-evolving trading agent runtime</title>
+    <!-- i18n: resolve language before first paint (localStorage > navigator) -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("nerya-lang");
+          var l =
+            s === "zh" || s === "en"
+              ? s
+              : ((navigator.language || "en") + "").toLowerCase().indexOf("zh") === 0
+              ? "zh"
+              : "en";
+          var d = document.documentElement;
+          d.lang = l;
+          d.classList.add("lang-" + l);
+          window.__NERYA_LANG__ = l;
+        } catch (e) {}
+      })();
+    </script>
+    <script defer src="i18n.zh.js"></script>
+    <script defer src="i18n.js"></script>
+    <title data-i18n="idx.meta.title">Nerya · self-evolving trading agent runtime</title>
     <meta
       name="description"
+      data-i18n-attr="content:idx.meta.desc"
       content="Nerya is a self-evolving, skill-first, trading-native autonomous agent runtime. Trades live under a Risk Gate and Approval Gate. Memory rewrites the kernel."
     />
     <meta name="theme-color" content="#0a081a" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nerya · self-evolving trading agent runtime" />
+    <meta property="og:title" data-i18n-attr="content:idx.meta.title" content="Nerya · self-evolving trading agent runtime" />
     <meta
       property="og:description"
+      data-i18n-attr="content:idx.meta.ogDesc"
       content="Skill-first. Trading-native. Self-evolving. The agent rewrites itself between sessions."
     />
     <meta property="og:image" content="assets/nerya-star.png" />
@@ -55,13 +77,13 @@
       </div>
       <div class="loader-copy">
         <span data-loader-count>/00</span>
-        <p>warming kernel · loading skills · binding memory</p>
+        <p data-i18n="idx.loader.copy">warming kernel · loading skills · binding memory</p>
       </div>
       <div class="loader-line"><span data-loader-line></span></div>
     </div>
 
     <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
-    <div class="cursor-label" data-cursor-label aria-hidden="true">signal</div>
+    <div class="cursor-label" data-cursor-label aria-hidden="true" data-i18n="js.signal">signal</div>
 
     <header class="topbar" data-reveal>
       <a class="brand magnetic" href="#origin" aria-label="Nerya home">
@@ -70,26 +92,40 @@
         <span class="brand-version">v0.1.0</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a class="magnetic" href="#reactor">Live</a>
-        <a class="magnetic" href="#evolve">Evolve</a>
-        <a class="magnetic" href="#team">Team</a>
-        <a class="magnetic" href="#guard">Risk</a>
-        <a class="magnetic" href="docs.html">Docs</a>
+        <a class="magnetic" href="#reactor" data-i18n="idx.nav.live">Live</a>
+        <a class="magnetic" href="#evolve" data-i18n="idx.nav.evolve">Evolve</a>
+        <a class="magnetic" href="#team" data-i18n="idx.nav.team">Team</a>
+        <a class="magnetic" href="#guard" data-i18n="idx.nav.risk">Risk</a>
+        <a class="magnetic" href="docs.html" data-i18n="idx.nav.docs">Docs</a>
       </nav>
-      <a
-        class="nav-cta magnetic"
-        href="https://github.com/NeryaAI/Nerya"
-        target="_blank"
-        rel="noopener"
-      >
+      <div class="topbar-end">
+        <div class="lang-switch" data-lang-switch>
+          <button class="lang-toggle" type="button" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" aria-label="Language / 语言">
+            <svg class="lang-globe" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0c2.6 2.4 2.6 15.6 0 18m0-18c-2.6 2.4-2.6 15.6 0 18M3.5 9h17M3.5 15h17" />
+            </svg>
+            <span data-lang-current>EN</span>
+          </button>
+          <ul class="lang-menu" data-lang-menu role="listbox">
+            <li><button type="button" data-lang-set="en" role="option">English</button></li>
+            <li><button type="button" data-lang-set="zh" role="option">中文</button></li>
+          </ul>
+        </div>
+        <a
+          class="nav-cta magnetic"
+          href="https://github.com/NeryaAI/Nerya"
+          target="_blank"
+          rel="noopener"
+        >
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
           <path
             fill="currentColor"
             d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.68-.22.68-.49v-1.74c-2.78.62-3.37-1.36-3.37-1.36-.46-1.18-1.12-1.5-1.12-1.5-.91-.64.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.58 2.36 1.12 2.93.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.66-.34 2.51-.34s1.71.11 2.51.34c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49C19.14 20.61 22 16.77 22 12.25 22 6.59 17.52 2 12 2z"
           />
         </svg>
-        Star on GitHub
-      </a>
+        <span data-i18n="idx.cta.starGh">Star on GitHub</span>
+        </a>
+      </div>
     </header>
 
     <main>
@@ -114,12 +150,12 @@
         </picture>
 
         <div class="hero-inner" data-reveal>
-          <p class="eyebrow">
+          <p class="eyebrow" data-i18n-html="idx.hero.eyebrow">
             operator console <span class="dot-sep"></span> self-evolving runtime
             <span class="dot-sep"></span> live, risk-gated
           </p>
-          <h1 id="hero-title" data-scramble="EVOLVE EVERY TRADE">EVOLVE EVERY TRADE</h1>
-          <p class="hero-lede">
+          <h1 id="hero-title" data-i18n="idx.hero.title">EVOLVE EVERY TRADE</h1>
+          <p class="hero-lede" data-i18n-html="idx.hero.lede">
             Nerya ships its own agent kernel, LLM gateway, sub-agents, typed
             memory, triggers, a durable team, a trading kernel, and an evolution
             pipeline. Every external call goes through a <em>SKILL.md</em>. It
@@ -132,24 +168,25 @@
               target="_blank"
               rel="noopener"
               data-pulse
+              data-i18n="idx.hero.starRepo"
             >
               ★ Star the repo
             </a>
-            <a class="secondary-cta magnetic" href="docs.html">Read the docs</a>
+            <a class="secondary-cta magnetic" href="docs.html" data-i18n="idx.cta.readDocs">Read the docs</a>
           </div>
           <nav class="hero-query" aria-label="Jump to a chapter">
-            <a href="#reactor">→ live evolution feed</a>
-            <a href="#evolve">→ closed evolution loop</a>
-            <a href="#team">→ durable agent team</a>
-            <a href="#guard">→ risk-first execution</a>
+            <a href="#reactor" data-i18n="idx.hero.q1">→ live evolution feed</a>
+            <a href="#evolve" data-i18n="idx.hero.q2">→ closed evolution loop</a>
+            <a href="#team" data-i18n="idx.hero.q3">→ durable agent team</a>
+            <a href="#guard" data-i18n="idx.hero.q4">→ risk-first execution</a>
           </nav>
         </div>
 
         <div class="status-strip" aria-hidden="true">
-          <span><b data-frame>frame 0001</b></span>
-          <span>live · risk-gated</span>
-          <span>risk gate ✓ active</span>
-          <span>★ stars wake the kernel</span>
+          <span><b data-frame data-i18n="idx.status.frame">frame 0001</b></span>
+          <span data-i18n="idx.status.live">live · risk-gated</span>
+          <span data-i18n="idx.status.gate">risk gate ✓ active</span>
+          <span data-i18n="idx.status.stars">★ stars wake the kernel</span>
         </div>
       </section>
 
@@ -158,12 +195,12 @@
         <div class="reactor-aura" aria-hidden="true"></div>
 
         <div class="wrap reactor-head" data-reveal>
-          <div class="section-index">∞ / live evolution feed</div>
-          <p class="eyebrow">self-evolving runtime · captured in motion</p>
-          <h2 id="reactor-title">
+          <div class="section-index" data-i18n="idx.reactor.idx">∞ / live evolution feed</div>
+          <p class="eyebrow" data-i18n="idx.reactor.eyebrow">self-evolving runtime · captured in motion</p>
+          <h2 id="reactor-title" data-i18n-html="idx.reactor.h2">
             Watch the kernel <em class="hot">rewrite itself</em>.
           </h2>
-          <p class="reactor-lede">
+          <p class="reactor-lede" data-i18n-html="idx.reactor.lede">
             One evolution cycle, in motion. The reflection engine drafts
             patches, the team votes, and versions
             <span class="mono">v1.1 → v1.2 → v1.3</span> compile behind her
@@ -202,22 +239,22 @@
               <path class="bk" d="M16,98 L2,98 L2,84" />
             </svg>
 
-            <span class="reactor-tag reactor-tag-live" aria-hidden="true">
+            <span class="reactor-tag reactor-tag-live" aria-hidden="true" data-i18n-html="idx.reactor.rec">
               <i></i> REC · live kernel
             </span>
           </figure>
 
           <aside class="reactor-rail" data-reactor-rail aria-hidden="true">
-            <p class="rail-title">cycle telemetry</p>
+            <p class="rail-title" data-i18n="idx.reactor.railTitle">cycle telemetry</p>
             <ul class="rail-feed" data-rail-feed>
-              <li><span class="t">00:00</span> observe · journal sealed</li>
-              <li><span class="t">00:03</span> reflect · analyst postmortem</li>
-              <li><span class="t">00:07</span> propose · diff vs live kernel</li>
-              <li><span class="t">00:11</span> validate · backtest + risk gate</li>
-              <li><span class="t">00:14</span> promote · v1.3 rolled out</li>
+              <li data-i18n-html="idx.reactor.feed1"><span class="t">00:00</span> observe · journal sealed</li>
+              <li data-i18n-html="idx.reactor.feed2"><span class="t">00:03</span> reflect · analyst postmortem</li>
+              <li data-i18n-html="idx.reactor.feed3"><span class="t">00:07</span> propose · diff vs live kernel</li>
+              <li data-i18n-html="idx.reactor.feed4"><span class="t">00:11</span> validate · backtest + risk gate</li>
+              <li data-i18n-html="idx.reactor.feed5"><span class="t">00:14</span> promote · v1.3 rolled out</li>
             </ul>
             <div class="rail-meter">
-              <span class="rail-meter-label">generation progress</span>
+              <span class="rail-meter-label" data-i18n="idx.reactor.genProgress">generation progress</span>
               <span class="rail-meter-bar"><i data-rail-bar></i></span>
             </div>
           </aside>
@@ -227,43 +264,43 @@
       <!-- ─────────── KINETIC TICKER (self-evolution marquee) ─────────── -->
       <div class="kinetic-ticker" aria-hidden="true">
         <div class="ticker-row" data-ticker>
-          <span class="tk">observe</span><span class="tk-sep">→</span>
-          <span class="tk">reflect</span><span class="tk-sep">→</span>
-          <span class="tk">propose</span><span class="tk-sep">→</span>
-          <span class="tk">validate</span><span class="tk-sep">→</span>
-          <span class="tk">promote</span><span class="tk-sep">✦</span>
+          <span class="tk" data-i18n="idx.tk.observe">observe</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.reflect">reflect</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.propose">propose</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.validate">validate</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.promote">promote</span><span class="tk-sep">✦</span>
           <span class="tk tk-hot">v1.1 → v1.2 → v1.3</span><span class="tk-sep">✦</span>
-          <span class="tk">live · risk-gated</span><span class="tk-sep">→</span>
-          <span class="tk">risk gate holds</span><span class="tk-sep">→</span>
-          <span class="tk">memory rewrites the kernel</span><span class="tk-sep">✦</span>
-          <span class="tk">25 skills</span><span class="tk-sep">→</span>
-          <span class="tk">durable team</span><span class="tk-sep">→</span>
-          <span class="tk tk-hot">evolve or fade</span><span class="tk-sep">✦</span>
-          <span class="tk" aria-hidden="true">observe</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">reflect</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">propose</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">validate</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">promote</span><span class="tk-sep">✦</span>
+          <span class="tk" data-i18n="idx.tk.live">live · risk-gated</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.gateHolds">risk gate holds</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.memKernel">memory rewrites the kernel</span><span class="tk-sep">✦</span>
+          <span class="tk" data-i18n="idx.tk.skills25">25 skills</span><span class="tk-sep">→</span>
+          <span class="tk" data-i18n="idx.tk.durableTeam">durable team</span><span class="tk-sep">→</span>
+          <span class="tk tk-hot" data-i18n="idx.tk.evolveFade">evolve or fade</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.observe">observe</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.reflect">reflect</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.propose">propose</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.validate">validate</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.promote">promote</span><span class="tk-sep">✦</span>
           <span class="tk tk-hot" aria-hidden="true">v1.1 → v1.2 → v1.3</span><span class="tk-sep">✦</span>
-          <span class="tk" aria-hidden="true">live · risk-gated</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">risk gate holds</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">memory rewrites the kernel</span><span class="tk-sep">✦</span>
-          <span class="tk" aria-hidden="true">25 skills</span><span class="tk-sep">→</span>
-          <span class="tk" aria-hidden="true">durable team</span><span class="tk-sep">→</span>
-          <span class="tk tk-hot" aria-hidden="true">evolve or fade</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.live">live · risk-gated</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.gateHolds">risk gate holds</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.memKernel">memory rewrites the kernel</span><span class="tk-sep">✦</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.skills25">25 skills</span><span class="tk-sep">→</span>
+          <span class="tk" aria-hidden="true" data-i18n="idx.tk.durableTeam">durable team</span><span class="tk-sep">→</span>
+          <span class="tk tk-hot" aria-hidden="true" data-i18n="idx.tk.evolveFade">evolve or fade</span><span class="tk-sep">✦</span>
         </div>
       </div>
 
       <!-- ─────────── 01 · EVOLVES (full-bleed band) ─────────── -->
       <section class="evolve" id="evolve" aria-labelledby="evolve-title">
         <div class="wrap">
-          <div class="section-index" data-reveal>01 / closed evolution loop</div>
+          <div class="section-index" data-reveal data-i18n="idx.evolve.idx">01 / closed evolution loop</div>
           <div class="evolve-head" data-reveal>
-            <p class="eyebrow">self-improving</p>
-            <h2 id="evolve-title">
+            <p class="eyebrow" data-i18n="idx.evolve.eyebrow">self-improving</p>
+            <h2 id="evolve-title" data-i18n-html="idx.evolve.h2">
               Every observation rewrites <em class="hot">the kernel</em>.
             </h2>
-            <p>
+            <p data-i18n="idx.evolve.p">
               After every session, the reflection engine reads the journal,
               drafts patch proposals (prompt deltas, new scripts, tuned configs,
               fresh skills), runs them through backtest and risk gates, then
@@ -286,7 +323,7 @@
           >
             <source src="assets/nerya-evolve.mp4?v=hires" type="video/mp4" />
           </video>
-          <figcaption class="bleed-tag">
+          <figcaption class="bleed-tag" data-i18n-html="idx.evolve.bleedTag">
             <span>v1.1 → v1.3</span> +49% promoted per cycle
           </figcaption>
         </figure>
@@ -294,23 +331,23 @@
         <div class="wrap">
           <div class="evolve-detail">
             <ol class="evolve-list" data-reveal data-pipeline>
-              <li data-step>
+              <li data-step data-i18n-html="idx.evolve.s1">
                 <span class="bullet">observe</span>
                 <span>journal every decision, fill, drift, miss.</span>
               </li>
-              <li data-step>
+              <li data-step data-i18n-html="idx.evolve.s2">
                 <span class="bullet">reflect</span>
                 <span>postmortem with the analyst sub-agent.</span>
               </li>
-              <li data-step>
+              <li data-step data-i18n-html="idx.evolve.s3">
                 <span class="bullet">propose</span>
                 <span>diff against the live kernel.</span>
               </li>
-              <li data-step>
+              <li data-step data-i18n-html="idx.evolve.s4">
                 <span class="bullet">validate</span>
                 <span>backtest gate, risk gate, structured output check.</span>
               </li>
-              <li data-step>
+              <li data-step data-i18n-html="idx.evolve.s5">
                 <span class="bullet">promote</span>
                 <span>versioned rollout, snapshot, rollback ready.</span>
               </li>
@@ -318,15 +355,15 @@
 
             <div class="evolve-counter" data-reveal aria-hidden="true">
               <div class="counter-row">
-                <span>auto-promotions / week</span>
+                <span data-i18n="idx.evolve.c1">auto-promotions / week</span>
                 <strong data-count-to="42">00</strong>
               </div>
               <div class="counter-row">
-                <span>backtest coverage</span>
+                <span data-i18n="idx.evolve.c2">backtest coverage</span>
                 <strong data-count-to="98">00</strong><span class="suffix">.4%</span>
               </div>
               <div class="counter-row">
-                <span>self-improvements logged</span>
+                <span data-i18n="idx.evolve.c3">self-improvements logged</span>
                 <strong data-count-to="1247">0</strong>
               </div>
             </div>
@@ -352,12 +389,12 @@
         <div class="guard-scrim" aria-hidden="true"></div>
 
         <div class="wrap guard-inner" data-reveal>
-          <div class="section-index">02 / risk-first execution</div>
-          <p class="eyebrow">live, risk-gated</p>
-          <h2 id="guard-title">
+          <div class="section-index" data-i18n="idx.guard.idx">02 / risk-first execution</div>
+          <p class="eyebrow" data-i18n="idx.guard.eyebrow">live, risk-gated</p>
+          <h2 id="guard-title" data-i18n-html="idx.guard.h2">
             Mistakes go into <em class="hot">memory</em>, not into your wallet.
           </h2>
-          <p>
+          <p data-i18n-html="idx.guard.p">
             Go live the moment <code>runtime.live_trading_enabled</code>
             is true <em>and</em> the Approval Gate signs off. Every order ships
             through a Risk Gate, a typed mistake ledger, a virtual ledger, and
@@ -365,12 +402,12 @@
           </p>
 
           <div class="guard-pills" role="list">
-            <span role="listitem">vault-only secrets</span>
-            <span role="listitem">prompt firewall</span>
-            <span role="listitem">structured output schema</span>
-            <span role="listitem">script sandbox</span>
-            <span role="listitem">drift detection</span>
-            <span role="listitem">rollback snapshot</span>
+            <span role="listitem" data-i18n="idx.guard.p1">vault-only secrets</span>
+            <span role="listitem" data-i18n="idx.guard.p2">prompt firewall</span>
+            <span role="listitem" data-i18n="idx.guard.p3">structured output schema</span>
+            <span role="listitem" data-i18n="idx.guard.p4">script sandbox</span>
+            <span role="listitem" data-i18n="idx.guard.p5">drift detection</span>
+            <span role="listitem" data-i18n="idx.guard.p6">rollback snapshot</span>
           </div>
         </div>
       </section>
@@ -378,13 +415,13 @@
       <!-- ─────────── 03 · AGENT TEAM (interactive console) ─────────── -->
       <section class="team" id="team" aria-labelledby="team-title">
         <div class="wrap">
-          <div class="section-index" data-reveal>03 / durable agent team</div>
+          <div class="section-index" data-reveal data-i18n="idx.team.idx">03 / durable agent team</div>
           <div class="team-head" data-reveal>
-            <p class="eyebrow">persistent multi-agent crew</p>
-            <h2 id="team-title">
+            <p class="eyebrow" data-i18n="idx.team.eyebrow">persistent multi-agent crew</p>
+            <h2 id="team-title" data-i18n-html="idx.team.h2">
               Four minds wired to one <em class="hot">blackboard</em>.
             </h2>
-            <p>
+            <p data-i18n="idx.team.p">
               Four roles stay resident across every turn. The Lead routes the
               work, the Analyst reads the tape, the Risk critic can veto, and
               the Memory scribe records the lesson. They share a blackboard, a
@@ -403,64 +440,64 @@
             <article class="agent-card agent-lead" data-agent style="--agent-col: 1; --agent-row: 1;">
               <header>
                 <span class="agent-id">A-01</span>
-                <span class="agent-state"><i></i> routing</span>
+                <span class="agent-state" data-i18n-html="idx.team.lead.state"><i></i> routing</span>
               </header>
               <h3>LEAD</h3>
-              <p class="agent-role">plans · routes · schedules</p>
+              <p class="agent-role" data-i18n="idx.team.lead.role">plans · routes · schedules</p>
               <ul class="agent-feed">
-                <li>→ open session 0x9f</li>
-                <li>→ dispatch analyst</li>
-                <li>→ await risk sign-off</li>
+                <li data-i18n="idx.team.lead.f1">→ open session 0x9f</li>
+                <li data-i18n="idx.team.lead.f2">→ dispatch analyst</li>
+                <li data-i18n="idx.team.lead.f3">→ await risk sign-off</li>
               </ul>
             </article>
 
             <article class="agent-card agent-analyst" data-agent style="--agent-col: 3; --agent-row: 1;">
               <header>
                 <span class="agent-id">A-02</span>
-                <span class="agent-state"><i></i> reading</span>
+                <span class="agent-state" data-i18n-html="idx.team.analyst.state"><i></i> reading</span>
               </header>
               <h3>ANALYST</h3>
-              <p class="agent-role">reads chart · drafts thesis</p>
+              <p class="agent-role" data-i18n="idx.team.analyst.role">reads chart · drafts thesis</p>
               <ul class="agent-feed">
-                <li>→ regime: trend-up</li>
-                <li>→ edge: +1.4R</li>
-                <li>→ thesis drafted</li>
+                <li data-i18n="idx.team.analyst.f1">→ regime: trend-up</li>
+                <li data-i18n="idx.team.analyst.f2">→ edge: +1.4R</li>
+                <li data-i18n="idx.team.analyst.f3">→ thesis drafted</li>
               </ul>
             </article>
 
             <article class="agent-card agent-risk" data-agent style="--agent-col: 1; --agent-row: 2;">
               <header>
                 <span class="agent-id">A-03</span>
-                <span class="agent-state risk"><i></i> guarding</span>
+                <span class="agent-state risk" data-i18n-html="idx.team.risk.state"><i></i> guarding</span>
               </header>
               <h3>RISK</h3>
-              <p class="agent-role">vetoes if the math is off</p>
+              <p class="agent-role" data-i18n="idx.team.risk.role">vetoes if the math is off</p>
               <ul class="agent-feed">
-                <li>→ size ≤ 2% checked</li>
-                <li>→ corr clamp ok</li>
-                <li>→ veto held in reserve</li>
+                <li data-i18n="idx.team.risk.f1">→ size ≤ 2% checked</li>
+                <li data-i18n="idx.team.risk.f2">→ corr clamp ok</li>
+                <li data-i18n="idx.team.risk.f3">→ veto held in reserve</li>
               </ul>
             </article>
 
             <article class="agent-card agent-memory" data-agent style="--agent-col: 3; --agent-row: 2;">
               <header>
                 <span class="agent-id">A-04</span>
-                <span class="agent-state"><i></i> writing</span>
+                <span class="agent-state" data-i18n-html="idx.team.memory.state"><i></i> writing</span>
               </header>
               <h3>MEMORY</h3>
-              <p class="agent-role">writes mistakes to the ledger</p>
+              <p class="agent-role" data-i18n="idx.team.memory.role">writes mistakes to the ledger</p>
               <ul class="agent-feed">
-                <li>→ postmortem saved</li>
-                <li>→ regimes.md +1</li>
-                <li>→ feeds next cycle</li>
+                <li data-i18n="idx.team.memory.f1">→ postmortem saved</li>
+                <li data-i18n="idx.team.memory.f2">→ regimes.md +1</li>
+                <li data-i18n="idx.team.memory.f3">→ feeds next cycle</li>
               </ul>
             </article>
 
             <div class="team-core" data-core aria-hidden="true">
               <span class="core-ring"></span>
               <span class="core-ring"></span>
-              <strong>BLACK<br />BOARD</strong>
-              <small>shared memory</small>
+              <strong data-i18n-html="idx.team.coreTitle">BLACK<br />BOARD</strong>
+              <small data-i18n="idx.team.coreSub">shared memory</small>
             </div>
           </div>
         </div>
@@ -479,49 +516,49 @@
               data-parallax="0.04"
             />
           </picture>
-          <figcaption>strategy_author · trigger · candle · ledger</figcaption>
+          <figcaption data-i18n="idx.authors.figcap">strategy_author · trigger · candle · ledger</figcaption>
         </figure>
 
         <div class="authors-inner">
-          <div class="section-index" data-reveal>04 / strategy author skill</div>
+          <div class="section-index" data-reveal data-i18n="idx.authors.idx">04 / strategy author skill</div>
 
           <div class="quote-block" data-reveal>
-            <p class="eyebrow">one sentence</p>
+            <p class="eyebrow" data-i18n="idx.authors.qEyebrow">one sentence</p>
             <blockquote>
-              <p>
+              <p data-i18n-html="idx.authors.quote">
                 "I have <em class="hot">$500</em> in a live account. Make me
                 money on BTC. <em>Don't blow it up.</em>"
               </p>
             </blockquote>
-            <p class="quote-attr">→ what a one-line prompt becomes</p>
+            <p class="quote-attr" data-i18n="idx.authors.qAttr">→ what a one-line prompt becomes</p>
           </div>
 
           <div class="authors-copy" data-reveal>
-            <h2 id="authors-title">
+            <h2 id="authors-title" data-i18n-html="idx.authors.h2">
               <span class="line line-1">Skills</span>
               <span class="line line-2">compose.</span>
               <span class="line line-3">Strategies</span>
               <span class="line line-4">learn.</span>
             </h2>
-            <p>
+            <p data-i18n-html="idx.authors.p">
               The <code>strategy_author</code> skill turns that sentence into a
               working strategy package in one chat turn: trigger, sub-agent
               prompt library, candle source, account binding, risk limits,
               session ledger. You approve it once, then it runs, journals, and
               rewrites itself from there.
             </p>
-            <a class="ghost-cta" href="https://github.com/NeryaAI/Nerya#skills" target="_blank" rel="noopener">
+            <a class="ghost-cta" href="https://github.com/NeryaAI/Nerya#skills" target="_blank" rel="noopener" data-i18n-html="idx.authors.ghost">
               <span>read the skill catalog</span>
               <span class="arrow">→</span>
             </a>
           </div>
 
           <div class="authors-baseline" data-reveal>
-            <div class="micro-copy">
+            <div class="micro-copy" data-i18n-html="idx.authors.micro1">
               live-ready<br />single-turn<br />operator-signed
             </div>
             <span class="baseline-rule"></span>
-            <div class="micro-copy">
+            <div class="micro-copy" data-i18n-html="idx.authors.micro2">
               25 builtin skills<br />zero yaml<br />SKILL.md only
             </div>
           </div>
@@ -547,20 +584,20 @@
               </video>
               <div class="ritual-scrim" aria-hidden="true"></div>
               <div class="ritual-text">
-                <p class="eyebrow">05 · ritual / war room</p>
-                <h2 id="rituals-title">
+                <p class="eyebrow" data-i18n="idx.ritual.r1.eyebrow">05 · ritual / war room</p>
+                <h2 id="rituals-title" data-i18n="idx.ritual.r1.h2">
                   The war room never sleeps.
                 </h2>
-                <p>
+                <p data-i18n="idx.ritual.r1.p">
                   Same four operators, now at the table. Shared blackboard,
                   task board, mailbox, gates. Every turn leaves a record, and
                   each record feeds the next session and the next version.
                 </p>
                 <ul class="ritual-list">
-                  <li><b>MARKET-READ</b><span>analyst frames the regime</span></li>
-                  <li><b>DEBATE</b><span>lead and risk argue the trade</span></li>
-                  <li><b>EXECUTE</b><span>live orders, gated by risk</span></li>
-                  <li><b>JOURNAL</b><span>memory seals the lesson</span></li>
+                  <li data-i18n-html="idx.ritual.r1.l1"><b>MARKET-READ</b><span>analyst frames the regime</span></li>
+                  <li data-i18n-html="idx.ritual.r1.l2"><b>DEBATE</b><span>lead and risk argue the trade</span></li>
+                  <li data-i18n-html="idx.ritual.r1.l3"><b>EXECUTE</b><span>live orders, gated by risk</span></li>
+                  <li data-i18n-html="idx.ritual.r1.l4"><b>JOURNAL</b><span>memory seals the lesson</span></li>
                 </ul>
               </div>
             </article>
@@ -572,17 +609,17 @@
                   <strong>memory.ledger</strong>
                 </div>
                 <div class="memory-grid">
-                  <span>global.md</span><b>house rules · style · tone</b>
-                  <span>mistakes.md</span><b>postmortems · -PnL events</b>
-                  <span>regimes.md</span><b>market structure · regimes</b>
-                  <span>skills.md</span><b>tool-learning · trade-offs</b>
-                  <span>strategies.md</span><b>per-strategy journal</b>
+                  <span>global.md</span><b data-i18n="idx.ritual.r2.g1">house rules · style · tone</b>
+                  <span>mistakes.md</span><b data-i18n="idx.ritual.r2.g2">postmortems · -PnL events</b>
+                  <span>regimes.md</span><b data-i18n="idx.ritual.r2.g3">market structure · regimes</b>
+                  <span>skills.md</span><b data-i18n="idx.ritual.r2.g4">tool-learning · trade-offs</b>
+                  <span>strategies.md</span><b data-i18n="idx.ritual.r2.g5">per-strategy journal</b>
                 </div>
               </div>
               <div class="ritual-text">
-                <p class="eyebrow">06 · ritual / typed memory</p>
-                <h2>Five surfaces. Plain markdown. No vector blob.</h2>
-                <p>
+                <p class="eyebrow" data-i18n="idx.ritual.r2.eyebrow">06 · ritual / typed memory</p>
+                <h2 data-i18n="idx.ritual.r2.h2">Five surfaces. Plain markdown. No vector blob.</h2>
+                <p data-i18n="idx.ritual.r2.p">
                   Memory is five typed markdown surfaces the reflection engine
                   can read, write, and diff. Audit them, grep them, or edit
                   them by hand.
@@ -592,9 +629,9 @@
 
             <article class="ritual-panel ritual-paper">
               <div class="ritual-text">
-                <p class="eyebrow">07 · ritual / self-rewriter</p>
-                <h2>The kernel writes its own next version.</h2>
-                <p>
+                <p class="eyebrow" data-i18n="idx.ritual.r3.eyebrow">07 · ritual / self-rewriter</p>
+                <h2 data-i18n="idx.ritual.r3.h2">The kernel writes its own next version.</h2>
+                <p data-i18n="idx.ritual.r3.p">
                   Reflection drafts a patch, the Approval Gate signs or rejects
                   the diff, and the runtime applies it with a rollback snapshot.
                   Each logged mistake feeds the next proposal.
@@ -622,11 +659,11 @@
 
       <!-- ─────────── 07 · ARCHITECTURE (closed loop) ─────────── -->
       <section class="loop" id="loop" aria-labelledby="loop-title">
-        <div class="section-index" data-reveal>08 / closed loop</div>
+        <div class="section-index" data-reveal data-i18n="idx.loop.idx">08 / closed loop</div>
 
         <div class="loop-head" data-reveal>
-          <p class="eyebrow">architecture</p>
-          <h2 id="loop-title">
+          <p class="eyebrow" data-i18n="idx.loop.eyebrow">architecture</p>
+          <h2 id="loop-title" data-i18n-html="idx.loop.h2">
             Market turns the agent.<br />
             The agent turns itself.
           </h2>
@@ -665,33 +702,33 @@
           <g class="loop-nodes" font-family="JetBrains Mono, monospace" font-size="11">
             <g transform="translate(130,120)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">market</text>
-              <text dy="60" text-anchor="middle" class="sub">ticks · news · feeds</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.market">market</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.marketSub">ticks · news · feeds</text>
             </g>
             <g transform="translate(400,80)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">agent</text>
-              <text dy="60" text-anchor="middle" class="sub">route · think · act</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.agent">agent</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.agentSub">route · think · act</text>
             </g>
             <g transform="translate(670,120)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">skills</text>
-              <text dy="60" text-anchor="middle" class="sub">SKILL.md · scripts</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.skills">skills</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.skillsSub">SKILL.md · scripts</text>
             </g>
             <g transform="translate(670,300)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">risk</text>
-              <text dy="60" text-anchor="middle" class="sub">policy · approval · limit</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.risk">risk</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.riskSub">policy · approval · limit</text>
             </g>
             <g transform="translate(400,340)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">execute</text>
-              <text dy="60" text-anchor="middle" class="sub">live · risk · ledger</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.execute">execute</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.executeSub">live · risk · ledger</text>
             </g>
             <g transform="translate(130,300)" class="loop-node">
               <circle r="40" />
-              <text dy="4" text-anchor="middle">evolve</text>
-              <text dy="60" text-anchor="middle" class="sub">propose · validate · promote</text>
+              <text dy="4" text-anchor="middle" data-i18n="idx.loop.n.evolve">evolve</text>
+              <text dy="60" text-anchor="middle" class="sub" data-i18n="idx.loop.n.evolveSub">propose · validate · promote</text>
             </g>
           </g>
 
@@ -707,20 +744,20 @@
         </svg>
 
         <div class="loop-legend" data-reveal>
-          <span><i class="dot dot-violet"></i> agents operate the loop</span>
-          <span><i class="dot dot-cyan"></i> skills are the atoms</span>
-          <span><i class="dot dot-mint"></i> evolution rewrites the agent</span>
+          <span data-i18n-html="idx.loop.lg1"><i class="dot dot-violet"></i> agents operate the loop</span>
+          <span data-i18n-html="idx.loop.lg2"><i class="dot dot-cyan"></i> skills are the atoms</span>
+          <span data-i18n-html="idx.loop.lg3"><i class="dot dot-mint"></i> evolution rewrites the agent</span>
         </div>
       </section>
 
       <!-- ─────────── 08 · DOCS GALLERY ─────────── -->
       <section class="docs" id="docs" aria-labelledby="docs-title">
-        <div class="section-index" data-reveal>09 / read deeper</div>
+        <div class="section-index" data-reveal data-i18n="idx.docs.idx">09 / read deeper</div>
 
         <div class="docs-head" data-reveal>
-          <p class="eyebrow">product docs</p>
-          <h2 id="docs-title">Take the kernel apart.</h2>
-          <p class="docs-sub">
+          <p class="eyebrow" data-i18n="idx.docs.eyebrow">product docs</p>
+          <h2 id="docs-title" data-i18n="idx.docs.h2">Take the kernel apart.</h2>
+          <p class="docs-sub" data-i18n="idx.docs.sub">
             The README is the front door. The skills, the agent kernel, the
             trading kernel, and the SDK each have their own playbook. Open the
             one that matches what you want to build.
@@ -730,62 +767,62 @@
         <div class="docs-grid">
           <a class="doc-card doc-feature" href="docs.html#overview" data-reveal>
             <span class="doc-tag">01</span>
-            <h3>README · the front door</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c1.h3">README · the front door</h3>
+            <p data-i18n="idx.docs.c1.p">
               Six pillars, install, quickstart, and the whole product tour, now
               a full operator manual.
             </p>
-            <span class="doc-arrow">→ open the manual</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c1.a">→ open the manual</span>
           </a>
 
           <a class="doc-card" href="docs.html#architecture" data-reveal>
             <span class="doc-tag">02</span>
-            <h3>Architecture · ground truth</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c2.h3">Architecture · ground truth</h3>
+            <p data-i18n="idx.docs.c2.p">
               Where every module lives, the runtime topology, and how the
               workspace holds all state on disk.
             </p>
-            <span class="doc-arrow">→ runtime map</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c2.a">→ runtime map</span>
           </a>
 
           <a class="doc-card" href="docs.html#skills" data-reveal>
             <span class="doc-tag">03</span>
-            <h3>Skill catalog</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c3.h3">Skill catalog</h3>
+            <p data-i18n-html="idx.docs.c3.p">
               25 built-in skills. Every one is a directory with
               <code>SKILL.md</code> as the only definition surface.
             </p>
-            <span class="doc-arrow">→ browse skills</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c3.a">→ browse skills</span>
           </a>
 
           <a class="doc-card" href="docs.html#trading" data-reveal>
             <span class="doc-tag">04</span>
-            <h3>Trading kernel</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c4.h3">Trading kernel</h3>
+            <p data-i18n="idx.docs.c4.p">
               Risk Gate, Approval Gate, accounts, virtual ledger,
               reconciliation, drift detection.
             </p>
-            <span class="doc-arrow">→ open trading</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c4.a">→ open trading</span>
           </a>
 
           <a class="doc-card" href="docs.html#self-evolution" data-reveal>
             <span class="doc-tag">05</span>
-            <h3>Evolution engine</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c5.h3">Evolution engine</h3>
+            <p data-i18n="idx.docs.c5.p">
               Reflection, strategy mutation, learning writer, patch proposals,
               promote / rollback flow.
             </p>
-            <span class="doc-arrow">→ open evolution</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c5.a">→ open evolution</span>
           </a>
 
           <a class="doc-card" href="docs.html#sdk" data-reveal>
             <span class="doc-tag">06</span>
-            <h3>SDK · Python + TS</h3>
-            <p>
+            <h3 data-i18n="idx.docs.c6.h3">SDK · Python + TS</h3>
+            <p data-i18n="idx.docs.c6.p">
               The surface your scripts import. Trading SDK, trigger SDK,
               connectors, secret refs, structured output.
             </p>
-            <span class="doc-arrow">→ open sdk</span>
+            <span class="doc-arrow" data-i18n="idx.docs.c6.a">→ open sdk</span>
           </a>
         </div>
       </section>
@@ -807,13 +844,13 @@
             <source src="assets/nerya-launch.mp4" type="video/mp4" />
           </video>
           <div class="launch-copy" data-reveal>
-            <p class="eyebrow">10 / launch console</p>
-            <h2 id="launch-title">
+            <p class="eyebrow" data-i18n="idx.launch.eyebrow">10 / launch console</p>
+            <h2 id="launch-title" data-i18n-html="idx.launch.h2">
               The next edge is
               <em class="hot">an evolution</em>
               away.
             </h2>
-            <p>
+            <p data-i18n="idx.launch.p">
               Free and open-source. Bring your own models. The runtime ships its
               own kernel, gateway, team, trading kernel, and evolution pipeline.
               If a star helps the signal travel, drop one.
@@ -832,9 +869,9 @@
                     d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
                   />
                 </svg>
-                <span>Star Nerya on GitHub</span>
+                <span data-i18n="idx.launch.star">Star Nerya on GitHub</span>
               </a>
-              <a class="secondary-cta magnetic" href="docs.html">
+              <a class="secondary-cta magnetic" href="docs.html" data-i18n="idx.cta.readDocs">
                 Read the docs
               </a>
               <a
@@ -842,6 +879,7 @@
                 href="https://github.com/NeryaAI/Nerya/blob/main/README.md#run-locally"
                 target="_blank"
                 rel="noopener"
+                data-i18n-html="idx.launch.install"
               >
                 <span>install in one line</span>
                 <span class="arrow">→</span>
@@ -852,25 +890,25 @@
 
         <div class="launch-readouts">
           <article data-reveal>
-            <span>runtime</span>
-            <strong>kernel</strong>
-            <p>
+            <span data-i18n="idx.launch.r1.k">runtime</span>
+            <strong data-i18n="idx.launch.r1.v">kernel</strong>
+            <p data-i18n="idx.launch.r1.p">
               own agent loop, planner, context builder, memory, reflection. No
               external agent framework.
             </p>
           </article>
           <article data-reveal>
-            <span>safety</span>
-            <strong>gated</strong>
-            <p>
+            <span data-i18n="idx.launch.r2.k">safety</span>
+            <strong data-i18n="idx.launch.r2.v">gated</strong>
+            <p data-i18n="idx.launch.r2.p">
               Live trades run under a Risk Gate and Approval Gate. Typed mistake
               ledger. Vault-only secrets.
             </p>
           </article>
           <article data-reveal>
-            <span>evolution</span>
-            <strong>diff</strong>
-            <p>
+            <span data-i18n="idx.launch.r3.k">evolution</span>
+            <strong data-i18n="idx.launch.r3.v">diff</strong>
+            <p data-i18n="idx.launch.r3.p">
               reflection drafts patches. Operator signs the diff. Runtime
               applies with rollback snapshot.
             </p>
@@ -883,13 +921,13 @@
       <div class="foot-left">
         <img class="brand-mark small" src="assets/nerya-logo.webp" alt="" aria-hidden="true" />
         <span class="foot-word">NERYA</span>
-        <span class="foot-meta">evolutionary brain · v0.1.0</span>
+        <span class="foot-meta" data-i18n="idx.foot.meta">evolutionary brain · v0.1.0</span>
       </div>
       <div class="foot-right">
         <a href="https://github.com/NeryaAI/Nerya" target="_blank" rel="noopener">GitHub</a>
         <a href="https://github.com/NeryaAI/Nerya/blob/main/README.md" target="_blank" rel="noopener">README</a>
         <a href="https://github.com/NeryaAI/Nerya/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS</a>
-        <a href="https://github.com/NeryaAI/Nerya/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+        <a href="https://github.com/NeryaAI/Nerya/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="idx.foot.license">License</a>
       </div>
     </footer>
 

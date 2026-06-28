@@ -576,24 +576,31 @@ function burst(x, y) {
 }
 
 // ── boot ────────────────────────────────────────────────────────────
-const hero = prepHero();           // split + hide hero immediately (behind loader)
-setupHeadings();
-setupReveals();
+// Wait for i18n to apply the active language before splitting any text, so
+// the kinetic layer animates the translated copy (not the English source).
+const i18nReady =
+  window.NeryaLang && window.NeryaLang.ready ? window.NeryaLang.ready : Promise.resolve();
 
-whenLoaded().then(() => {
-  const runs = [
-    () => playHero(hero),
-    playScenes,
-    setupCounters,
-    setupMagnetic,
-    setupTilt,
-    setupReactor,
-    setupTeam,
-    setupPipeline,
-    setupLoopDiagram,
-    setupStarBurst,
-  ];
-  for (const fn of runs) {
-    try { fn(); } catch (err) { console.warn(`[anime-fx] ${fn.name || "fx"} skipped:`, err); }
-  }
+i18nReady.then(() => {
+  const hero = prepHero();           // split + hide hero immediately (behind loader)
+  setupHeadings();
+  setupReveals();
+
+  whenLoaded().then(() => {
+    const runs = [
+      () => playHero(hero),
+      playScenes,
+      setupCounters,
+      setupMagnetic,
+      setupTilt,
+      setupReactor,
+      setupTeam,
+      setupPipeline,
+      setupLoopDiagram,
+      setupStarBurst,
+    ];
+    for (const fn of runs) {
+      try { fn(); } catch (err) { console.warn(`[anime-fx] ${fn.name || "fx"} skipped:`, err); }
+    }
+  });
 });

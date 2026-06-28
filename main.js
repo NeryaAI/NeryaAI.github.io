@@ -18,6 +18,10 @@ const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
+// i18n helper: translate dynamic strings via the active language, English fallback.
+const t = (key, fallback) =>
+  window.NeryaLang && window.NeryaLang.t ? window.NeryaLang.t(key, fallback) : fallback;
+
 const pointer = {
   x: window.innerWidth * 0.5,
   y: window.innerHeight * 0.5,
@@ -226,7 +230,7 @@ function render(time) {
   // Hero frame counter — operator feel
   frameTick += 1;
   if (frameLabel && frameTick % 4 === 0) {
-    frameLabel.textContent = `frame ${String(frameTick).padStart(4, "0")}`;
+    frameLabel.textContent = `${t("js.frame", "frame")} ${String(frameTick).padStart(4, "0")}`;
   }
 
   if (!prefersReducedMotion) requestAnimationFrame(render);
@@ -328,11 +332,13 @@ function setupCursor() {
     .forEach((target) => {
       target.addEventListener("pointerenter", () => {
         cursor.classList.add("is-hot");
-        cursorLabel.textContent = target.matches("a, button") ? "open" : "inspect";
+        cursorLabel.textContent = target.matches("a, button")
+          ? t("js.open", "open")
+          : t("js.inspect", "inspect");
       });
       target.addEventListener("pointerleave", () => {
         cursor.classList.remove("is-hot");
-        cursorLabel.textContent = "signal";
+        cursorLabel.textContent = t("js.signal", "signal");
       });
     });
 }
