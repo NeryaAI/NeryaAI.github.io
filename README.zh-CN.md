@@ -15,7 +15,8 @@
 ---
 
 **NeryaLanding** 是 [Nerya](https://github.com/NeryaAI/Nerya) 的官方主页项目。
-Nerya 是一个以技能为核心、面向交易、可自我进化的自主智能体运行时。
+Nerya 是一支以技能为核心、运行在本机的投研 Agent 团队。默认纸面执行，实盘执行必须经过
+Risk Gate 和人工 Approval Gate。
 
 过去这个页面塞在 Nerya 的 dashboard 里。从这一版开始它独立成了一个项目，让
 dashboard 专注做控制台，让主页按自己的节奏迭代。
@@ -27,7 +28,7 @@ dashboard 专注做控制台，让主页按自己的节奏迭代。
 
 一张纯静态页面，技术栈极简：
 
-- 用 **WebGL2 fragment shader** 渲染深色 hero：紫色光壳、青色丝线、琥珀色热区，
+- 用 **WebGL2 fragment shader** 渲染深色 hero：紫色光壳、青色丝线，
   对鼠标和滚动都有反应。
 - **加载仪式**：`/00 → /100` 数字 + 线条进度 + 字母 scramble 揭示。
 - **磁吸 / 自定义光标**、海报 spotlight 蒙版、底部滚动进度条。

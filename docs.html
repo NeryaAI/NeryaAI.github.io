@@ -163,7 +163,7 @@
           <a href="#status" data-spy data-i18n="d.nav.status">Status &amp; license</a>
         </nav>
         <div class="side-foot" data-i18n-html="d.sidefoot">
-          <span class="dot live"></span> live · risk-gated · v0.1.0
+          <span class="dot live"></span> paper-first · live only after approval
         </div>
       </aside>
       <div class="sidebar-scrim" data-scrim aria-hidden="true"></div>
@@ -175,11 +175,12 @@
           <p class="eyebrow" data-fx data-i18n="d.hero.eyebrow">Operator manual · self-evolving runtime</p>
           <h1 data-hero-title data-i18n-html="d.hero.title">Run an agent that<br /><em>rewrites itself</em>.</h1>
           <p class="hero-lede" data-fx data-i18n="d.hero.lede">
-            Nerya ships its own agent kernel, LLM gateway, sub-agents, typed
-            memory, triggers, an Agent Team orchestrator, a trading kernel, and an
-            evolution pipeline, with no external framework attached at runtime.
-            This manual walks the whole thing, from one-line install to signing an
-            evolution diff.
+            Nerya is a complete trading-agent runtime, built from the kernel up.
+            The LLM gateway, sub-agents, typed memory, triggers, the Agent Team
+            orchestrator, the trading kernel, and the evolution pipeline all ship
+            together, with no external framework attached at runtime. This manual
+            walks the whole thing, from one-line install to signing an evolution
+            diff.
           </p>
           <div class="hero-actions" data-fx>
             <a class="btn btn-primary" href="#quickstart" data-i18n="d.hero.install">Install in one line</a>
@@ -201,9 +202,11 @@
             <h2 data-i18n="d.ov.h2">No strategy? Ask the agent for one.</h2>
           </div>
           <p class="lead" data-reveal data-i18n="d.ov.lead">
-            Nerya is a self-evolving AI trading team that runs on your laptop.
-            Skill-first and trading-native. One sentence is enough to get a
-            working strategy package.
+            Nerya is a self-evolving investment-research team that runs on your
+            laptop. Market, on-chain, news, and technical analysts, a risk
+            critic, and a portfolio manager do the homework, so one sentence is
+            enough to get a researched, runnable strategy package that sharpens
+            itself after every session.
           </p>
 
           <figure class="quote" data-reveal>
@@ -212,11 +215,12 @@
 
           <p data-reveal data-i18n-html="d.ov.p">
             The <code>strategy_author</code> skill turns that prompt into a working
-            strategy package in a single chat turn: trigger, sub-agent prompt
-            library, candle source, account binding, risk limits, session ledger.
-            You approve it, and it runs. After each run, the agent journals every
-            decision, reviews every fill, reflects between sessions, and drafts
-            upgrade proposals. The operator signs the diff or rejects it.
+            strategy package in a single chat turn. It wires the trigger, the
+            sub-agent prompts, the candle source, the account binding, the risk
+            limits, and the session ledger. You approve it, and it runs. After
+            each run, the agent journals every decision and reviews every fill,
+            then reflects between sessions to draft upgrade proposals. The
+            operator signs the diff or rejects it.
           </p>
 
           <div class="callout callout-safe" data-reveal>
@@ -239,7 +243,7 @@
             <article class="info-card" data-card>
               <span class="card-idx">01</span>
               <h3 data-i18n="d.pil.c1.h3">Agent Team</h3>
-              <p data-i18n="d.pil.c1.p">A durable, role-typed team with a leader, analysts, a risk critic, a shared blackboard, a task board, a mailbox, and gates.</p>
+              <p data-i18n="d.pil.c1.p">A durable investment-research desk: strategy lead, market/on-chain/news/technical analysts, a risk critic, a portfolio manager, a shared blackboard, a task board, a mailbox, and gates.</p>
             </article>
             <article class="info-card" data-card>
               <span class="card-idx">02</span>
@@ -399,13 +403,15 @@ python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
         <!-- AGENT TEAM -->
         <section class="doc-section" id="agent-team">
           <div class="doc-head" data-reveal>
-            <p class="eyebrow" data-i18n="d.team.eyebrow">05 · a durable standing team</p>
+            <p class="eyebrow" data-i18n="d.team.eyebrow">05 · a standing investment-research desk</p>
             <h2 data-i18n="d.team.h2">Agent Team</h2>
           </div>
           <p class="lead" data-reveal data-i18n-html="d.team.lead">
-            A <code>TeamRun</code> is a durable team config that persists across
-            turns. It carries the whole standing team and the rules that keep it
-            honest.
+            A <code>TeamRun</code> is a durable investment-research desk that
+            persists across turns. Analysts cover market, on-chain, news, and
+            technicals, a risk critic controls the downside, and a portfolio
+            manager owns exposure. It carries the whole standing team and the
+            rules that keep it honest.
           </p>
           <ul class="check-list" data-grid>
             <li data-card data-i18n="d.team.l1">Typed members: strategy lead, market / on-chain / news / technical analysts, risk critic, execution planner, portfolio manager.</li>
@@ -432,9 +438,10 @@ python -m nerya.cli.app proposals list --workspace ~/.nerya</code></pre>
             <h2 data-i18n="d.evo.h2">Self-evolution</h2>
           </div>
           <p class="lead" data-reveal data-i18n-html="d.evo.lead">
-            After each closed session, <code>reflection.py</code> writes memory
-            entries. <code>nerya/evolution/</code> reads those entries and produces
-            typed proposals.
+            Strategies are not static. After each closed session,
+            <code>reflection.py</code> writes memory entries and
+            <code>nerya/evolution/</code> reads them to produce typed proposals
+            that sharpen the next version and adapt it to the current regime.
           </p>
           <div class="code" data-code data-reveal>
             <div class="code-bar"><span class="code-lang">proposal types</span><button class="copy" type="button" data-copy data-i18n="dz.copy">copy</button></div>

@@ -452,8 +452,6 @@ function setupReactor() {
 function runReactorCycle(section) {
   const feed = $$(".rail-feed li", section);
   const bar = $("[data-rail-bar]", section);
-  const versionEl = $("[data-version]", section);
-  const versions = ["v1.1", "v1.1", "v1.2", "v1.2", "v1.3"];
   if (!feed.length) return;
   const apply = (idx) => {
     feed.forEach((li, k) => li.classList.toggle("is-active", k === idx));
@@ -461,11 +459,6 @@ function runReactorCycle(section) {
     if (bar) {
       if (REDUCE) bar.style.width = `${pct}%`;
       else animate(bar, { width: `${pct}%`, duration: 600, ease: "outQuad" });
-    }
-    if (versionEl && versionEl.textContent !== versions[idx]) {
-      versionEl.textContent = versions[idx];
-      if (!REDUCE)
-        animate(versionEl, { scale: [1.3, 1], opacity: [0.25, 1], duration: 420, ease: "outQuad" });
     }
   };
   apply(0);

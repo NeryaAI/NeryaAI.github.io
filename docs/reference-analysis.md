@@ -68,7 +68,7 @@ generated in the same anime-cyber violet style:
 | Asset | Pose | Section |
 |---|---|---|
 | `assets/nerya-mascot.png` | smiling 3/4 portrait (existing brand asset) | hero orbit |
-| `assets/nerya-evolver.png` | fist up, v1.1 → v1.3 ghosts ascending | 01 · evolve |
+| `assets/nerya-evolver.png` | fist up, proposal stages ascending | 01 · evolve |
 | `assets/nerya-guard.png` | hexagonal shield with policy / approval / limit runes | 02 · guard |
 | `assets/nerya-author.png` | strategy editor + brain orb | 03 · authors |
 | `assets/nerya-team.png` | four Nerya as Lead / Analyst / Risk / Memory | 04 · ritual one |

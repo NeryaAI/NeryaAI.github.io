@@ -17,7 +17,8 @@ Standalone. Static. Deploy anywhere.
 ---
 
 **NeryaLanding** is the launch page for [Nerya](https://github.com/NeryaAI/Nerya),
-the self-evolving, skill-first, trading-native autonomous agent runtime.
+the local, skill-first investment-research Agent Team runtime. Paper execution is
+the default; live execution stays behind Risk Gate and a human Approval Gate.
 
 It used to live inside the Nerya dashboard. As of this release it is its own
 project, so the dashboard ships fast and the landing page can iterate on its own
@@ -31,8 +32,7 @@ Visit *this* site when you want to learn what Nerya is.
 A single static page built with:
 
 - **WebGL2 fragment shader** for the dark-void hero. Violet shell, cyan
-  filament, soft violet glow, pointer-reactive, scroll-driven. No amber, no
-  off-brand accent.
+  filament, soft violet glow, pointer-reactive, scroll-driven.
 - **Loader ritual** with a `/00 → /100` counter and a scrambled wordmark
   reveal.
 - **Custom magnetic cursor**, spotlight masks on the mascot posters, and a
