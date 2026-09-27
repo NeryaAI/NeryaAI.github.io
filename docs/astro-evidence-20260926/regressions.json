@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-26T04:32:11.833Z",
+  "results": [
+    {
+      "name": "Expanded workspace isolates background and restores focus",
+      "passed": true,
+      "evidence": {
+        "role": "dialog",
+        "modal": "true",
+        "headerInert": true,
+        "footerInert": true,
+        "storyInert": true,
+        "toolbarInert": true
+      }
+    },
+    {
+      "name": "Unrelated film controls preserve active GIF progress",
+      "passed": true,
+      "evidence": {
+        "before": 18.823333334922793,
+        "progress": 22.166666666666668,
+        "paused": "false"
+      }
+    },
+    {
+      "name": "Media-error GIF fallback remains playable with seeking disabled",
+      "passed": true
+    }
+  ]
+}

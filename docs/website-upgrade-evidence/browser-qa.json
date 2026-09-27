@@ -1,0 +1,409 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "name": "Desktop entry stays at top after native iframe autofocus",
+      "status": "passed",
+      "evidence": {
+        "min": 0,
+        "max": 0,
+        "focus": "IFRAME",
+        "innerFocus": "TEXTAREA"
+      }
+    },
+    {
+      "name": "Desktop layout and JavaScript",
+      "status": "passed",
+      "evidence": {
+        "lang": "zh-CN",
+        "theme": "light",
+        "y": 0,
+        "width": 1440,
+        "scrollWidth": 1425,
+        "errors": []
+      }
+    },
+    {
+      "name": "Result tab backtest",
+      "status": "passed",
+      "evidence": [
+        "backtest"
+      ]
+    },
+    {
+      "name": "Result tab market",
+      "status": "passed",
+      "evidence": [
+        "market"
+      ]
+    },
+    {
+      "name": "Result tab research",
+      "status": "passed",
+      "evidence": [
+        "research"
+      ]
+    },
+    {
+      "name": "Result tab strategy",
+      "status": "passed",
+      "evidence": [
+        "strategy"
+      ]
+    },
+    {
+      "name": "Result tabs keyboard arrows and End",
+      "status": "passed"
+    },
+    {
+      "name": "Detailed research report opens with five sections",
+      "status": "passed",
+      "evidence": {
+        "open": true,
+        "sections": 5,
+        "text": 501
+      }
+    },
+    {
+      "name": "Report Escape and return focus",
+      "status": "passed"
+    },
+    {
+      "name": "Six matching video/GIF/poster variants: zh-light",
+      "status": "passed",
+      "evidence": [
+        {
+          "id": "strategy",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/strategy-zh-light-poster.webp",
+          "video": "/assets/product-recordings/strategy-zh-light.mp4",
+          "gif": "/assets/product-recordings/strategy-zh-light.gif"
+        },
+        {
+          "id": "team",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/team-zh-light-poster.webp",
+          "video": "/assets/product-recordings/team-zh-light.mp4",
+          "gif": "/assets/product-recordings/team-zh-light.gif"
+        },
+        {
+          "id": "evolution",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/evolution-zh-light-poster.webp",
+          "video": "/assets/product-recordings/evolution-zh-light.mp4",
+          "gif": "/assets/product-recordings/evolution-zh-light.gif"
+        },
+        {
+          "id": "vault",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/vault-zh-light-poster.webp",
+          "video": "/assets/product-recordings/vault-zh-light.mp4",
+          "gif": "/assets/product-recordings/vault-zh-light.gif"
+        },
+        {
+          "id": "markets",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/markets-zh-light-poster.webp",
+          "video": "/assets/product-recordings/markets-zh-light.mp4",
+          "gif": "/assets/product-recordings/markets-zh-light.gif"
+        },
+        {
+          "id": "integrations",
+          "variant": "zh-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/integrations-zh-light-poster.webp",
+          "video": "/assets/product-recordings/integrations-zh-light.mp4",
+          "gif": "/assets/product-recordings/integrations-zh-light.gif"
+        }
+      ]
+    },
+    {
+      "name": "GIF playback and poster pause: zh-light",
+      "status": "passed"
+    },
+    {
+      "name": "Six matching video/GIF/poster variants: zh-dark",
+      "status": "passed",
+      "evidence": [
+        {
+          "id": "strategy",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/strategy-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/strategy-zh-dark.mp4",
+          "gif": "/assets/product-recordings/strategy-zh-dark.gif"
+        },
+        {
+          "id": "team",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/team-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/team-zh-dark.mp4",
+          "gif": "/assets/product-recordings/team-zh-dark.gif"
+        },
+        {
+          "id": "evolution",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/evolution-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/evolution-zh-dark.mp4",
+          "gif": "/assets/product-recordings/evolution-zh-dark.gif"
+        },
+        {
+          "id": "vault",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/vault-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/vault-zh-dark.mp4",
+          "gif": "/assets/product-recordings/vault-zh-dark.gif"
+        },
+        {
+          "id": "markets",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/markets-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/markets-zh-dark.mp4",
+          "gif": "/assets/product-recordings/markets-zh-dark.gif"
+        },
+        {
+          "id": "integrations",
+          "variant": "zh-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/integrations-zh-dark-poster.webp",
+          "video": "/assets/product-recordings/integrations-zh-dark.mp4",
+          "gif": "/assets/product-recordings/integrations-zh-dark.gif"
+        }
+      ]
+    },
+    {
+      "name": "GIF playback and poster pause: zh-dark",
+      "status": "passed"
+    },
+    {
+      "name": "Six matching video/GIF/poster variants: en-dark",
+      "status": "passed",
+      "evidence": [
+        {
+          "id": "strategy",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/strategy-en-dark-poster.webp",
+          "video": "/assets/product-recordings/strategy-en-dark.mp4",
+          "gif": "/assets/product-recordings/strategy-en-dark.gif"
+        },
+        {
+          "id": "team",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/team-en-dark-poster.webp",
+          "video": "/assets/product-recordings/team-en-dark.mp4",
+          "gif": "/assets/product-recordings/team-en-dark.gif"
+        },
+        {
+          "id": "evolution",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/evolution-en-dark-poster.webp",
+          "video": "/assets/product-recordings/evolution-en-dark.mp4",
+          "gif": "/assets/product-recordings/evolution-en-dark.gif"
+        },
+        {
+          "id": "vault",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/vault-en-dark-poster.webp",
+          "video": "/assets/product-recordings/vault-en-dark.mp4",
+          "gif": "/assets/product-recordings/vault-en-dark.gif"
+        },
+        {
+          "id": "markets",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/markets-en-dark-poster.webp",
+          "video": "/assets/product-recordings/markets-en-dark.mp4",
+          "gif": "/assets/product-recordings/markets-en-dark.gif"
+        },
+        {
+          "id": "integrations",
+          "variant": "en-dark",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/integrations-en-dark-poster.webp",
+          "video": "/assets/product-recordings/integrations-en-dark.mp4",
+          "gif": "/assets/product-recordings/integrations-en-dark.gif"
+        }
+      ]
+    },
+    {
+      "name": "GIF playback and poster pause: en-dark",
+      "status": "passed"
+    },
+    {
+      "name": "Six matching video/GIF/poster variants: en-light",
+      "status": "passed",
+      "evidence": [
+        {
+          "id": "strategy",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/strategy-en-light-poster.webp",
+          "video": "/assets/product-recordings/strategy-en-light.mp4",
+          "gif": "/assets/product-recordings/strategy-en-light.gif"
+        },
+        {
+          "id": "team",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/team-en-light-poster.webp",
+          "video": "/assets/product-recordings/team-en-light.mp4",
+          "gif": "/assets/product-recordings/team-en-light.gif"
+        },
+        {
+          "id": "evolution",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/evolution-en-light-poster.webp",
+          "video": "/assets/product-recordings/evolution-en-light.mp4",
+          "gif": "/assets/product-recordings/evolution-en-light.gif"
+        },
+        {
+          "id": "vault",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/vault-en-light-poster.webp",
+          "video": "/assets/product-recordings/vault-en-light.mp4",
+          "gif": "/assets/product-recordings/vault-en-light.gif"
+        },
+        {
+          "id": "markets",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/markets-en-light-poster.webp",
+          "video": "/assets/product-recordings/markets-en-light.mp4",
+          "gif": "/assets/product-recordings/markets-en-light.gif"
+        },
+        {
+          "id": "integrations",
+          "variant": "en-light",
+          "poster": "http://127.0.0.1:4173/assets/product-recordings/integrations-en-light-poster.webp",
+          "video": "/assets/product-recordings/integrations-en-light.mp4",
+          "gif": "/assets/product-recordings/integrations-en-light.gif"
+        }
+      ]
+    },
+    {
+      "name": "GIF playback and poster pause: en-light",
+      "status": "passed"
+    },
+    {
+      "name": "Video chapter seeking",
+      "status": "passed",
+      "evidence": {
+        "time": 5.52,
+        "duration": 8.1,
+        "paused": true
+      }
+    },
+    {
+      "name": "Replay resets and plays",
+      "status": "passed"
+    },
+    {
+      "name": "Global motion pause",
+      "status": "passed"
+    },
+    {
+      "name": "Manual scrolling remains enabled",
+      "status": "passed",
+      "evidence": {
+        "first": 420,
+        "after": 420
+      }
+    },
+    {
+      "name": "Mobile entry and no horizontal overflow",
+      "status": "passed",
+      "evidence": {
+        "lang": "en",
+        "theme": "dark",
+        "y": 0,
+        "width": 390,
+        "scrollWidth": 390,
+        "errors": []
+      }
+    },
+    {
+      "name": "Mobile navigation opens and closes",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile report remains inside viewport",
+      "status": "passed",
+      "evidence": {
+        "left": 19,
+        "right": 371,
+        "width": 390,
+        "open": true
+      }
+    },
+    {
+      "name": "18 documentation sections and valid navigation",
+      "status": "passed",
+      "evidence": {
+        "sections": 18,
+        "missing": 0,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "errors": []
+      }
+    },
+    {
+      "name": "Documentation language switching",
+      "status": "passed"
+    },
+    {
+      "name": "Documentation content search",
+      "status": "passed",
+      "evidence": [
+        "sdk",
+        "artifacts"
+      ]
+    },
+    {
+      "name": "Documentation no-match state",
+      "status": "passed"
+    },
+    {
+      "name": "Documentation theme switching and SDK anchor",
+      "status": "passed"
+    },
+    {
+      "name": "Current CLI, event reset and chart contracts",
+      "status": "passed",
+      "evidence": {
+        "invalidStart": false,
+        "hasEpoch": true,
+        "cards": true
+      }
+    },
+    {
+      "name": "Mobile docs search, navigation and table containment",
+      "status": "passed",
+      "evidence": {
+        "lang": "en",
+        "theme": "light",
+        "y": 0,
+        "width": 390,
+        "scrollWidth": 390,
+        "errors": []
+      }
+    },
+    {
+      "name": "Reduced-motion entry is visible, paused and stays at top",
+      "status": "passed",
+      "evidence": {
+        "motion": true,
+        "opacity": "1",
+        "animations": 0,
+        "scrollY": 0,
+        "videos": true
+      }
+    },
+    {
+      "name": "No observed uncaught page errors at completion",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "homepage-zh-light-strategy.png",
+    "research-report-zh-light.png",
+    "homepage-en-dark-backtest.png",
+    "homepage-en-dark-market.png",
+    "homepage-zh-dark-mobile.png",
+    "docs-zh-dark.png",
+    "docs-en-light-sdk.png",
+    "docs-en-light-mobile.png"
+  ],
+  "checkedAt": "2026-09-26T12:40:37.348Z"
+}

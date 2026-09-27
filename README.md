@@ -1,3 +1,32 @@
+# Nerya website · React
+
+The current website uses **React, Vite, TypeScript, Tailwind CSS v4 and
+framer-motion**. Astro is no longer part of the active build. The complete
+homepage and Agent SDK manual are React pages, prerendered to static HTML and
+hydrated in the browser.
+
+```sh
+npm ci
+npm run dev
+# http://127.0.0.1:4173/
+
+npm run build
+npm run typecheck
+npm run check
+npm run preview
+```
+
+Edit `src/App.tsx` for the homepage, `src/Manual.tsx` and `src/data/manual.mjs`
+for documentation, and `components/ui/` for reusable components. The shared
+directory has the shadcn aliases in `components.json`. Publish only `dist/`.
+The interactive Mock is isolated; website actions do not reach real accounts.
+
+See [React integration and effects](docs/react-migration-and-effects.md) for
+the current file map, behavior, reference components and verification commands.
+
+<details>
+<summary>Historical design notes (retired implementations, not current setup instructions)</summary>
+
 <p align="center">
   <img src="assets/nerya-mascot.png" alt="Nerya mascot" width="220" />
 </p>
@@ -38,10 +67,12 @@ A single static page built with:
 - **Custom magnetic cursor**, spotlight masks on the mascot posters, and a
   scroll meter.
 - **Pinned horizontal scroll** for the three "ritual" panels (Agent Team,
-  Typed Memory, Self-Rewriter) on desktop, stacked on mobile.
+  Scoped Memory, Governed Evolution) on desktop, stacked on mobile.
 - **Six original mascot illustrations** of the Nerya character doing different
-  jobs (evolving, guarding, authoring, leading the team, rewriting her own
-  kernel, leaning on a GitHub star).
+  jobs (evolving, guarding, authoring, leading the team, reviewing governed
+  proposals, leaning on a GitHub star).
+- **Current product surfaces** including the Chat Canvas for browser sessions,
+  charts, files, structured JSON, and styled web-search results.
 - **A docs gallery** that points directly at the parts of the Nerya repo a
   visitor will actually want to read (README, AGENTS, skills/, trading/,
   evolution/, sdk/).
@@ -106,21 +137,85 @@ NeryaLanding/
 └── README.zh-CN.md
 ```
 
-## Run locally
+## Run and build with Astro
+
+Use Node.js 22.12.0 or newer (Node 26 is supported by the pinned Astro 7.3.5
+engine range), and npm 9.6.5 or newer. The landing entry point is now
+`src/pages/index.astro`; root `index.html` remains legacy source and is never
+copied to the published site.
 
 ```bash
-python -m http.server 4173 --bind 127.0.0.1
+npm ci
+npm run dev
 ```
 
-Then open <http://127.0.0.1:4173/>.
+Open <http://127.0.0.1:4173/>. For a production preview:
 
-Any static server works. There is no build step, no bundler, no npm install.
+```bash
+npm run build
+npm run check
+npm run preview
+```
 
-## Deploy
+Only `dist/` is the publishable static artifact. It includes `.nojekyll` for
+GitHub Pages; these commands do not deploy anything. The site is designed for
+hosting at `/` (a root site or custom domain). Repository-subpath hosting is
+not supported: the landing and its bundled demo use root-relative URLs.
 
-Push the repo, point a static host at the root. Both `index.html` and `assets/`
-must be served from the same origin so the WebGL canvas can pick up the textures
-and the mascot illustrations can load.
+`dev`, `build`, and `preview` run `prepare:public` first. That task copies an
+explicit allowlist of existing files to ignored `public/`, preserving
+`docs.html`, `skills.html`, `recipes.html`, icon scripts, and the prebuilt
+`demo/` artifact. Add local product films/posters/GIFs to
+`assets/product-demos/`; direct media files there map to the same public URL.
+Nothing is moved or removed. Do not edit `public/`; unexpected files cause
+preparation to stop for inspection rather than being deleted. Private source,
+tools, evidence directories, image provenance, and source maps are not copied.
+
+`npm run check:astro` checks an existing build: local links/assets, the eight
+main sections, four product films, and byte-preserved public/demo files. It is
+static verification, not browser or accessibility testing. `npm run check`
+also checks the deterministic demo fixtures. `npm run check:legacy` retains
+the old landing assertions and sibling-dashboard icon checks separately; it
+is not the Astro acceptance gate. Icon maintenance commands are unchanged.
+
+The demo is deliberately **not** rebuilt during installation, dev, build,
+preview, or checks. `npm run build:demo` is an explicit maintenance operation
+that requires a compatible sibling Agent checkout; ordinary landing builds
+use the checked-in bundle without relying on that checkout.
+
+The six walkthroughs now live in `assets/product-recordings/`. They are viewport
+recordings of the actual source-backed Agent interface, including markets and
+connector authoring, not the earlier authored UI illustrations. Each has an MP4,
+animated GIF and poster from a captured frame. `node tools/record-native-demos.mjs
+--verify` checks decoding and hashes with the local ffmpeg/ffprobe toolchain.
+Recording itself requires an explicitly authorized Ego task space; see
+`docs/native-recordings-20260926.md` before operating the browser.
+
+After Agent UI changes, run `npm run build:demo` and `npm run check:demo-source`
+against the current sibling dashboard, then refresh the recordings. The source
+check detects stale imported files and new routes; normal standalone site builds
+still require no sibling checkout. The current workbench demo implements its
+command/session-view protocol locally and never forwards requests to a runtime.
+
+Recordings now use a1280×800 CSS viewport at DPR2, preserving2560×1600 renderer
+pixels through raw `Page.captureScreenshot`. Do not use CSS-scale screenshots or
+upscale old media. MP4 uses CRF14, GIF uses a full palette without dithering, and
+WebP posters preserve lossless samples plus ICC profiles. With retained raw
+captures and the local image toolchain, `node tools/check-media-quality.mjs`
+verifies poster pixel identity and generates a labelled density comparison.
+
+The landing pauses offscreen/hidden media and provides pause, replay, chapter
+seeking and a GIF toggle. The native workspace remains local-only. Its bootstrap
+normalizes query navigation into hash routes and adds narrowly scoped in-memory
+Vault/timeline fixtures. No real secrets or runtime calls are used.
+
+Twenty mascot-derived portraits replace DiceBear. Uploaded-reference provenance
+and exact atlas crop metadata live in `assets/agent-avatars/provenance.json`.
+`npm run check` verifies the standalone site's media and portraits without the
+sibling dashboard. With that checkout present, `npm run check:avatars` also
+verifies shared mapping/component contracts and byte-identical dashboard assets.
+`node tools/sync-role-avatars.mjs` copies the canonical portraits without
+rebuilding the native bundle or restarting the Agent service.
 
 ## Companion projects
 
@@ -138,3 +233,5 @@ signal is what makes it easier for other operators to find.
 
 PolyForm Noncommercial 1.0.0 (same as Nerya). See [LICENSE](LICENSE) for the
 full text and `contact` in the Nerya repo for commercial use.
+
+</details>

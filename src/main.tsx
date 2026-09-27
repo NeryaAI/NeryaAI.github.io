@@ -1,0 +1,11 @@
+import React from 'react';
+import {mountPage} from './hydrate';
+import App from './App';
+import './styles/site.css';
+import './styles/showcase.css';
+import './styles/narrative.css';
+import './styles/tailwind.css';
+import './styles/effects.css';
+const root=document.getElementById('react-root');
+if(!root)throw new Error('Missing React root');
+mountPage(root,<App/>);

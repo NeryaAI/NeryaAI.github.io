@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true, "lib": ["ES2022", "DOM", "DOM.Iterable"] },
+  "include": ["components/**/*.tsx", "lib/**/*.ts", "src/scripts/site.ts", "src/scripts/results.ts", "src/scripts/stories.ts", "src/scripts/effects.ts"],
+  "exclude": ["node_modules", "dist", "public", "demo", "demo-src"]
+}

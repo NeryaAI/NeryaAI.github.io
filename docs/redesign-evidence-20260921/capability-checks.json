@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-09-21T04:06:49.430Z",
+  "browser": "Ego Browser",
+  "checks": [
+    "Light/dark persistence and real Agent synchronization",
+    "Collaboration playback, interruption, reverse and artifacts",
+    "Four market workflows and distinct support boundaries",
+    "Evolution requires validation and separates approval/application/rollback",
+    "Adapter reuse/new branches, error state and usable plan download",
+    "Bilingual state retention",
+    "Native Agent handles A-share and new-connector requests",
+    "Mobile 390/320px in both themes",
+    "Reduced motion and no unintended external requests"
+  ],
+  "passed": 9,
+  "viewports": [
+    1440,
+    390,
+    320
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ]
+}

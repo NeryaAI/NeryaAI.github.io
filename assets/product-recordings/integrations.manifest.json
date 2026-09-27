@@ -1,0 +1,1845 @@
+{
+  "schema": "nerya-native-recording/v1",
+  "name": "integrations",
+  "mode": "record",
+  "status": "encoded-and-verified",
+  "recordedAt": "2026-09-26T07:17:17.442Z",
+  "sourceUrl": "http://127.0.0.1:4173/demo/index.html#/chat",
+  "recorderSha256": "5fd8439d81152d88d5a48f863f29ce53856f147f2c6d2bcef5a5a92097bc89bf",
+  "browser": {
+    "backend": "ego-browser",
+    "space": 20,
+    "page": "p1"
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 2
+  },
+  "safety": {
+    "demo": "real-agent",
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "viewport": [
+      1280,
+      800
+    ],
+    "dpr": 2
+  },
+  "disclosure": "Actual screen recording of the source-backed Nerya app with deterministic data; no live accounts, model requests or orders. This is not drawn or recreated UI.",
+  "capture": {
+    "method": "Ego Page.cdp Page.captureScreenshot native DPR2 PNG",
+    "pixelWidth": 2560,
+    "pixelHeight": 1600,
+    "targetFps": 10,
+    "osCursorCaptured": false,
+    "targetSeconds": 16,
+    "maxSeconds": 24,
+    "timestamp": "monotonic host clock at screenshot request/response midpoint",
+    "timing": "real elapsed time; no speed-up",
+    "modifications": "none; only frame repetition, PNG-to-video encoding and GIF palette conversion"
+  },
+  "story": "Type an exchange-authoring request and read the native integration plan. This is not a verified live connection or generated-and-tested connector.",
+  "sourceInputs": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/backtest.png",
+      "bytes": 45198,
+      "sha256": "154b65ebc1d057a3b5208823e6b2b053cf881f6829b2edd8a10873f0410334cf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/connector.png",
+      "bytes": 44220,
+      "sha256": "2e6f6f4d49f3bd52654beb08494869997ea5b698c99ee27ca93a0ec2ee6a51c4"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/data.png",
+      "bytes": 44976,
+      "sha256": "fc994201c823b4fa10aef160185b70daabe8766d4ffa4bb2149b183184d01039"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/equities.png",
+      "bytes": 42300,
+      "sha256": "97df401e0dfd8b359563d0f50975f314a584cbb1026a185185894ca170ae7dba"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/evolution.png",
+      "bytes": 44643,
+      "sha256": "c7bf7752be8203775c7b8bb14b62638ff9ecca63d7f1e6fb853a25b2f7fec032"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/execution.png",
+      "bytes": 43723,
+      "sha256": "349533a2d19644764eae968297706d5c0158d9413636c1886a32664e0a16acc8"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/futures.png",
+      "bytes": 40640,
+      "sha256": "6c76c9b3bf7f7e28f471db3c8b9797319da17c2c7797e1cddc32a7461b3392fc"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/macro.png",
+      "bytes": 46742,
+      "sha256": "2666d70cd72b426bfd1e554374f81478144eea5b517191629ac95c9257c7ad9b"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/onchain.png",
+      "bytes": 44767,
+      "sha256": "3c67bf0f5265e514a496e1680a2b797a2105c188008984ca93e7079a8b09675c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/portfolio.png",
+      "bytes": 40851,
+      "sha256": "4fa5a4bb1f4d10bc247c69712910875e39bd800121cdaa00ecff43f3645e0d46"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/prediction.png",
+      "bytes": 45457,
+      "sha256": "150aa5c102c627bdb0e19aa149dafe0475abfbcc47ebce71abb3a602dee2d29d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/quant.png",
+      "bytes": 46248,
+      "sha256": "6f8823e82c10ee1f67451620d37b8bf6604bdedb393199f7fef3335bd9bdd9e5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/security.png",
+      "bytes": 43628,
+      "sha256": "a552401688f4f09ea4ddd532b60287eac1739d785f963e25ecbff3ed8c0a2ba1"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/sentiment.png",
+      "bytes": 46534,
+      "sha256": "1cc0102fd3ac6ab6fd95b45e5a3db69ec36fa1386093b1c1937ad8c313177dc3"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "actions": [
+    {
+      "t": 0.7944,
+      "end": 5.2623,
+      "kind": "native-type",
+      "name": "给 Nerya 发消息",
+      "text": "接入 ExampleX 交易所，先检查 CCXT 桥接，再编写只读行情与账户连接器，订单权限保持关闭。",
+      "ref": "[data-native-record-target=\"capture-2\"]",
+      "snapshot": "snapshot-001.txt"
+    },
+    {
+      "t": 5.4127,
+      "end": 5.5172,
+      "kind": "native-click",
+      "role": "button",
+      "name": "发送",
+      "ref": "[data-native-record-target=\"capture-4\"]",
+      "snapshot": "snapshot-003.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0aa2fb10-bfa7-4fe7-9e1c-c971147fe1c8"
+    },
+    {
+      "t": 10.0194,
+      "end": 10.403,
+      "kind": "native-scroll",
+      "deltaY": -300,
+      "viewportPoint": {
+        "x": 930,
+        "y": 480
+      }
+    },
+    {
+      "t": 13.0193,
+      "end": 13.3189,
+      "kind": "native-scroll",
+      "deltaY": 190,
+      "viewportPoint": {
+        "x": 930,
+        "y": 480
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "snapshot-000.txt",
+      "label": "ready",
+      "t": null,
+      "sha256": "d24890a8deb0db8688218b985a251f158aa0861cb82cc73eb5d82f4cc7afbba0"
+    },
+    {
+      "file": "snapshot-001.txt",
+      "label": "textbox: 给 Nerya 发消息",
+      "t": 0.7236,
+      "sha256": "d24890a8deb0db8688218b985a251f158aa0861cb82cc73eb5d82f4cc7afbba0"
+    },
+    {
+      "file": "snapshot-003.txt",
+      "label": "button: 发送",
+      "t": 5.3314,
+      "sha256": "d8dd73a55971eb1e0c8ddb4605e7a4df45f5353ac556429182ee5e981f2bd477"
+    },
+    {
+      "file": "snapshot-005.txt",
+      "label": "generated result",
+      "t": 5.7659,
+      "sha256": "d939bf8bffea72c653ae6969d0aebc81b815135a4730f3da3e0b0c21f3601392"
+    },
+    {
+      "file": "snapshot-006.txt",
+      "label": "end",
+      "t": 16.0753,
+      "sha256": "d27652845747d0184c91f6193808ef8a37a88492a41d1e864f65f4234ce28fd7"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-00000.png",
+      "t": 0.0504,
+      "requestSeconds": 0.1008,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00001.png",
+      "t": 0.1406,
+      "requestSeconds": 0.0765,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00002.png",
+      "t": 0.2424,
+      "requestSeconds": 0.0768,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00003.png",
+      "t": 0.3428,
+      "requestSeconds": 0.0736,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00004.png",
+      "t": 0.4534,
+      "requestSeconds": 0.091,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00005.png",
+      "t": 0.5436,
+      "requestSeconds": 0.069,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00006.png",
+      "t": 0.6459,
+      "requestSeconds": 0.071,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00007.png",
+      "t": 0.7514,
+      "requestSeconds": 0.0852,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00008.png",
+      "t": 0.8973,
+      "requestSeconds": 0.1754,
+      "sha256": "fd4ac10af1bbac923634498db15a2fdc1db5b3fe32fd80cbe03bc61e3ad0546b"
+    },
+    {
+      "file": "frame-00009.png",
+      "t": 1.5719,
+      "requestSeconds": 1.1703,
+      "sha256": "52d126ee0cde140204865a60d0189167591f08f1c11a3b745766c568a72cfe3e"
+    },
+    {
+      "file": "frame-00010.png",
+      "t": 2.2589,
+      "requestSeconds": 0.2006,
+      "sha256": "163a61f99a7cb13d44ce2ef15fe99cfcd86c004c6341c6fbe5e7c6e0d84bbcb3"
+    },
+    {
+      "file": "frame-00011.png",
+      "t": 2.4583,
+      "requestSeconds": 0.1953,
+      "sha256": "57c165393a9d2458d1d0bd12a9d54403b8bb7620668866435fc0f451f0e8b89b"
+    },
+    {
+      "file": "frame-00012.png",
+      "t": 2.6386,
+      "requestSeconds": 0.1622,
+      "sha256": "9c983c3b9b7565b86e203a45cf8ace738c62bb9dc9807235df3ccecedf82ae84"
+    },
+    {
+      "file": "frame-00013.png",
+      "t": 2.8024,
+      "requestSeconds": 0.1623,
+      "sha256": "b4f956f5802c2c646955b3aadeb74895514374d0c7049c3a9b0b1298bf6a9d81"
+    },
+    {
+      "file": "frame-00014.png",
+      "t": 2.97,
+      "requestSeconds": 0.1699,
+      "sha256": "97dd0da30fee547cd8eaa91787afe3cb1e1525cbd770474f3ada323293363adf"
+    },
+    {
+      "file": "frame-00015.png",
+      "t": 3.1392,
+      "requestSeconds": 0.1655,
+      "sha256": "05672c8492f0565e8922adee8b54638f250e78c416b539fe778a93efc2a3283a"
+    },
+    {
+      "file": "frame-00016.png",
+      "t": 3.3239,
+      "requestSeconds": 0.201,
+      "sha256": "2b5bf25f5438694f1d47cc178a4034c22233edf28f6ea904a8b3227a0c9f7b0d"
+    },
+    {
+      "file": "frame-00017.png",
+      "t": 3.5342,
+      "requestSeconds": 0.2167,
+      "sha256": "fc88330842c0de98bcf006b7dac0b2e3d59a47080860675a2d3de05fe8f80c7a"
+    },
+    {
+      "file": "frame-00018.png",
+      "t": 3.7452,
+      "requestSeconds": 0.2022,
+      "sha256": "8d0cac79b8ea2f02bb3d7608569f829c9ca6bab51ad045910467ca881388e800"
+    },
+    {
+      "file": "frame-00019.png",
+      "t": 3.9326,
+      "requestSeconds": 0.1697,
+      "sha256": "c28a8a913d42ff7367b4bdd9efd66e1652eb4e1b02433930aba4714e9d9f89cc"
+    },
+    {
+      "file": "frame-00020.png",
+      "t": 4.099,
+      "requestSeconds": 0.1601,
+      "sha256": "9e7009ee4ff745eeb00b4e0d96c230a8d5c6e753ccdc1fd488e3d784825a1626"
+    },
+    {
+      "file": "frame-00021.png",
+      "t": 4.2689,
+      "requestSeconds": 0.1767,
+      "sha256": "35c9479c26bbaab29f47b3fe574c95846e492dcc92802e25ce9e276273fb454c"
+    },
+    {
+      "file": "frame-00022.png",
+      "t": 4.4592,
+      "requestSeconds": 0.2008,
+      "sha256": "a963ee555468d59794e4a8eee5126b3a23ea04a06c6f38449b805dc5442426c6"
+    },
+    {
+      "file": "frame-00023.png",
+      "t": 4.6592,
+      "requestSeconds": 0.1961,
+      "sha256": "0d42435d94c47485c3a20cb6fe869797e94febe20eb641ae15f0c2d5a8971927"
+    },
+    {
+      "file": "frame-00024.png",
+      "t": 4.8606,
+      "requestSeconds": 0.2037,
+      "sha256": "780aab936ec5cbe49913b5c59030820d722f58b69fffa47a246b8be4af68bdce"
+    },
+    {
+      "file": "frame-00025.png",
+      "t": 5.0452,
+      "requestSeconds": 0.1626,
+      "sha256": "8e45682000825752c34b9d648f4a1d54d6f4891080f5d7bc06223b7652c912b7"
+    },
+    {
+      "file": "frame-00026.png",
+      "t": 5.2192,
+      "requestSeconds": 0.185,
+      "sha256": "8b63af7cba50829ce6539086eca050ef9acc212f3e9df0a135a9fede54a01aa2"
+    },
+    {
+      "file": "frame-00027.png",
+      "t": 5.3628,
+      "requestSeconds": 0.0989,
+      "sha256": "8b63af7cba50829ce6539086eca050ef9acc212f3e9df0a135a9fede54a01aa2"
+    },
+    {
+      "file": "frame-00028.png",
+      "t": 5.5211,
+      "requestSeconds": 0.2166,
+      "sha256": "b24625e7c099c42c8e80ead74c96682141ba0190ead10d055679882ce7e3ac8f"
+    },
+    {
+      "file": "frame-00029.png",
+      "t": 5.6885,
+      "requestSeconds": 0.1131,
+      "sha256": "53cfe8fdb48f310f3fb493755aae464eec0f925de570f2611a5112b7932a1c37"
+    },
+    {
+      "file": "frame-00030.png",
+      "t": 5.8047,
+      "requestSeconds": 0.1158,
+      "sha256": "55829e184f659cfbcf20999da41d5a41833af412f2adc1cddb56fd88f37c54f3"
+    },
+    {
+      "file": "frame-00031.png",
+      "t": 5.9208,
+      "requestSeconds": 0.1136,
+      "sha256": "8000eeb613bcf00111e1f494808f4f52ff007cd7fac927848923db82635ffd2a"
+    },
+    {
+      "file": "frame-00032.png",
+      "t": 6.0192,
+      "requestSeconds": 0.0801,
+      "sha256": "416a6f74d3a091e118843bf050053e903ce6ae09597b361557aa5f47ae7fe79c"
+    },
+    {
+      "file": "frame-00033.png",
+      "t": 6.1211,
+      "requestSeconds": 0.0842,
+      "sha256": "201ec0db94f5af51d2924857edb5b0276e8dbc4fb91abaa6f5fe2f6c6bf9adff"
+    },
+    {
+      "file": "frame-00034.png",
+      "t": 6.2216,
+      "requestSeconds": 0.0824,
+      "sha256": "693c195425b3e7b2349eaa96d9bf615292e1954776ac1b562c3794193e78877f"
+    },
+    {
+      "file": "frame-00035.png",
+      "t": 6.3498,
+      "requestSeconds": 0.1354,
+      "sha256": "923f54e04c9a390bc8ebf986ccf6ba63ac39d69d17c1f1745e001ee4817f61d9"
+    },
+    {
+      "file": "frame-00036.png",
+      "t": 6.4752,
+      "requestSeconds": 0.1122,
+      "sha256": "2081347d58d247ed9dd146deaa3ad4d33cc69c652ac5b31811072d5b05e5a652"
+    },
+    {
+      "file": "frame-00037.png",
+      "t": 6.5903,
+      "requestSeconds": 0.1151,
+      "sha256": "ed6fd9827b54e037299fcf423a119b84430fd9785cd9abfdba019077aba2892f"
+    },
+    {
+      "file": "frame-00038.png",
+      "t": 6.6982,
+      "requestSeconds": 0.0976,
+      "sha256": "7a9c6d8b2779f52aaae52493ea4a354dd9f26d710951f6731acb19347e00a7a3"
+    },
+    {
+      "file": "frame-00039.png",
+      "t": 6.7784,
+      "requestSeconds": 0.0572,
+      "sha256": "ba47a86de2038422ec3f9840aa4914564d2a2144aea8ba326366de5da62bafe7"
+    },
+    {
+      "file": "frame-00040.png",
+      "t": 6.9115,
+      "requestSeconds": 0.1203,
+      "sha256": "b125453ef7e0591cedbf7b360533eff1ab6c4ae3fc8bd157a0859777d5f74d73"
+    },
+    {
+      "file": "frame-00041.png",
+      "t": 7.0288,
+      "requestSeconds": 0.1112,
+      "sha256": "2e08fbe71599a449594c17eb3cf04757652c238eb30ea4f5528c42b70b3355c6"
+    },
+    {
+      "file": "frame-00042.png",
+      "t": 7.1355,
+      "requestSeconds": 0.1015,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00043.png",
+      "t": 7.2384,
+      "requestSeconds": 0.1011,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00044.png",
+      "t": 7.3392,
+      "requestSeconds": 0.0974,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00045.png",
+      "t": 7.4384,
+      "requestSeconds": 0.0954,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00046.png",
+      "t": 7.5289,
+      "requestSeconds": 0.0749,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00047.png",
+      "t": 7.6388,
+      "requestSeconds": 0.0924,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00048.png",
+      "t": 7.7302,
+      "requestSeconds": 0.0722,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00049.png",
+      "t": 7.8401,
+      "requestSeconds": 0.0934,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00050.png",
+      "t": 7.9378,
+      "requestSeconds": 0.0863,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00051.png",
+      "t": 8.0418,
+      "requestSeconds": 0.0913,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00052.png",
+      "t": 8.1423,
+      "requestSeconds": 0.0892,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00053.png",
+      "t": 8.2415,
+      "requestSeconds": 0.0847,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00054.png",
+      "t": 8.3434,
+      "requestSeconds": 0.0851,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00055.png",
+      "t": 8.4438,
+      "requestSeconds": 0.0831,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00056.png",
+      "t": 8.5449,
+      "requestSeconds": 0.0833,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00057.png",
+      "t": 8.645,
+      "requestSeconds": 0.0803,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00058.png",
+      "t": 8.7459,
+      "requestSeconds": 0.0788,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00059.png",
+      "t": 8.8377,
+      "requestSeconds": 0.0582,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00060.png",
+      "t": 8.9477,
+      "requestSeconds": 0.0753,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00061.png",
+      "t": 9.0577,
+      "requestSeconds": 0.0922,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00062.png",
+      "t": 9.1578,
+      "requestSeconds": 0.09,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00063.png",
+      "t": 9.2565,
+      "requestSeconds": 0.0839,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00064.png",
+      "t": 9.3593,
+      "requestSeconds": 0.0872,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00065.png",
+      "t": 9.46,
+      "requestSeconds": 0.0855,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00066.png",
+      "t": 9.5606,
+      "requestSeconds": 0.0833,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00067.png",
+      "t": 9.6613,
+      "requestSeconds": 0.0823,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00068.png",
+      "t": 9.7523,
+      "requestSeconds": 0.0611,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00069.png",
+      "t": 9.873,
+      "requestSeconds": 0.0996,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00070.png",
+      "t": 9.9719,
+      "requestSeconds": 0.0943,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00071.png",
+      "t": 10.1533,
+      "requestSeconds": 0.2572,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00072.png",
+      "t": 10.6403,
+      "requestSeconds": 0.7134,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00073.png",
+      "t": 11.0426,
+      "requestSeconds": 0.0879,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00074.png",
+      "t": 11.1449,
+      "requestSeconds": 0.0901,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00075.png",
+      "t": 11.2431,
+      "requestSeconds": 0.0837,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00076.png",
+      "t": 11.3448,
+      "requestSeconds": 0.0847,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00077.png",
+      "t": 11.4447,
+      "requestSeconds": 0.0805,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00078.png",
+      "t": 11.5529,
+      "requestSeconds": 0.0932,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00079.png",
+      "t": 11.6451,
+      "requestSeconds": 0.0757,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00080.png",
+      "t": 11.7568,
+      "requestSeconds": 0.0953,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00081.png",
+      "t": 11.8463,
+      "requestSeconds": 0.0731,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00082.png",
+      "t": 11.9581,
+      "requestSeconds": 0.0939,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00083.png",
+      "t": 12.0475,
+      "requestSeconds": 0.0713,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00084.png",
+      "t": 12.168,
+      "requestSeconds": 0.1089,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00085.png",
+      "t": 12.2733,
+      "requestSeconds": 0.0987,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00086.png",
+      "t": 12.3721,
+      "requestSeconds": 0.0958,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00087.png",
+      "t": 12.461,
+      "requestSeconds": 0.0741,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00088.png",
+      "t": 12.5723,
+      "requestSeconds": 0.0968,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00089.png",
+      "t": 12.6632,
+      "requestSeconds": 0.0793,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00090.png",
+      "t": 12.7631,
+      "requestSeconds": 0.0763,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00091.png",
+      "t": 12.8736,
+      "requestSeconds": 0.0942,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00092.png",
+      "t": 12.9732,
+      "requestSeconds": 0.0918,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00093.png",
+      "t": 13.1426,
+      "requestSeconds": 0.2313,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00094.png",
+      "t": 13.364,
+      "requestSeconds": 0.2081,
+      "sha256": "a2e5fe340c48f9ee31ebb170a38615a13868d22ba986e5e2bd7c03da9da5402a"
+    },
+    {
+      "file": "frame-00095.png",
+      "t": 13.6417,
+      "requestSeconds": 0.3443,
+      "sha256": "c758cb49fa47a55e23713dc99b4a9dcbaddea941e72bd664dc985f42ec9ec607"
+    },
+    {
+      "file": "frame-00096.png",
+      "t": 13.8597,
+      "requestSeconds": 0.0887,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00097.png",
+      "t": 13.9583,
+      "requestSeconds": 0.0819,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00098.png",
+      "t": 14.0608,
+      "requestSeconds": 0.085,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00099.png",
+      "t": 14.1669,
+      "requestSeconds": 0.0946,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00100.png",
+      "t": 14.2703,
+      "requestSeconds": 0.1007,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00101.png",
+      "t": 14.371,
+      "requestSeconds": 0.0974,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00102.png",
+      "t": 14.4725,
+      "requestSeconds": 0.1001,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00103.png",
+      "t": 14.5699,
+      "requestSeconds": 0.0916,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00104.png",
+      "t": 14.6651,
+      "requestSeconds": 0.0802,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00105.png",
+      "t": 14.7734,
+      "requestSeconds": 0.0938,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00106.png",
+      "t": 14.8649,
+      "requestSeconds": 0.0762,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00107.png",
+      "t": 14.9742,
+      "requestSeconds": 0.0917,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00108.png",
+      "t": 15.0669,
+      "requestSeconds": 0.0731,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00109.png",
+      "t": 15.1662,
+      "requestSeconds": 0.0689,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00110.png",
+      "t": 15.2862,
+      "requestSeconds": 0.1066,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00111.png",
+      "t": 15.3879,
+      "requestSeconds": 0.0965,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00112.png",
+      "t": 15.4785,
+      "requestSeconds": 0.0766,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00113.png",
+      "t": 15.5888,
+      "requestSeconds": 0.0935,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00114.png",
+      "t": 15.6803,
+      "requestSeconds": 0.074,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00115.png",
+      "t": 15.791,
+      "requestSeconds": 0.0929,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00116.png",
+      "t": 15.8812,
+      "requestSeconds": 0.072,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    },
+    {
+      "file": "frame-00117.png",
+      "t": 15.9911,
+      "requestSeconds": 0.0892,
+      "sha256": "b2c5d78b57a8fccd159541b8ebf21de08f74402e193ff5194bc2308637ea3224"
+    }
+  ],
+  "duration": 16.048,
+  "finalUrl": "http://127.0.0.1:4173/demo/index.html#/chat/0aa2fb10-bfa7-4fe7-9e1c-c971147fe1c8",
+  "demoRequests": [
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/session/transcript",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    }
+  ],
+  "demoErrors": [],
+  "sourceInputsAfter": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/backtest.png",
+      "bytes": 45198,
+      "sha256": "154b65ebc1d057a3b5208823e6b2b053cf881f6829b2edd8a10873f0410334cf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/connector.png",
+      "bytes": 44220,
+      "sha256": "2e6f6f4d49f3bd52654beb08494869997ea5b698c99ee27ca93a0ec2ee6a51c4"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/data.png",
+      "bytes": 44976,
+      "sha256": "fc994201c823b4fa10aef160185b70daabe8766d4ffa4bb2149b183184d01039"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/equities.png",
+      "bytes": 42300,
+      "sha256": "97df401e0dfd8b359563d0f50975f314a584cbb1026a185185894ca170ae7dba"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/evolution.png",
+      "bytes": 44643,
+      "sha256": "c7bf7752be8203775c7b8bb14b62638ff9ecca63d7f1e6fb853a25b2f7fec032"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/execution.png",
+      "bytes": 43723,
+      "sha256": "349533a2d19644764eae968297706d5c0158d9413636c1886a32664e0a16acc8"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/futures.png",
+      "bytes": 40640,
+      "sha256": "6c76c9b3bf7f7e28f471db3c8b9797319da17c2c7797e1cddc32a7461b3392fc"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/macro.png",
+      "bytes": 46742,
+      "sha256": "2666d70cd72b426bfd1e554374f81478144eea5b517191629ac95c9257c7ad9b"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/onchain.png",
+      "bytes": 44767,
+      "sha256": "3c67bf0f5265e514a496e1680a2b797a2105c188008984ca93e7079a8b09675c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/portfolio.png",
+      "bytes": 40851,
+      "sha256": "4fa5a4bb1f4d10bc247c69712910875e39bd800121cdaa00ecff43f3645e0d46"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/prediction.png",
+      "bytes": 45457,
+      "sha256": "150aa5c102c627bdb0e19aa149dafe0475abfbcc47ebce71abb3a602dee2d29d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/quant.png",
+      "bytes": 46248,
+      "sha256": "6f8823e82c10ee1f67451620d37b8bf6604bdedb393199f7fef3335bd9bdd9e5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/security.png",
+      "bytes": 43628,
+      "sha256": "a552401688f4f09ea4ddd532b60287eac1739d785f963e25ecbff3ed8c0a2ba1"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/sentiment.png",
+      "bytes": 46534,
+      "sha256": "1cc0102fd3ac6ab6fd95b45e5a3db69ec36fa1386093b1c1937ad8c313177dc3"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "sourceStable": true,
+  "outputs": [
+    {
+      "file": "integrations.mp4",
+      "bytes": 475912,
+      "sha256": "ce9af67daf8121b76a3c382e80175316b387f8baf4b40883bb7a0892705a538f",
+      "width": 2560,
+      "height": 1600,
+      "codec": "h264",
+      "frames": 385,
+      "duration": 16.041667
+    },
+    {
+      "file": "integrations.gif",
+      "bytes": 487066,
+      "sha256": "01ef3182c5f7a114023e2f34d61da404b870275fa7cf37ef7fac8a9fb8ed95bd",
+      "width": 2560,
+      "height": 1600,
+      "codec": "gif",
+      "frames": 160,
+      "duration": 16
+    },
+    {
+      "file": "integrations-poster.webp",
+      "bytes": 102414,
+      "sha256": "773748c88e3be48ddcf1e2a4a07d06cd10ef36ea60955e8709f7448d7de301a8",
+      "width": 2560,
+      "height": 1600,
+      "codec": "webp",
+      "frames": 1,
+      "duration": null
+    }
+  ],
+  "posterSourceFrame": "frame-00065.png",
+  "encoding": {
+    "mp4": "ffmpeg/libx264 CRF14 slow native 2x",
+    "gif": "ffmpeg full 256-color palette, no dithering, native 2x",
+    "poster": "lossless WebP from raw native2x frame, source ICC retained",
+    "encoderSha256": "5fd8439d81152d88d5a48f863f29ce53856f147f2c6d2bcef5a5a92097bc89bf",
+    "posterRefinement": {
+      "tool": "cwebp",
+      "flags": "-lossless -z 6 -metadata icc",
+      "reason": "Preserve source color interpretation as well as lossless samples"
+    }
+  },
+  "captureDirectory": ".tmp/native-recordings/integrations-record-WqXcze"
+}

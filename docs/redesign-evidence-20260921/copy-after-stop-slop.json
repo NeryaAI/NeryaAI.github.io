@@ -1,0 +1,62 @@
+{
+  "text": "跳至内容\nnerya\n产品\n投研团队\n策略与市场\n交易所适配\n文档 ↗\n☀\nEN\n本地开始 ↗\nⅡ\n\n运行在你本地的 AI 投研工作台\n\n让 AI 团队\n帮你构建策略\n\n描述你的想法。研究员收集证据，审阅员检查结论，你决定是否运行策略。\n\n本地开始\n↗\n▷\n体验工作台\n\n本地运行 · 默认模拟交易\n\n开始探索\n研究任务\n策略验证\n改进审查\nNERYA WORKSPACE\nNerya Agent /工作空间\n展开体验 ↗\n\n选择任务，或输入你的需求。\n\n打开完整工作台 ↗\n让研究员与审阅员\n一起检查策略\n\n各成员保留自己的上下文，交换消息，并在共享黑板上记录结论与分歧。\n\n研究负责人\n分配研究任务\n↗\n市场分析师\n检查数据和来源\n↗\n风险审查员\n检查敞口和限额\n↗\n研究负责人\n共享黑板\n分配研究任务\n\n确定研究范围，分配任务并汇总结论。\n\n↳\n确认标的与时间范围\n↳\n记录证据与待验证问题\n\nresearch/plan.md → shared-board.json\n\nTEAM SESSION / research-024\n↺\n启动团队 ▷\n协调者\n计划与分工\n研究员\n并行收集证据\n审阅员\n质疑与补充\n风控审查员\n汇总并交付\n协调者\n拆解研究问题\n\n研究趋势，收集反向证据，保留成员各自的上下文。\n\n共享产物\nresearch/plan.md\n独立上下文，共享工作记录。\n01 / 04\n按市场配置\n策略工作流\n\n切换市场，查看数据源、交易约束和策略节点。\n\n₿\n加密货币\n◒\n预测市场\n↗\n期货\n沪\nA 股\nBTC / USDT\nBTC 趋势策略\n\n构建 BTC 趋势策略，让研究员和审阅员交叉质疑，从模拟执行开始。\n\n◇ 仓位预算\n◇ 费用与滑点\n◇ 信号确认\n打开策略工作流 ↗\nstrategy / workflow\nPAPER\n01\n行情输入\nCCXT · Binance / Bybit / OKX\n02\n趋势信号\n检查这个步骤\n03\n团队审阅\n检查这个步骤\n04\n风险检查\n检查这个步骤\n05\n模拟执行\nPAPER\n▤\nbtc_trend_guard / strategy.yml\n✓\n\n模拟 → 审查 → 受控执行\n\nCCXT · Binance / Bybit / OKX\n接入与执行边界\n先检查风险，\n再批准执行\n\n默认模拟交易。实盘需要启用权限，通过风控并完成人工审批。\n\n了解风控与审批机制\n↗\n◇\n\n调整仓位比例，查看拦截条件。\n\n执行检查点\n风险规则\n模拟\n实盘\nBTC / USDT\n交易意图\n订单占组合比例\n3%\n\n单笔仓位上限：组合的 5%。\n\n✓\nRisk Gate\n满足仓位限制\n✓\nApproval Gate\n模拟流程\n执行模拟检查\n\n已满足风险限制，可以继续下一步检查。\n\nEVOLUTION / 014\nv1.3.2\n观察\n反思\n提案\n验证\n审查\n检查会话记录\n\n研究员对照运行记录，核查决策、成交和被拒绝的信号。\n\nsessions/paper-018.jsonl\n− max_position_pct: 8\n+ max_position_pct: 5\n+ signal_confirmation: 3\n\n逐步检查，当前版本保持不变。\n\n←\n重新探索 ↺\n下一步 →\n在 Nerya 中打开完整审查\n↗\n让 Agent 复盘，\n由你审核改进\n\nAgent 从会话记录中提出改进。你检查变更、运行验证，再决定应用或回滚。\n\n了解受控进化\n↗\n告诉 Agent\n你要适配的接口\n\n代码 Agent 先查已有桥接，再根据 API 文档准备适配方案。验证和审批后才能启用执行。\n\nCCXT\nBinance\nBybit\nOKX\nHyperliquid\nPolymarket\nTushare\nAkShare\nNERYA / CODING AGENT\n提案工作流\n描述要适配的接口\n复用 CCXT 桥接\n编写新连接器\nAPI 文档 → 能力 → 连接器 → 审查\n生成适配方案 ↗\nworkspace / providers\n等待任务\n\n输入平台名称和需要接入的能力。\n\n下载适配方案 ↓\n安装 Nerya，\n开始你的研究\n\n接入模型后，先用模拟模式验证策略。\n\n开始使用 Nerya\n↗\n使用前须知\n数据存储\n模型与策略导入\n策略变更审批\n使用许可\nnerya\n文档\n技能\n示例\nGitHub ↗\n© 2026 Nerya\n产品体验使用模拟数据，不连接账户或模型，不执行真实操作。\nPolyForm Noncommercial",
+  "chars": 1549,
+  "portraits": [
+    {
+      "role": "lead",
+      "src": "assets/agent-avatars/lead.png",
+      "loaded": true
+    },
+    {
+      "role": "analyst",
+      "src": "assets/agent-avatars/analyst.png",
+      "loaded": true
+    },
+    {
+      "role": "risk",
+      "src": "assets/agent-avatars/risk.png",
+      "loaded": false
+    },
+    {
+      "role": "lead",
+      "src": "assets/agent-avatars/lead.png",
+      "loaded": true
+    },
+    {
+      "role": "lead",
+      "src": "assets/agent-avatars/lead.png",
+      "loaded": true
+    },
+    {
+      "role": "researcher",
+      "src": "assets/agent-avatars/researcher.png",
+      "loaded": true
+    },
+    {
+      "role": "reviewer",
+      "src": "assets/agent-avatars/reviewer.png",
+      "loaded": true
+    },
+    {
+      "role": "risk",
+      "src": "assets/agent-avatars/risk.png",
+      "loaded": false
+    },
+    {
+      "role": "lead",
+      "src": "assets/agent-avatars/lead.png",
+      "loaded": true
+    },
+    {
+      "role": "coder",
+      "src": "assets/agent-avatars/coder.png",
+      "loaded": true
+    },
+    {
+      "role": "coder",
+      "src": "assets/agent-avatars/coder.png",
+      "loaded": true
+    }
+  ],
+  "overflow": false
+}

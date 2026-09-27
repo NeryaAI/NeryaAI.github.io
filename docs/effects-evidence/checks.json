@@ -1,0 +1,195 @@
+{
+  "checkedAt": "2026-09-26T15:34:46.182Z",
+  "results": [
+    {
+      "name": "React hydration and native iframe autofocus preserve top position",
+      "passed": true,
+      "data": {
+        "min": 0,
+        "max": 0,
+        "react": true,
+        "frameCount": 1
+      }
+    },
+    {
+      "name": "Centered perspective Mock, no hero card, three direct GitHub links",
+      "passed": true,
+      "data": {
+        "h": {
+          "x": 222.5,
+          "y": 163.796875,
+          "width": 980,
+          "height": 184.53125,
+          "top": 163.796875,
+          "right": 1202.5,
+          "bottom": 348.328125,
+          "left": 222.5
+        },
+        "w": {
+          "x": 7.29785680770874,
+          "y": 335.703125,
+          "width": 1410.404296875,
+          "height": 586.3934936523438,
+          "top": 335.703125,
+          "right": 1417.7021536827087,
+          "bottom": 922.0966186523438,
+          "left": 7.29785680770874
+        },
+        "transform": "translateY(-240px) scale(1.02) rotateX(30deg)",
+        "heroResults": 0,
+        "cta": [
+          {
+            "href": "https://github.com/NeryaAI/Nerya",
+            "bg": "rgb(48, 39, 62)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "href": "https://github.com/NeryaAI/Nerya",
+            "bg": "rgb(48, 39, 62)",
+            "color": "rgb(255, 255, 255)"
+          },
+          {
+            "href": "https://github.com/NeryaAI/Nerya",
+            "bg": "rgb(48, 39, 62)",
+            "color": "rgb(255, 255, 255)"
+          }
+        ],
+        "mode": "scroll"
+      }
+    },
+    {
+      "name": "Mock starts blurred behind slogan, then settles sharp below it",
+      "passed": true,
+      "data": {
+        "initialLayout": {
+          "cardTop": 335.703125,
+          "cardBottom": 1092.4193115234375,
+          "sloganTop": 163.796875,
+          "sloganBottom": 348.328125,
+          "introTop": 1425.703125,
+          "gapAbove": -12.625,
+          "gapBelow": 333.2838134765625,
+          "translateY": -240,
+          "filter": "blur(3px)",
+          "glow": "none",
+          "frame": {
+            "padding": "0px",
+            "border": "1px"
+          }
+        },
+        "settledLayout": {
+          "cardTop": 125.703125,
+          "cardBottom": 959.7418212890625,
+          "sloganBottom": -137.8072509765625,
+          "introTop": 975.703125,
+          "gapAbove": 263.5103759765625,
+          "gapBelow": 15.9613037109375,
+          "translateY": 0,
+          "filter": "blur(0px)"
+        }
+      }
+    },
+    {
+      "name": "Expanded Mock escapes transforms and Escape closes it",
+      "passed": true,
+      "data": {
+        "r": {
+          "x": 12,
+          "y": 12,
+          "width": 1416,
+          "height": 976,
+          "top": 12,
+          "right": 1428,
+          "bottom": 988,
+          "left": 12
+        },
+        "height": 1000,
+        "width": 1440,
+        "perspective": "none",
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Top-right AI/effects icon is removed",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Six authored scenes still play, seek and replay",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Pointer spotlight and edge glow track the actual component",
+      "passed": true,
+      "data": {
+        "x": "356.203125px",
+        "y": "269px",
+        "angle": "90deg"
+      }
+    },
+    {
+      "name": "Offscreen scenes pause and no screen-recording media is loaded",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Four language/theme combinations and native excerpts survive React updates",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Lower output cards and full research report remain usable",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Responsive React layout at 768px",
+      "passed": true,
+      "data": {
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Responsive React layout at 390px",
+      "passed": true,
+      "data": {
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Responsive React layout at 320px",
+      "passed": true,
+      "data": {
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Reduced motion yields static, readable content",
+      "passed": true,
+      "data": {
+        "mode": "static",
+        "transform": "none",
+        "animations": 0
+      }
+    },
+    {
+      "name": "React manual retains 18 sections, filtering, language and anchors",
+      "passed": true,
+      "data": {
+        "matches": 6,
+        "total": 18
+      }
+    },
+    {
+      "name": "Mobile React manual menu and Escape",
+      "passed": true,
+      "data": {}
+    },
+    {
+      "name": "Final React homepage has no captured runtime exceptions",
+      "passed": true,
+      "data": {}
+    }
+  ]
+}

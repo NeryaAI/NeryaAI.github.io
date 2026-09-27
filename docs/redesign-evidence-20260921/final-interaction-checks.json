@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-20T19:20:32.505Z",
+  "checks": [
+    "Clean copy, background, source-backed iframe",
+    "Motion pause and reduced-motion stable canvas",
+    "Route tabs and expanded workspace",
+    "Setup dialog and Escape",
+    "390px and 320px bilingual layout and mobile menu",
+    "Native prompt starters and streaming chat",
+    "Three native members, continuing a member, files",
+    "Three strategy workflows and native node editor",
+    "Mobile real app and no external requests"
+  ],
+  "passed": 9,
+  "browser": "Ego Browser",
+  "viewports": [
+    1440,
+    390,
+    320
+  ],
+  "network": "No real API or external requests"
+}

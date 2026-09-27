@@ -1,0 +1,1179 @@
+{
+  "schema": "nerya-native-recording/v1",
+  "name": "markets",
+  "mode": "record",
+  "status": "encoded-and-verified",
+  "recordedAt": "2026-09-26T07:16:48.212Z",
+  "sourceUrl": "http://127.0.0.1:4173/demo/index.html#/strategies",
+  "recorderSha256": "5fd8439d81152d88d5a48f863f29ce53856f147f2c6d2bcef5a5a92097bc89bf",
+  "browser": {
+    "backend": "ego-browser",
+    "space": 20,
+    "page": "p1"
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 2
+  },
+  "safety": {
+    "demo": "real-agent",
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "viewport": [
+      1280,
+      800
+    ],
+    "dpr": 2
+  },
+  "disclosure": "Actual screen recording of the source-backed Nerya app with deterministic data; no live accounts, model requests or orders. This is not drawn or recreated UI.",
+  "capture": {
+    "method": "Ego Page.cdp Page.captureScreenshot native DPR2 PNG",
+    "pixelWidth": 2560,
+    "pixelHeight": 1600,
+    "targetFps": 10,
+    "osCursorCaptured": false,
+    "targetSeconds": 16,
+    "maxSeconds": 24,
+    "timestamp": "monotonic host clock at screenshot request/response midpoint",
+    "timing": "real elapsed time; no speed-up",
+    "modifications": "none; only frame repetition, PNG-to-video encoding and GIF palette conversion"
+  },
+  "story": "Open genuine workflow canvases for crypto, prediction markets, futures and A-shares.",
+  "sourceInputs": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/backtest.png",
+      "bytes": 45198,
+      "sha256": "154b65ebc1d057a3b5208823e6b2b053cf881f6829b2edd8a10873f0410334cf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/connector.png",
+      "bytes": 44220,
+      "sha256": "2e6f6f4d49f3bd52654beb08494869997ea5b698c99ee27ca93a0ec2ee6a51c4"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/data.png",
+      "bytes": 44976,
+      "sha256": "fc994201c823b4fa10aef160185b70daabe8766d4ffa4bb2149b183184d01039"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/equities.png",
+      "bytes": 42300,
+      "sha256": "97df401e0dfd8b359563d0f50975f314a584cbb1026a185185894ca170ae7dba"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/evolution.png",
+      "bytes": 44643,
+      "sha256": "c7bf7752be8203775c7b8bb14b62638ff9ecca63d7f1e6fb853a25b2f7fec032"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/execution.png",
+      "bytes": 43723,
+      "sha256": "349533a2d19644764eae968297706d5c0158d9413636c1886a32664e0a16acc8"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/futures.png",
+      "bytes": 40640,
+      "sha256": "6c76c9b3bf7f7e28f471db3c8b9797319da17c2c7797e1cddc32a7461b3392fc"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/macro.png",
+      "bytes": 46742,
+      "sha256": "2666d70cd72b426bfd1e554374f81478144eea5b517191629ac95c9257c7ad9b"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/onchain.png",
+      "bytes": 44767,
+      "sha256": "3c67bf0f5265e514a496e1680a2b797a2105c188008984ca93e7079a8b09675c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/portfolio.png",
+      "bytes": 40851,
+      "sha256": "4fa5a4bb1f4d10bc247c69712910875e39bd800121cdaa00ecff43f3645e0d46"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/prediction.png",
+      "bytes": 45457,
+      "sha256": "150aa5c102c627bdb0e19aa149dafe0475abfbcc47ebce71abb3a602dee2d29d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/quant.png",
+      "bytes": 46248,
+      "sha256": "6f8823e82c10ee1f67451620d37b8bf6604bdedb393199f7fef3335bd9bdd9e5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/security.png",
+      "bytes": 43628,
+      "sha256": "a552401688f4f09ea4ddd532b60287eac1739d785f963e25ecbff3ed8c0a2ba1"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/sentiment.png",
+      "bytes": 46534,
+      "sha256": "1cc0102fd3ac6ab6fd95b45e5a3db69ec36fa1386093b1c1937ad8c313177dc3"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "actions": [
+    {
+      "t": 1.1978,
+      "end": 1.3115,
+      "kind": "native-click",
+      "role": "button",
+      "name": "打开策略：BTC 趋势跟随",
+      "ref": "[data-native-record-target=\"capture-2\"]",
+      "snapshot": "snapshot-001.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=btc_trend_guard&tab=performance"
+    },
+    {
+      "t": 1.6307,
+      "kind": "verified-market-route",
+      "expectedStrategyId": "btc_trend_guard",
+      "title": "BTC 趋势跟随",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=btc_trend_guard&tab=performance",
+      "snapshot": "snapshot-003.txt"
+    },
+    {
+      "t": 1.6307,
+      "end": 1.8013,
+      "kind": "native-hover",
+      "ref": "[data-native-record-target=\"capture-4\"]",
+      "name": "切换策略",
+      "snapshot": "snapshot-003.txt"
+    },
+    {
+      "t": 4.5443,
+      "end": 4.6338,
+      "kind": "native-click",
+      "role": "anchor",
+      "name": "所有策略",
+      "ref": "[data-native-record-target=\"capture-6\"]",
+      "snapshot": "snapshot-005.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies"
+    },
+    {
+      "t": 4.814,
+      "end": 4.9243,
+      "kind": "native-click",
+      "role": "button",
+      "name": "打开策略：事件概率与证据核查",
+      "ref": "[data-native-record-target=\"capture-8\"]",
+      "snapshot": "snapshot-007.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=event_probability"
+    },
+    {
+      "t": 5.2315,
+      "kind": "verified-market-route",
+      "expectedStrategyId": "event_probability",
+      "title": "事件概率与证据核查",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=event_probability",
+      "snapshot": "snapshot-009.txt"
+    },
+    {
+      "t": 5.2315,
+      "end": 5.4359,
+      "kind": "native-hover",
+      "ref": "[data-native-record-target=\"capture-10\"]",
+      "name": "切换策略",
+      "snapshot": "snapshot-009.txt"
+    },
+    {
+      "t": 8.1945,
+      "end": 8.2919,
+      "kind": "native-click",
+      "role": "anchor",
+      "name": "所有策略",
+      "ref": "[data-native-record-target=\"capture-12\"]",
+      "snapshot": "snapshot-011.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies"
+    },
+    {
+      "t": 8.4984,
+      "end": 10.2167,
+      "kind": "native-click",
+      "role": "button",
+      "name": "打开策略：期货期限结构",
+      "ref": "[data-native-record-target=\"capture-14\"]",
+      "snapshot": "snapshot-013.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=futures_term_structure"
+    },
+    {
+      "t": 12.3966,
+      "kind": "verified-market-route",
+      "expectedStrategyId": "futures_term_structure",
+      "title": "期货期限结构",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=futures_term_structure",
+      "snapshot": "snapshot-015.txt"
+    },
+    {
+      "t": 12.3966,
+      "end": 13.4412,
+      "kind": "native-hover",
+      "ref": "[data-native-record-target=\"capture-16\"]",
+      "name": "切换策略",
+      "snapshot": "snapshot-015.txt"
+    },
+    {
+      "t": 14.4161,
+      "end": 14.51,
+      "kind": "native-click",
+      "role": "anchor",
+      "name": "所有策略",
+      "ref": "[data-native-record-target=\"capture-18\"]",
+      "snapshot": "snapshot-017.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies"
+    },
+    {
+      "t": 14.6784,
+      "end": 16.2702,
+      "kind": "native-click",
+      "role": "button",
+      "name": "打开策略：A 股因子轮动",
+      "ref": "[data-native-record-target=\"capture-20\"]",
+      "snapshot": "snapshot-019.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=ashare_factor_rotation"
+    },
+    {
+      "t": 18.5123,
+      "kind": "verified-market-route",
+      "expectedStrategyId": "ashare_factor_rotation",
+      "title": "A 股因子轮动",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=ashare_factor_rotation",
+      "snapshot": "snapshot-021.txt"
+    },
+    {
+      "t": 18.5123,
+      "end": 20.1383,
+      "kind": "native-hover",
+      "ref": "[data-native-record-target=\"capture-22\"]",
+      "name": "切换策略",
+      "snapshot": "snapshot-021.txt"
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "snapshot-000.txt",
+      "label": "ready",
+      "t": null,
+      "sha256": "eb8a4c3b0e9c196d8503548e431d84c2936a636c9190570c631ea414e342c3e7"
+    },
+    {
+      "file": "snapshot-001.txt",
+      "label": "button: 打开策略：BTC 趋势跟随",
+      "t": 1.1269,
+      "sha256": "eb8a4c3b0e9c196d8503548e431d84c2936a636c9190570c631ea414e342c3e7"
+    },
+    {
+      "file": "snapshot-003.txt",
+      "label": "button: 切换策略",
+      "t": 1.5186,
+      "sha256": "9d662c24e26ef61dd4537f829ca6ad402348672c75d2bc9ce0c50503d36699f8"
+    },
+    {
+      "file": "snapshot-005.txt",
+      "label": "anchor: 所有策略",
+      "t": 4.4669,
+      "sha256": "9d662c24e26ef61dd4537f829ca6ad402348672c75d2bc9ce0c50503d36699f8"
+    },
+    {
+      "file": "snapshot-007.txt",
+      "label": "button: 打开策略：事件概率与证据核查",
+      "t": 4.7367,
+      "sha256": "1250ee75e8575850453615dab5cb84ca9567022bd8363fbe64affbad39473183"
+    },
+    {
+      "file": "snapshot-009.txt",
+      "label": "button: 切换策略",
+      "t": 5.1354,
+      "sha256": "f39b7ad5e3faca865c6d21694642fb1c9b4404d1bb281013b64a026a32c34ab5"
+    },
+    {
+      "file": "snapshot-011.txt",
+      "label": "anchor: 所有策略",
+      "t": 8.1263,
+      "sha256": "f39b7ad5e3faca865c6d21694642fb1c9b4404d1bb281013b64a026a32c34ab5"
+    },
+    {
+      "file": "snapshot-013.txt",
+      "label": "button: 打开策略：期货期限结构",
+      "t": 8.3878,
+      "sha256": "fa84a79b5eecc35ab7ae3a7a4ed9b98c55e8d26d53777d3c663bebd9d350a8d6"
+    },
+    {
+      "file": "snapshot-015.txt",
+      "label": "button: 切换策略",
+      "t": 12.3943,
+      "sha256": "1e99af99c26c64ba53a9cece48768a1be2e8af1e37de211e23fd2449548abd3e"
+    },
+    {
+      "file": "snapshot-017.txt",
+      "label": "anchor: 所有策略",
+      "t": 14.3277,
+      "sha256": "ee92c58662af217bd19c2f96fc9b692945d944b41c15034955c2733658ae5d5e"
+    },
+    {
+      "file": "snapshot-019.txt",
+      "label": "button: 打开策略：A 股因子轮动",
+      "t": 14.6045,
+      "sha256": "9c9ad94cba007894b79db685cd772e8eb819b9d6457b0850823bf3f8f806d55d"
+    },
+    {
+      "file": "snapshot-021.txt",
+      "label": "button: 切换策略",
+      "t": 18.4339,
+      "sha256": "640f1ecd29ceb9cfbd4e90d59558b09a938f11db93a1515f2fdda24fa15bc508"
+    },
+    {
+      "file": "snapshot-023.txt",
+      "label": "end",
+      "t": 21.1914,
+      "sha256": "5247e77ada72f926783d59814848182b2fd1f4dda316f7d324b3762033680ccb"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-00000.png",
+      "t": 0.5553,
+      "requestSeconds": 1.1106,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00001.png",
+      "t": 1.1543,
+      "requestSeconds": 0.086,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00002.png",
+      "t": 1.3079,
+      "requestSeconds": 0.1895,
+      "sha256": "8aa364e92ca023594879d770adc646931da9cf95bf963d174a7ba78250eb97fa"
+    },
+    {
+      "file": "frame-00003.png",
+      "t": 1.4501,
+      "requestSeconds": 0.0939,
+      "sha256": "8aa364e92ca023594879d770adc646931da9cf95bf963d174a7ba78250eb97fa"
+    },
+    {
+      "file": "frame-00004.png",
+      "t": 1.5669,
+      "requestSeconds": 0.1266,
+      "sha256": "8aa364e92ca023594879d770adc646931da9cf95bf963d174a7ba78250eb97fa"
+    },
+    {
+      "file": "frame-00005.png",
+      "t": 1.6719,
+      "requestSeconds": 0.0792,
+      "sha256": "8aa364e92ca023594879d770adc646931da9cf95bf963d174a7ba78250eb97fa"
+    },
+    {
+      "file": "frame-00006.png",
+      "t": 1.8115,
+      "requestSeconds": 0.1589,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00007.png",
+      "t": 1.9373,
+      "requestSeconds": 0.0897,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00008.png",
+      "t": 2.0288,
+      "requestSeconds": 0.0686,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00009.png",
+      "t": 2.1409,
+      "requestSeconds": 0.089,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00010.png",
+      "t": 2.2389,
+      "requestSeconds": 0.0824,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00011.png",
+      "t": 2.3415,
+      "requestSeconds": 0.0851,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00012.png",
+      "t": 2.438,
+      "requestSeconds": 0.0752,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00013.png",
+      "t": 2.5412,
+      "requestSeconds": 0.0785,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00014.png",
+      "t": 2.6423,
+      "requestSeconds": 0.0771,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00015.png",
+      "t": 2.7422,
+      "requestSeconds": 0.0742,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00016.png",
+      "t": 2.8632,
+      "requestSeconds": 0.1132,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00017.png",
+      "t": 2.9692,
+      "requestSeconds": 0.0957,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00018.png",
+      "t": 3.069,
+      "requestSeconds": 0.0932,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00019.png",
+      "t": 3.1708,
+      "requestSeconds": 0.0948,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00020.png",
+      "t": 3.2677,
+      "requestSeconds": 0.086,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00021.png",
+      "t": 3.3621,
+      "requestSeconds": 0.0724,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00022.png",
+      "t": 3.4632,
+      "requestSeconds": 0.0713,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00023.png",
+      "t": 3.5642,
+      "requestSeconds": 0.0702,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00024.png",
+      "t": 3.6837,
+      "requestSeconds": 0.1062,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00025.png",
+      "t": 3.7857,
+      "requestSeconds": 0.0947,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00026.png",
+      "t": 3.8752,
+      "requestSeconds": 0.0711,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00027.png",
+      "t": 3.9865,
+      "requestSeconds": 0.0909,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00028.png",
+      "t": 4.0783,
+      "requestSeconds": 0.0722,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00029.png",
+      "t": 4.1882,
+      "requestSeconds": 0.0891,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00030.png",
+      "t": 4.2778,
+      "requestSeconds": 0.0656,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00031.png",
+      "t": 4.3987,
+      "requestSeconds": 0.1037,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00032.png",
+      "t": 4.498,
+      "requestSeconds": 0.0918,
+      "sha256": "5da9c0e180a5714821248ea9a1a1113a3aa4251c913333965da465c77d465b12"
+    },
+    {
+      "file": "frame-00033.png",
+      "t": 4.634,
+      "requestSeconds": 0.1635,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00034.png",
+      "t": 4.7648,
+      "requestSeconds": 0.0973,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00035.png",
+      "t": 4.9163,
+      "requestSeconds": 0.2003,
+      "sha256": "b18d5957c988d906d0fda60bb07e931028bb800e15bfec93a8ba4bb756f26774"
+    },
+    {
+      "file": "frame-00036.png",
+      "t": 5.0652,
+      "requestSeconds": 0.0933,
+      "sha256": "b18d5957c988d906d0fda60bb07e931028bb800e15bfec93a8ba4bb756f26774"
+    },
+    {
+      "file": "frame-00037.png",
+      "t": 5.1746,
+      "requestSeconds": 0.111,
+      "sha256": "b18d5957c988d906d0fda60bb07e931028bb800e15bfec93a8ba4bb756f26774"
+    },
+    {
+      "file": "frame-00038.png",
+      "t": 5.2806,
+      "requestSeconds": 0.0983,
+      "sha256": "b18d5957c988d906d0fda60bb07e931028bb800e15bfec93a8ba4bb756f26774"
+    },
+    {
+      "file": "frame-00039.png",
+      "t": 5.4442,
+      "requestSeconds": 0.2242,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00040.png",
+      "t": 5.6051,
+      "requestSeconds": 0.0945,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00041.png",
+      "t": 5.7033,
+      "requestSeconds": 0.089,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00042.png",
+      "t": 5.7948,
+      "requestSeconds": 0.0694,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00043.png",
+      "t": 5.9077,
+      "requestSeconds": 0.0917,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00044.png",
+      "t": 6.0057,
+      "requestSeconds": 0.0838,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00045.png",
+      "t": 6.1056,
+      "requestSeconds": 0.0822,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00046.png",
+      "t": 6.2176,
+      "requestSeconds": 0.104,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00047.png",
+      "t": 6.3189,
+      "requestSeconds": 0.0956,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00048.png",
+      "t": 6.4191,
+      "requestSeconds": 0.0941,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00049.png",
+      "t": 6.5182,
+      "requestSeconds": 0.091,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00050.png",
+      "t": 6.6203,
+      "requestSeconds": 0.0928,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00051.png",
+      "t": 6.7213,
+      "requestSeconds": 0.091,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00052.png",
+      "t": 6.8227,
+      "requestSeconds": 0.091,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00053.png",
+      "t": 6.9203,
+      "requestSeconds": 0.0869,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00054.png",
+      "t": 7.0191,
+      "requestSeconds": 0.0823,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00055.png",
+      "t": 7.1132,
+      "requestSeconds": 0.0673,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00056.png",
+      "t": 7.2342,
+      "requestSeconds": 0.1059,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00057.png",
+      "t": 7.3361,
+      "requestSeconds": 0.0939,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00058.png",
+      "t": 7.4255,
+      "requestSeconds": 0.0717,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00059.png",
+      "t": 7.5365,
+      "requestSeconds": 0.0899,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00060.png",
+      "t": 7.6288,
+      "requestSeconds": 0.0721,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00061.png",
+      "t": 7.749,
+      "requestSeconds": 0.1113,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00062.png",
+      "t": 7.8533,
+      "requestSeconds": 0.0944,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00063.png",
+      "t": 7.9519,
+      "requestSeconds": 0.0897,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00064.png",
+      "t": 8.0428,
+      "requestSeconds": 0.07,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00065.png",
+      "t": 8.1504,
+      "requestSeconds": 0.0875,
+      "sha256": "d370001c9dc7fc68744c0009503c283a6c88d8ba0303f47d2c3541be4f57ff65"
+    },
+    {
+      "file": "frame-00066.png",
+      "t": 8.2852,
+      "requestSeconds": 0.1533,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00067.png",
+      "t": 8.43,
+      "requestSeconds": 0.1357,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00068.png",
+      "t": 8.5488,
+      "requestSeconds": 0.1012,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00069.png",
+      "t": 10.4493,
+      "requestSeconds": 3.6979,
+      "sha256": "bb316093984a63697552f4c2b3ed94ed629f7fea35c304596203b88bd637c9ab"
+    },
+    {
+      "file": "frame-00070.png",
+      "t": 12.3387,
+      "requestSeconds": 0.0767,
+      "sha256": "bb316093984a63697552f4c2b3ed94ed629f7fea35c304596203b88bd637c9ab"
+    },
+    {
+      "file": "frame-00071.png",
+      "t": 13.3541,
+      "requestSeconds": 1.9078,
+      "sha256": "f29c4761a9730aaf30de673462c3bcd90890bbcb0e54f14541e4ea9c25c51114"
+    },
+    {
+      "file": "frame-00072.png",
+      "t": 14.3627,
+      "requestSeconds": 0.1059,
+      "sha256": "f29c4761a9730aaf30de673462c3bcd90890bbcb0e54f14541e4ea9c25c51114"
+    },
+    {
+      "file": "frame-00073.png",
+      "t": 14.5006,
+      "requestSeconds": 0.1689,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00074.png",
+      "t": 14.6327,
+      "requestSeconds": 0.0905,
+      "sha256": "b7274b4f45649252abaae8a9fbc5e3debcc34baa067cbb059d34b35cac232572"
+    },
+    {
+      "file": "frame-00075.png",
+      "t": 16.5049,
+      "requestSeconds": 3.6338,
+      "sha256": "8578e06430e4fac9a5f4cb522299f678465175cb0918f41455a15f5ee4342738"
+    },
+    {
+      "file": "frame-00076.png",
+      "t": 18.3666,
+      "requestSeconds": 0.0882,
+      "sha256": "8578e06430e4fac9a5f4cb522299f678465175cb0918f41455a15f5ee4342738"
+    },
+    {
+      "file": "frame-00077.png",
+      "t": 18.4673,
+      "requestSeconds": 0.0888,
+      "sha256": "8578e06430e4fac9a5f4cb522299f678465175cb0918f41455a15f5ee4342738"
+    },
+    {
+      "file": "frame-00078.png",
+      "t": 19.8444,
+      "requestSeconds": 2.6451,
+      "sha256": "e881335e13dc1fb4a756c75c39cf0f038aa19fc6aedf5adc691cceb5dd453739"
+    }
+  ],
+  "duration": 21.1685,
+  "finalUrl": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=ashare_factor_rotation",
+  "demoRequests": [
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflows",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflow",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflow",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflow",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflow",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    }
+  ],
+  "demoErrors": [],
+  "sourceInputsAfter": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/backtest.png",
+      "bytes": 45198,
+      "sha256": "154b65ebc1d057a3b5208823e6b2b053cf881f6829b2edd8a10873f0410334cf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/connector.png",
+      "bytes": 44220,
+      "sha256": "2e6f6f4d49f3bd52654beb08494869997ea5b698c99ee27ca93a0ec2ee6a51c4"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/data.png",
+      "bytes": 44976,
+      "sha256": "fc994201c823b4fa10aef160185b70daabe8766d4ffa4bb2149b183184d01039"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/equities.png",
+      "bytes": 42300,
+      "sha256": "97df401e0dfd8b359563d0f50975f314a584cbb1026a185185894ca170ae7dba"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/evolution.png",
+      "bytes": 44643,
+      "sha256": "c7bf7752be8203775c7b8bb14b62638ff9ecca63d7f1e6fb853a25b2f7fec032"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/execution.png",
+      "bytes": 43723,
+      "sha256": "349533a2d19644764eae968297706d5c0158d9413636c1886a32664e0a16acc8"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/futures.png",
+      "bytes": 40640,
+      "sha256": "6c76c9b3bf7f7e28f471db3c8b9797319da17c2c7797e1cddc32a7461b3392fc"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/macro.png",
+      "bytes": 46742,
+      "sha256": "2666d70cd72b426bfd1e554374f81478144eea5b517191629ac95c9257c7ad9b"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/onchain.png",
+      "bytes": 44767,
+      "sha256": "3c67bf0f5265e514a496e1680a2b797a2105c188008984ca93e7079a8b09675c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/portfolio.png",
+      "bytes": 40851,
+      "sha256": "4fa5a4bb1f4d10bc247c69712910875e39bd800121cdaa00ecff43f3645e0d46"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/prediction.png",
+      "bytes": 45457,
+      "sha256": "150aa5c102c627bdb0e19aa149dafe0475abfbcc47ebce71abb3a602dee2d29d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/quant.png",
+      "bytes": 46248,
+      "sha256": "6f8823e82c10ee1f67451620d37b8bf6604bdedb393199f7fef3335bd9bdd9e5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/security.png",
+      "bytes": 43628,
+      "sha256": "a552401688f4f09ea4ddd532b60287eac1739d785f963e25ecbff3ed8c0a2ba1"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/sentiment.png",
+      "bytes": 46534,
+      "sha256": "1cc0102fd3ac6ab6fd95b45e5a3db69ec36fa1386093b1c1937ad8c313177dc3"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "sourceStable": true,
+  "outputs": [
+    {
+      "file": "markets.mp4",
+      "bytes": 1438093,
+      "sha256": "3db35aa88db27cadb1d7cb47c55f95341ae1b52a60defe77934036dff3174adb",
+      "width": 2560,
+      "height": 1600,
+      "codec": "h264",
+      "frames": 508,
+      "duration": 21.166667
+    },
+    {
+      "file": "markets.gif",
+      "bytes": 1240324,
+      "sha256": "736e9916481c04ca3960c4d9e1873393762815a4f569593ce52cad5cac474a3d",
+      "width": 2560,
+      "height": 1600,
+      "codec": "gif",
+      "frames": 212,
+      "duration": 21.2
+    },
+    {
+      "file": "markets-poster.webp",
+      "bytes": 93384,
+      "sha256": "782c9ff78dacfcfd9b148ea67cb3036c94273eba928b9a7c427b278651a8833a",
+      "width": 2560,
+      "height": 1600,
+      "codec": "webp",
+      "frames": 1,
+      "duration": null
+    }
+  ],
+  "posterSourceFrame": "frame-00078.png",
+  "encoding": {
+    "mp4": "ffmpeg/libx264 CRF14 slow native 2x",
+    "gif": "ffmpeg full 256-color palette, no dithering, native 2x",
+    "poster": "lossless WebP from raw native2x frame, source ICC retained",
+    "encoderSha256": "5fd8439d81152d88d5a48f863f29ce53856f147f2c6d2bcef5a5a92097bc89bf",
+    "posterRefinement": {
+      "tool": "cwebp",
+      "flags": "-lossless -z 6 -metadata icc",
+      "reason": "Preserve source color interpretation as well as lossless samples"
+    }
+  },
+  "captureDirectory": ".tmp/native-recordings/markets-record-opylwK"
+}

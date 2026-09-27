@@ -1,0 +1,309 @@
+{
+  "checkedAt": "2026-09-26T13:01:04.372Z",
+  "results": [
+    {
+      "name": "Arrival stays at top through iframe autofocus",
+      "passed": true,
+      "data": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "name": "Centered workspace rises behind the slogan; no right-hand card",
+      "passed": true,
+      "data": {
+        "heroCards": 0,
+        "headingBottom": 332.984375,
+        "workspaceTop": 336.4359130859375,
+        "centerDelta": 0.00005340576171875,
+        "pose": "--workspace-tilt: 34deg; --workspace-roll: 0deg; --workspace-scale: 0.92; --workspace-lift: -86px;",
+        "overflow": false
+      }
+    },
+    {
+      "name": "Scroll-linked gradual 34 to 0 degree reveal",
+      "passed": true,
+      "data": [
+        {
+          "y": 0,
+          "tilt": 34,
+          "scale": 0.92
+        },
+        {
+          "y": 240,
+          "tilt": 26.32407828857533,
+          "scale": 0.9380609922621758
+        },
+        {
+          "y": 480,
+          "tilt": 11.219845243513882,
+          "scale": 0.9736003641329085
+        },
+        {
+          "y": 780,
+          "tilt": 0,
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "name": "Expanded workspace remains viewport-fixed and closes by Escape",
+      "passed": true,
+      "data": {
+        "top": 16,
+        "left": 16,
+        "right": 1424,
+        "bottom": 984,
+        "width": 1440,
+        "height": 1000,
+        "perspective": "none"
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: strategy",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 10,
+          "before": 315.84000000000015,
+          "after": 365.9400000000005
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: team",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 16,
+          "before": 49.099999999998545,
+          "after": 100
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: evolution",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 4,
+          "before": 32.30000000000109,
+          "after": 165.89999999999964
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: vault",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 5,
+          "before": 33.70000000000073,
+          "after": 82.80000000000291
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: markets",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 29,
+          "before": 0,
+          "after": 183
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Authored scene plays, seeks, pauses and replays: integrations",
+      "passed": true,
+      "data": {
+        "advancing": {
+          "count": 4,
+          "before": 50,
+          "after": 100
+        },
+        "paused": {
+          "paused": "true",
+          "chapter": "2",
+          "before": 9600,
+          "after": 9600
+        }
+      }
+    },
+    {
+      "name": "Offscreen animations stop; no video/GIF requests",
+      "passed": true,
+      "data": {
+        "offscreen": [
+          [
+            "strategy",
+            "true"
+          ],
+          [
+            "team",
+            "true"
+          ],
+          [
+            "evolution",
+            "true"
+          ],
+          [
+            "vault",
+            "true"
+          ],
+          [
+            "markets",
+            "true"
+          ],
+          [
+            "integrations",
+            "true"
+          ]
+        ],
+        "recordingRequests": 0,
+        "videoCount": 0
+      }
+    },
+    {
+      "name": "Live language/theme adaptation: en-dark",
+      "passed": true,
+      "data": {
+        "lang": "en",
+        "theme": "dark",
+        "visibleNative": [
+          "Bitcoin\nBTC\n83,999.6\nUSDT\n+3.45% period\nsample · Snapshot Jan 4, 08:00 AM"
+        ],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "name": "Live language/theme adaptation: zh-dark",
+      "passed": true,
+      "data": {
+        "lang": "zh-CN",
+        "theme": "dark",
+        "visibleNative": [
+          "Bitcoin\nBTC\n83,999.6\nUSDT\n+3.45% 区间\nsample · 行情快照 1月4日 08:00"
+        ],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "name": "Live language/theme adaptation: en-light",
+      "passed": true,
+      "data": {
+        "lang": "en",
+        "theme": "light",
+        "visibleNative": [
+          "Bitcoin\nBTC\n83,999.6\nUSDT\n+3.45% period\nsample · Snapshot Jan 4, 08:00 AM"
+        ],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "name": "Live language/theme adaptation: zh-light",
+      "passed": true,
+      "data": {
+        "lang": "zh-CN",
+        "theme": "light",
+        "visibleNative": [
+          "Bitcoin\nBTC\n83,999.6\nUSDT\n+3.45% 区间\nsample · 行情快照 1月4日 08:00"
+        ],
+        "overflow": false,
+        "errors": []
+      }
+    },
+    {
+      "name": "Result cards moved below hero and full report retained",
+      "passed": true,
+      "data": {
+        "sections": 5
+      }
+    },
+    {
+      "name": "Global pause controls the new authored scenes",
+      "passed": true
+    },
+    {
+      "name": "Responsive hero and six scenes at 768px",
+      "passed": true,
+      "data": {
+        "lang": "zh-CN",
+        "theme": "light",
+        "scrollY": 0,
+        "overflow": false,
+        "errors": [],
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Responsive hero and six scenes at 390px",
+      "passed": true,
+      "data": {
+        "lang": "zh-CN",
+        "theme": "light",
+        "scrollY": 0,
+        "overflow": false,
+        "errors": [],
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Responsive hero and six scenes at 320px",
+      "passed": true,
+      "data": {
+        "lang": "zh-CN",
+        "theme": "light",
+        "scrollY": 0,
+        "overflow": false,
+        "errors": [],
+        "transform": "none"
+      }
+    },
+    {
+      "name": "Reduced motion has upright workspace and readable static scenes",
+      "passed": true,
+      "data": {
+        "transform": "none",
+        "paused": true,
+        "animations": 0,
+        "content": 110
+      }
+    }
+  ]
+}

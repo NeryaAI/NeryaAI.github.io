@@ -1,0 +1,70 @@
+{
+  "capturePixels": [
+    2560,
+    1600
+  ],
+  "cssViewport": [
+    1280,
+    800
+  ],
+  "deviceScaleFactor": 2,
+  "maximumFilmCssWidth": 1160,
+  "retinaRequiredWidth": 2320,
+  "comparison": "Same current UI; old1x resampling path simulated, newGIF decoded directly.",
+  "results": [
+    {
+      "name": "strategy",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 130
+    },
+    {
+      "name": "team",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 134
+    },
+    {
+      "name": "evolution",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 118
+    },
+    {
+      "name": "vault",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 125
+    },
+    {
+      "name": "markets",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 79
+    },
+    {
+      "name": "integrations",
+      "pixels": [
+        2560,
+        1600
+      ],
+      "losslessPoster": true,
+      "sourceFrames": 118
+    }
+  ]
+}

@@ -1,3 +1,30 @@
+# Nerya 官网 · React
+
+当前项目使用 **React + Vite + TypeScript + Tailwind CSS v4 + framer-motion**。
+首页、动画场景、成果展示与 Agent SDK 文档均已迁移到 React；不再使用 Astro。
+构建时预渲染页面，浏览器中再接管交互，避免无 JavaScript 时出现空白页面。
+
+```sh
+npm ci
+npm run dev
+# 本地地址：http://127.0.0.1:4173/
+
+npm run build
+npm run typecheck
+npm run check
+npm run preview
+```
+
+首页入口为 `src/App.tsx`，文档为 `src/Manual.tsx` 与 `src/data/manual.mjs`。
+可复用组件统一放在根目录 `components/ui/`，shadcn 路径别名已经配置。
+只发布 `dist/`；官网 Mock 保持隔离，不操作真实账户。
+
+完整目录、特效说明与验收方式见
+[React 迁移与特效说明](docs/react-migration-and-effects.md)。
+
+<details>
+<summary>历史设计记录（不适用于当前构建与启动方式）</summary>
+
 <p align="center">
   <img src="assets/nerya-mascot.png" alt="Nerya 形象" width="220" />
 </p>
@@ -32,10 +59,12 @@ dashboard 专注做控制台，让主页按自己的节奏迭代。
   对鼠标和滚动都有反应。
 - **加载仪式**：`/00 → /100` 数字 + 线条进度 + 字母 scramble 揭示。
 - **磁吸 / 自定义光标**、海报 spotlight 蒙版、底部滚动进度条。
-- **桌面端钉住的横向滚动**：三个 ritual 面板（Agent Team / 类型化 Memory /
-  自我重写）。手机端自动改为纵向堆叠。
-- 六张全新的 **Nerya 形象插图**：进化、风控、写策略、带团队、改自己的内核、给
+- **桌面端钉住的横向滚动**：三个 ritual 面板（Agent Team / 分域 Memory /
+  受控进化）。手机端自动改为纵向堆叠。
+- 六张全新的 **Nerya 形象插图**：进化、风控、写策略、带团队、审阅受控提案、给
   GitHub star 点赞。同一角色、同一画风、不同动作。
+- **当前产品界面**：Chat Canvas 会在对话旁展示浏览器会话、图表、文件、结构化
+  JSON 和带样式的网页搜索结果。
 - **文档画廊**：把读者真正想看的 Nerya 仓库内容（README / AGENTS / skills /
   trading / evolution / sdk）拼成卡片直达。
 - 底部 **一个大 CTA**：去 GitHub 给 Nerya 点星。
@@ -108,3 +137,5 @@ python -m http.server 4173 --bind 127.0.0.1
 
 PolyForm Noncommercial 1.0.0，与 Nerya 一致。完整条款见 [LICENSE](LICENSE)，
 商用授权请走 Nerya 仓库说明里的联系方式。
+
+</details>

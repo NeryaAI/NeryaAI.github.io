@@ -1,0 +1,16 @@
+{
+  "provider": "ChatGPT web via GPT Pro Think manual recovery / OpenCLI",
+  "modelSelection": "Latest",
+  "reasoningEffort": "Extra high",
+  "imageModel": "not exposed by UI",
+  "userApprovedSelection": true,
+  "session": "nerya-landing-20260921",
+  "conversation": "https://chatgpt.com/c/6ab01a0f-7a54-83e8-8ed2-7e1ca1619705",
+  "prompt": "Create exactly one original landscape image for Nerya, a calm local-first AI investment research team website. This is editorial environment artwork, NOT a screenshot. No text, no logos, no UI, no charts, no currency symbols.\n\nUltra-wide fine-art landscape photograph: an immense misty alpine lake at dawn, pale lavender-blue mountains layered far into the distance, a small architectural observatory of pale limestone at the far right edge, still reflective water, a single delicate lilac light from the observatory. Tactile 35mm film grain, subdued mineral colors, pale gray-lilac sky, no neon, premium Swiss editorial photography. The subject is serenity and perspective, not finance cliches.\n\nOur code will place a readable software workspace over this image, so keep the central two thirds serene and low-detail; concentrate architectural interest near the far right. Wide landscape aspect ratio 3:2 or wider. Generate the actual image, not a description or a code drawing.\n",
+  "file": "/Users/rick/Documents/Project/Nerya/landing-page/assets/generated/nerya-observatory.png",
+  "width": 1672,
+  "height": 941,
+  "bytes": 2050792,
+  "sha256": "0908c861d63bf3e8143c86afcbe017d8e2e366064be8241ecb6a8db55d39029c",
+  "extractedAt": "2026-09-20T17:46:09.331Z"
+}

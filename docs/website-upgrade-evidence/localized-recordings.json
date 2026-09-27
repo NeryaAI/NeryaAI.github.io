@@ -1,0 +1,3329 @@
+{
+  "completed": [
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "strategy",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/chat/demo-strategy",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:17.990Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.172729457999989
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.217763708000013,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 368
+          }
+        },
+        {
+          "time": 4.359375457999995,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0026.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "strategy-zh-light.mp4",
+          "bytes": 60447,
+          "sha256": "4d6d2a720df122acc59a390f0cb82e52a0a8b8cd166dd9804823895597614763",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.2
+        },
+        {
+          "file": "strategy-zh-light.gif",
+          "bytes": 644120,
+          "sha256": "27e9b1c8e047b0aabeb1ea31811b9a34adaaa15ffb6726e6b8623bbd16c35345",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.26
+        },
+        {
+          "file": "strategy-zh-light-poster.webp",
+          "bytes": 46814,
+          "sha256": "2b41b027ef3dae9d36c196dc7710e5e2785c7b2967264774c3c8643bc1530b88",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 44
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "team",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/chat/demo-research",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:26.176Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.09194375050001
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0557158340000026,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 330
+          }
+        },
+        {
+          "time": 4.406368875000014,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "team-zh-light.mp4",
+          "bytes": 66979,
+          "sha256": "5363c9198d7d0150a19bc28de05fbdbafb7790db8bf6039b274db1ebeb4a526f",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "team-zh-light.gif",
+          "bytes": 720866,
+          "sha256": "7cd91fc3a3dad162fd57466f682182d773ee7da4e32d0b6d6c7d04236d8dec2b",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "team-zh-light-poster.webp",
+          "bytes": 50920,
+          "sha256": "7bf8ef8aa552347c4f9beb2a9bde73b0d4794619c346e878ac4a1b3e65777d1e",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "evolution",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/chat/demo-review",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:34.411Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.152657540999995
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.061587207999983,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 221
+          }
+        },
+        {
+          "time": 4.359914999999979,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "evolution-zh-light.mp4",
+          "bytes": 62098,
+          "sha256": "c9001ffcf7b277067b84b4f30c9e6884568ac9227b4ccadad6ae6eb0f79254a8",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.2
+        },
+        {
+          "file": "evolution-zh-light.gif",
+          "bytes": 641010,
+          "sha256": "8d47ec4bdf124e58d58063e95fb12ffa2d89ef1a53236abb83e39e23dad57305",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.26
+        },
+        {
+          "file": "evolution-zh-light-poster.webp",
+          "bytes": 48776,
+          "sha256": "7c52f8a7a73b377af0e12ece670e692153c70c6e833ec366a728e140cccd7217",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "vault",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/env-vault",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:42.633Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.141905396500022
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0299527090000047,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 870.4,
+            "y": 461.6,
+            "distance": 128
+          }
+        },
+        {
+          "time": 4.385478375000006,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "vault-zh-light.mp4",
+          "bytes": 114360,
+          "sha256": "b5bb798144df646e26a6885bf002ee9d0fffdab32697f1a7ea25d686dd330dfd",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "vault-zh-light.gif",
+          "bytes": 869093,
+          "sha256": "be6cc405f420e0455e80508f2c756450e80e680c52fea0f374a62a2a84f9739c",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "vault-zh-light-poster.webp",
+          "bytes": 44756,
+          "sha256": "e3eb5a2b832cba7ad8a6c5da42f1d58f6614d597fd5862faeecf8e8e783e8330",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 55
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "markets",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/strategies",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:50.866Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.140882812500001
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.049820500000002,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 461.6,
+            "distance": 408
+          }
+        },
+        {
+          "time": 4.383486124999996,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "markets-zh-light.mp4",
+          "bytes": 159969,
+          "sha256": "5dd5510769c4cb6ab2309a0ebb1ce49e68f1b29941be5ddbdaef9fcbc919a4b4",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "markets-zh-light.gif",
+          "bytes": 666509,
+          "sha256": "4eef8db1e295aed57141c69d37766c08a70900660ed46d8d78769e2c969a4663",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "markets-zh-light-poster.webp",
+          "bytes": 49598,
+          "sha256": "405f8874464777d01bca4eeca2aa1dcc42a238aff4cf1fc48398252fadb3ecd5",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "integrations",
+      "lang": "zh",
+      "theme": "light",
+      "variant": "zh-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=light#/chat",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:19:59.268Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.078239229
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 4.506131167000014,
+          "kind": "native-keyboard",
+          "keys": [
+            "Tab",
+            "Tab"
+          ]
+        }
+      ],
+      "posterSourceFrame": "frame-0026.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "integrations-zh-light.mp4",
+          "bytes": 54523,
+          "sha256": "19bb0377154636a8191067cdf3dfd8ba2e495cf2356a2ba9a0fda65262214ca6",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.1
+        },
+        {
+          "file": "integrations-zh-light.gif",
+          "bytes": 169936,
+          "sha256": "234a7da85b5f4f9a05e6dbd9f9b083b24c8d5e7a1e6ca59c0c9c0d9e2ce27fde",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.13
+        },
+        {
+          "file": "integrations-zh-light-poster.webp",
+          "bytes": 43044,
+          "sha256": "df9fc7aa6ad9ecc54cdc127b5b2a9c4fd85ebf461eb342d5f0ebd00118a83a49",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 44
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "strategy",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/chat/demo-strategy",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:07.703Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.06221756250001
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0615179999999818,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 368
+          }
+        },
+        {
+          "time": 4.415103124999995,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0026.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "strategy-zh-dark.mp4",
+          "bytes": 61209,
+          "sha256": "2068ec9e22c0e0b4ec664b9b84995ca4e45f3cc624ecbdca37c88eb206a49945",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.6
+        },
+        {
+          "file": "strategy-zh-dark.gif",
+          "bytes": 510393,
+          "sha256": "bf08cf96a0917e64605d64876ca9b2b86957fb5cf1c8200b71dd63ba9d990a62",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.63
+        },
+        {
+          "file": "strategy-zh-dark-poster.webp",
+          "bytes": 45778,
+          "sha256": "f780397b43d2671c21e57c31a38e93ea23068ce78ad14fdeee060c2f4b3f8055",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 44
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "team",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/chat/demo-research",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:15.938Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.152163833
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.085714707999985,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 330
+          }
+        },
+        {
+          "time": 4.368592457999999,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "team-zh-dark.mp4",
+          "bytes": 63522,
+          "sha256": "634d4762cc11f1f0c97f16827a16122c56379ef81af9bd2603f257dbc6d99b32",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.2
+        },
+        {
+          "file": "team-zh-dark.gif",
+          "bytes": 619933,
+          "sha256": "176b59caa6121f8638a4a1474f183595bf0c8cd6f34d0bb5629fc53665e89a0c",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.26
+        },
+        {
+          "file": "team-zh-dark-poster.webp",
+          "bytes": 49872,
+          "sha256": "b8ea5cf5366cbd427953a7b57ff3005d84bbdf2882595e2f5592e39c744d1aaa",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "evolution",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/chat/demo-review",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:24.117Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.083754687500011
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.1264108750000013,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 221
+          }
+        },
+        {
+          "time": 4.366696916999993,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "evolution-zh-dark.mp4",
+          "bytes": 62000,
+          "sha256": "ce8f30fbc0df2c559c2cbdfd6a10b8d002d279d43fc6bf3cb40212cc7ad800fb",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "evolution-zh-dark.gif",
+          "bytes": 508847,
+          "sha256": "2a1e5f056daa29386798485db583b97fc0d93e75c174d71239a414e3736ee962",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "evolution-zh-dark-poster.webp",
+          "bytes": 48606,
+          "sha256": "fd58cdb0ed54d09f90d1969825c0a68b9136adf68c5e77f5f2562f221a33c49a",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 56
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "vault",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/env-vault",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:32.269Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.057393958
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0272308750000083,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 870.4,
+            "y": 461.6,
+            "distance": 128
+          }
+        },
+        {
+          "time": 4.377536499999987,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "vault-zh-dark.mp4",
+          "bytes": 105948,
+          "sha256": "359dd62fa24bf41d6a916828870ad6e764f4b043abd563acb02ac931a68d2125",
+          "width": 1280,
+          "height": 800,
+          "duration": 8
+        },
+        {
+          "file": "vault-zh-dark.gif",
+          "bytes": 794907,
+          "sha256": "bd13110bb6407a8669ad2fd7e3d5eb565bba57da57354163a15a5d6deb9b57d4",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.01
+        },
+        {
+          "file": "vault-zh-dark-poster.webp",
+          "bytes": 42750,
+          "sha256": "58f70835b18447245c4426ea065950bfa90218d88c699f4b4dc0bb897f71f4c2",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 56
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "markets",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/strategies",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:40.529Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.15171974999999
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.06227337499999,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 461.6,
+            "distance": 408
+          }
+        },
+        {
+          "time": 4.396053332999989,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "markets-zh-dark.mp4",
+          "bytes": 150668,
+          "sha256": "c3113558a36dce5c82007840cd0155f6c9b6db832322eab95a535a8a25c2d04d",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "markets-zh-dark.gif",
+          "bytes": 561551,
+          "sha256": "5c1966739528f5ca4173cbf92f424479f2ce33a426a4127e390a819838a565dd",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "markets-zh-dark-poster.webp",
+          "bytes": 46706,
+          "sha256": "993932c6ebc94493d92795dac32433e6caca689e5116ac57b6a00eb5be1f5171",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "integrations",
+      "lang": "zh",
+      "theme": "dark",
+      "variant": "zh-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=zh&theme=dark#/chat",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:50.014Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.089236250000017
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "zh"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 4.5105164159999696,
+          "kind": "native-keyboard",
+          "keys": [
+            "Tab",
+            "Tab"
+          ]
+        }
+      ],
+      "posterSourceFrame": "frame-0030.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "integrations-zh-dark.mp4",
+          "bytes": 55793,
+          "sha256": "ac5a2357e488a15c8e5add610b3b0e6580baea9f90327fa580545c3b5905ddb9",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.6
+        },
+        {
+          "file": "integrations-zh-dark.gif",
+          "bytes": 180496,
+          "sha256": "7e7a2803a025ff60442207a27027196ada7d6f61037f15769e53d10b4d61f4ec",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.63
+        },
+        {
+          "file": "integrations-zh-dark-poster.webp",
+          "bytes": 42106,
+          "sha256": "f8e00818ca7f39f32e707a7c32c88374f964b4ebcd6318da89e057378dad36ce",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 51
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "strategy",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/chat/demo-strategy",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:20:58.422Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.100660479500016
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0586486670000013,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 441
+          }
+        },
+        {
+          "time": 4.404681000000041,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "strategy-en-light.mp4",
+          "bytes": 64045,
+          "sha256": "0dabd7901ca2a3bd99f7622dc1d166d14596c309a72777a8a5cbbec2970ac265",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "strategy-en-light.gif",
+          "bytes": 638811,
+          "sha256": "cab332cf27ef53ff4424fe829dd5b1878a2e4ce08de258ae97d08043b1feaaa2",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "strategy-en-light-poster.webp",
+          "bytes": 50244,
+          "sha256": "356ba3ff0f690d7ca2c0cec6d9116824ff0999b3e73c5e2d6bbcc8c0ba6038a8",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "team",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/chat/demo-research",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:06.673Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.151377104000014
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.080258833000029,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 450
+          }
+        },
+        {
+          "time": 4.3636055829999965,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "team-en-light.mp4",
+          "bytes": 71470,
+          "sha256": "7de39fc78afbe4bce60f362602e8cea3443ca43352616d2cbac8336964bdae07",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.2
+        },
+        {
+          "file": "team-en-light.gif",
+          "bytes": 679531,
+          "sha256": "eee2ae6a347451d7fabec1019bdb0d7c71845f07b88f23de6445d9ea48063fdf",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.26
+        },
+        {
+          "file": "team-en-light-poster.webp",
+          "bytes": 56124,
+          "sha256": "3ec522f6fcb178d79d1aae6e49871654f754454e1e107c526bb767beec7d498e",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "evolution",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/chat/demo-review",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:14.818Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.053893396000028
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0734230419999804,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 290
+          }
+        },
+        {
+          "time": 4.375171167000023,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "evolution-en-light.mp4",
+          "bytes": 70826,
+          "sha256": "4f69bc8744ece85c3708660b0aa13b9eb3597a41cb4739b6e84d1ed3c9431be5",
+          "width": 1280,
+          "height": 800,
+          "duration": 8
+        },
+        {
+          "file": "evolution-en-light.gif",
+          "bytes": 680707,
+          "sha256": "c23692ebf3cbfe386f880285d6b93c7f23f18e52d3a69cca17bc2161ad389511",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.01
+        },
+        {
+          "file": "evolution-en-light-poster.webp",
+          "bytes": 55354,
+          "sha256": "4c661cd0f055aa0f4e55f24cf49d731df4f824177b20c2a1de803685ccfe79c0",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 56
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "vault",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/env-vault",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:23.053Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.11725229100004
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0363019579999966,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 870.4,
+            "y": 461.6,
+            "distance": 152
+          }
+        },
+        {
+          "time": 4.421490665999998,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "vault-en-light.mp4",
+          "bytes": 72844,
+          "sha256": "bf2411aed653061b989562e5e663266e33fdd1f0996be938a8955c78f0d144d8",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "vault-en-light.gif",
+          "bytes": 376988,
+          "sha256": "19d32869d0ec84771f00e08c4f192457c5343840e3821659568482d93a769b67",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "vault-en-light-poster.webp",
+          "bytes": 54338,
+          "sha256": "07dd8eb47c294d1f73755f9c7dd6faccc7f5f42d5720f4f31d6c8fb2c9e2c352",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "markets",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/strategies",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:31.222Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.057000729000022
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0980296250000245,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 461.6,
+            "distance": 408
+          }
+        },
+        {
+          "time": 4.449342457999999,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "markets-en-light.mp4",
+          "bytes": 164486,
+          "sha256": "9b0f9292a59d35cfb21974513d2758057a2b4e46bed888f3388c3cdb22be8639",
+          "width": 1280,
+          "height": 800,
+          "duration": 8
+        },
+        {
+          "file": "markets-en-light.gif",
+          "bytes": 584063,
+          "sha256": "f70fb6b6cf0e1792178ba7d5d00b850256d47c84e1a011105269ae1e7c174ed3",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.01
+        },
+        {
+          "file": "markets-en-light-poster.webp",
+          "bytes": 49814,
+          "sha256": "41d009aff2537f037bcb184c50feba3762efd28eb9f28875073530acb9d62964",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 56
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "integrations",
+      "lang": "en",
+      "theme": "light",
+      "variant": "en-light",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=light#/chat",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:39.814Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.089302792000002
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": true,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 4.536885333999991,
+          "kind": "native-keyboard",
+          "keys": [
+            "Tab",
+            "Tab"
+          ]
+        }
+      ],
+      "posterSourceFrame": "frame-0027.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "integrations-en-light.mp4",
+          "bytes": 63965,
+          "sha256": "c1e3f193aa971d2583c1b93f470906821520dd406aacef4c483ad5e363e06098",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.2
+        },
+        {
+          "file": "integrations-en-light.gif",
+          "bytes": 260022,
+          "sha256": "b4b8e5da06dadef1576c858c87c65f1439dd92df31d21c786f312e817768b83d",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.26
+        },
+        {
+          "file": "integrations-en-light-poster.webp",
+          "bytes": 46990,
+          "sha256": "2e77bc4838d811f3f296adb20ad79db8f78922b6ca10a33cfed9a61636d986eb",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 45
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "strategy",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/chat/demo-strategy",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:48.146Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.04548675000004
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 4.490587875000027,
+          "kind": "native-keyboard",
+          "keys": [
+            "Tab",
+            "Tab"
+          ]
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "strategy-en-dark.mp4",
+          "bytes": 26821,
+          "sha256": "aa4e438b4e34a17f26788a5ae6811c7c37e1d6fd1722e0020519e239609978ef",
+          "width": 1280,
+          "height": 800,
+          "duration": 8
+        },
+        {
+          "file": "strategy-en-dark.gif",
+          "bytes": 99956,
+          "sha256": "89bb578d4b358bea03555c5e5aeb92838b6d8e11a5d4aa4055f228bca8d73cb4",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.01
+        },
+        {
+          "file": "strategy-en-dark-poster.webp",
+          "bytes": 18514,
+          "sha256": "a025d66b0fbbb6967304553d28d7915aeb7aa6b3f8cbf4287de2556eaccdd559",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "team",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/chat/demo-research",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:21:56.339Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.078108333500044
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0902782920000025,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 450
+          }
+        },
+        {
+          "time": 4.390790083000029,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0033.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "team-en-dark.mp4",
+          "bytes": 69130,
+          "sha256": "e7035c197e416407945c7613de6f85ce88de94c5c43b3192780c6d789f5cf3df",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "team-en-dark.gif",
+          "bytes": 654788,
+          "sha256": "6ce5c8d864c7fd38fee58a6eb225bd0f54078441869f859920de326163e4cd7a",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "team-en-dark-poster.webp",
+          "bytes": 54720,
+          "sha256": "ba78d3b77e6f54851638dc6969bcd240bb7b083528348f1285a6e20cdcedae9b",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 56
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "evolution",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/chat/demo-review",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:22:04.569Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.128389916999964
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.0459977089999595,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 379.75,
+            "distance": 290
+          }
+        },
+        {
+          "time": 4.428559708999994,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "evolution-en-dark.mp4",
+          "bytes": 69732,
+          "sha256": "c60f75bd1b072d991f3d46db5b16ff5b3724396d6ce4bc06a02f1c4e4d94fc85",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "evolution-en-dark.gif",
+          "bytes": 603426,
+          "sha256": "aa5317c1a33f9d7730257bea8cd77f2bb846f1a97b77fc911952b956f3c2f90f",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "evolution-en-dark-poster.webp",
+          "bytes": 54650,
+          "sha256": "6155b7cfde02e8cff60ebf777997f570e1a6924af22ee92d96cdfacaffb9bdde",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "vault",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/env-vault",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:22:12.756Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.090711874500034
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.045011375000002,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 870.4,
+            "y": 461.6,
+            "distance": 152
+          }
+        },
+        {
+          "time": 4.3786783750000176,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "vault-en-dark.mp4",
+          "bytes": 73219,
+          "sha256": "c78792c74828c60a74e1ae255b4083cec1db116aeb7269979c4e8bc3d9ee20a2",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "vault-en-dark.gif",
+          "bytes": 491754,
+          "sha256": "c7dc66d3bf1fc46c61dc056826c6547671877444b3609464da7b042f0be999f6",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "vault-en-dark-poster.webp",
+          "bytes": 52000,
+          "sha256": "51224422653200eb35eb55c7ef0adcfe97ae6d20b076259212967ec9b2f7f771",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "markets",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/strategies",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:22:21.039Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.163479708500033
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 2.039579625000013,
+          "kind": "native-wheel",
+          "deltaY": 240,
+          "point": {
+            "x": 880,
+            "y": 461.6,
+            "distance": 408
+          }
+        },
+        {
+          "time": 4.407277584000025,
+          "kind": "native-wheel",
+          "deltaY": 230
+        }
+      ],
+      "posterSourceFrame": "frame-0034.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "markets-en-dark.mp4",
+          "bytes": 152714,
+          "sha256": "f919b89bfd5a76d1b85c22f09cf882ab81cefae6e8e5e39e74186e591f1c402d",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.1
+        },
+        {
+          "file": "markets-en-dark.gif",
+          "bytes": 535662,
+          "sha256": "033721d5b496a2739209ff045551365d792413f98bda1a78e0ec408fabfc9870",
+          "width": 1280,
+          "height": 800,
+          "duration": 8.13
+        },
+        {
+          "file": "markets-en-dark-poster.webp",
+          "bytes": 47000,
+          "sha256": "7d8a68f670d5a514c5332af9e4c627fc9db68152bee61348d6db8a0f78979b87",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 57
+    },
+    {
+      "schema": "nerya-native-localized-recording/v1",
+      "name": "integrations",
+      "lang": "en",
+      "theme": "dark",
+      "variant": "en-dark",
+      "status": "verified",
+      "sourceUrl": "http://127.0.0.1:4173/demo/index.html?lang=en&theme=dark#/chat",
+      "sourceInputs": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "sourceInputsAfter": [
+        {
+          "file": "demo/index.html",
+          "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+        },
+        {
+          "file": "demo/app.js",
+          "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+        },
+        {
+          "file": "demo/app.css",
+          "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+        },
+        {
+          "file": "demo/global.css",
+          "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+        },
+        {
+          "file": "demo/theme.js",
+          "sha256": "f3d8ebea7a6e4ee28fe0c086e8584defeef84cd7b6d1beec485d14dd257dd1ad"
+        },
+        {
+          "file": "demo/runtime.js",
+          "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+        },
+        {
+          "file": "demo/native-fixtures.js",
+          "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+        }
+      ],
+      "recordedAt": "2026-09-26T12:22:29.632Z",
+      "browser": {
+        "space": 27,
+        "page": "p1"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      },
+      "capture": {
+        "method": "Ego Page.captureScreenshot native DPR1 PNG",
+        "retiming": "captured elapsed-time frame durations; no speed-up",
+        "duration": 8.15700364599994
+      },
+      "safety": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+        "light": false,
+        "viewport": [
+          1280,
+          800
+        ],
+        "dpr": 1,
+        "settings": "en"
+      },
+      "disclosure": "Actual isolated Nerya demo DOM; synthetic data, no live model/account/order. No drawn UI or language overlays.",
+      "actions": [
+        {
+          "time": 4.522226957999985,
+          "kind": "native-keyboard",
+          "keys": [
+            "Tab",
+            "Tab"
+          ]
+        }
+      ],
+      "posterSourceFrame": "frame-0027.png",
+      "demoErrors": [],
+      "outputs": [
+        {
+          "file": "integrations-en-dark.mp4",
+          "bytes": 60194,
+          "sha256": "42c0a8c5be8adec4517d5ed0efb56c7cfa9d0ce926246022d290bd65863c786f",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.2
+        },
+        {
+          "file": "integrations-en-dark.gif",
+          "bytes": 198570,
+          "sha256": "9e30a0d789556319a86477fa026e4afcff5254064a0824397ef88d7f67f277e3",
+          "width": 1280,
+          "height": 800,
+          "duration": 7.26
+        },
+        {
+          "file": "integrations-en-dark-poster.webp",
+          "bytes": 45860,
+          "sha256": "b873f2abb687f5a2367dbf220db51ca40a39fd42965cc4ef4856b59598718fd8",
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "frameCount": 45
+    }
+  ]
+}

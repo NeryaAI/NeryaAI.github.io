@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-09-21T04:06:56.172Z",
+  "checks": [
+    "Six local PNG identities; no role-symbol placeholders",
+    "Role switching and desktop themes",
+    "Native workflow portraits match each Agent role",
+    "Native member tabs and conversation identity",
+    "Native role library uses PNG portraits",
+    "320px themes and English layout",
+    "Shorter Chinese default copy; execution boundaries retained"
+  ],
+  "passed": 7,
+  "beforeChars": 2049,
+  "afterChars": 1549,
+  "reductionPercent": 24.4,
+  "viewports": [
+    1440,
+    320
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ]
+}

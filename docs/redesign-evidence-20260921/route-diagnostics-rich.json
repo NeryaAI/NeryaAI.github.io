@@ -1,0 +1,277 @@
+[
+  {
+    "route": "#/",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\nBTC 趋势跟随 · 验证方案\n仓位上限 · 提案 014\n设置\n今天想研究什么？\n\n研究市场、验证策略，或把一个任务交给你的 Agent 团队。\n\n自主执行\n运行时默认\n从下方选择问题，或直接描述你的目标。\n推荐问题\n市场研究\n策略验证\n持仓复盘\n团队协作\n今天的市场有哪些值得关注的变化？\n把我的交易想法变成可验证的策略\n检查我的持仓风险和需要确认的事项\n让研究员和审阅员一起核查一份报告",
+    "requests": [
+      "/inbox/items",
+      "/search/engines/status",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/llm/tiers",
+      "/llm/models",
+      "/llm/config"
+    ]
+  },
+  {
+    "route": "#/strategies",
+    "failed": false,
+    "tail": "跟随 · 验证方案\n仓位上限 · 提案 014\n设置\n策略\n\n选择一个策略，查看画布、调整节点或继续对话。\n\n+ 创建策略\n显示所有候选版本\n刷新\nPAPER\n当前版本\nBTC 趋势跟随\n\n4 小时趋势过滤，结合波动率调整仓位；风险审查后进入模拟执行。\n\n2 个脚本\n3 Agent\nBTC/USDT\n打开画布 →\n重命名\n删除\nPAPER\n已暂停\nETH 区间均值回归\n\n识别低波动区间，过滤趋势突破；等待新一轮样本外验证。\n\n2 个脚本\n2 Agent\nETH/USDT\n打开画布 →\n重命名\n删除\nPAPER\n草稿\n宏观与流动性观察\n\n汇总宏观事件、链上活动与风险分歧，交由团队每日上午审阅。\n\n1 个脚本\n3 Agent\nBTC/USDT · ETH/USDT\n打开画布 →\n重命名\n删除候选",
+    "requests": [
+      "/inbox/items",
+      "/search/engines/status",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/llm/tiers",
+      "/llm/models",
+      "/llm/config",
+      "/strategies/runtime/workflows"
+    ]
+  },
+  {
+    "route": "#/workflows",
+    "failed": false,
+    "tail": "或间隔运行的非策略任务、脚本和触发器。\n\nAgent\n脚本\n触发器\n全部2\nAgent2\n脚本0\n触发器0\n活跃2\n已暂停0\n每日研究简报\n活跃\nmorning-research\n·\n0 9 * * 1-5\n·\nagent\n策略运行复盘\n活跃\nrisk-review\n·\n每 4 小时\n·\nagent\n每日研究简报\n\nmorning-research\n\n活跃\n编辑\n立即运行\n暂停\n删除\n类型\nAgent\n节奏\n0 9 * * 1-5\n时区\nAsia/Shanghai\n最近运行\n–\n下次运行\n–\n目标\n-\n投递\n-\n会话\nreuse\n匹配路由\n-\n原始需求\n对比观察清单的变化，交给审阅员复核后生成日报。\n流程化 Prompt\n-\n原始调度\n路由\n\n事件驱动的自动化。 · 0 条路由\n\n未注册路由",
+    "requests": [
+      "/search/engines/status",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/llm/tiers",
+      "/llm/models",
+      "/llm/config",
+      "/strategies/runtime/workflows",
+      "/triggers/routes",
+      "/triggers/schedules",
+      "/triggers/schedules/status"
+    ]
+  },
+  {
+    "route": "#/agents",
+    "failed": false,
+    "tail": "仓位上限 · 提案 014\n设置\nAgent\n查看每个 Agent 的职责与技能，按需要调整你的团队。\n刷新\n新建 Agent\nAgent\n技能\n任务\nAgent (3)\n\n选择角色，查看职责和可用技能。\n\n全部\n自定义\n内置\nresearcher\n2 个技能 · 内置\nreviewer\n1 个技能 · 内置\nrisk critic\n1 个技能 · 内置\nresearcher\n\nresearcher\n\n编辑配置\n内置\n模型档位: 高\n这个 Agent 负责什么\n\n研究员 · Research and source verification\n\n预加载技能\nweb_search\nanalysis\n\n这是内置角色。修改后会保存为你的自定义版本，内置模板仍会保留。\n\n查看完整工作说明\n模型与运行详情",
+    "requests": [
+      "/llm/tiers",
+      "/llm/models",
+      "/llm/config",
+      "/strategies/runtime/workflows",
+      "/triggers/routes",
+      "/triggers/schedules",
+      "/triggers/schedules/status",
+      "/teams/roles",
+      "/skills",
+      "/teams/role/get"
+    ]
+  },
+  {
+    "route": "#/self-evolution",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\nBTC 趋势跟随 · 验证方案\n仓位上限 · 提案 014\n设置\n记忆与学习\n记忆\n学习记录\n全局记忆\n搜索记忆\n添加记忆\n\n所有策略可读取的通用知识。\n\n3 条记忆\n\n波动扩张阶段的单笔仓位上限保持为 5%，需要独立审查后才能修改。\n\n决策\n·\n9月20日\n\n比较市场数据时必须对齐时间窗口；缺少成交量时不要推断确认强度。\n\n经验\n·\n9月20日\n\n保留研究员与审阅员的分歧，不要求人为达成一致。\n\n偏好\n·\n9月20日\n常驻偏好与约定",
+    "requests": [
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/memory/domains",
+      "/memory/records"
+    ]
+  },
+  {
+    "route": "#/portfolio",
+    "failed": true,
+    "tail": "演示页面暂未准备好 / Demo unavailable\n\nCannot read properties of undefined (reading 'length')\n\n返回 Agent / Return to Agent",
+    "requests": [
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/portfolio/summary",
+      "/portfolio/positions",
+      "/portfolio/pnl",
+      "/portfolio/health",
+      "/reconciliation/reports",
+      "/kill_switch/get",
+      "/wallet/portfolio"
+    ]
+  },
+  {
+    "route": "#/settings",
+    "failed": false,
+    "tail": "\n界面\n集成\n网页搜索\n环境与密钥库\n网关\n设置\n模型服务商、访问控制、网络与界面偏好设置。\n刷新\n提供商与模型库\n\n三步接入模型服务商：粘贴 API 密钥、拉取模型清单、勾选要用的模型。密钥会自动加密保存。\n\n提供商\n可输入任意提供商 ID，或从目录中选择。\nopenai\nAPI 密钥 / Vault 引用\n?\n明文将自动转为 vault://\n获取模型列表\n?\n获取成功后，再选择要导入的模型。\n连接选项与手动添加\n默认模型\n\n选择主模型，需要时添加备用模型。\n\n已配置 3/4\n主模型\nResearch model · workspace\n备用模型（可选）\n不使用备用模型\n\n用于默认对话。已有任务分档保持不变；未配置的任务分档会沿用主模型。\n\n刷新模型库\n2 个模型\n保存分配\n高级模型路由",
+    "requests": [
+      "/portfolio/pnl",
+      "/portfolio/health",
+      "/reconciliation/reports",
+      "/kill_switch/get",
+      "/wallet/portfolio",
+      "/llm/config",
+      "/llm/providers",
+      "/llm/models",
+      "/llm/catalog",
+      "/llm/oauth/providers"
+    ]
+  },
+  {
+    "route": "#/chat?panel=browser",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\n仓位上限 · 提案 014\n设置\n新对话\n就绪\n工作区\n今天想研究什么？\n\n研究市场、验证策略，或把一个任务交给你的 Agent 团队。\n\n自主执行\n运行时默认\n从下方选择问题，或直接描述你的目标。\n推荐问题\n市场研究\n策略验证\n持仓复盘\n团队协作\n今天的市场有哪些值得关注的变化？\n把我的交易想法变成可验证的策略\n检查我的持仓风险和需要确认的事项\n让研究员和审阅员一起核查一份报告",
+    "requests": [
+      "/kill_switch/get",
+      "/wallet/portfolio",
+      "/llm/config",
+      "/llm/providers",
+      "/llm/models",
+      "/llm/catalog",
+      "/llm/oauth/providers",
+      "/llm/tiers",
+      "/agent/sessions",
+      "/approvals/pending"
+    ]
+  },
+  {
+    "route": "#/dashboard",
+    "failed": true,
+    "tail": "演示页面暂未准备好 / Demo unavailable\n\nCannot read properties of undefined (reading 'mode')\n\n返回 Agent / Return to Agent",
+    "requests": [
+      "/setup/readiness",
+      "/workspace/ui",
+      "/accounts/list",
+      "/strategy/list",
+      "/operator/overview",
+      "/workspace",
+      "/market/venues",
+      "/trading/recent_trades",
+      "/market/news",
+      "/market/candles"
+    ]
+  },
+  {
+    "route": "#/self-evolution?tab=memory",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\n仓位上限 · 提案 014\n设置\n记忆与学习\n记忆\n学习记录\n全局记忆\n搜索记忆\n添加记忆\n\n所有策略可读取的通用知识。\n\n3 条记忆\n\n波动扩张阶段的单笔仓位上限保持为 5%，需要独立审查后才能修改。\n\n决策\n·\n9月20日\n\n比较市场数据时必须对齐时间窗口；缺少成交量时不要推断确认强度。\n\n经验\n·\n9月20日\n\n保留研究员与审阅员的分歧，不要求人为达成一致。\n\n偏好\n·\n9月20日\n常驻偏好与约定",
+    "requests": [
+      "/accounts/list",
+      "/strategy/list",
+      "/operator/overview",
+      "/workspace",
+      "/market/venues",
+      "/trading/recent_trades",
+      "/market/news",
+      "/market/candles",
+      "/memory/domains",
+      "/memory/records"
+    ]
+  },
+  {
+    "route": "#/orders",
+    "failed": false,
+    "tail": "策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\nBTC 趋势跟随 · 验证方案\n仓位上限 · 提案 014\n设置\n订单与执行器\n当前订单簿。可查看账户、市场、执行器、时长，并手动撤单。\n刷新\n资产\n账户\n订单\n事件\nCannot read properties of undefined (reading 'id')\n重试\n活跃订单\n0\n已成交\n0\n丢失 / 已取消\n0\n活跃执行器\n0\n状态：\n活跃\n近期\n缓存\n丢失\n账户：\n全部\n搜索订单、市场、账户或策略\n订单 (0)\n\n当前账户的实时与历史订单。每次撤单都会记录到审计日志。\n\n没有订单匹配当前筛选。\n\n搜索与分页仅作用于本次加载的记录，最多 200 条。\n\n执行器 (0)",
+    "requests": [
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/orders/list",
+      "/executors/list",
+      "/accounts/list"
+    ]
+  },
+  {
+    "route": "#/incidents",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\nBTC 趋势跟随 · 验证方案\n仓位上限 · 提案 014\n设置\n事件中心\n处理漂移、丢失订单、过期快照、认证失败等异常。\n已解除\nPAPER\n启用紧急停止\n刷新\n资产\n账户\n订单\n事件\n事件\n0\n对账报告\n0\n0 个漂移问题\n丢失订单\n0\n紧急停止\n已解除\n最近 15m\n最近 1h\n最近 6h\n最近 24h\n全部\n0\n搜索异常类型、账户或对象\n事件\n\n汇总丢失订单、过期快照、对账漂移及其他风险信号。\n\n此窗口内暂无事件。\n对账报告\n\n来自本地与账户扫描的严重级别标签报告。\n\n暂无对账报告。",
+    "requests": [
+      "/accounts/list",
+      "/kill_switch/get",
+      "/incidents",
+      "/reconciliation/reports",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/kill_switch/get",
+      "/incidents",
+      "/reconciliation/reports"
+    ]
+  },
+  {
+    "route": "#/accounts",
+    "failed": true,
+    "tail": "演示页面暂未准备好 / Demo unavailable\n\nCannot read properties of undefined (reading 'live_trading_enabled')\n\n返回 Agent / Return to Agent",
+    "requests": [
+      "/operator/nav",
+      "/inbox/items",
+      "/kill_switch/get",
+      "/incidents",
+      "/reconciliation/reports",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/accounts/proposals/list",
+      "/accounts/list"
+    ]
+  },
+  {
+    "route": "#/advanced",
+    "failed": false,
+    "tail": "跳转到主要内容\nNerya\n概览\n新对话\n搜索\n⌘K\n智能体\n策略\n更多\n交易\n自动化\n记忆与学习\n自动化浏览器\n运行中策略\nBTC 趋势跟随\n对话\nBTC 市场结构 · 4h\nBTC 趋势跟随 · 验证方案\n仓位上限 · 提案 014\n设置\nadvancedPage.eyebrow\n开发者诊断\n运行时诊断与兼容开关。一般使用无需调整。\n运行时能力开关\n?\n\n整个功能域（如证据库、审查队列）的总开关。关掉某个开关，对应功能就会从 Nerya 中消失，重新打开即恢复。\n\n刷新\n工作区配置文件\n这里修改的是当前工作区的运行时能力配置，不影响代码默认值；适合按项目启停实验模块或暂时封闭某类入口。\n环境变量优先级高于此文件；如果你手动改了 JSON，可以点击刷新让运行时重新载入。",
+    "requests": [
+      "/reconciliation/reports",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/accounts/proposals/list",
+      "/accounts/list",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/runtime/flags"
+    ]
+  },
+  {
+    "route": "#/env-vault",
+    "failed": false,
+    "tail": "\n\n加密后注入 run_shell、skill 脚本子进程和 stdio MCP 服务器的环境变量。\n\n0 个已配置\n尚未配置任何运行时环境变量。\n变量名\n大写 shell 环境变量名；保存的值会加密\n值\n保存后不再回显\n刷新\n保存环境变量\n\n这些变量仅在进程启动时从 SecretVault 解析。Agent 只能看到名称和引用，看不到明文值。\n\nSecretVault 引用\n\n管理可复用的 vault:// 引用，供 provider、账户、MCP 配置、网关令牌和运行时环境使用。\n\n0 条引用\nSecretVault 为空。\nVault 名称\n小写字母 a-z0-9_-。\n类型\n作用域\n逗号分隔\n值\n加密存储；绝不回显\n保存 vault 引用\nFinancial Datasets API",
+    "requests": [
+      "/inbox/items",
+      "/accounts/proposals/list",
+      "/accounts/list",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/runtime/flags",
+      "/data/financial_datasets/status",
+      "/security/env/list",
+      "/security/secrets/list"
+    ]
+  },
+  {
+    "route": "#/gateway",
+    "failed": false,
+    "tail": "置\n常规\n模型\n登录与访问\n网络与环境\nMCP 与外部 Agent\n界面\n集成\n网页搜索\n环境与密钥库\n网关\n运营\n网关\n配置每个聊天平台，查看所有通道的实时事件流。\n通道列表\n实时状态\n网关通道\n\n让 Nerya 出现在你的聊天软件里：选择平台、粘贴机器人令牌、保存，然后发一条测试消息。令牌会自动加密保存。\n\n0 个可用\n刷新\n通道是什么\n还没有配置网关通道。\n平台\nTelegram (telegram)\n通道 ID\n小写标识\n启用\n运行时加载\n通知与回复\n交易通知\n成交后同步\n自动回信\n将智能体回复同步回原通道\n主题\n逗号分隔\n访问控制\n模式\n轮询\n轮询\nwebhook\n轮询\n随服务启动\n测试消息\n通过当前通道发送\n保存网关\n测试网关\n新建\n删除\n运行时已识别到 0 个已配置的网关通道。",
+    "requests": [
+      "/accounts/list",
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/runtime/flags",
+      "/data/financial_datasets/status",
+      "/security/env/list",
+      "/security/secrets/list",
+      "/inbox/items",
+      "/gateway/config"
+    ]
+  },
+  {
+    "route": "#/web-search",
+    "failed": true,
+    "tail": "演示页面暂未准备好 / Demo unavailable\n\nCannot read properties of undefined (reading 'length')\n\n返回 Agent / Return to Agent",
+    "requests": [
+      "/strategy/list_all",
+      "/operator/nav",
+      "/inbox/items",
+      "/runtime/flags",
+      "/data/financial_datasets/status",
+      "/security/env/list",
+      "/security/secrets/list",
+      "/inbox/items",
+      "/gateway/config",
+      "/search/engines/status"
+    ]
+  }
+]

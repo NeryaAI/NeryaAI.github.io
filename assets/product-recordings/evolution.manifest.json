@@ -1,0 +1,1705 @@
+{
+  "schema": "nerya-native-recording/v1",
+  "name": "evolution",
+  "mode": "record",
+  "status": "encoded-and-verified",
+  "recordedAt": "2026-09-26T07:09:52.936Z",
+  "sourceUrl": "http://127.0.0.1:4173/demo/index.html#/chat",
+  "recorderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+  "browser": {
+    "backend": "ego-browser",
+    "space": 20,
+    "page": "p1"
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 2
+  },
+  "safety": {
+    "demo": "real-agent",
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "viewport": [
+      1280,
+      800
+    ],
+    "dpr": 2
+  },
+  "disclosure": "Actual screen recording of the source-backed Nerya app with deterministic data; no live accounts, model requests or orders. This is not drawn or recreated UI.",
+  "capture": {
+    "method": "Ego Page.cdp Page.captureScreenshot native DPR2 PNG",
+    "pixelWidth": 2560,
+    "pixelHeight": 1600,
+    "targetFps": 10,
+    "osCursorCaptured": false,
+    "targetSeconds": 16,
+    "maxSeconds": 24,
+    "timestamp": "monotonic host clock at screenshot request/response midpoint",
+    "timing": "real elapsed time; no speed-up",
+    "modifications": "none; only frame repetition, PNG-to-video encoding and GIF palette conversion"
+  },
+  "story": "Review the native conversation diff, evidence and unchanged-runtime disclosure. No approval/application is claimed.",
+  "sourceInputs": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "actions": [
+    {
+      "t": 0.7982,
+      "end": 3.9789,
+      "kind": "native-type",
+      "name": "给 Nerya 发消息",
+      "text": "复盘最近 18 次模拟会话，提出更稳妥的配置，并在应用前展示变更。",
+      "ref": "[data-native-record-target=\"capture-2\"]",
+      "snapshot": "snapshot-001.txt"
+    },
+    {
+      "t": 4.0805,
+      "end": 4.18,
+      "kind": "native-click",
+      "role": "button",
+      "name": "发送",
+      "ref": "[data-native-record-target=\"capture-4\"]",
+      "snapshot": "snapshot-003.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/d1e54305-623c-40aa-80fe-23e08740a93b"
+    },
+    {
+      "t": 10.0872,
+      "end": 10.4084,
+      "kind": "native-scroll",
+      "deltaY": -300,
+      "viewportPoint": {
+        "x": 930,
+        "y": 480
+      }
+    },
+    {
+      "t": 13.026,
+      "end": 13.3594,
+      "kind": "native-scroll",
+      "deltaY": 190,
+      "viewportPoint": {
+        "x": 930,
+        "y": 480
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "snapshot-000.txt",
+      "label": "ready",
+      "t": null,
+      "sha256": "e9e42810a73444e1c995921b3fd612e433663e9687e3c15543beaae692dfa131"
+    },
+    {
+      "file": "snapshot-001.txt",
+      "label": "textbox: 给 Nerya 发消息",
+      "t": 0.7151,
+      "sha256": "e9e42810a73444e1c995921b3fd612e433663e9687e3c15543beaae692dfa131"
+    },
+    {
+      "file": "snapshot-003.txt",
+      "label": "button: 发送",
+      "t": 4.0188,
+      "sha256": "3892a5fe346930ec580a60cf385f4a0734c3a183ee114b7daba34db998b78b2c"
+    },
+    {
+      "file": "snapshot-005.txt",
+      "label": "generated result",
+      "t": 5.9445,
+      "sha256": "54ce3d76d65df4f10b7de5644ae8a0446497a4e5b4e2a6387a3495e3b73d6429"
+    },
+    {
+      "file": "snapshot-006.txt",
+      "label": "end",
+      "t": 16.0981,
+      "sha256": "54ce3d76d65df4f10b7de5644ae8a0446497a4e5b4e2a6387a3495e3b73d6429"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-00000.png",
+      "t": 0.0441,
+      "requestSeconds": 0.0883,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00001.png",
+      "t": 0.1315,
+      "requestSeconds": 0.0618,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00002.png",
+      "t": 0.2335,
+      "requestSeconds": 0.0615,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00003.png",
+      "t": 0.3364,
+      "requestSeconds": 0.0637,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00004.png",
+      "t": 0.4363,
+      "requestSeconds": 0.0613,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00005.png",
+      "t": 0.5461,
+      "requestSeconds": 0.0785,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00006.png",
+      "t": 0.6464,
+      "requestSeconds": 0.0775,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00007.png",
+      "t": 0.7524,
+      "requestSeconds": 0.0906,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00008.png",
+      "t": 0.908,
+      "requestSeconds": 0.1996,
+      "sha256": "d39708d9f7ccceba950d719e545624d95211661e6419ffcb3e551106e0d43053"
+    },
+    {
+      "file": "frame-00009.png",
+      "t": 1.5863,
+      "requestSeconds": 1.1542,
+      "sha256": "52d126ee0cde140204865a60d0189167591f08f1c11a3b745766c568a72cfe3e"
+    },
+    {
+      "file": "frame-00010.png",
+      "t": 2.2623,
+      "requestSeconds": 0.1947,
+      "sha256": "4ffba27a43d6ac019eabd96f6a8c3febd0a078ecb90019ffc70f6966e44b4297"
+    },
+    {
+      "file": "frame-00011.png",
+      "t": 2.4421,
+      "requestSeconds": 0.1621,
+      "sha256": "5bda7d7095d357def4ddb9a0abe4e0d93ca09d07052e091caf8c5437882ed14b"
+    },
+    {
+      "file": "frame-00012.png",
+      "t": 2.6082,
+      "requestSeconds": 0.1671,
+      "sha256": "b88268285fe7770d9b77b784710dede3769e60412c9779388e1391a8ac8ced2c"
+    },
+    {
+      "file": "frame-00013.png",
+      "t": 2.7758,
+      "requestSeconds": 0.1649,
+      "sha256": "a59718ace013beb25b4d8885aca62eab60f3bbb5441cb4bab0a82169a11ae3fa"
+    },
+    {
+      "file": "frame-00014.png",
+      "t": 2.9435,
+      "requestSeconds": 0.1677,
+      "sha256": "d844cb3f937eb763ff98f1c50f8dd432bdbff7331ff2ab5c81e49b537c0fdfed"
+    },
+    {
+      "file": "frame-00015.png",
+      "t": 3.1101,
+      "requestSeconds": 0.1624,
+      "sha256": "b85423ca00f4d481325a5327aa8bf68c21644e250075f37220f39fbdb1d5cbb1"
+    },
+    {
+      "file": "frame-00016.png",
+      "t": 3.2761,
+      "requestSeconds": 0.1665,
+      "sha256": "c1adab875eb0338e1e5bea17ee132ae4340a47459ba3fb57581d32f721e3ba44"
+    },
+    {
+      "file": "frame-00017.png",
+      "t": 3.4425,
+      "requestSeconds": 0.1633,
+      "sha256": "80af0982cfed1dc64f7edc3c685154ff57c798344d042d0e7627392572f98ca4"
+    },
+    {
+      "file": "frame-00018.png",
+      "t": 3.609,
+      "requestSeconds": 0.1666,
+      "sha256": "6dc8637a7a42c1e5d83b004a6ad8851a0d7b8785b57fd05f3a791df8842f5344"
+    },
+    {
+      "file": "frame-00019.png",
+      "t": 3.7694,
+      "requestSeconds": 0.1513,
+      "sha256": "a8a877b24823420f976b47abe79ccba505d7f5a6319857df285f5a7fe5bdaf64"
+    },
+    {
+      "file": "frame-00020.png",
+      "t": 3.9264,
+      "requestSeconds": 0.1598,
+      "sha256": "2da05775df48925a79d381e501ac4cc62af1142e3c6367ec9ac60b077f4d9fc5"
+    },
+    {
+      "file": "frame-00021.png",
+      "t": 4.0433,
+      "requestSeconds": 0.0733,
+      "sha256": "2da05775df48925a79d381e501ac4cc62af1142e3c6367ec9ac60b077f4d9fc5"
+    },
+    {
+      "file": "frame-00022.png",
+      "t": 4.2049,
+      "requestSeconds": 0.1928,
+      "sha256": "04cef50d74cdff91714a60dc69db94bafccbcf1d414b1d047307e604686ddfa3"
+    },
+    {
+      "file": "frame-00023.png",
+      "t": 5.1157,
+      "requestSeconds": 1.626,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00024.png",
+      "t": 5.9761,
+      "requestSeconds": 0.0913,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00025.png",
+      "t": 6.068,
+      "requestSeconds": 0.072,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00026.png",
+      "t": 6.1721,
+      "requestSeconds": 0.0779,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00027.png",
+      "t": 6.2712,
+      "requestSeconds": 0.0742,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00028.png",
+      "t": 6.3715,
+      "requestSeconds": 0.0718,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00029.png",
+      "t": 6.4726,
+      "requestSeconds": 0.0718,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00030.png",
+      "t": 6.573,
+      "requestSeconds": 0.0703,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00031.png",
+      "t": 6.675,
+      "requestSeconds": 0.0711,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00032.png",
+      "t": 6.7926,
+      "requestSeconds": 0.1056,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00033.png",
+      "t": 6.8947,
+      "requestSeconds": 0.0955,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00034.png",
+      "t": 6.9949,
+      "requestSeconds": 0.0942,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00035.png",
+      "t": 7.0928,
+      "requestSeconds": 0.0885,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00036.png",
+      "t": 7.1959,
+      "requestSeconds": 0.091,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00037.png",
+      "t": 7.2959,
+      "requestSeconds": 0.0882,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00038.png",
+      "t": 7.3869,
+      "requestSeconds": 0.0671,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00039.png",
+      "t": 7.5089,
+      "requestSeconds": 0.1083,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00040.png",
+      "t": 7.6113,
+      "requestSeconds": 0.0931,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00041.png",
+      "t": 7.7121,
+      "requestSeconds": 0.0929,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00042.png",
+      "t": 7.8126,
+      "requestSeconds": 0.0925,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00043.png",
+      "t": 7.9142,
+      "requestSeconds": 0.0927,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00044.png",
+      "t": 8.0134,
+      "requestSeconds": 0.0876,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00045.png",
+      "t": 8.1136,
+      "requestSeconds": 0.0841,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00046.png",
+      "t": 8.2155,
+      "requestSeconds": 0.085,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00047.png",
+      "t": 8.3184,
+      "requestSeconds": 0.0882,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00048.png",
+      "t": 8.4148,
+      "requestSeconds": 0.078,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00049.png",
+      "t": 8.5146,
+      "requestSeconds": 0.0781,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00050.png",
+      "t": 8.6182,
+      "requestSeconds": 0.0823,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00051.png",
+      "t": 8.7149,
+      "requestSeconds": 0.0757,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00052.png",
+      "t": 8.8208,
+      "requestSeconds": 0.0835,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00053.png",
+      "t": 8.9186,
+      "requestSeconds": 0.0792,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00054.png",
+      "t": 9.0203,
+      "requestSeconds": 0.0794,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00055.png",
+      "t": 9.1202,
+      "requestSeconds": 0.076,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00056.png",
+      "t": 9.2209,
+      "requestSeconds": 0.0747,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00057.png",
+      "t": 9.3224,
+      "requestSeconds": 0.0737,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00058.png",
+      "t": 9.4253,
+      "requestSeconds": 0.0755,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00059.png",
+      "t": 9.5228,
+      "requestSeconds": 0.0668,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00060.png",
+      "t": 9.6397,
+      "requestSeconds": 0.0964,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00061.png",
+      "t": 9.7427,
+      "requestSeconds": 0.1015,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00062.png",
+      "t": 9.8446,
+      "requestSeconds": 0.0993,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00063.png",
+      "t": 9.9431,
+      "requestSeconds": 0.0971,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00064.png",
+      "t": 10.0406,
+      "requestSeconds": 0.0925,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00065.png",
+      "t": 10.2004,
+      "requestSeconds": 0.2105,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00066.png",
+      "t": 10.4558,
+      "requestSeconds": 0.2962,
+      "sha256": "4a7f1ff7418bb72c4f1ad2e70720ba9aeba3872bd1825b9fe97ab24debfc8b90"
+    },
+    {
+      "file": "frame-00067.png",
+      "t": 10.6592,
+      "requestSeconds": 0.1072,
+      "sha256": "a1a685e02fb3fcdc1d2834635b5887d82b7e045df1aff1ac4e107b7a6e071551"
+    },
+    {
+      "file": "frame-00068.png",
+      "t": 10.7624,
+      "requestSeconds": 0.096,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00069.png",
+      "t": 10.8635,
+      "requestSeconds": 0.098,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00070.png",
+      "t": 10.962,
+      "requestSeconds": 0.0959,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00071.png",
+      "t": 11.0619,
+      "requestSeconds": 0.0958,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00072.png",
+      "t": 11.1606,
+      "requestSeconds": 0.0911,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00073.png",
+      "t": 11.2535,
+      "requestSeconds": 0.0738,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00074.png",
+      "t": 11.3551,
+      "requestSeconds": 0.0747,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00075.png",
+      "t": 11.4552,
+      "requestSeconds": 0.0733,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00076.png",
+      "t": 11.558,
+      "requestSeconds": 0.0755,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00077.png",
+      "t": 11.6546,
+      "requestSeconds": 0.0651,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00078.png",
+      "t": 11.7719,
+      "requestSeconds": 0.0978,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00079.png",
+      "t": 11.866,
+      "requestSeconds": 0.0846,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00080.png",
+      "t": 11.9674,
+      "requestSeconds": 0.0836,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00081.png",
+      "t": 12.0674,
+      "requestSeconds": 0.0837,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00082.png",
+      "t": 12.1694,
+      "requestSeconds": 0.0836,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00083.png",
+      "t": 12.2689,
+      "requestSeconds": 0.0788,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00084.png",
+      "t": 12.3686,
+      "requestSeconds": 0.0761,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00085.png",
+      "t": 12.4727,
+      "requestSeconds": 0.0814,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00086.png",
+      "t": 12.5693,
+      "requestSeconds": 0.071,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00087.png",
+      "t": 12.6836,
+      "requestSeconds": 0.0969,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00088.png",
+      "t": 12.7797,
+      "requestSeconds": 0.0898,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00089.png",
+      "t": 12.8793,
+      "requestSeconds": 0.0906,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00090.png",
+      "t": 12.9808,
+      "requestSeconds": 0.0898,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00091.png",
+      "t": 13.1598,
+      "requestSeconds": 0.2466,
+      "sha256": "a17261c22321c2e5f00882db8e8a66d2d66d7e569b2fa9f63a5392447fe5a640"
+    },
+    {
+      "file": "frame-00092.png",
+      "t": 13.4148,
+      "requestSeconds": 0.2581,
+      "sha256": "2ccadbae387d4cbc78c383ee9a6a5cb9ac9d0a2be4e5b125f2d89c3fa4a99e94"
+    },
+    {
+      "file": "frame-00093.png",
+      "t": 13.5908,
+      "requestSeconds": 0.0909,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00094.png",
+      "t": 13.6865,
+      "requestSeconds": 0.0797,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00095.png",
+      "t": 13.7877,
+      "requestSeconds": 0.0783,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00096.png",
+      "t": 13.887,
+      "requestSeconds": 0.0736,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00097.png",
+      "t": 13.9903,
+      "requestSeconds": 0.0763,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00098.png",
+      "t": 14.0893,
+      "requestSeconds": 0.0711,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00099.png",
+      "t": 14.19,
+      "requestSeconds": 0.0697,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00100.png",
+      "t": 14.3093,
+      "requestSeconds": 0.1042,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00101.png",
+      "t": 14.4111,
+      "requestSeconds": 0.0963,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00102.png",
+      "t": 14.5109,
+      "requestSeconds": 0.0953,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00103.png",
+      "t": 14.6108,
+      "requestSeconds": 0.094,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00104.png",
+      "t": 14.7121,
+      "requestSeconds": 0.0956,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00105.png",
+      "t": 14.8141,
+      "requestSeconds": 0.0977,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00106.png",
+      "t": 14.9115,
+      "requestSeconds": 0.0916,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00107.png",
+      "t": 15.0028,
+      "requestSeconds": 0.0728,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00108.png",
+      "t": 15.1141,
+      "requestSeconds": 0.0914,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00109.png",
+      "t": 15.2161,
+      "requestSeconds": 0.0919,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00110.png",
+      "t": 15.3154,
+      "requestSeconds": 0.0885,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00111.png",
+      "t": 15.418,
+      "requestSeconds": 0.0901,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00112.png",
+      "t": 15.5152,
+      "requestSeconds": 0.0847,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00113.png",
+      "t": 15.6166,
+      "requestSeconds": 0.0833,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00114.png",
+      "t": 15.7183,
+      "requestSeconds": 0.0855,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00115.png",
+      "t": 15.8187,
+      "requestSeconds": 0.0827,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00116.png",
+      "t": 15.9211,
+      "requestSeconds": 0.0835,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    },
+    {
+      "file": "frame-00117.png",
+      "t": 16.0182,
+      "requestSeconds": 0.0742,
+      "sha256": "04f8989d4b222f8b54f952bae8a12cbae85d865107c8491ad858a093d53248ca"
+    }
+  ],
+  "duration": 16.0826,
+  "finalUrl": "http://127.0.0.1:4173/demo/index.html#/chat/d1e54305-623c-40aa-80fe-23e08740a93b",
+  "demoRequests": [
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/session/transcript",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    }
+  ],
+  "demoErrors": [],
+  "sourceInputsAfter": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "sourceStable": true,
+  "outputs": [
+    {
+      "file": "evolution.mp4",
+      "bytes": 724273,
+      "sha256": "529c5d71dee59aa471b2c9579a65c0899367ebfddae99957d9ca194788609c73",
+      "width": 2560,
+      "height": 1600,
+      "codec": "h264",
+      "frames": 386,
+      "duration": 16.083333
+    },
+    {
+      "file": "evolution.gif",
+      "bytes": 787537,
+      "sha256": "e48f9453e6cf2276d7c606a62eb8f105129863c0fe39eb08750cf19e48d679be",
+      "width": 2560,
+      "height": 1600,
+      "codec": "gif",
+      "frames": 161,
+      "duration": 16.1
+    },
+    {
+      "file": "evolution-poster.webp",
+      "bytes": 117634,
+      "sha256": "febe798fa95a2cea83a025d46ba766bd274c9088cf8244356b8c13918be70592",
+      "width": 2560,
+      "height": 1600,
+      "codec": "webp",
+      "frames": 1,
+      "duration": null
+    }
+  ],
+  "posterSourceFrame": "frame-00117.png",
+  "encoding": {
+    "mp4": "ffmpeg/libx264 CRF14 slow native 2x",
+    "gif": "ffmpeg full 256-color palette, no dithering, native 2x",
+    "poster": "lossless WebP from raw native2x frame, source ICC retained",
+    "encoderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+    "posterRefinement": {
+      "tool": "cwebp",
+      "flags": "-lossless -z 6 -metadata icc",
+      "reason": "Preserve source color interpretation as well as lossless samples"
+    }
+  },
+  "captureDirectory": ".tmp/native-recordings/evolution-record-CG3RMW"
+}

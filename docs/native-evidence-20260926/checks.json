@@ -1,0 +1,202 @@
+{
+  "checkedAt": "2026-09-26T06:13:24.636Z",
+  "results": [
+    {
+      "name": "Astro entry, six native recordings and retained real workspace",
+      "passed": true,
+      "evidence": {
+        "title": "Nerya · 你的 Agent 策略团队",
+        "heading": "一句想法\n一支策略团队",
+        "headings": [
+          "一句想法一支策略团队",
+          "在工作台里 看清每一步",
+          "说出想法 开始构建",
+          "让 Agent 分工研究",
+          "自主复盘 迭代策略",
+          "把密钥存入本地 Vault",
+          "换个市场 继续研究",
+          "需要新接口 从需求开始",
+          "从你的第一个策略开始",
+          "把团队带到你的工作区"
+        ],
+        "films": [
+          {
+            "id": "strategy",
+            "video": "/assets/product-recordings/strategy.mp4",
+            "gif": "/assets/product-recordings/strategy.gif"
+          },
+          {
+            "id": "team",
+            "video": "/assets/product-recordings/team.mp4",
+            "gif": "/assets/product-recordings/team.gif"
+          },
+          {
+            "id": "evolution",
+            "video": "/assets/product-recordings/evolution.mp4",
+            "gif": "/assets/product-recordings/evolution.gif"
+          },
+          {
+            "id": "vault",
+            "video": "/assets/product-recordings/vault.mp4",
+            "gif": "/assets/product-recordings/vault.gif"
+          },
+          {
+            "id": "markets",
+            "video": "/assets/product-recordings/markets.mp4",
+            "gif": "/assets/product-recordings/markets.gif"
+          },
+          {
+            "id": "integrations",
+            "video": "/assets/product-recordings/integrations.mp4",
+            "gif": "/assets/product-recordings/integrations.gif"
+          }
+        ],
+        "real": "real-agent",
+        "overflow": false
+      }
+    },
+    {
+      "name": "Each film loads, advances, pauses, replays and seeks",
+      "passed": true,
+      "evidence": [
+        {
+          "id": "strategy",
+          "time": 10.786666,
+          "duration": 16,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        },
+        {
+          "id": "team",
+          "time": 10.786666,
+          "duration": 16,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        },
+        {
+          "id": "evolution",
+          "time": 10.842222,
+          "duration": 16.083333,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        },
+        {
+          "id": "vault",
+          "time": 10.814444,
+          "duration": 16.041667,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        },
+        {
+          "id": "markets",
+          "time": 11.147777,
+          "duration": 16.541667,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        },
+        {
+          "id": "integrations",
+          "time": 10.842222,
+          "duration": 16.083333,
+          "width": 1280,
+          "height": 800,
+          "paused": true
+        }
+      ]
+    },
+    {
+      "name": "GIF embed and offscreen resource suspension",
+      "passed": true,
+      "evidence": {
+        "gif": "http://127.0.0.1:4173/assets/product-recordings/strategy.gif",
+        "offscreenPaused": true
+      }
+    },
+    {
+      "name": "Global pause and reduced motion keep stills readable",
+      "passed": true,
+      "evidence": {
+        "paused": "true",
+        "gifs": true,
+        "title": "让 Agent 分工研究"
+      }
+    },
+    {
+      "name": "Feature handoffs use the native app including settings",
+      "passed": true,
+      "evidence": {
+        "routes": [
+          "strategy",
+          "agents",
+          "self-evolution",
+          "settings"
+        ],
+        "nativeErrors": []
+      }
+    },
+    {
+      "name": "Four market workflows preserve the chosen strategy",
+      "passed": true,
+      "evidence": [
+        "#/strategies?strategy_id=btc_trend_guard",
+        "#/strategies?strategy_id=event_probability",
+        "#/strategies?strategy_id=futures_term_structure",
+        "#/strategies?strategy_id=ashare_factor_rotation"
+      ]
+    },
+    {
+      "name": "Connector request transfers as an unsent editable draft",
+      "passed": true,
+      "evidence": {
+        "value": "帮我接入 ExampleX 的行情接口并添加数据校验",
+        "status": "已放到工作台 发送后查看适配方案"
+      }
+    },
+    {
+      "name": "Language, theme and route state remain synchronized",
+      "passed": true,
+      "evidence": {
+        "lang": "en",
+        "theme": "dark",
+        "frameTheme": "dark",
+        "draft": "帮我接入 ExampleX 的行情接口并添加数据校验",
+        "hash": "#/chat"
+      }
+    },
+    {
+      "name": "Mobile widths, bilingual headings and menus",
+      "passed": true,
+      "evidence": [
+        {
+          "width": 320,
+          "scroll": 305,
+          "headings": []
+        },
+        {
+          "width": 390,
+          "scroll": 375,
+          "headings": []
+        },
+        {
+          "width": 768,
+          "scroll": 753,
+          "headings": []
+        }
+      ]
+    },
+    {
+      "name": "Setup modal, keyboard close and local-only runtime",
+      "passed": true,
+      "evidence": {
+        "external": [],
+        "missing": [],
+        "nativeErrors": []
+      }
+    }
+  ]
+}

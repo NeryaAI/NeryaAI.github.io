@@ -7,3 +7,10 @@ node_modules/
 .cache/
 qa/
 docs/screenshots/raw/
+
+assets/_orig_png_backup/
+
+# Generated Astro output; edit the original assets, never public/.
+/public/
+/dist/
+/.astro/

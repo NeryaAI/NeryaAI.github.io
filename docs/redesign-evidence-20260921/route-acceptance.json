@@ -1,0 +1,134 @@
+[
+  {
+    "route": "#/",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/accounts",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/advanced",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/chat",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/dashboard",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/env-vault",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/gateway",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/inbox",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/incidents",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/orders",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/portfolio",
+    "failed": false,
+    "branding": false,
+    "alerts": [
+      "净值曲线暂不可用"
+    ]
+  },
+  {
+    "route": "",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/settings",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/skills",
+    "failed": false,
+    "branding": false,
+    "alerts": [
+      "Cannot read properties of undefined (reading 'find')重试"
+    ]
+  },
+  {
+    "route": "#/strategies",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/tasks",
+    "failed": true,
+    "branding": false,
+    "alerts": [
+      "演示页面暂未准备好 / Demo unavailableCannot read properties of undefined (reading 'length')返回 Agent / Return to Agent"
+    ]
+  },
+  {
+    "route": "#/web-search",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  },
+  {
+    "route": "#/workflows",
+    "failed": false,
+    "branding": false,
+    "alerts": []
+  }
+]

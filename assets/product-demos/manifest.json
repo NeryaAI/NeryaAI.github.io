@@ -1,0 +1,539 @@
+{
+  "schema": "nerya.authored-product-demos/v1",
+  "generator": {
+    "file": "tools/render-product-demos.mjs",
+    "sha256": "22c5309bfe5fca7ed4f0120bfc2c04a6de344b5118404590b1b565cde3c73d09",
+    "command": "node tools/render-product-demos.mjs",
+    "previewCommand": "node tools/render-product-demos.mjs --preview",
+    "verifyCommand": "node tools/render-product-demos.mjs --verify"
+  },
+  "specification": {
+    "width": 960,
+    "height": 640,
+    "aspectRatio": "3:2",
+    "fps": 10,
+    "durationSeconds": 9,
+    "frames": 90,
+    "gifMaxBytes": 3000000,
+    "mp4MaxBytes": 500000,
+    "language": "en",
+    "captionLanguages": [
+      "en",
+      "zh"
+    ],
+    "audio": false
+  },
+  "provenance": {
+    "kind": "authored-product-walkthrough",
+    "notSessionRecording": true,
+    "disclosure": {
+      "en": "Authored product walkthrough with illustrative states. Not a real session recording; no account, model, credential, or connector is contacted.",
+      "zh": "人工编排的产品演示，使用示例状态；并非真实会话录屏，不连接账户、模型、凭据或连接器。"
+    },
+    "visualMethod": "Deterministic Node canvas UI drawing; original local PNG member portraits and WebP mascot; no image generation or browser capture.",
+    "credentialSafety": "Mask dots and an invented vault://demo/bybit reference only. No secret value is generated, loaded, encoded, or authenticated. No algorithm is named.",
+    "vaultSourceVerification": {
+      "file": "../agent/nerya/security/secrets.py",
+      "checkedSymbols": [
+        "SecretMeta.ref",
+        "SecretVault._flush",
+        "SecretVault.resolve",
+        "SecretVault.public_ref"
+      ],
+      "supportedClaims": [
+        "Encrypted persistence",
+        "vault:// references",
+        "Runtime secret resolution"
+      ],
+      "caveat": "The authentication completion is an illustrative state, not evidence of a live connection. Locked refers to the closed/masked product depiction, not a verified runtime lock API."
+    },
+    "evolutionSafety": "Checks and approval are authored example states. Approved candidate does not mean applied or deployed; current version remains unchanged.",
+    "tradingClaims": "No returns, profit, account balances, live fills, or performance claims.",
+    "avatarIdentity": "Original assets/agent-avatars/*.png are drawn unchanged; provenance and CC0 artwork notice remain in their existing directory."
+  },
+  "integration": {
+    "preferred": "mp4",
+    "videoAttributes": [
+      "autoplay",
+      "muted",
+      "loop",
+      "playsinline"
+    ],
+    "preload": "none",
+    "posterFallback": true,
+    "reducedMotion": "Show poster; start only on explicit user request.",
+    "controls": "Host supplies pause/replay and optional GIF link. Video is not interactive product UI.",
+    "suggestedMediaWidthCssPx": [
+      640,
+      760
+    ]
+  },
+  "reproducibility": {
+    "node": "v26.0.0",
+    "canvas": "0.1.100",
+    "sharp": "0.35.4",
+    "ffmpeg": "ffmpeg version 8.1.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "fonts": [
+      {
+        "role": "sans",
+        "file": "/System/Library/Fonts/Avenir Next.ttc",
+        "sha256": "e03834eefdb4164c2af2c35b985285eb4fd67ff8db54aaed3bdc6d9c8b7f3c3c"
+      },
+      {
+        "role": "mono",
+        "file": "/System/Library/Fonts/Menlo.ttc",
+        "sha256": "f2d400484a6aace67980730ec0a9ef24ce9e535a2604f118e6fdc2510021b85f"
+      }
+    ],
+    "seed": "No randomness, wall-clock values, or network inputs. Fixed frame timestamps and single-thread H.264 encoding.",
+    "note": "Same inputs, fonts, and encoder/toolchain versions reproduce these outputs; different codecs/fonts may change bytes."
+  },
+  "inputs": [
+    {
+      "file": "assets/nerya-logo.webp",
+      "sha256": "077e937a251215b88b93af65ef29083a8dd415d88f92b4876e79b9fdb43f363e"
+    },
+    {
+      "file": "assets/agent-avatars/lead.png",
+      "sha256": "b77fe93ed34c9102855243c947b60194d09047ecf15b7ebde1531224746f9226"
+    },
+    {
+      "file": "assets/agent-avatars/researcher.png",
+      "sha256": "be14243e350e64049f0075ef0f4a44316d2fca53dadfca897209db1c7f48c882"
+    },
+    {
+      "file": "assets/agent-avatars/reviewer.png",
+      "sha256": "2b59edbbda0052b355ecbcd3cc5ab61ba3a6b90e47cdf4fc53ec704d5fc3c4d0"
+    },
+    {
+      "file": "assets/agent-avatars/analyst.png",
+      "sha256": "185d99ddaf5813e84de1d00972ae2ff0db32a9f448dd622efc0dae6677e3bd75"
+    },
+    {
+      "file": "assets/agent-avatars/coder.png",
+      "sha256": "06add872f6551d4cc883dfba784913be73c28559baeeabe3fc75a2e01e4b3cda"
+    },
+    {
+      "file": "assets/agent-avatars/risk.png",
+      "sha256": "a40f1431bf41402e22ef2e236fa8477fbd0e9be96c4b3eb93a4f12aa344fd9a5"
+    },
+    {
+      "file": "assets/agent-avatars/provenance.json",
+      "sha256": "0424e8cf117771f2ce08a29de61cb52300a9f2ea0d2c87fe1b7f79223033db22"
+    },
+    {
+      "file": "../agent/nerya/security/secrets.py",
+      "sha256": "6d83d6db05898e6d9f0d5d62a9fb716a7957d8a55151ea5731fb3ebea9ff1936"
+    }
+  ],
+  "films": [
+    {
+      "id": "strategy",
+      "posterTime": 7.4,
+      "title": {
+        "en": "From a request to a strategy",
+        "zh": "从一句话，到策略工作流"
+      },
+      "caption": {
+        "en": "Describe the idea, follow task progress, then inspect the workflow and package.",
+        "zh": "描述想法，跟随任务进度，再检查生成的工作流与策略包。"
+      },
+      "stages": [
+        {
+          "time": 0,
+          "label": "Natural-language request"
+        },
+        {
+          "time": 2.363,
+          "label": "Task progress and workflow assembly"
+        },
+        {
+          "time": 5.4,
+          "label": "Package files appear"
+        },
+        {
+          "time": 6.413,
+          "label": "Package ready for review"
+        }
+      ],
+      "composition": "Expanding composer becomes a task rail beside a branching workflow and file package.",
+      "chapterStarts": [
+        0,
+        3,
+        6
+      ],
+      "width": 960,
+      "height": 640,
+      "fps": 10,
+      "durationSeconds": 9,
+      "frameCount": 90,
+      "sourceDistinctFrames": 69,
+      "sourceLoopBoundaryExact": true,
+      "media": {
+        "gif": {
+          "file": "assets/product-demos/strategy.gif",
+          "bytes": 609888,
+          "sha256": "d938f100429330157bb10bdba83789b84c3ba7d2f51176c13a1361f5fbf285dd",
+          "probe": {
+            "codec_name": "gif",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 69,
+            "firstLastDecodedEqual": true
+          },
+          "loopCount": 0
+        },
+        "mp4": {
+          "file": "assets/product-demos/strategy.mp4",
+          "bytes": 112406,
+          "sha256": "3ce0615707bca9d0c39db8cab9617dba3949e750567d771a9cf8bef473171e3d",
+          "probe": {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 90,
+            "firstLastDecodedEqual": false
+          },
+          "fastStart": true
+        },
+        "poster": {
+          "file": "assets/product-demos/strategy-poster.webp",
+          "bytes": 32956,
+          "sha256": "9000284256b7d1d6ae32c95e2178a7de43f030ed81f91fdf25b569ebf8bdb10f",
+          "width": 960,
+          "height": 640
+        },
+        "storyboard": {
+          "file": "assets/product-demos/strategy-storyboard.webp",
+          "bytes": 65222,
+          "sha256": "59dcfe1a2dfe1584cfdd84141ab5b9c803182e07cf07bac7af94a1b1d1561ddd",
+          "width": 1300,
+          "height": 926
+        }
+      }
+    },
+    {
+      "id": "team",
+      "posterTime": 7.3,
+      "title": {
+        "en": "Independent roles. Shared evidence.",
+        "zh": "分工协作，共享证据"
+      },
+      "caption": {
+        "en": "Researcher and reviewer work in parallel; their sources and constraints stay attached.",
+        "zh": "研究员与审阅员并行工作，来源与约束汇入同一份证据。"
+      },
+      "stages": [
+        {
+          "time": 0,
+          "label": "Distinct member roles assigned"
+        },
+        {
+          "time": 1.688,
+          "label": "Parallel research and review messages"
+        },
+        {
+          "time": 3.15,
+          "label": "Citations attached independently"
+        },
+        {
+          "time": 5.513,
+          "label": "Shared evidence assembled"
+        }
+      ],
+      "composition": "Member rail, two parallel conversation lanes, and a shared evidence notebook.",
+      "chapterStarts": [
+        0,
+        3,
+        6
+      ],
+      "width": 960,
+      "height": 640,
+      "fps": 10,
+      "durationSeconds": 9,
+      "frameCount": 90,
+      "sourceDistinctFrames": 57,
+      "sourceLoopBoundaryExact": true,
+      "media": {
+        "gif": {
+          "file": "assets/product-demos/team.gif",
+          "bytes": 273693,
+          "sha256": "97432749e9a6f9dcd45a12693c37d7a3251996ae720c8738957263423e753df2",
+          "probe": {
+            "codec_name": "gif",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 57,
+            "firstLastDecodedEqual": true
+          },
+          "loopCount": 0
+        },
+        "mp4": {
+          "file": "assets/product-demos/team.mp4",
+          "bytes": 79910,
+          "sha256": "7d6b81ed9411cc1c351be03ce6fe121854f1655bf35726e61f39f578789500b2",
+          "probe": {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 85,
+            "firstLastDecodedEqual": false
+          },
+          "fastStart": true
+        },
+        "poster": {
+          "file": "assets/product-demos/team-poster.webp",
+          "bytes": 39152,
+          "sha256": "2817f346024e22bd1657702d73ee9d2c7a5bd0f5cc485b089f460c0b1094d3ed",
+          "width": 960,
+          "height": 640
+        },
+        "storyboard": {
+          "file": "assets/product-demos/team-storyboard.webp",
+          "bytes": 78356,
+          "sha256": "3cee4f9552ef5ef259db7fc992b964754e0ad5d175a63a34e3ccd16d2dfdd815",
+          "width": 1300,
+          "height": 926
+        }
+      }
+    },
+    {
+      "id": "evolution",
+      "posterTime": 7.4,
+      "title": {
+        "en": "A review you can act on",
+        "zh": "把会话复盘，变成可审阅的改动"
+      },
+      "caption": {
+        "en": "Trace the session, inspect a concrete diff, validate it, and approve a candidate.",
+        "zh": "从会话记录定位问题，检查具体差异，通过验证后再批准候选版本。"
+      },
+      "stages": [
+        {
+          "time": 0,
+          "label": "Review a missing-data session"
+        },
+        {
+          "time": 2.081,
+          "label": "Concrete code diff"
+        },
+        {
+          "time": 4.5,
+          "label": "Candidate validation"
+        },
+        {
+          "time": 6.75,
+          "label": "Operator approves candidate; current version unchanged"
+        }
+      ],
+      "composition": "Session finding and review timeline beside an inline code diff, checks, and explicit approval.",
+      "chapterStarts": [
+        0,
+        3,
+        6
+      ],
+      "width": 960,
+      "height": 640,
+      "fps": 10,
+      "durationSeconds": 9,
+      "frameCount": 90,
+      "sourceDistinctFrames": 49,
+      "sourceLoopBoundaryExact": true,
+      "media": {
+        "gif": {
+          "file": "assets/product-demos/evolution.gif",
+          "bytes": 405991,
+          "sha256": "703a4ee1debc451b309f5319064f8f31e7520c5636f094eef9d1cd9a3a711d9d",
+          "probe": {
+            "codec_name": "gif",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 49,
+            "firstLastDecodedEqual": true
+          },
+          "loopCount": 0
+        },
+        "mp4": {
+          "file": "assets/product-demos/evolution.mp4",
+          "bytes": 101521,
+          "sha256": "1b171d9ebfec9938c950019208cf42a9ed6c4dae106bbce1162e5d9800308b85",
+          "probe": {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 90,
+            "firstLastDecodedEqual": false
+          },
+          "fastStart": true
+        },
+        "poster": {
+          "file": "assets/product-demos/evolution-poster.webp",
+          "bytes": 36662,
+          "sha256": "63305c74ae8d462cb095f83631e3c5fb46575dec751a61d7ea08cf5d7a0acfd3",
+          "width": 960,
+          "height": 640
+        },
+        "storyboard": {
+          "file": "assets/product-demos/evolution-storyboard.webp",
+          "bytes": 80588,
+          "sha256": "3bf88ba42c82ab83f0edc66b478d5ba95fd7ab7d7d0c53016eeb0c5a18d21597",
+          "width": 1300,
+          "height": 926
+        }
+      }
+    },
+    {
+      "id": "vault",
+      "posterTime": 7.4,
+      "title": {
+        "en": "Credentials stay behind the reference",
+        "zh": "凭据留在金库，Agent 使用引用"
+      },
+      "caption": {
+        "en": "Keep credentials encrypted locally, pass a secret reference, and authenticate in the connector runtime.",
+        "zh": "凭据在本地加密保存，传递密钥引用，由连接器运行时完成鉴权。"
+      },
+      "stages": [
+        {
+          "time": 0,
+          "label": "Masked local credential"
+        },
+        {
+          "time": 1.238,
+          "label": "Encrypted at rest"
+        },
+        {
+          "time": 3.15,
+          "label": "Opaque reference received by Agent"
+        },
+        {
+          "time": 5.119,
+          "label": "Connector resolves in runtime"
+        },
+        {
+          "time": 6.244,
+          "label": "Illustrated authentication completes"
+        }
+      ],
+      "composition": "Dark closed vault, moving reference token, Agent reference field, and connector authentication.",
+      "chapterStarts": [
+        0,
+        3,
+        6
+      ],
+      "width": 960,
+      "height": 640,
+      "fps": 10,
+      "durationSeconds": 9,
+      "frameCount": 90,
+      "sourceDistinctFrames": 61,
+      "sourceLoopBoundaryExact": true,
+      "media": {
+        "gif": {
+          "file": "assets/product-demos/vault.gif",
+          "bytes": 179092,
+          "sha256": "ce975e95d16dfaa171d655f44cb8c8caa5bea672557f2c61e50d486aea94a9ff",
+          "probe": {
+            "codec_name": "gif",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 61,
+            "firstLastDecodedEqual": true
+          },
+          "loopCount": 0
+        },
+        "mp4": {
+          "file": "assets/product-demos/vault.mp4",
+          "bytes": 58508,
+          "sha256": "2bf599c69232d0fe5052c09a10024e68292b061e29ab3922818fbd8bc72363f5",
+          "probe": {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 640,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "10/1",
+            "avg_frame_rate": "10/1",
+            "nb_read_frames": "90",
+            "duration": 9
+          },
+          "animation": {
+            "decodedFrames": 90,
+            "distinctDecodedFrames": 79,
+            "firstLastDecodedEqual": false
+          },
+          "fastStart": true
+        },
+        "poster": {
+          "file": "assets/product-demos/vault-poster.webp",
+          "bytes": 28650,
+          "sha256": "808800b8b5da68798c3a952350203662cf22db9f7b574b0ed92e1abbd49edc40",
+          "width": 960,
+          "height": 640
+        },
+        "storyboard": {
+          "file": "assets/product-demos/vault-storyboard.webp",
+          "bytes": 66054,
+          "sha256": "3144710060c83c41e3af90e9850504bc98ccaeab2592b6934d720274e9331c4b",
+          "width": 1300,
+          "height": 926
+        }
+      }
+    }
+  ]
+}

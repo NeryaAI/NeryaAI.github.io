@@ -1,0 +1,1489 @@
+{
+  "schema": "nerya-native-recording/v1",
+  "name": "strategy",
+  "mode": "record",
+  "status": "encoded-and-verified",
+  "recordedAt": "2026-09-26T07:04:33.992Z",
+  "sourceUrl": "http://127.0.0.1:4173/demo/index.html#/chat",
+  "recorderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+  "browser": {
+    "backend": "ego-browser",
+    "space": 20,
+    "page": "p1"
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 2
+  },
+  "safety": {
+    "demo": "real-agent",
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "viewport": [
+      1280,
+      800
+    ],
+    "dpr": 2
+  },
+  "disclosure": "Actual screen recording of the source-backed Nerya app with deterministic data; no live accounts, model requests or orders. This is not drawn or recreated UI.",
+  "capture": {
+    "method": "Ego Page.cdp Page.captureScreenshot native DPR2 PNG",
+    "pixelWidth": 2560,
+    "pixelHeight": 1600,
+    "targetFps": 10,
+    "osCursorCaptured": false,
+    "targetSeconds": 16,
+    "maxSeconds": 24,
+    "timestamp": "monotonic host clock at screenshot request/response midpoint",
+    "timing": "real elapsed time; no speed-up",
+    "modifications": "none; only frame repetition, PNG-to-video encoding and GIF palette conversion"
+  },
+  "story": "Type the strategy brief, inspect the generated validation plan, open the actual BTC workflow.",
+  "sourceInputs": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "actions": [
+    {
+      "t": 0.8076,
+      "end": 3.1458,
+      "kind": "native-type",
+      "name": "给 Nerya 发消息",
+      "text": "创建 BTC 趋势策略，4h 周期，仓位上限 5%，先完成独立审阅。",
+      "ref": "[data-native-record-target=\"capture-2\"]",
+      "snapshot": "snapshot-001.txt"
+    },
+    {
+      "t": 3.2896,
+      "end": 3.4104,
+      "kind": "native-click",
+      "role": "button",
+      "name": "发送",
+      "ref": "[data-native-record-target=\"capture-4\"]",
+      "snapshot": "snapshot-003.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/46b4e452-e0ed-4dd6-9533-cbeaebfc84c9"
+    },
+    {
+      "t": 7.5945,
+      "end": 7.7268,
+      "kind": "native-click",
+      "role": "anchor",
+      "name": "策略",
+      "ref": "[data-native-record-target=\"capture-6\"]",
+      "snapshot": "snapshot-005.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies"
+    },
+    {
+      "t": 7.9471,
+      "end": 8.0709,
+      "kind": "native-click",
+      "role": "button",
+      "name": "打开策略：BTC 趋势跟随",
+      "ref": "[data-native-record-target=\"capture-8\"]",
+      "snapshot": "snapshot-007.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=btc_trend_guard&tab=performance"
+    },
+    {
+      "t": 11.6102,
+      "end": 11.7346,
+      "kind": "native-click",
+      "role": "button",
+      "name": "编辑详情: 独立审阅员",
+      "ref": "[data-native-record-target=\"capture-10\"]",
+      "snapshot": "snapshot-009.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=btc_trend_guard&tab=performance"
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "snapshot-000.txt",
+      "label": "ready",
+      "t": null,
+      "sha256": "eee12b60bb82c505d1d969864806a453f373bb837071ccb38eec16ad70fb612c"
+    },
+    {
+      "file": "snapshot-001.txt",
+      "label": "textbox: 给 Nerya 发消息",
+      "t": 0.7222,
+      "sha256": "eee12b60bb82c505d1d969864806a453f373bb837071ccb38eec16ad70fb612c"
+    },
+    {
+      "file": "snapshot-003.txt",
+      "label": "button: 发送",
+      "t": 3.2223,
+      "sha256": "317d2b735b1cc859e94fc8fb64a7396980ee2c855aa6a3e235f90848e2e050f1"
+    },
+    {
+      "file": "snapshot-005.txt",
+      "label": "anchor: 策略",
+      "t": 7.5268,
+      "sha256": "1317b99bd755cc903696d98f553702db2b8ee4ce7df08959955da22d37c75a65"
+    },
+    {
+      "file": "snapshot-007.txt",
+      "label": "button: 打开策略：BTC 趋势跟随",
+      "t": 7.8454,
+      "sha256": "7a0a340e2f78e7cfb12e6478d9dc2134be2607af88596cc632f7c4c64429f9d7"
+    },
+    {
+      "file": "snapshot-009.txt",
+      "label": "button: 编辑详情: 独立审阅员",
+      "t": 11.5418,
+      "sha256": "07833179c6c2d4d57f71589ba9842ce2ad54b3767b87198406eb20df3f8df0eb"
+    },
+    {
+      "file": "snapshot-011.txt",
+      "label": "end",
+      "t": 16.0801,
+      "sha256": "31bd0e579ed02a1308d7258d57aa924f9e19e20e59db1e06c231f710b5b28974"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-00000.png",
+      "t": 0.0444,
+      "requestSeconds": 0.0888,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00001.png",
+      "t": 0.1554,
+      "requestSeconds": 0.1084,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00002.png",
+      "t": 0.2501,
+      "requestSeconds": 0.0779,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00003.png",
+      "t": 0.3519,
+      "requestSeconds": 0.0792,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00004.png",
+      "t": 0.4514,
+      "requestSeconds": 0.0752,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00005.png",
+      "t": 0.5515,
+      "requestSeconds": 0.0722,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00006.png",
+      "t": 0.6642,
+      "requestSeconds": 0.0947,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00007.png",
+      "t": 0.762,
+      "requestSeconds": 0.0901,
+      "sha256": "bde3d36dabfce64d843de0936e755f72f8cc805ff5044d5ce405800fedeff19a"
+    },
+    {
+      "file": "frame-00008.png",
+      "t": 0.9114,
+      "requestSeconds": 0.1898,
+      "sha256": "d39708d9f7ccceba950d719e545624d95211661e6419ffcb3e551106e0d43053"
+    },
+    {
+      "file": "frame-00009.png",
+      "t": 1.0635,
+      "requestSeconds": 0.1139,
+      "sha256": "52d126ee0cde140204865a60d0189167591f08f1c11a3b745766c568a72cfe3e"
+    },
+    {
+      "file": "frame-00010.png",
+      "t": 1.2095,
+      "requestSeconds": 0.1751,
+      "sha256": "9d931732ab30f5abb2a6113221ad4a083eff547829062624e8bc77c2499d8ac2"
+    },
+    {
+      "file": "frame-00011.png",
+      "t": 1.4018,
+      "requestSeconds": 0.2064,
+      "sha256": "ac7bd37215b3558eac5da26f93c7a6e3d3c77041ac878cb6f2d47472adcd8bcc"
+    },
+    {
+      "file": "frame-00012.png",
+      "t": 1.5896,
+      "requestSeconds": 0.1659,
+      "sha256": "2adbb9914adf2b965961ba54725d66d8e18593d5b1d80268786966c35fd21cd4"
+    },
+    {
+      "file": "frame-00013.png",
+      "t": 1.7537,
+      "requestSeconds": 0.1594,
+      "sha256": "2cc4db5cf823eaa0f532be26c3b127403dfd88fbd1877c48b29fdad5af616002"
+    },
+    {
+      "file": "frame-00014.png",
+      "t": 1.9154,
+      "requestSeconds": 0.1609,
+      "sha256": "8eb6a3618ccf2f34b476aa38ad1903ed679f81e33bd99fac1b91960a36828395"
+    },
+    {
+      "file": "frame-00015.png",
+      "t": 2.0739,
+      "requestSeconds": 0.1531,
+      "sha256": "3769607719ef1983051debc96f90da052066a29ed9ecb20242f23475282df37c"
+    },
+    {
+      "file": "frame-00016.png",
+      "t": 2.2344,
+      "requestSeconds": 0.165,
+      "sha256": "da23770218c7405da07f31d77c47b5969cccd4d55a21f839a63f461f50702b53"
+    },
+    {
+      "file": "frame-00017.png",
+      "t": 2.4037,
+      "requestSeconds": 0.1705,
+      "sha256": "c4dc405bf955af70a85f96154de9391bb0d188fde7aa57e56b6df68460fa6062"
+    },
+    {
+      "file": "frame-00018.png",
+      "t": 2.5898,
+      "requestSeconds": 0.1988,
+      "sha256": "88d7ec52cac9a3b55101103e6c3698525ed8a66a4b3cf7aabb094fdbebb406d9"
+    },
+    {
+      "file": "frame-00019.png",
+      "t": 2.7871,
+      "requestSeconds": 0.1927,
+      "sha256": "c69b9085a185437ad38d2a8f10886caa88124066f4eb20bff9dc67e087096425"
+    },
+    {
+      "file": "frame-00020.png",
+      "t": 2.9793,
+      "requestSeconds": 0.1887,
+      "sha256": "b9a881995e5fe41f1df9ce4f03c476c453136c7cd6f73758fe4fac9463d4b5e1"
+    },
+    {
+      "file": "frame-00021.png",
+      "t": 3.1437,
+      "requestSeconds": 0.1371,
+      "sha256": "c6363c07a307e5683279abaaa971e4a6bb660d539184c24f424863dfa1ed8803"
+    },
+    {
+      "file": "frame-00022.png",
+      "t": 3.2509,
+      "requestSeconds": 0.0764,
+      "sha256": "c6363c07a307e5683279abaaa971e4a6bb660d539184c24f424863dfa1ed8803"
+    },
+    {
+      "file": "frame-00023.png",
+      "t": 3.4192,
+      "requestSeconds": 0.2094,
+      "sha256": "4ce7979970dcd4f23fca4c3b6667e5b11f9a94722a12e3bf91716982702c022b"
+    },
+    {
+      "file": "frame-00024.png",
+      "t": 4.3018,
+      "requestSeconds": 1.5537,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00025.png",
+      "t": 5.1235,
+      "requestSeconds": 0.0866,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00026.png",
+      "t": 5.2214,
+      "requestSeconds": 0.0784,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00027.png",
+      "t": 5.3336,
+      "requestSeconds": 0.0993,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00028.png",
+      "t": 5.4245,
+      "requestSeconds": 0.0794,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00029.png",
+      "t": 5.526,
+      "requestSeconds": 0.0787,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00030.png",
+      "t": 5.6272,
+      "requestSeconds": 0.077,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00031.png",
+      "t": 5.7281,
+      "requestSeconds": 0.076,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00032.png",
+      "t": 5.8463,
+      "requestSeconds": 0.1095,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00033.png",
+      "t": 5.9488,
+      "requestSeconds": 0.0916,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00034.png",
+      "t": 6.0522,
+      "requestSeconds": 0.0947,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00035.png",
+      "t": 6.1421,
+      "requestSeconds": 0.0719,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00036.png",
+      "t": 6.2542,
+      "requestSeconds": 0.0936,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00037.png",
+      "t": 6.3436,
+      "requestSeconds": 0.0696,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00038.png",
+      "t": 6.4554,
+      "requestSeconds": 0.091,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00039.png",
+      "t": 6.5435,
+      "requestSeconds": 0.0646,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00040.png",
+      "t": 6.6569,
+      "requestSeconds": 0.0874,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00041.png",
+      "t": 6.7481,
+      "requestSeconds": 0.0664,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00042.png",
+      "t": 6.8581,
+      "requestSeconds": 0.085,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00043.png",
+      "t": 6.9669,
+      "requestSeconds": 0.1019,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00044.png",
+      "t": 7.0689,
+      "requestSeconds": 0.0989,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00045.png",
+      "t": 7.1593,
+      "requestSeconds": 0.0787,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00046.png",
+      "t": 7.2694,
+      "requestSeconds": 0.0969,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00047.png",
+      "t": 7.3683,
+      "requestSeconds": 0.0953,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00048.png",
+      "t": 7.4663,
+      "requestSeconds": 0.0901,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00049.png",
+      "t": 7.5576,
+      "requestSeconds": 0.0728,
+      "sha256": "f71db5b86970d92c541b00066aa5559686f95d8be05c1a4efa2e85e838026ec7"
+    },
+    {
+      "file": "frame-00050.png",
+      "t": 7.7264,
+      "requestSeconds": 0.2108,
+      "sha256": "f6b410e92b972e2f551208aed956776faf0928f9ccad1e427052b6c975f536aa"
+    },
+    {
+      "file": "frame-00051.png",
+      "t": 7.8901,
+      "requestSeconds": 0.113,
+      "sha256": "6d79c50428590e5133d1c0010afcbb404af62b1e21bd7d1fe69eda3c729b7643"
+    },
+    {
+      "file": "frame-00052.png",
+      "t": 8.0582,
+      "requestSeconds": 0.2207,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00053.png",
+      "t": 8.2073,
+      "requestSeconds": 0.0754,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00054.png",
+      "t": 8.3172,
+      "requestSeconds": 0.0916,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00055.png",
+      "t": 8.4182,
+      "requestSeconds": 0.0899,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00056.png",
+      "t": 8.5102,
+      "requestSeconds": 0.0714,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00057.png",
+      "t": 8.6104,
+      "requestSeconds": 0.0686,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00058.png",
+      "t": 8.7207,
+      "requestSeconds": 0.085,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00059.png",
+      "t": 8.8213,
+      "requestSeconds": 0.0836,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00060.png",
+      "t": 8.9218,
+      "requestSeconds": 0.0807,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00061.png",
+      "t": 9.0296,
+      "requestSeconds": 0.0924,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00062.png",
+      "t": 9.1424,
+      "requestSeconds": 0.1151,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00063.png",
+      "t": 9.239,
+      "requestSeconds": 0.075,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00064.png",
+      "t": 9.3507,
+      "requestSeconds": 0.0957,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00065.png",
+      "t": 9.4494,
+      "requestSeconds": 0.0912,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00066.png",
+      "t": 9.5409,
+      "requestSeconds": 0.071,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00067.png",
+      "t": 9.6414,
+      "requestSeconds": 0.0693,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00068.png",
+      "t": 9.7427,
+      "requestSeconds": 0.0686,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00069.png",
+      "t": 9.8439,
+      "requestSeconds": 0.0671,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00070.png",
+      "t": 9.9525,
+      "requestSeconds": 0.0817,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00071.png",
+      "t": 10.0537,
+      "requestSeconds": 0.0798,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00072.png",
+      "t": 10.1654,
+      "requestSeconds": 0.0991,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00073.png",
+      "t": 10.2637,
+      "requestSeconds": 0.0942,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00074.png",
+      "t": 10.365,
+      "requestSeconds": 0.0975,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00075.png",
+      "t": 10.456,
+      "requestSeconds": 0.0789,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00076.png",
+      "t": 10.5562,
+      "requestSeconds": 0.0807,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00077.png",
+      "t": 10.6567,
+      "requestSeconds": 0.0817,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00078.png",
+      "t": 10.755,
+      "requestSeconds": 0.0741,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00079.png",
+      "t": 10.8661,
+      "requestSeconds": 0.0958,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00080.png",
+      "t": 10.9569,
+      "requestSeconds": 0.0776,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00081.png",
+      "t": 11.0642,
+      "requestSeconds": 0.0885,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00082.png",
+      "t": 11.1771,
+      "requestSeconds": 0.1107,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00083.png",
+      "t": 11.2823,
+      "requestSeconds": 0.0967,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00084.png",
+      "t": 11.3729,
+      "requestSeconds": 0.0786,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00085.png",
+      "t": 11.4821,
+      "requestSeconds": 0.0933,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00086.png",
+      "t": 11.5725,
+      "requestSeconds": 0.0745,
+      "sha256": "a460684de4c2c52e36bb2102eb00a2fc4d28d532dc8eff1d1248b5993e802bea"
+    },
+    {
+      "file": "frame-00087.png",
+      "t": 11.723,
+      "requestSeconds": 0.1751,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00088.png",
+      "t": 11.8422,
+      "requestSeconds": 0.0602,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00089.png",
+      "t": 11.9578,
+      "requestSeconds": 0.0884,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00090.png",
+      "t": 12.0522,
+      "requestSeconds": 0.0739,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00091.png",
+      "t": 12.1633,
+      "requestSeconds": 0.0954,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00092.png",
+      "t": 12.2625,
+      "requestSeconds": 0.0939,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00093.png",
+      "t": 12.3626,
+      "requestSeconds": 0.094,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00094.png",
+      "t": 12.4602,
+      "requestSeconds": 0.0893,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00095.png",
+      "t": 12.5637,
+      "requestSeconds": 0.0932,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00096.png",
+      "t": 12.6624,
+      "requestSeconds": 0.0913,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00097.png",
+      "t": 12.7637,
+      "requestSeconds": 0.0907,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00098.png",
+      "t": 12.8633,
+      "requestSeconds": 0.0897,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00099.png",
+      "t": 12.9615,
+      "requestSeconds": 0.0822,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00100.png",
+      "t": 13.0553,
+      "requestSeconds": 0.0667,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00101.png",
+      "t": 13.1682,
+      "requestSeconds": 0.0886,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00102.png",
+      "t": 13.2637,
+      "requestSeconds": 0.0757,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00103.png",
+      "t": 13.365,
+      "requestSeconds": 0.078,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00104.png",
+      "t": 13.4691,
+      "requestSeconds": 0.0837,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00105.png",
+      "t": 13.559,
+      "requestSeconds": 0.0623,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00106.png",
+      "t": 13.6603,
+      "requestSeconds": 0.0618,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00107.png",
+      "t": 13.7709,
+      "requestSeconds": 0.0789,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00108.png",
+      "t": 13.871,
+      "requestSeconds": 0.0769,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00109.png",
+      "t": 13.9709,
+      "requestSeconds": 0.0774,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00110.png",
+      "t": 14.0708,
+      "requestSeconds": 0.0739,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00111.png",
+      "t": 14.1698,
+      "requestSeconds": 0.0697,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00112.png",
+      "t": 14.2733,
+      "requestSeconds": 0.0725,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00113.png",
+      "t": 14.3742,
+      "requestSeconds": 0.0708,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00114.png",
+      "t": 14.4746,
+      "requestSeconds": 0.0675,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00115.png",
+      "t": 14.5752,
+      "requestSeconds": 0.0652,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00116.png",
+      "t": 14.6767,
+      "requestSeconds": 0.0651,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00117.png",
+      "t": 14.777,
+      "requestSeconds": 0.0629,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00118.png",
+      "t": 14.8775,
+      "requestSeconds": 0.0613,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00119.png",
+      "t": 14.9967,
+      "requestSeconds": 0.0966,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00120.png",
+      "t": 15.0926,
+      "requestSeconds": 0.0872,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00121.png",
+      "t": 15.1876,
+      "requestSeconds": 0.0769,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00122.png",
+      "t": 15.2873,
+      "requestSeconds": 0.0768,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00123.png",
+      "t": 15.3862,
+      "requestSeconds": 0.0725,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00124.png",
+      "t": 15.4972,
+      "requestSeconds": 0.0911,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00125.png",
+      "t": 15.5886,
+      "requestSeconds": 0.0711,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00126.png",
+      "t": 15.69,
+      "requestSeconds": 0.0711,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00127.png",
+      "t": 15.791,
+      "requestSeconds": 0.0703,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00128.png",
+      "t": 15.8943,
+      "requestSeconds": 0.0739,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    },
+    {
+      "file": "frame-00129.png",
+      "t": 15.9899,
+      "requestSeconds": 0.0618,
+      "sha256": "4aaefe691f923b3bfbed80e9896ec68d567e87cf33da0215d9bb1f69769fa752"
+    }
+  ],
+  "duration": 16.061,
+  "finalUrl": "http://127.0.0.1:4173/demo/index.html#/strategies?strategy_id=btc_trend_guard&tab=performance",
+  "demoRequests": [
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/session/transcript",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflows",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategies/runtime/workflow",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    }
+  ],
+  "demoErrors": [],
+  "sourceInputsAfter": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "sourceStable": true,
+  "outputs": [
+    {
+      "file": "strategy.mp4",
+      "bytes": 785032,
+      "sha256": "3d0c9e2ce4e885987b6050ca9ea6da914d8e09f2c38e9419588e38a890fb3afa",
+      "width": 2560,
+      "height": 1600,
+      "codec": "h264",
+      "frames": 385,
+      "duration": 16.041667
+    },
+    {
+      "file": "strategy.gif",
+      "bytes": 794564,
+      "sha256": "afe51e648c4603145710918fa286e4fba4db7d4ff75a34cb047b10a6fc9fb8b4",
+      "width": 2560,
+      "height": 1600,
+      "codec": "gif",
+      "frames": 161,
+      "duration": 16.1
+    },
+    {
+      "file": "strategy-poster.webp",
+      "bytes": 94920,
+      "sha256": "58d77ef4a16069c6edbaef840bd1fde1d0410645fb84c88992ab639d7d21adbe",
+      "width": 2560,
+      "height": 1600,
+      "codec": "webp",
+      "frames": 1,
+      "duration": null
+    }
+  ],
+  "posterSourceFrame": "frame-00070.png",
+  "encoding": {
+    "mp4": "ffmpeg/libx264 CRF14 slow native 2x",
+    "gif": "ffmpeg full 256-color palette, no dithering, native 2x",
+    "poster": "lossless WebP from raw native2x frame, source ICC retained",
+    "encoderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+    "posterRefinement": {
+      "tool": "cwebp",
+      "flags": "-lossless -z 6 -metadata icc",
+      "reason": "Preserve source color interpretation as well as lossless samples"
+    }
+  },
+  "captureDirectory": ".tmp/native-recordings/strategy-record-xNW4Wr"
+}

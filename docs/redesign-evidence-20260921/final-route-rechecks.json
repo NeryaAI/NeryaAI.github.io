@@ -1,0 +1,17 @@
+[
+  {
+    "route": "#/skills",
+    "error": false,
+    "alerts": []
+  },
+  {
+    "route": "#/portfolio",
+    "error": false,
+    "alerts": []
+  },
+  {
+    "route": "#/tasks",
+    "error": false,
+    "alerts": []
+  }
+]

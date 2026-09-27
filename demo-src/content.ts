@@ -1,0 +1,38 @@
+import capabilities from '../capabilities-data.js';
+const snippets={
+ research:{title:['BTC market structure · 4h','BTC 市场结构 · 4h'],prompt:['Compare the current BTC trend, volume and volatility. Have a reviewer challenge the conclusion.','研究 BTC 的趋势、成交量和波动率，让审阅员独立质疑结论。'],reply:[
+  '## BTC · trend intact, confirmation still matters\n\nThe research team compared the 4-hour structure with the 1-hour execution window. The main trend remains constructive, but volume has not confirmed a breakout.\n\n| Observation | Research finding | Review note |\n|---|---|---|\n| Trend | 20-period average above the 60-period average | Recheck if two bars close below the range |\n| Volatility | ATR has risen for three windows | Reduce sizing, do not widen the stop |\n| Volume | Breakout volume is below the recent median | Wait for confirmation |\n\n### The team’s disagreement\nThe researcher sees trend continuation. The reviewer considers the evidence insufficient for adding exposure. We retain both views and keep the next action at **observe**.\n\n### Next steps\n1. Compare the next three completed bars.\n2. Keep the position limit at 5%.\n3. Revisit the thesis when price structure or volume changes.\n\nThe full brief and source checklist are available in the workspace.',
+  '## BTC · 趋势仍在，确认还不充分\n\n团队对比了 4 小时趋势结构和 1 小时执行窗口。中期结构仍偏强，但成交量尚未确认突破。\n\n| 观察项 | 研究结论 | 审阅意见 |\n|---|---|---|\n| 趋势 | 20 周期均线位于 60 周期均线上方 | 连续两根收盘跌回区间则重新评估 |\n| 波动率 | ATR 连续三个窗口上升 | 缩减仓位，不放宽止损 |\n| 成交量 | 突破量低于近期中位数 | 等待进一步确认 |\n\n### 团队保留的分歧\n研究员倾向于趋势延续；审阅员认为证据不足以支持增加敞口。两个观点都保留，下一步维持为**观察**。\n\n### 接下来检查什么\n1. 对比未来三根已完成 K 线。\n2. 保持单笔仓位上限 5%。\n3. 当结构或量能改变时，重新审视判断。\n\n完整简报和来源核查清单已放入工作区。'
+ ]},
+ strategy:{title:['BTC trend guard · validation plan','BTC 趋势跟随 · 验证方案'],prompt:['Turn the trend idea into a paper strategy. Add independent review and a 5% position limit.','把趋势想法变成模拟策略，加入独立审阅和 5% 仓位上限。'],reply:[
+ '## Strategy package ready for review\n\n**BTC trend guard** connects the data feed, signal script, researcher, reviewer, and risk checks into one inspectable workflow.\n\n| Component | Configuration |\n|---|---|\n| Signal | EMA 20 / 60, three-bar confirmation |\n| Regime filter | 4h trend with a 1h execution window |\n| Position limit | 5% of the research portfolio |\n| Execution | Paper |\n| Cadence | Every 15 minutes |\n\n### Validation checklist\n- Five chronological holdout windows.\n- Explicit fees and slippage.\n- No future-bar features or overlapping labels.\n- A cooldown after two rejected signals.\n\nThe reviewer requested one change: do not increase risk during volatility expansion. I added that requirement to the risk node. Open **Strategies** to inspect the workflow, scripts, and validation report.',
+ '## 策略包已准备好，等待审阅\n\n**BTC 趋势跟随**将数据输入、信号脚本、研究员、审阅员和风险检查串成了一条可检查的工作流。\n\n| 模块 | 配置 |\n|---|---|\n| 信号 | EMA 20 / 60，连续三根确认 |\n| 环境过滤 | 4h 趋势，1h 执行窗口 |\n| 仓位上限 | 研究组合的 5% |\n| 执行模式 | 模拟 |\n| 检查频率 | 每 15 分钟 |\n\n### 验证清单\n- 五个按时间顺序划分的样本外窗口。\n- 显式计入费用与滑点。\n- 排除未来 K 线特征与标签重叠。\n- 连续两次信号被拒绝后进入冷却。\n\n审阅员提出了一项修改：波动扩张时不得增加风险。我已将该要求写入风险节点。打开**策略**，可以检查工作流、脚本和验证报告。'
+ ]},
+ review:{title:['Position limit · proposal 014','仓位上限 · 提案 014'],prompt:['Review the last 18 paper sessions. Propose a safer configuration and show the diff before applying it.','复盘最近 18 次模拟会话，提出更稳妥的配置，并在应用前展示变更。'],reply:[
+ '## Proposal 014 · narrow exposure during volatility expansion\n\nThe reviewer traced the repeated risk events to short-lived breakout signals. The loss distribution is concentrated in low-confirmation entries rather than the trend filter itself.\n\n```diff\n- max_position_pct: 8\n+ max_position_pct: 5\n- signal_confirmation: 1\n+ signal_confirmation: 3\n```\n\n### Evidence and checks\n- **18 sessions** reviewed with a consistent data window.\n- **6 transient signals** account for most rejected entries.\n- Researcher and risk critic agreed to reduce exposure, while keeping the original trend filter.\n\n**Status: awaiting operator review.** The current configuration is unchanged. Validation, approval, application, and observation remain separate steps. The proposal includes a rollback snapshot.',
+ '## 提案 014 · 在波动扩张时收紧敞口\n\n审阅员把重复风险事件追溯到了短暂突破信号。问题主要集中在确认不足的入场，而不是趋势过滤器本身。\n\n```diff\n- max_position_pct: 8\n+ max_position_pct: 5\n- signal_confirmation: 1\n+ signal_confirmation: 3\n```\n\n### 证据与检查\n- 对照了相同数据窗口下的 **18 次会话**。\n- **6 次短暂信号**贡献了大部分被拒绝的入场。\n- 研究员与风险审查员同意降低敞口，同时保留原有趋势过滤器。\n\n**当前状态：等待操作者审查。** 运行中的配置没有改变。验证、审批、应用和观察仍是独立步骤，并已为提案准备回滚快照。'
+ ]}
+};
+export function classifyPrompt(text:string){
+ if(/适配|接入|连接器|integrat|connector|adapt .*venue/i.test(text))return 'adapter';
+ if(/预测市场|事件合约|polymarket|prediction|event contract/i.test(text))return 'prediction';
+ if(/期货|futures|CTA|合约换月/i.test(text))return 'futures';
+ if(/A\s*股|A[- ]?shares|ashare|因子轮动/i.test(text))return 'equities';
+ if(/复盘|审查|review|proposal/i.test(text))return 'review';
+ return /策略|strategy|validation/i.test(text)?'strategy':'research';
+}
+export function scenario(kind:string,lang:string,request=''){
+ const i=lang==='en'?0:1;
+ if(['prediction','futures','equities'].includes(kind)){
+  const m=capabilities.markets[kind];
+  const reply=i===0?`## ${m.label[0]} strategy workspace\n\n${m.prompt[0]}\n\n### Research → review → strategy\n${m.nodes.map((n:string[],j:number)=>`${j+1}. ${n[0]}`).join('\n')}\n\n### Required constraints\n${m.constraints.map((c:string[])=>'- '+c[0]).join('\n')}\n\n### Connection and execution\n${m.support[0]}\n\nThe team keeps research evidence, independent review and paper validation separate. Open Strategies to inspect the package.`:`## ${m.label[1]}策略工作区\n\n${m.prompt[1]}\n\n### 研究 → 审阅 → 策略\n${m.nodes.map((n:string[],j:number)=>`${j+1}. ${n[1]}`).join('\n')}\n\n### 必须检查的约束\n${m.constraints.map((c:string[])=>'- '+c[1]).join('\n')}\n\n### 接入与执行\n${m.support[1]}\n\n团队会分别保留研究证据、独立审查与模拟验证。打开策略页，可以检查对应的策略包。`;
+  return {title:m.label[i]+(i===0?' strategy plan':'策略方案'),prompt:m.prompt[i],reply:reply+'\n\n'+(i===0?'### Data & framework route\n':'### 数据与框架路径\n')+m.sources[i]};
+ }
+ if(kind==='adapter'){
+  const plan=capabilities.adapterPlan(request||'Connect ExampleX market and account data');
+  const target=plan.ok?plan.target:'CustomVenue';
+  return {title:target+(i===0?' integration plan':' 接入方案'),prompt:request,reply:i===0?`## ${target} integration plan\n\n1. Check the existing CCXT bridge before authoring new code.\n2. Read the official API documentation and map authentication, rate limits, and data capabilities.\n3. Stage a provider module, capability declaration and contract-test plan.\n4. Verify with connector_view and operator review.\n\n**Order placement remains disabled.** The code-generation plan is not a verified live connection.`:`## ${target} 接入方案\n\n1. 先检查 CCXT 是否已有桥接，避免重复编写适配。\n2. 阅读官方 API 文档，梳理鉴权、限流与数据能力。\n3. 准备 provider 模块、能力声明和契约测试计划。\n4. 使用 connector_view 核验，并提交操作者审查。\n\n**订单权限保持关闭。** 代码生成方案不等于已经验证的实盘连接。`};
+ }
+ const s=snippets[kind as keyof typeof snippets]||snippets.research;return {title:s.title[i],prompt:s.prompt[i],reply:s.reply[i]};
+}
+export function reportDocument(kind:string,lang:string){const s=scenario(kind,lang);return `<!doctype html><html><head><meta charset="utf-8"><style>body{font:14px/1.9 system-ui;color:#342c40;background:#faf9fd;padding:34px;max-width:800px;margin:auto}h1{font-size:27px;line-height:1.4}small{color:#776780;letter-spacing:.08em}pre{font:13px/1.9 system-ui;white-space:pre-wrap}hr{border:0;border-top:1px solid #e5dcec;margin:24px 0}</style></head><body><small>NERYA / RESEARCH DESK</small><h1>${s.title}</h1><hr><pre>${s.reply.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]!))}</pre></body></html>`;}

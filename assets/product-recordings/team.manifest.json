@@ -1,0 +1,2013 @@
+{
+  "schema": "nerya-native-recording/v1",
+  "name": "team",
+  "mode": "record",
+  "status": "encoded-and-verified",
+  "recordedAt": "2026-09-26T07:09:30.479Z",
+  "sourceUrl": "http://127.0.0.1:4173/demo/index.html#/chat",
+  "recorderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+  "browser": {
+    "backend": "ego-browser",
+    "space": 20,
+    "page": "p1"
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 2
+  },
+  "safety": {
+    "demo": "real-agent",
+    "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'none'; frame-src 'self' about: blob:; object-src 'none'; base-uri 'none'; form-action 'none'",
+    "viewport": [
+      1280,
+      800
+    ],
+    "dpr": 2
+  },
+  "disclosure": "Actual screen recording of the source-backed Nerya app with deterministic data; no live accounts, model requests or orders. This is not drawn or recreated UI.",
+  "capture": {
+    "method": "Ego Page.cdp Page.captureScreenshot native DPR2 PNG",
+    "pixelWidth": 2560,
+    "pixelHeight": 1600,
+    "targetFps": 10,
+    "osCursorCaptured": false,
+    "targetSeconds": 16,
+    "maxSeconds": 24,
+    "timestamp": "monotonic host clock at screenshot request/response midpoint",
+    "timing": "real elapsed time; no speed-up",
+    "modifications": "none; only frame repetition, PNG-to-video encoding and GIF palette conversion"
+  },
+  "story": "Compare researcher, reviewer and risk critic; continue one member with a bounded instruction.",
+  "sourceInputs": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "actions": [
+    {
+      "t": null,
+      "end": null,
+      "kind": "native-type",
+      "name": "给 Nerya 发消息",
+      "text": "研究 BTC 趋势与成交量，让研究员、审阅员和风控角色分别核查证据。",
+      "ref": "[data-native-record-target=\"capture-1\"]",
+      "snapshot": "snapshot-000.txt"
+    },
+    {
+      "t": null,
+      "end": null,
+      "kind": "native-click",
+      "role": "button",
+      "name": "发送",
+      "ref": "[data-native-record-target=\"capture-3\"]",
+      "snapshot": "snapshot-002.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": null,
+      "end": null,
+      "kind": "native-click",
+      "role": "button",
+      "name": "3 个 agent",
+      "ref": "[data-native-record-target=\"capture-6\"]",
+      "snapshot": "snapshot-005.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": null,
+      "end": null,
+      "kind": "native-click",
+      "role": "tab",
+      "name": "researcher",
+      "ref": "[data-native-record-target=\"capture-8\"]",
+      "snapshot": "snapshot-007.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": null,
+      "end": null,
+      "kind": "native-click",
+      "role": "tab",
+      "name": "成员",
+      "ref": "[data-native-record-target=\"capture-11\"]",
+      "snapshot": "snapshot-010.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": 2.1007,
+      "end": 2.2132,
+      "kind": "native-click",
+      "role": "tab",
+      "name": "reviewer",
+      "ref": "[data-native-record-target=\"capture-14\"]",
+      "snapshot": "snapshot-013.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": 5.1846,
+      "end": 5.3535,
+      "kind": "native-click",
+      "role": "tab",
+      "name": "risk_critic",
+      "ref": "[data-native-record-target=\"capture-16\"]",
+      "snapshot": "snapshot-015.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    },
+    {
+      "t": 7.6371,
+      "end": 9.2733,
+      "kind": "native-type",
+      "name": "继续与 risk_critic",
+      "text": "补查量能与反向情景，保留 5% 上限。",
+      "ref": "[data-native-record-target=\"capture-18\"]",
+      "snapshot": "snapshot-017.txt"
+    },
+    {
+      "t": 10.168,
+      "end": 10.2727,
+      "kind": "native-click",
+      "role": "button",
+      "name": "继续此 agent",
+      "ref": "[data-native-record-target=\"capture-20\"]",
+      "snapshot": "snapshot-019.txt",
+      "url": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d"
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "snapshot-000.txt",
+      "label": "textbox: 给 Nerya 发消息",
+      "t": null,
+      "sha256": "59a6b374de24fe6952517446a4419c96f751f84482699e45e538d46e066e422f"
+    },
+    {
+      "file": "snapshot-002.txt",
+      "label": "button: 发送",
+      "t": null,
+      "sha256": "2dbce6c8858e64cd7a58c075ce7ca62e00954cb3713e283a719adad5a9a03cb0"
+    },
+    {
+      "file": "snapshot-004.txt",
+      "label": "prepared team",
+      "t": null,
+      "sha256": "2d5f2bb86fdf1a1a1f0d91ddbbae4d14832f9a9ce4feb02b96894c8db77c67c6"
+    },
+    {
+      "file": "snapshot-005.txt",
+      "label": "button: 3 个 agent",
+      "t": null,
+      "sha256": "2d5f2bb86fdf1a1a1f0d91ddbbae4d14832f9a9ce4feb02b96894c8db77c67c6"
+    },
+    {
+      "file": "snapshot-007.txt",
+      "label": "tab: researcher",
+      "t": null,
+      "sha256": "bfebb7e34bdb1d877438bc6b0282657d054e172dd757e40150467bb291205d4a"
+    },
+    {
+      "file": "snapshot-009.txt",
+      "label": "tidy demo workspace tabs",
+      "t": null,
+      "sha256": "33f226fa8da20b6ed34bcade95cb674f4ad29a5f8422b45a95a68999a8df8078"
+    },
+    {
+      "file": "snapshot-010.txt",
+      "label": "tab: 成员",
+      "t": null,
+      "sha256": "33f226fa8da20b6ed34bcade95cb674f4ad29a5f8422b45a95a68999a8df8078"
+    },
+    {
+      "file": "snapshot-012.txt",
+      "label": "ready",
+      "t": null,
+      "sha256": "33f226fa8da20b6ed34bcade95cb674f4ad29a5f8422b45a95a68999a8df8078"
+    },
+    {
+      "file": "snapshot-013.txt",
+      "label": "tab: reviewer",
+      "t": 2.0232,
+      "sha256": "33f226fa8da20b6ed34bcade95cb674f4ad29a5f8422b45a95a68999a8df8078"
+    },
+    {
+      "file": "snapshot-015.txt",
+      "label": "tab: risk_critic",
+      "t": 5.0937,
+      "sha256": "ac811cc4c6256a3bf060c997831f6cb20b9a11dba5ffbf5b900d109d66908b4b"
+    },
+    {
+      "file": "snapshot-017.txt",
+      "label": "textbox: 继续与 risk_critic",
+      "t": 7.537,
+      "sha256": "9c441de29b00339cf7553f074cb2d482dbdbce93159013164b97c5734f885a60"
+    },
+    {
+      "file": "snapshot-019.txt",
+      "label": "button: 继续此 agent",
+      "t": 10.0683,
+      "sha256": "6d8196c5be24c45e655fdf4fe9d19738c7731a1c3200e9d2bef91d7d9c9673b2"
+    },
+    {
+      "file": "snapshot-021.txt",
+      "label": "end",
+      "t": 16.0582,
+      "sha256": "8bd377ecdb02232bc82b912052673b6aea566a5e325704bcecaa0a475876f9ce"
+    }
+  ],
+  "frames": [
+    {
+      "file": "frame-00000.png",
+      "t": 0.4429,
+      "requestSeconds": 0.8857,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00001.png",
+      "t": 0.9285,
+      "requestSeconds": 0.0824,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00002.png",
+      "t": 1.0409,
+      "requestSeconds": 0.1034,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00003.png",
+      "t": 1.1387,
+      "requestSeconds": 0.0892,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00004.png",
+      "t": 1.2431,
+      "requestSeconds": 0.095,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00005.png",
+      "t": 1.3421,
+      "requestSeconds": 0.0924,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00006.png",
+      "t": 1.4417,
+      "requestSeconds": 0.0887,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00007.png",
+      "t": 1.5459,
+      "requestSeconds": 0.0952,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00008.png",
+      "t": 1.6526,
+      "requestSeconds": 0.1076,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00009.png",
+      "t": 1.7547,
+      "requestSeconds": 0.0935,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00010.png",
+      "t": 1.8552,
+      "requestSeconds": 0.0918,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00011.png",
+      "t": 1.9587,
+      "requestSeconds": 0.0971,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00012.png",
+      "t": 2.0554,
+      "requestSeconds": 0.0906,
+      "sha256": "8c5c35f988e82d6f7854251b2e34c568d7131b0577b8fe846a011a9059649e6e"
+    },
+    {
+      "file": "frame-00013.png",
+      "t": 2.2293,
+      "requestSeconds": 0.2351,
+      "sha256": "f4aa1dbaebeee6ae425e70b35ea904062011b572ef75e962a72c16ef08434ee7"
+    },
+    {
+      "file": "frame-00014.png",
+      "t": 2.4023,
+      "requestSeconds": 0.1078,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00015.png",
+      "t": 2.5061,
+      "requestSeconds": 0.0966,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00016.png",
+      "t": 2.607,
+      "requestSeconds": 0.0969,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00017.png",
+      "t": 2.7157,
+      "requestSeconds": 0.1148,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00018.png",
+      "t": 2.8133,
+      "requestSeconds": 0.0773,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00019.png",
+      "t": 2.9153,
+      "requestSeconds": 0.0781,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00020.png",
+      "t": 3.0254,
+      "requestSeconds": 0.0953,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00021.png",
+      "t": 3.1247,
+      "requestSeconds": 0.0925,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00022.png",
+      "t": 3.2264,
+      "requestSeconds": 0.0927,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00023.png",
+      "t": 3.3363,
+      "requestSeconds": 0.1091,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00024.png",
+      "t": 3.4397,
+      "requestSeconds": 0.0945,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00025.png",
+      "t": 3.538,
+      "requestSeconds": 0.0907,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00026.png",
+      "t": 3.6428,
+      "requestSeconds": 0.096,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00027.png",
+      "t": 3.7407,
+      "requestSeconds": 0.0915,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00028.png",
+      "t": 3.862,
+      "requestSeconds": 0.1306,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00029.png",
+      "t": 3.9817,
+      "requestSeconds": 0.1052,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00030.png",
+      "t": 4.0898,
+      "requestSeconds": 0.1079,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00031.png",
+      "t": 4.1907,
+      "requestSeconds": 0.0908,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00032.png",
+      "t": 4.3021,
+      "requestSeconds": 0.111,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00033.png",
+      "t": 4.4063,
+      "requestSeconds": 0.0939,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00034.png",
+      "t": 4.5082,
+      "requestSeconds": 0.0967,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00035.png",
+      "t": 4.6067,
+      "requestSeconds": 0.0921,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00036.png",
+      "t": 4.7185,
+      "requestSeconds": 0.1133,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00037.png",
+      "t": 4.8136,
+      "requestSeconds": 0.0739,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00038.png",
+      "t": 4.9182,
+      "requestSeconds": 0.0804,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00039.png",
+      "t": 5.0258,
+      "requestSeconds": 0.0921,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00040.png",
+      "t": 5.1323,
+      "requestSeconds": 0.1038,
+      "sha256": "844562b55d2f8ccede4b177c083344feacaac741cfc9252a4138b38aefbb9526"
+    },
+    {
+      "file": "frame-00041.png",
+      "t": 5.3664,
+      "requestSeconds": 0.3618,
+      "sha256": "9fe5030f7f44ad0cf3ee83e838fff0d887df8180bcb91b34466c5746820e3224"
+    },
+    {
+      "file": "frame-00042.png",
+      "t": 5.5945,
+      "requestSeconds": 0.0909,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00043.png",
+      "t": 5.6929,
+      "requestSeconds": 0.0866,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00044.png",
+      "t": 5.7955,
+      "requestSeconds": 0.0879,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00045.png",
+      "t": 5.8948,
+      "requestSeconds": 0.0842,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00046.png",
+      "t": 6.0033,
+      "requestSeconds": 0.0968,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00047.png",
+      "t": 6.1024,
+      "requestSeconds": 0.0958,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00048.png",
+      "t": 6.2039,
+      "requestSeconds": 0.099,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00049.png",
+      "t": 6.3041,
+      "requestSeconds": 0.0982,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00050.png",
+      "t": 6.4051,
+      "requestSeconds": 0.1007,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00051.png",
+      "t": 6.5049,
+      "requestSeconds": 0.0956,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00052.png",
+      "t": 6.608,
+      "requestSeconds": 0.1,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00053.png",
+      "t": 6.7157,
+      "requestSeconds": 0.112,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00054.png",
+      "t": 6.8334,
+      "requestSeconds": 0.1203,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00055.png",
+      "t": 6.9514,
+      "requestSeconds": 0.1124,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00056.png",
+      "t": 7.0658,
+      "requestSeconds": 0.1133,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00057.png",
+      "t": 7.1721,
+      "requestSeconds": 0.0961,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00058.png",
+      "t": 7.2738,
+      "requestSeconds": 0.0994,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00059.png",
+      "t": 7.3721,
+      "requestSeconds": 0.094,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00060.png",
+      "t": 7.4729,
+      "requestSeconds": 0.0936,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00061.png",
+      "t": 7.582,
+      "requestSeconds": 0.1094,
+      "sha256": "b0f9950678e9ed2071eb2af3ee8a8ef1b5deac8f2fc513f47ec2c4aa2f87a2b5"
+    },
+    {
+      "file": "frame-00062.png",
+      "t": 7.7517,
+      "requestSeconds": 0.2289,
+      "sha256": "68eb96984f68c15abc7aad893a6833756050b651e27c58b502659f8cb777b6b8"
+    },
+    {
+      "file": "frame-00063.png",
+      "t": 7.9405,
+      "requestSeconds": 0.1441,
+      "sha256": "68eb96984f68c15abc7aad893a6833756050b651e27c58b502659f8cb777b6b8"
+    },
+    {
+      "file": "frame-00064.png",
+      "t": 8.1263,
+      "requestSeconds": 0.2243,
+      "sha256": "759bd89c226c1a622dfdc08d223a55649db59e38bf43c4199e3364e655f4d302"
+    },
+    {
+      "file": "frame-00065.png",
+      "t": 8.3375,
+      "requestSeconds": 0.1948,
+      "sha256": "cc0dc50dc68cc679cdba39f4b6e44084c8836f21b30a139e99c50cdd6b760bd6"
+    },
+    {
+      "file": "frame-00066.png",
+      "t": 8.5198,
+      "requestSeconds": 0.1667,
+      "sha256": "0e6f0a83ca824929eb01042bedf858c32b0e9db8f65d0860cce377a6f9ea89c5"
+    },
+    {
+      "file": "frame-00067.png",
+      "t": 8.7044,
+      "requestSeconds": 0.1993,
+      "sha256": "c29bf46697587dc0a021461a0e80a0761e27707973796a97fdb00ec2928ebc96"
+    },
+    {
+      "file": "frame-00068.png",
+      "t": 8.9038,
+      "requestSeconds": 0.1963,
+      "sha256": "85e95bbfd2716bd0a0e4f6b6d7b395ba347a7d9650da0169baf56080261ce088"
+    },
+    {
+      "file": "frame-00069.png",
+      "t": 9.102,
+      "requestSeconds": 0.1968,
+      "sha256": "da8311e861fe7503d0e3ed9d9c6cccad29d3ad354ad696caa51ebb0f237a4562"
+    },
+    {
+      "file": "frame-00070.png",
+      "t": 9.268,
+      "requestSeconds": 0.1315,
+      "sha256": "d2545383e1e00359ac7436314d27930c6e6cff5ba1a49fdad3b8b22ecdfc99e4"
+    },
+    {
+      "file": "frame-00071.png",
+      "t": 9.3932,
+      "requestSeconds": 0.1159,
+      "sha256": "d2545383e1e00359ac7436314d27930c6e6cff5ba1a49fdad3b8b22ecdfc99e4"
+    },
+    {
+      "file": "frame-00072.png",
+      "t": 9.5031,
+      "requestSeconds": 0.1007,
+      "sha256": "d2545383e1e00359ac7436314d27930c6e6cff5ba1a49fdad3b8b22ecdfc99e4"
+    },
+    {
+      "file": "frame-00073.png",
+      "t": 9.6033,
+      "requestSeconds": 0.0965,
+      "sha256": "d2545383e1e00359ac7436314d27930c6e6cff5ba1a49fdad3b8b22ecdfc99e4"
+    },
+    {
+      "file": "frame-00074.png",
+      "t": 9.7028,
+      "requestSeconds": 0.0944,
+      "sha256": "d2545383e1e00359ac7436314d27930c6e6cff5ba1a49fdad3b8b22ecdfc99e4"
+    },
+    {
+      "file": "frame-00075.png",
+      "t": 9.8034,
+      "requestSeconds": 0.0935,
+      "sha256": "2fa27b5701b6b09a28003963b418eabb71eceb287654ce5c6394877b241588a1"
+    },
+    {
+      "file": "frame-00076.png",
+      "t": 9.903,
+      "requestSeconds": 0.0904,
+      "sha256": "2fa27b5701b6b09a28003963b418eabb71eceb287654ce5c6394877b241588a1"
+    },
+    {
+      "file": "frame-00077.png",
+      "t": 10.0052,
+      "requestSeconds": 0.0912,
+      "sha256": "2fa27b5701b6b09a28003963b418eabb71eceb287654ce5c6394877b241588a1"
+    },
+    {
+      "file": "frame-00078.png",
+      "t": 10.1132,
+      "requestSeconds": 0.109,
+      "sha256": "2fa27b5701b6b09a28003963b418eabb71eceb287654ce5c6394877b241588a1"
+    },
+    {
+      "file": "frame-00079.png",
+      "t": 10.2935,
+      "requestSeconds": 0.249,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00080.png",
+      "t": 10.4692,
+      "requestSeconds": 0.0998,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00081.png",
+      "t": 10.5735,
+      "requestSeconds": 0.1058,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00082.png",
+      "t": 10.6823,
+      "requestSeconds": 0.1076,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00083.png",
+      "t": 10.7959,
+      "requestSeconds": 0.1163,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00084.png",
+      "t": 10.9119,
+      "requestSeconds": 0.1124,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00085.png",
+      "t": 11.0265,
+      "requestSeconds": 0.1134,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00086.png",
+      "t": 11.1374,
+      "requestSeconds": 0.1054,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00087.png",
+      "t": 11.2402,
+      "requestSeconds": 0.0968,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00088.png",
+      "t": 11.3398,
+      "requestSeconds": 0.0967,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00089.png",
+      "t": 11.4414,
+      "requestSeconds": 0.0982,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00090.png",
+      "t": 11.5401,
+      "requestSeconds": 0.0959,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00091.png",
+      "t": 11.6412,
+      "requestSeconds": 0.0981,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00092.png",
+      "t": 11.7412,
+      "requestSeconds": 0.0988,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00093.png",
+      "t": 11.8398,
+      "requestSeconds": 0.0952,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00094.png",
+      "t": 11.9403,
+      "requestSeconds": 0.0951,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00095.png",
+      "t": 12.0417,
+      "requestSeconds": 0.0969,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00096.png",
+      "t": 12.1406,
+      "requestSeconds": 0.0952,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00097.png",
+      "t": 12.2407,
+      "requestSeconds": 0.0943,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00098.png",
+      "t": 12.3413,
+      "requestSeconds": 0.0937,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00099.png",
+      "t": 12.4423,
+      "requestSeconds": 0.0927,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00100.png",
+      "t": 12.5423,
+      "requestSeconds": 0.0918,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00101.png",
+      "t": 12.6522,
+      "requestSeconds": 0.112,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00102.png",
+      "t": 12.7658,
+      "requestSeconds": 0.1121,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00103.png",
+      "t": 12.8791,
+      "requestSeconds": 0.1113,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00104.png",
+      "t": 12.9862,
+      "requestSeconds": 0.0998,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00105.png",
+      "t": 13.0883,
+      "requestSeconds": 0.1013,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00106.png",
+      "t": 13.1882,
+      "requestSeconds": 0.0949,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00107.png",
+      "t": 13.289,
+      "requestSeconds": 0.096,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00108.png",
+      "t": 13.3899,
+      "requestSeconds": 0.0976,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00109.png",
+      "t": 13.4892,
+      "requestSeconds": 0.0952,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00110.png",
+      "t": 13.5911,
+      "requestSeconds": 0.0979,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00111.png",
+      "t": 13.7008,
+      "requestSeconds": 0.1183,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00112.png",
+      "t": 13.8081,
+      "requestSeconds": 0.0957,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00113.png",
+      "t": 13.9073,
+      "requestSeconds": 0.0921,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00114.png",
+      "t": 14.0089,
+      "requestSeconds": 0.0928,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00115.png",
+      "t": 14.1089,
+      "requestSeconds": 0.0915,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00116.png",
+      "t": 14.2099,
+      "requestSeconds": 0.0898,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00117.png",
+      "t": 14.3106,
+      "requestSeconds": 0.089,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00118.png",
+      "t": 14.411,
+      "requestSeconds": 0.0865,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00119.png",
+      "t": 14.5122,
+      "requestSeconds": 0.0852,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00120.png",
+      "t": 14.6123,
+      "requestSeconds": 0.0823,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00121.png",
+      "t": 14.7231,
+      "requestSeconds": 0.1004,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00122.png",
+      "t": 14.8342,
+      "requestSeconds": 0.1186,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00123.png",
+      "t": 14.9321,
+      "requestSeconds": 0.0735,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00124.png",
+      "t": 15.0501,
+      "requestSeconds": 0.1059,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00125.png",
+      "t": 15.1563,
+      "requestSeconds": 0.1033,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00126.png",
+      "t": 15.2569,
+      "requestSeconds": 0.0944,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00127.png",
+      "t": 15.3578,
+      "requestSeconds": 0.0943,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00128.png",
+      "t": 15.4581,
+      "requestSeconds": 0.093,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00129.png",
+      "t": 15.5598,
+      "requestSeconds": 0.0948,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00130.png",
+      "t": 15.6585,
+      "requestSeconds": 0.0917,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00131.png",
+      "t": 15.7597,
+      "requestSeconds": 0.09,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00132.png",
+      "t": 15.8607,
+      "requestSeconds": 0.0894,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    },
+    {
+      "file": "frame-00133.png",
+      "t": 15.9776,
+      "requestSeconds": 0.1195,
+      "sha256": "b6af784e72dab5fd445007ebc93a1b55b1a1384c3f0b2398d174d8f494d6fd12"
+    }
+  ],
+  "duration": 16.0389,
+  "finalUrl": "http://127.0.0.1:4173/demo/index.html#/chat/0fc4802e-8bc0-45b2-9c5f-88e9a3b7e23d",
+  "demoRequests": [
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/auth/status",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/strategy/list_all",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/operator/nav",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/inbox/items",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/tiers",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/models",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/llm/config",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/session/transcript",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands/events",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/resume",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/runtime/info",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/commands",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/teams/agents/get",
+      "method": "POST",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions/view",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/approvals/pending",
+      "method": "GET",
+      "local": true
+    },
+    {
+      "path": "/agent/sessions",
+      "method": "GET",
+      "local": true
+    }
+  ],
+  "demoErrors": [],
+  "sourceInputsAfter": [
+    {
+      "url": "http://127.0.0.1:4173/demo/app.css",
+      "bytes": 96818,
+      "sha256": "c29c0362160bdce82eca011b81fdac17fdd0806080b3c62c5e15f009a7f978f5"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/app.js",
+      "bytes": 3056077,
+      "sha256": "6a88c8f9bdde762637510596048da57972612ad5386bf2e797f4848fbd80481f"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/analyst.png",
+      "bytes": 43592,
+      "sha256": "1c76cdb61c1ba15f0a2c31ab1d1e2015da89ef1767bf2dbd57404c0ad2ea7c8d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/coder.png",
+      "bytes": 44040,
+      "sha256": "72649d6049ffaaa0729cbe9aa27b62f17c3e7d8c6441fff45e1757a1f73c33bf"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/lead.png",
+      "bytes": 42897,
+      "sha256": "c8fb818d30965563a8867c9231dae2942fd9150033572031d27048271a64b751"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/researcher.png",
+      "bytes": 46337,
+      "sha256": "4391bbca1382b75f2075ab16d008392ef2b9f8b384b9b92fca773016b1fa910d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/reviewer.png",
+      "bytes": 45038,
+      "sha256": "2a348583d4dfbe92f3124c3848bbc5291227eca2d1ed17d037e0849843b03a37"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/avatars/risk.png",
+      "bytes": 44272,
+      "sha256": "22f68885f222bb01c2e8a4cca2b9cfc52a935860cde30187beca97710c67b99c"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/branding/Logo.png",
+      "bytes": 770402,
+      "sha256": "53274ccbb4e7b804e7ee0595f3a228923574650731a0b95252add4f7c1b7d87d"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/global.css",
+      "bytes": 129895,
+      "sha256": "0cd89b43755f2fc826acc273629cce3d78d9948dc3d59435408caaf9534e84f7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/index.html",
+      "bytes": 763,
+      "sha256": "3a1d6caa0df689a1062a2a05cedd2f94935126969632471e3cfd5acac489f4e7"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/native-fixtures.js",
+      "bytes": 8273,
+      "sha256": "4cb287e0db160540dffe55fabd5803cdc7a2eb2dc39b94d3c10b630aab5da384"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/runtime.js",
+      "bytes": 264,
+      "sha256": "4a4a20f7575b4c9b05fed082b0fef69d40633ce964af74166f57b0c7a3fb5520"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/source-manifest.json",
+      "bytes": 32463,
+      "sha256": "fc93f5d0271b7b3c6db042ffbb102e079dac9f544bf1d192a8b46a67a5c2667e"
+    },
+    {
+      "url": "http://127.0.0.1:4173/demo/theme.js",
+      "bytes": 2227,
+      "sha256": "92520217685e2df0a38fd59c175f634b8a43549386b74a7ff12bb75f9cc488d5"
+    }
+  ],
+  "sourceStable": true,
+  "outputs": [
+    {
+      "file": "team.mp4",
+      "bytes": 680278,
+      "sha256": "ac4f51310d349dbee5db83ad35e826afc308495cf9d4b999dcea8d34cda78880",
+      "width": 2560,
+      "height": 1600,
+      "codec": "h264",
+      "frames": 385,
+      "duration": 16.041667
+    },
+    {
+      "file": "team.gif",
+      "bytes": 351204,
+      "sha256": "8f3bec7bb84c81e0d44ff539446d7876f3c513cbb8e9d22fbfafce51dcb6a2ec",
+      "width": 2560,
+      "height": 1600,
+      "codec": "gif",
+      "frames": 160,
+      "duration": 16
+    },
+    {
+      "file": "team-poster.webp",
+      "bytes": 183506,
+      "sha256": "9a318f68ffe3d4019daebf7e59b27714a34966034dbfb2d2fc7834a35f22de5e",
+      "width": 2560,
+      "height": 1600,
+      "codec": "webp",
+      "frames": 1,
+      "duration": null
+    }
+  ],
+  "posterSourceFrame": "frame-00133.png",
+  "encoding": {
+    "mp4": "ffmpeg/libx264 CRF14 slow native 2x",
+    "gif": "ffmpeg full 256-color palette, no dithering, native 2x",
+    "poster": "lossless WebP from raw native2x frame, source ICC retained",
+    "encoderSha256": "9bb4240814d4056f1d37d0f6802adc2af4349247097343c9dcc0399f48fca187",
+    "posterRefinement": {
+      "tool": "cwebp",
+      "flags": "-lossless -z 6 -metadata icc",
+      "reason": "Preserve source color interpretation as well as lossless samples"
+    }
+  },
+  "captureDirectory": ".tmp/native-recordings/team-record-K6Deja"
+}

@@ -1,0 +1,180 @@
+/* ../agent/dashboard/components/chat/ResearchReplyCards.module.css */
+.native-part .ResearchReplyCards_results {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0 6px;
+  min-width: 0;
+}
+.native-part .ResearchReplyCards_card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 106px;
+  padding: 17px 18px;
+  border: 1px solid var(--line-hi);
+  border-radius: 18px;
+  background: var(--card);
+  text-align: left;
+  color: var(--text-base);
+  overflow: hidden;
+  transition: border-color .15s, background .15s;
+}
+.native-part .ResearchReplyCards_card:hover {
+  background: var(--panel-bg);
+  border-color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_card:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 3px;
+}
+.native-part .ResearchReplyCards_card:disabled {
+  cursor: default;
+}
+.native-part .ResearchReplyCards_avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--panel-bg);
+  font-size: 21px;
+  font-weight: 600;
+}
+.native-part .ResearchReplyCards_identity {
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.native-part .ResearchReplyCards_name {
+  display: block;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.native-part .ResearchReplyCards_quote {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.native-part .ResearchReplyCards_quote strong {
+  font-weight: 650;
+}
+.native-part .ResearchReplyCards_symbol {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-right: 2px;
+}
+.native-part .ResearchReplyCards_quote small {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_change {
+  white-space: nowrap;
+  margin-left: 3px;
+}
+.native-part .ResearchReplyCards_metadata {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.native-part .ResearchReplyCards_sparkline {
+  flex: 1 1 140px;
+  min-width: 65px;
+  margin-left: 4px;
+  height: 58px;
+}
+.native-part .ResearchReplyCards_sparkline svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.native-part .ResearchReplyCards_sparkline > span {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_arrow {
+  align-self: flex-start;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_card[data-tone=up] :is(.ResearchReplyCards_change, .ResearchReplyCards_sparkline) {
+  color: var(--ok,#45b78a);
+}
+.native-part .ResearchReplyCards_card[data-tone=down] :is(.ResearchReplyCards_change, .ResearchReplyCards_sparkline) {
+  color: var(--danger,#e16572);
+}
+.native-part .ResearchReplyCards_card[data-tone=flat] :is(.ResearchReplyCards_change, .ResearchReplyCards_sparkline) {
+  color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_studies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.native-part .ResearchReplyCards_studies button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  text-align: left;
+}
+.native-part .ResearchReplyCards_studies button > span:last-child {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.native-part .ResearchReplyCards_studies button:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}
+@media (max-width:600px) {
+  .native-part .ResearchReplyCards_card {
+    gap: 10px;
+    padding: 14px 12px;
+    min-height: 96px;
+    border-radius: 14px;
+  }
+  .native-part .ResearchReplyCards_avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+  .native-part .ResearchReplyCards_name {
+    font-size: 16px;
+  }
+  .native-part .ResearchReplyCards_quote {
+    font-size: 14px;
+  }
+  .native-part .ResearchReplyCards_symbol {
+    font-size: 11px;
+  }
+  .native-part .ResearchReplyCards_sparkline {
+    flex-basis: 75px;
+    height: 48px;
+  }
+  .native-part .ResearchReplyCards_arrow {
+    display: none;
+  }
+  .native-part .ResearchReplyCards_metadata {
+    font-size: 9px;
+  }
+}

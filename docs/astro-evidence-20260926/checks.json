@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-09-26T04:29:15.828Z",
+  "results": [
+    {
+      "name": "Astro entry, four films and retained real workspace",
+      "passed": true,
+      "evidence": {
+        "title": "Nerya · Your agent strategy team",
+        "heading": "Your next strategy\nstarts with a team",
+        "headings": [
+          "Your next strategystarts with a team",
+          "Watch the team get to work",
+          "Turn an idea into a strategy",
+          "Give Agents a shared research task",
+          "Let Agents review and refine",
+          "Keep credentials in your local Vault",
+          "One team More ways to research",
+          "Need another integration Ask your agent",
+          "Bring an idea Your team is ready",
+          "Bring the team to your workspace"
+        ],
+        "films": [
+          {
+            "id": "strategy",
+            "video": "/assets/product-demos/strategy.mp4",
+            "gif": "/assets/product-demos/strategy.gif"
+          },
+          {
+            "id": "team",
+            "video": "/assets/product-demos/team.mp4",
+            "gif": "/assets/product-demos/team.gif"
+          },
+          {
+            "id": "evolution",
+            "video": "/assets/product-demos/evolution.mp4",
+            "gif": "/assets/product-demos/evolution.gif"
+          },
+          {
+            "id": "vault",
+            "video": "/assets/product-demos/vault.mp4",
+            "gif": "/assets/product-demos/vault.gif"
+          }
+        ],
+        "real": "real-agent",
+        "overflow": false
+      }
+    },
+    {
+      "name": "Each film loads, advances, pauses, replays and seeks",
+      "passed": true,
+      "evidence": [
+        {
+          "id": "strategy",
+          "time": 6.12,
+          "duration": 9,
+          "width": 960,
+          "height": 640,
+          "paused": true
+        },
+        {
+          "id": "team",
+          "time": 6.12,
+          "duration": 9,
+          "width": 960,
+          "height": 640,
+          "paused": true
+        },
+        {
+          "id": "evolution",
+          "time": 6.12,
+          "duration": 9,
+          "width": 960,
+          "height": 640,
+          "paused": true
+        },
+        {
+          "id": "vault",
+          "time": 6.12,
+          "duration": 9,
+          "width": 960,
+          "height": 640,
+          "paused": true
+        }
+      ]
+    },
+    {
+      "name": "GIF embed and offscreen resource suspension",
+      "passed": true,
+      "evidence": {
+        "gif": "http://127.0.0.1:4173/assets/product-demos/strategy.gif",
+        "offscreenPaused": true
+      }
+    },
+    {
+      "name": "Global pause and reduced motion keep stills readable",
+      "passed": true,
+      "evidence": {
+        "paused": "true",
+        "gifs": true,
+        "title": "让 Agent 分工研究"
+      }
+    },
+    {
+      "name": "Feature handoffs use the native app including settings",
+      "passed": true,
+      "evidence": {
+        "routes": [
+          "strategy",
+          "agents",
+          "self-evolution",
+          "settings"
+        ],
+        "nativeErrors": []
+      }
+    },
+    {
+      "name": "Four market workflows preserve the chosen strategy",
+      "passed": true,
+      "evidence": [
+        "#/strategies?strategy_id=btc_trend_guard",
+        "#/strategies?strategy_id=event_probability",
+        "#/strategies?strategy_id=futures_term_structure",
+        "#/strategies?strategy_id=ashare_factor_rotation"
+      ]
+    },
+    {
+      "name": "Connector request transfers as an unsent editable draft",
+      "passed": true,
+      "evidence": {
+        "value": "帮我接入 ExampleX 的行情接口并添加数据校验",
+        "status": "已放到工作台 发送后查看适配方案"
+      }
+    },
+    {
+      "name": "Language, theme and route state remain synchronized",
+      "passed": true,
+      "evidence": {
+        "lang": "en",
+        "theme": "dark",
+        "frameTheme": "dark",
+        "draft": "帮我接入 ExampleX 的行情接口并添加数据校验",
+        "hash": "#/chat"
+      }
+    },
+    {
+      "name": "Mobile widths, bilingual headings and menus",
+      "passed": true,
+      "evidence": [
+        {
+          "width": 320,
+          "scroll": 305,
+          "headings": []
+        },
+        {
+          "width": 390,
+          "scroll": 375,
+          "headings": []
+        },
+        {
+          "width": 768,
+          "scroll": 753,
+          "headings": []
+        }
+      ]
+    },
+    {
+      "name": "Setup modal, keyboard close and local-only runtime",
+      "passed": true,
+      "evidence": {
+        "external": [],
+        "missing": [],
+        "nativeErrors": []
+      }
+    }
+  ]
+}

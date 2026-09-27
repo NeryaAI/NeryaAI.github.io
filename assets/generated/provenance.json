@@ -1,0 +1,38 @@
+{
+  "provider": "ChatGPT web",
+  "workflow": "GPT Pro Think manual workflow through Ego Browser, explicitly requested by the user",
+  "model_selection": "Latest",
+  "reasoning_effort": "Extra high",
+  "image_model": "Not exposed by the web interface",
+  "conversation": "https://chatgpt.com/c/6ab01da4-63c4-83ea-8729-e332a5665578",
+  "reference_uploads_verified_before_send": [
+    "docs/redesign-evidence-20260921/nerya-ref-cursor.png",
+    "docs/redesign-evidence-20260921/nerya-ref-workbuddy-interactive.png",
+    "docs/redesign-evidence-20260921/nerya-ref-claude-interactive.png",
+    "docs/redesign-evidence-20260921/nerya-ref-codex.png",
+    "assets/nerya-mascot.png"
+  ],
+  "files": [
+    {
+      "original": "nerya-reference-workspace.png",
+      "display": "nerya-reference-workspace.webp",
+      "dimensions": [1672, 941],
+      "original_sha256": "56b90776b25db65660de9f668dc487eefeb4e8bacb3db8b3d4cf3b2a5665d2cb",
+      "display_sha256": "98d9c24e8ba20595ad000a539a08fa44560ef96c553c05b193ecc43c4019e8d8",
+      "role": "Standalone panoramic research scene, not the console background",
+      "prompt_file": "docs/asset-reference-brief-20260921.md"
+    },
+    {
+      "original": "nerya-reference-studio.png",
+      "display": "nerya-reference-studio.webp",
+      "dimensions": [1672, 941],
+      "original_sha256": "a41a1ad81068ee1f55a556edb1aca2331be57d1ffc18b54f09407ffd20fab525",
+      "display_sha256": "b9b3235060c29ef1152ddba6c229240e81065131c4ae42c42a0b6843a441c2fe",
+      "role": "Closing invitation scene",
+      "prompt": "Using the SAME five uploaded reference images and the Nerya identity, generate exactly ONE additional original panoramic 16:9 image, different from the first scene. A quiet editorial illustration inside an ivory-and-lavender research studio at dusk, with the same adult violet-haired Nerya operator on the RIGHT THIRD, seated at a beautifully drawn pale stone desk, reading a blank paper research brief. Maintain her violet eyes, cat hair clip, white and purple jacket; natural elegant anatomy and hands; refined anime linework with atmospheric painted environment, mature and calm. A generous curved window at far right reveals a pale blue mountain horizon. Keep the LEFT 60% clean warm ivory plaster wall, a very light natural shadow only, so real HTML heading and buttons can overlay it with excellent contrast. No text, no UI, no logos, no watermarks, no money symbols. Composition is a warm invitation to begin researching, not a repeat of the previous landscape. Generate the actual image now."
+    }
+  ],
+  "display_conversion": "cwebp -q 86; no content edits",
+  "unused_exploration": ["nerya-observatory.png", "nerya-observatory.webp"],
+  "brand_logo": "Existing Nerya logo; not presented as newly generated"
+}

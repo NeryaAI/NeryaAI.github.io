@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "target": "ExampleX",
+  "route": "author",
+  "files": [
+    "provider.py",
+    "capabilities.json",
+    "tests/test_contract.py",
+    "review-checklist.md"
+  ],
+  "liveEnabled": false,
+  "validation": "required",
+  "prompt": "帮我接入 ExampleX 的行情与账户数据，先验证能力，订单权限保持关闭。",
+  "notice": "Illustrative plan. Requires API verification, contract tests and review before deployment."
+}

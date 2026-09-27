@@ -1,0 +1,23 @@
+[
+  {
+    "command": "./node_modules/.bin/tsc --noEmit",
+    "cwd": "agent/dashboard",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": "npm run build:demo",
+    "cwd": "landing-page",
+    "exit": 0,
+    "stdout": "\n> build:demo\n> node tools/sync-icons.mjs && node demo-src/build.mjs\n\nSynced 91 Nerya Outline icons\nBuilt the real dashboard: 238 source files, 21 page routes. Source dashboard was not edited.\n",
+    "stderr": ""
+  },
+  {
+    "command": "npm run check",
+    "cwd": "landing-page",
+    "exit": 0,
+    "stdout": "\n> check\n> npm run check:icons && node tools/check-landing.cjs && node tools/check-demo.mjs && node tools/check-capabilities.cjs && node tools/check-avatars.cjs\n\n\n> check:icons\n> node tools/sync-icons.mjs --check && node tools/check-icons.mjs\n\nPASS: 91 icons match the Agent source (fa444c7ca61d)\nPASS: 91 shared paths; 364 website size cases; React exports, navigation, accessibility, all four website entry points.\nPASS: local gates, source-backed real Agent frontend, unique IDs, resources, requested capability sections and deny-network CSP.\nPASS: six populated strategy graphs across four market categories, valid edges/counts, paper-only fixtures, proposal staging and schedule state changes.\nPASS: four bilingual market contracts, adapter branches, no live activation, validation → approval → apply separation, rollback/reset.\nPASS: six distinct licensed PNG assets, local copies, consistent role mapping, portrait markup and targeted copy cleanup.\n",
+    "stderr": ""
+  }
+]

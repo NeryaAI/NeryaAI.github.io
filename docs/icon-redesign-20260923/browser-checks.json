@@ -1,0 +1,149 @@
+{
+  "status": "passed",
+  "count": 13,
+  "results": [
+    {
+      "name": "01-website-light",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "en",
+      "theme": "light",
+      "icons": 42,
+      "visible": 39,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "02-website-dark",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "en",
+      "theme": "dark",
+      "icons": 42,
+      "visible": 39,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "03-website-language",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "zh-CN",
+      "theme": "dark",
+      "icons": 42,
+      "visible": 39,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "04-agent-home",
+      "url": "http://127.0.0.1:4186/demo/index.html?lang=zh#/",
+      "lang": "zh",
+      "theme": "light",
+      "icons": 33,
+      "visible": 32,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "05-agent-research",
+      "url": "http://127.0.0.1:4186/demo/index.html?lang=zh#/chat/demo-research",
+      "lang": "zh",
+      "theme": "light",
+      "icons": 69,
+      "visible": 47,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "06-agent-strategies",
+      "url": "http://127.0.0.1:4186/demo/index.html?lang=zh#/strategies",
+      "lang": "zh",
+      "theme": "light",
+      "icons": 28,
+      "visible": 27,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "07-docs",
+      "url": "http://127.0.0.1:4186/docs.html",
+      "lang": "zh",
+      "theme": "lang-zh",
+      "icons": 3,
+      "visible": 2,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "07-skills",
+      "url": "http://127.0.0.1:4186/skills.html",
+      "lang": "zh",
+      "theme": "lang-zh",
+      "icons": 3,
+      "visible": 2,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "07-recipes",
+      "url": "http://127.0.0.1:4186/recipes.html",
+      "lang": "zh",
+      "theme": "lang-zh",
+      "icons": 3,
+      "visible": 2,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "08-mobile-website",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "zh-CN",
+      "theme": "dark",
+      "icons": 42,
+      "visible": 39,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "09-mobile-menu",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "zh-CN",
+      "theme": "dark",
+      "icons": 42,
+      "visible": 40,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "10-mobile-320",
+      "url": "http://127.0.0.1:4186/",
+      "lang": "zh-CN",
+      "theme": "dark",
+      "icons": 42,
+      "visible": 39,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "name": "11-mobile-agent",
+      "url": "http://127.0.0.1:4186/demo/index.html?lang=zh#/",
+      "lang": "zh",
+      "theme": "light",
+      "icons": 12,
+      "visible": 12,
+      "bad": [],
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

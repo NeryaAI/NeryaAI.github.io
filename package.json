@@ -1,0 +1,51 @@
+{
+  "name": "nerya-landing",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=9.6.5"
+  },
+  "scripts": {
+    "prepare:public": "node tools/prepare-public.mjs",
+    "predev": "npm run prepare:public",
+    "dev": "vite",
+    "prebuild": "npm run prepare:public",
+    "build": "vite build && node tools/prerender-react.mjs",
+    "prepreview": "npm run prepare:public",
+    "preview": "vite preview",
+    "sync:icons": "node tools/sync-icons.mjs",
+    "check:icons": "node tools/sync-icons.mjs --check && node tools/check-icons.mjs",
+    "build:demo": "node tools/sync-icons.mjs && node demo-src/build.mjs",
+    "check:demo-source": "node tools/check-demo-source.mjs",
+    "check": "npm run check:react && npm run check:demo && node tools/check-mascot-assets.cjs && node tools/check-recording-provenance.cjs && node tools/check-scroll-effects.mjs && node tools/check-narrative.mjs",
+    "check:react": "node tools/check-react.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check:effects": "node tools/check-scroll-effects.mjs",
+    "typecheck:effects": "tsc --noEmit -p tsconfig.effects.json",
+    "check:avatars": "node tools/check-avatars.cjs && node --test tools/role-avatars.test.mjs",
+    "check:upgrade": "node tools/check-website-upgrade.mjs",
+    "snapshot:parts": "node tools/render-native-parts.mjs",
+    "check:demo": "node tools/check-demo.mjs && node tools/check-demo-routing.cjs && node tools/check-native-fixtures.cjs && node tools/check-command-fixtures.cjs",
+    "check:legacy": "npm run check:icons && node tools/check-landing.cjs && node tools/check-demo.mjs && node tools/check-capabilities.cjs && node tools/check-avatars.cjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "26.6.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "esbuild": "0.28.2",
+    "oxc-transform-react": "0.145.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vite": "8.3.1"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "framer-motion": "13.4.4",
+    "lucide-react": "1.48.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "3.7.0"
+  }
+}
