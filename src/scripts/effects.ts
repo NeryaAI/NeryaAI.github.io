@@ -14,6 +14,10 @@ let pointerFrame = 0, scrollFrame = 0;
 let hovered: HTMLElement | null = null;
 let point = { x: 0, y: 0 };
 const text = (zh: string, en: string) => root.lang.startsWith('zh') ? zh : en;
+function replayAmbient(el: HTMLElement) {
+  el.dataset.ambientReplay = 'true';
+  requestAnimationFrame(() => requestAnimationFrame(() => delete el.dataset.ambientReplay));
+}
 
 function sync() {
   root.dataset.pageHidden = String(document.hidden);
@@ -32,7 +36,12 @@ function sync() {
   }
 }
 const observer = new IntersectionObserver(entries => {
-  for (const entry of entries) entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target);
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      if (!visible.has(entry.target)) replayAmbient(entry.target as HTMLElement);
+      visible.add(entry.target);
+    } else visible.delete(entry.target);
+  }
   sync();
 }, { threshold: .02 });
 ambient.forEach(el => observer.observe(el));

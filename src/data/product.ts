@@ -15,29 +15,33 @@ export type ProductFeature = {
 // The lead may adjust the hero without changing the feature contract.
 export const hero = {
   title: {
-    zh: '把策略想法\n交给 Agent 团队',
-    en: 'Bring your strategy ideas\nto an Agent team',
+    zh: 'Quant Super Agent',
+    en: 'Quant Super Agent',
   },
   description: {
-    zh: '说出你的想法，让 Agent 编写策略、分工研究并定期复盘。你可以查看证据并审核改动。',
-    en: 'Describe your idea. Let Agents write the strategy, share research tasks and review runs on a schedule. Inspect the evidence and approve strategy updates.',
+    zh: '研究行情、写策略、跑回测',
+    en: 'Research markets, build strategies, run backtests',
   },
-  cta: { zh: '体验策略创建', en: 'Explore strategy creation' },
+  evolution: {
+    zh: '以 Recursive Self-Improvement 持续迭代策略',
+    en: 'Iterate with Recursive Self-Improvement',
+  },
+  cta: { zh: '查看策略示例', en: 'Explore a strategy example' },
   route: '/chat/demo-strategy',
 };
 
 export const features: ProductFeature[] = [
   {
     id: 'strategy',
-    title: { zh: '说出想法 开始构建', en: 'Turn an idea into a strategy' },
+    title: { zh: '从想法到第一版策略', en: 'From idea to version one' },
     description: {
-      zh: '描述交易逻辑与约束。Agent 编写策略草稿并执行校验，你在同一对话里查看逻辑说明和回测结果。',
-      en: 'Describe your trading rules and constraints. The Agent writes and checks a strategy draft. Read the logic and backtest results in the same conversation.',
+      zh: 'Super Agent 把买卖逻辑拆成规则、参数和回测。',
+      en: 'The Super Agent turns trading logic into rules, parameters and a backtest.',
     },
     steps: [
-      { zh: '描述想法', en: 'Describe your idea' },
-      { zh: '生成工作流', en: 'Generate the workflow' },
-      { zh: '检查策略包', en: 'Inspect the package' },
+      { zh: '接住想法', en: 'Take the idea' },
+      { zh: '拆成任务', en: 'Split the work' },
+      { zh: '跑出第一版', en: 'Run a first version' },
     ],
     cta: { zh: '体验策略创建', en: 'Explore strategy creation' },
     route: '/chat/demo-strategy',
@@ -48,15 +52,15 @@ export const features: ProductFeature[] = [
   },
   {
     id: 'team',
-    title: { zh: '让 Agent 分工研究', en: 'Give Agents a shared research task' },
+    title: { zh: 'Super Agent，调度量化团队', en: 'Super Agent, quant team' },
     description: {
-      zh: '研究员分头分析行情与消息，风险审阅员检查假设。协调 Agent 汇总证据与结论。',
-      en: 'Researchers examine market data and news in parallel. A risk reviewer checks assumptions. The lead Agent brings the evidence and findings together.',
+      zh: '研究员、因子分析师与审阅员并行投研。',
+      en: 'Researchers, factor analysts and reviewers work in parallel.',
     },
     steps: [
-      { zh: '分配任务', en: 'Assign tasks' },
+      { zh: '分派工作', en: 'Assign the work' },
       { zh: '并行研究', en: 'Research in parallel' },
-      { zh: '汇总证据', en: 'Combine evidence' },
+      { zh: '汇总研究', en: 'Combine findings' },
     ],
     cta: { zh: '查看 Agent 团队', en: 'Explore the Agent team' },
     route: '/agents',
@@ -67,15 +71,15 @@ export const features: ProductFeature[] = [
   },
   {
     id: 'evolution',
-    title: { zh: '自主复盘 迭代策略', en: 'Let Agents review and refine' },
+    title: { zh: '策略进入下一版', en: 'The strategy enters its next version' },
     description: {
-      zh: '启用复盘计划后，Agent 分析运行记录并提出调整建议。你可以查看依据和候选改动，审核策略更新。',
-      en: 'Enable a review schedule. The Agent examines run history and proposes changes. Inspect the evidence and candidate edits before approving strategy updates.',
+      zh: '它读运行结果，找到薄弱处，提出修改。',
+      en: 'It reads the run, finds the weak spot and proposes a change.',
     },
     steps: [
-      { zh: '读取运行记录', en: 'Read run history' },
-      { zh: '提出候选改动', en: 'Propose candidate changes' },
-      { zh: '验证与审核', en: 'Validate and review' },
+      { zh: '回看结果', en: 'Read the result' },
+      { zh: '找出问题', en: 'Find the weak spot' },
+      { zh: '准备下一版', en: 'Prepare the next version' },
     ],
     cta: { zh: '查看复盘与提案', en: 'Explore reviews and proposals' },
     route: '/self-evolution',
@@ -86,21 +90,21 @@ export const features: ProductFeature[] = [
   },
   {
     id: 'vault',
-    title: { zh: '把密钥存入本地 Vault', en: 'Keep credentials in your local Vault' },
+    title: { zh: 'API 密钥，交给 Vault 保管', en: 'Keep your API keys in Vault' },
     description: {
-      zh: '将账户密钥加密存入本地 Vault，并在账户配置中使用凭据引用。',
-      en: 'Store account credentials encrypted in the local Vault and use references in account configuration.',
+      zh: '交易所和数据服务的密钥集中存放，连接时按需调用。',
+      en: 'Store exchange and data-service keys together, ready for your connections.',
     },
     steps: [
-      { zh: '存入凭据', en: 'Store credentials' },
-      { zh: '传递引用', en: 'Pass references' },
-      { zh: '运行时使用', en: 'Use at runtime' },
+      { zh: '添加密钥', en: 'Add a key' },
+      { zh: '本地保存', en: 'Store locally' },
+      { zh: '按需调用', en: 'Use when needed' },
     ],
-    cta: { zh: '查看设置', en: 'Explore settings' },
-    route: '/settings',
+    cta: { zh: '打开 Vault', en: 'Open Vault' },
+    route: '/env-vault',
     detail: {
-      zh: '标准安装使用 AES-GCM 与 scrypt。加密保护落盘数据，运行进程仍需使用明文凭据。',
-      en: 'Standard installations use AES-GCM and scrypt to encrypt stored data. The runtime still needs plaintext credentials when using them.',
+      zh: '凭据保存在本地 Vault，连接配置通过 vault:// 引用使用。',
+      en: 'Credentials stay in the local Vault; connection settings use vault:// references.',
     },
   },
 ];
@@ -110,34 +114,34 @@ export const markets = [
   {
     id: 'crypto',
     title: { zh: '加密货币', en: 'Crypto' },
-    description: { zh: '研究行情与链上信号', en: 'Research price action and on-chain signals' },
+    description: { zh: '看看价格和链上信号', en: 'Look at price action and on-chain signals' },
     route: '/strategies?strategy_id=btc_trend_guard',
   },
   {
     id: 'prediction',
     title: { zh: '预测市场', en: 'Prediction markets' },
-    description: { zh: '比较事件概率与结算规则', en: 'Compare event probabilities and resolution rules' },
+    description: { zh: '比较事件概率和结算规则', en: 'Compare event probabilities and resolution rules' },
     route: '/strategies?strategy_id=event_probability',
   },
   {
     id: 'futures',
     title: { zh: '期货', en: 'Futures' },
-    description: { zh: '研究期限结构与换月条件', en: 'Study term structure and contract rolls' },
+    description: { zh: '看看期限结构和换月条件', en: 'Look at term structure and contract rolls' },
     route: '/strategies?strategy_id=futures_term_structure',
   },
   {
     id: 'equities',
-    title: { zh: 'A 股', en: 'A-shares' },
-    description: { zh: '研究因子与交易日历', en: 'Research factors and trading calendars' },
-    route: '/strategies?strategy_id=ashare_factor_rotation',
+    title: { zh: '海外美股', en: 'US equities' },
+    description: { zh: '看看因子和组合轮动', en: 'Look at factors and portfolio rotation' },
+    route: '/strategies?strategy_id=us_equity_factor_rotation',
   },
 ];
 
 export const connectorAuthoring = {
-  title: { zh: '用自然语言提出接入需求', en: 'Describe the connector you need' },
+  title: { zh: '先把想接什么说清楚', en: 'Start by saying what you need' },
   description: {
-    zh: '告诉 Agent 目标平台与数据需求。Agent 检查现有连接器，整理接口约定并准备接入提案。',
-    en: 'Tell the Agent which platform and data you need. It checks existing connectors, maps API requirements and prepares an integration proposal.',
+    zh: '告诉 Agent 目标平台和数据需求。它会看看现有连接器，再整理下一步。',
+    en: 'Tell the Agent the platform and data you need. It checks the existing connectors and maps the next step.',
   },
   detail: {
     zh: '新增适配代码需要验证与审核。接口文档和接入提案不能证明连接已可用。',

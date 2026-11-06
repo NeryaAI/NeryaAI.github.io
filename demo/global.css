@@ -559,9 +559,24 @@ video {
 }
 /* Card surface — single thin shadow, no inset highlight, no violet glow.
      2026-05 airy redesign: trade depth illusion for calm legibility. */
+.\!card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+}
 .card {
   border-radius: 0.75rem;
   border-width: 1px;
+}
+.\!card {
+    border-color: var(--line) !important;
+    background: var(--card) !important;
+    box-shadow: 0 1px 2px rgba(2, 6, 23, 0.06) !important;
+    /* Long machine strings (paths, ids, hashes, addresses) wrap inside the
+       card rather than spilling past its edge or forcing page-wide scroll.
+       Inherited, so it only affects text that would actually overflow. */
+    overflow-wrap: anywhere !important;
+  }
+.card {
     border-color: var(--line);
     background: var(--card);
     box-shadow: 0 1px 2px rgba(2, 6, 23, 0.06);
@@ -569,11 +584,16 @@ video {
        card rather than spilling past its edge or forcing page-wide scroll.
        Inherited, so it only affects text that would actually overflow. */
     overflow-wrap: anywhere;
-}
+  }
 html.light .card {
     background: var(--card);
     border-color: var(--line);
     box-shadow: 0 1px 2px rgba(76, 29, 149, 0.04);
+  }
+html.light .\!card {
+    background: var(--card) !important;
+    border-color: var(--line) !important;
+    box-shadow: 0 1px 2px rgba(76, 29, 149, 0.04) !important;
   }
 /* Hover: only darken the border, no translate, no extra shadow. */
 .card-hover {
@@ -1402,10 +1422,21 @@ html.light .composer-shell {
     box-shadow: none;
     border-radius: 10px;
   }
+.settings-flat .\!card {
+    border: 1px solid var(--line) !important;
+    background: var(--card) !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+  }
 html.light .settings-flat .card {
     border: 1px solid var(--line);
     background: var(--card);
     box-shadow: none;
+  }
+html.light .settings-flat .\!card {
+    border: 1px solid var(--line) !important;
+    background: var(--card) !important;
+    box-shadow: none !important;
   }
 .settings-flat .card-head {
     padding: 10px 12px;
@@ -1553,6 +1584,9 @@ html.light .settings-flat .card {
 .top-4 {
   top: 1rem;
 }
+.isolate {
+  isolation: isolate;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1579,6 +1613,10 @@ html.light .settings-flat .card {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1599,9 +1637,19 @@ html.light .settings-flat .card {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+.-mr-2 {
+  margin-right: -0.5rem;
+}
+.-mt-2 {
+  margin-top: -0.5rem;
 }
 .-mt-3 {
   margin-top: -0.75rem;
@@ -1708,6 +1756,9 @@ html.light .settings-flat .card {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .mt-\[2px\] {
   margin-top: 2px;
 }
@@ -1719,12 +1770,6 @@ html.light .settings-flat .card {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 }
 .\!block {
   display: block !important;
@@ -1897,6 +1942,9 @@ html.light .settings-flat .card {
 .max-h-\[420px\] {
   max-height: 420px;
 }
+.max-h-\[50vh\] {
+  max-height: 50vh;
+}
 .max-h-\[55vh\] {
   max-height: 55vh;
 }
@@ -1920,6 +1968,9 @@ html.light .settings-flat .card {
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
+}
+.max-h-\[85vh\] {
+  max-height: 85vh;
 }
 .max-h-\[calc\(100dvh-32px\)\] {
   max-height: calc(100dvh - 32px);
@@ -1945,8 +1996,14 @@ html.light .settings-flat .card {
 .min-h-14 {
   min-height: 3.5rem;
 }
+.min-h-16 {
+  min-height: 4rem;
+}
 .min-h-20 {
   min-height: 5rem;
+}
+.min-h-24 {
+  min-height: 6rem;
 }
 .min-h-28 {
   min-height: 7rem;
@@ -1954,23 +2011,20 @@ html.light .settings-flat .card {
 .min-h-36 {
   min-height: 9rem;
 }
+.min-h-5 {
+  min-height: 1.25rem;
+}
 .min-h-7 {
   min-height: 1.75rem;
 }
 .min-h-8 {
   min-height: 2rem;
 }
+.min-h-80 {
+  min-height: 20rem;
+}
 .min-h-9 {
   min-height: 2.25rem;
-}
-.min-h-\[120px\] {
-  min-height: 120px;
-}
-.min-h-\[140px\] {
-  min-height: 140px;
-}
-.min-h-\[160px\] {
-  min-height: 160px;
 }
 .min-h-\[200px\] {
   min-height: 200px;
@@ -1990,9 +2044,6 @@ html.light .settings-flat .card {
 .min-h-\[62px\] {
   min-height: 62px;
 }
-.min-h-\[72px\] {
-  min-height: 72px;
-}
 .min-h-\[88px\] {
   min-height: 88px;
 }
@@ -2001,6 +2052,9 @@ html.light .settings-flat .card {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.\!w-auto {
+  width: auto !important;
 }
 .w-1 {
   width: 0.25rem;
@@ -2107,8 +2161,8 @@ html.light .settings-flat .card {
 .w-\[36\%\] {
   width: 36%;
 }
-.w-\[400px\] {
-  width: 400px;
+.w-\[420px\] {
+  width: 420px;
 }
 .w-\[540px\] {
   width: 540px;
@@ -2144,6 +2198,9 @@ html.light .settings-flat .card {
 .min-w-5 {
   min-width: 1.25rem;
 }
+.min-w-8 {
+  min-width: 2rem;
+}
 .min-w-\[110px\] {
   min-width: 110px;
 }
@@ -2152,9 +2209,6 @@ html.light .settings-flat .card {
 }
 .min-w-\[140px\] {
   min-width: 140px;
-}
-.min-w-\[160px\] {
-  min-width: 160px;
 }
 .min-w-\[16px\] {
   min-width: 16px;
@@ -2191,6 +2245,9 @@ html.light .settings-flat .card {
 }
 .max-w-3xl {
   max-width: 48rem;
+}
+.max-w-40 {
+  max-width: 10rem;
 }
 .max-w-48 {
   max-width: 12rem;
@@ -2246,9 +2303,6 @@ html.light .settings-flat .card {
 .max-w-\[320px\] {
   max-width: 320px;
 }
-.max-w-\[33\.333\%\] {
-  max-width: 33.333%;
-}
 .max-w-\[40\%\] {
   max-width: 40%;
 }
@@ -2293,6 +2347,9 @@ html.light .settings-flat .card {
 }
 .max-w-md {
   max-width: 28rem;
+}
+.max-w-none {
+  max-width: none;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -2392,6 +2449,9 @@ html.light .settings-flat .card {
 .cursor-default {
   cursor: default;
 }
+.cursor-grab {
+  cursor: grab;
+}
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -2444,6 +2504,12 @@ html.light .settings-flat .card {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 .grid-cols-\[110px_minmax\(0\2c 1fr\)\] {
   grid-template-columns: 110px minmax(0,1fr);
 }
@@ -2470,6 +2536,12 @@ html.light .settings-flat .card {
 }
 .grid-cols-\[repeat\(auto-fill\2c minmax\(360px\2c 1fr\)\)\] {
   grid-template-columns: repeat(auto-fill,minmax(360px,1fr));
+}
+.grid-cols-\[repeat\(auto-fit\2c minmax\(min\(100\%\2c 12rem\)\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,12rem),1fr));
+}
+.flex-row {
+  flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
@@ -2524,6 +2596,9 @@ html.light .settings-flat .card {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-\[3px\] {
+  gap: 3px;
 }
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
@@ -2632,6 +2707,11 @@ html.light .settings-flat .card {
   margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -2642,6 +2722,9 @@ html.light .settings-flat .card {
 }
 .divide-brand-500\/10 > :not([hidden]) ~ :not([hidden]) {
   border-color: rgb(139 92 246 / 0.1);
+}
+.self-start {
+  align-self: flex-start;
 }
 .self-center {
   align-self: center;
@@ -2719,6 +2802,9 @@ html.light .settings-flat .card {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+.rounded-tl-sm {
+  border-top-left-radius: 0.125rem;
+}
 .rounded-tl-xl {
   border-top-left-radius: 0.75rem;
 }
@@ -2773,6 +2859,9 @@ html.light .settings-flat .card {
 }
 .border-\[color\:var\(--text-base\)\] {
   border-color: var(--text-base);
+}
+.border-\[color\:var\(--violet-2\)\] {
+  border-color: var(--violet-2);
 }
 .border-accent-400\/35 {
   border-color: rgb(52 224 161 / 0.35);
@@ -2911,6 +3000,9 @@ html.light .settings-flat .card {
 }
 .border-fluid-500\/40 {
   border-color: rgb(6 182 212 / 0.4);
+}
+.border-ink-500\/20 {
+  border-color: rgb(var(--ink-500) / 0.2);
 }
 .border-ink-500\/35 {
   border-color: rgb(var(--ink-500) / 0.35);
@@ -3625,9 +3717,6 @@ html.light .settings-flat .card {
 .pb-4 {
   padding-bottom: 1rem;
 }
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -3639,9 +3728,6 @@ html.light .settings-flat .card {
 }
 .pl-5 {
   padding-left: 1.25rem;
-}
-.pl-6 {
-  padding-left: 1.5rem;
 }
 .pl-8 {
   padding-left: 2rem;
@@ -3699,6 +3785,10 @@ html.light .settings-flat .card {
 }
 .font-sans {
   font-family: -apple-system, BlinkMacSystemFont, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-\[10\.5px\] {
   font-size: 10.5px;
@@ -3828,6 +3918,9 @@ html.light .settings-flat .card {
 }
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+.text-\[color\:var\(--danger\)\] {
+  color: var(--danger);
 }
 .text-\[color\:var\(--text-base\)\] {
   color: var(--text-base);
@@ -4144,6 +4237,9 @@ html.light .settings-flat .card {
 .ring-brand-400\/25 {
   --tw-ring-color: rgb(157 107 255 / 0.25);
 }
+.ring-brand-500\/30 {
+  --tw-ring-color: rgb(139 92 246 / 0.3);
+}
 .ring-brand-500\/40 {
   --tw-ring-color: rgb(139 92 246 / 0.4);
 }
@@ -4168,6 +4264,10 @@ html.light .settings-flat .card {
 }
 .blur-3xl {
   --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.invert {
+  --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
@@ -4283,6 +4383,14 @@ html.light .settings-flat .card {
   --fluid-soft: rgba(34, 211, 238, 0.16);
   --text-base: #e9ebf2;
   --text-muted: #a3acc0;
+  --syntax-comment: var(--text-muted);
+  --syntax-keyword: rgb(var(--brand-readable));
+  --syntax-type: #7dd3fc;
+  --syntax-function: #93c5fd;
+  --syntax-string: var(--ok);
+  --syntax-number: var(--warn);
+  --syntax-meta: #f0abfc;
+  --syntax-deletion: var(--err);
   --scrollbar-track: #151820;
   --scrollbar-thumb: #394050;
   --scrollbar-thumb-hover: #555f75;
@@ -4325,6 +4433,9 @@ html.light {
   --fluid-soft: rgba(8, 145, 178, 0.12);
   --text-base: #1c2333;
   --text-muted: #59657b;
+  --syntax-type: #075985;
+  --syntax-function: #1d4ed8;
+  --syntax-meta: #86198f;
   --scrollbar-track: #f2f4f8;
   --scrollbar-thumb: #c1c9d7;
   --scrollbar-thumb-hover: #9ba6ba;
@@ -4476,14 +4587,11 @@ body::after {
   50% { opacity: 0; }
 }
 
-/* highlight.js dark theme — shared by the chat markdown renderer and the
-   workspace canvas code view. The token class names are highlight.js-specific
-   (emitted by rehype-highlight), so these rules are intentionally global.
-   Palette tracks the ink/brand scheme: violet keywords, cyan types, emerald
-   strings, amber numbers. */
-.hljs { color: #cdd6e4; background: transparent; }
+/* Shared semantic syntax colours for Markdown, file previews and the editor.
+   Theme tokens keep normal-size code readable on each native surface. */
+.hljs { color: var(--text-base); background: transparent; }
 .hljs-comment,
-.hljs-quote { color: #6b7689; font-style: italic; }
+.hljs-quote { color: var(--syntax-comment); font-style: italic; }
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-literal,
@@ -4491,29 +4599,29 @@ body::after {
 .hljs-name,
 .hljs-tag,
 .hljs-selector-id,
-.hljs-selector-class { color: #c4a3ff; }
+.hljs-selector-class { color: var(--syntax-keyword); }
 .hljs-built_in,
 .hljs-type,
 .hljs-class .hljs-title,
-.hljs-title.class_ { color: #7dd3fc; }
+.hljs-title.class_ { color: var(--syntax-type); }
 .hljs-title,
 .hljs-title.function_,
-.hljs-function .hljs-title { color: #93c5fd; }
+.hljs-function .hljs-title { color: var(--syntax-function); }
 .hljs-string,
 .hljs-attr,
 .hljs-addition,
 .hljs-meta-string,
-.hljs-template-tag { color: #6ee7b7; }
+.hljs-template-tag { color: var(--syntax-string); }
 .hljs-number,
 .hljs-variable,
 .hljs-template-variable,
-.hljs-regexp { color: #fcd34d; }
+.hljs-regexp { color: var(--syntax-number); }
 .hljs-symbol,
 .hljs-bullet,
 .hljs-meta,
 .hljs-attribute,
-.hljs-link { color: #f0abfc; }
-.hljs-deletion { color: #fca5a5; }
+.hljs-link { color: var(--syntax-meta); }
+.hljs-deletion { color: var(--syntax-deletion); }
 .hljs-emphasis { font-style: italic; }
 .hljs-strong { font-weight: 600; }
 
@@ -4656,6 +4764,7 @@ input[type=checkbox], input[type=radio] { accent-color: var(--violet); }
 [data-composer-actions] { flex:none; margin-left:4px; }
 [data-composer-model-trigger] { max-width:220px; }
 [data-composer-toolbar] button { min-height:32px; }
+[data-testid="composer-add"][data-work-mode="plan"], [data-testid="composer-add"][data-work-mode="goal"] { color: rgb(var(--brand-readable)); }
 @container composer (max-width:480px) {
  [data-composer-toolbar] { display:grid; grid-template-columns:32px minmax(0,1fr) auto; gap:4px; }
  [data-composer-toolbar] > input { display:none; }
@@ -4664,11 +4773,21 @@ input[type=checkbox], input[type=radio] { accent-color: var(--violet); }
  [data-composer-models] { grid-column:1 / span 2; grid-row:2; margin-left:0; justify-content:flex-start; }
  [data-composer-model-trigger] { max-width:190px; }
  [data-composer-models] button:first-child > svg:first-child { display:none; }
+ [data-composer-work-mode] { display:none; }
 }
-@media(pointer:coarse) {
- [data-composer-toolbar] button { min-height:40px; }
- [data-composer-actions] > button:last-child { min-width:40px; }
- [data-testid="user-interaction"] button { min-height:44px; }
+@media (pointer:coarse), (max-width:767px) {
+ [data-chat-composer] button,
+ [data-testid="task-dock-header"] button,
+ [data-testid="workspace-files"] button,
+ [data-testid="user-interaction"] button,
+ .ui-icon-button,.ui-select-option { min-height:44px; min-width:44px; }
+ [data-chat-composer] textarea { min-height:44px; }
+}
+@container composer (max-width:480px) {
+ [data-composer-toolbar] { grid-template-columns:44px minmax(0,1fr) auto; }
+ [data-composer-toolbar] button { min-height:44px; min-width:44px; }
+ [data-composer-toolbar]:has([data-composer-actions] > button:nth-child(2)) [data-composer-actions] { grid-column:1 / -1; grid-row:3; justify-content:flex-end; flex-wrap:wrap; margin-left:0; }
+ [data-composer-toolbar]:has([data-composer-actions] > button:nth-child(2)) [data-composer-models] { grid-column:1 / -1; }
 }
 
 [data-testid="agent-start"] [role="tablist"] { scrollbar-width:none; }
@@ -4678,6 +4797,9 @@ input[type=checkbox], input[type=radio] { accent-color: var(--violet); }
  [data-testid="agent-start"] [role="tab"] { padding-left:9px; padding-right:9px; min-height:34px; }
  [data-chat-composer="hero"] textarea { min-height:64px; }
 }
+
+/* Native range highlight survives focus returning to the conversation search field. */
+::highlight(nerya-match) { background: #fde68a; color: #422006; }
 html.light .nerya-app-shell .hover\:text-white:hover {
     color: var(--text-base);
   }
@@ -4891,6 +5013,9 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 .hover\:text-\[color\:var\(--text-base\)\]:hover {
   color: var(--text-base);
 }
+.hover\:text-\[color\:var\(--violet-2\)\]:hover {
+  color: var(--violet-2);
+}
 .hover\:text-brand-100:hover {
   --tw-text-opacity: 1;
   color: rgb(var(--brand-readable) / var(--tw-text-opacity));
@@ -4974,6 +5099,9 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 .focus-visible\:outline-\[color\:var\(--violet\)\]:focus-visible {
   outline-color: var(--violet);
 }
+.focus-visible\:outline-brand-400:focus-visible {
+  outline-color: #9d6bff;
+}
 .focus-visible\:outline-brand-500:focus-visible {
   outline-color: #8b5cf6;
 }
@@ -5004,6 +5132,9 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 }
 .focus-visible\:ring-offset-\[\#0a0b1a\]:focus-visible {
   --tw-ring-offset-color: #0a0b1a;
+}
+.active\:cursor-grabbing:active {
+  cursor: grabbing;
 }
 .disabled\:cursor-default:disabled {
   cursor: default;
@@ -5056,12 +5187,31 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 .group:hover .group-hover\:opacity-90 {
   opacity: 0.9;
 }
+.peer:checked ~ .peer-checked\:border-brand-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(157 107 255 / var(--tw-border-opacity));
+}
+.peer:checked ~ .peer-checked\:bg-brand-500\/10 {
+  background-color: rgb(139 92 246 / 0.1);
+}
+.peer:focus-visible ~ .peer-focus-visible\:ring-2 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.peer:focus-visible ~ .peer-focus-visible\:ring-brand-400 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(157 107 255 / var(--tw-ring-opacity));
+}
 .aria-checked\:bg-brand-500[aria-checked="true"] {
   --tw-bg-opacity: 1;
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
 }
 .aria-pressed\:bg-\[color\:var\(--panel-bg\)\][aria-pressed="true"] {
   background-color: var(--panel-bg);
+}
+.data-\[priority-drop\=true\]\:border-\[color\:var\(--brand\)\][data-priority-drop=true] {
+  border-color: var(--brand);
 }
 .data-\[state\=open\]\:border-brand-500\/55[data-state=open] {
   border-color: rgb(139 92 246 / 0.55);
@@ -5105,6 +5255,12 @@ html.light .nerya-app-shell .hover\:text-white:hover {
     display: none;
   }
 }
+@media (max-width: 600px) {
+
+  .max-\[600px\]\:min-h-11 {
+    min-height: 2.75rem;
+  }
+}
 @media (min-width: 640px) {
 
   .sm\:col-span-2 {
@@ -5129,6 +5285,14 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 
   .sm\:inline {
     display: inline;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:inline-flex {
+    display: inline-flex;
   }
 
   .sm\:w-44 {
@@ -5205,6 +5369,14 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 
   .sm\:p-4 {
     padding: 1rem;
+  }
+
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
   }
 
   .sm\:p-7 {
@@ -5382,8 +5554,16 @@ html.light .nerya-app-shell .hover\:text-white:hover {
     grid-template-columns: 1fr auto auto;
   }
 
+  .lg\:grid-cols-\[minmax\(0\2c 1fr\)_minmax\(320px\2c 420px\)\] {
+    grid-template-columns: minmax(0,1fr) minmax(320px,420px);
+  }
+
   .lg\:grid-cols-\[minmax\(170px\2c 220px\)_160px_minmax\(180px\2c 260px\)_1fr_auto\] {
     grid-template-columns: minmax(170px,220px) 160px minmax(180px,260px) 1fr auto;
+  }
+
+  .lg\:grid-cols-\[minmax\(240px\2c 0\.7fr\)_minmax\(0\2c 2fr\)\] {
+    grid-template-columns: minmax(240px,0.7fr) minmax(0,2fr);
   }
 
   .lg\:flex-row {
@@ -5471,10 +5651,6 @@ html.light .nerya-app-shell .hover\:text-white:hover {
 
   .xl\:grid-cols-\[minmax\(0\2c 1fr\)_420px\] {
     grid-template-columns: minmax(0,1fr) 420px;
-  }
-
-  .xl\:grid-cols-\[minmax\(360px\2c 0\.95fr\)_minmax\(0\2c 1\.35fr\)\] {
-    grid-template-columns: minmax(360px,0.95fr) minmax(0,1.35fr);
   }
 }
 .\[\&_\[aria-selected\=true\]\]\:bg-\[color\:var\(--panel-bg\)\] [aria-selected=true] {

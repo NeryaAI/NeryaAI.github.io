@@ -19,6 +19,12 @@ window.addEventListener('nerya:ui_settings_changed',()=>{
 });
 const stamp='2026-09-20T08:00:00.000Z';
 const copy=(en:string,zh:string)=>locale==='en'?en:zh;
+const assistantProfiles:Json[]=[{
+ id:'main',name:'Nerya',role:copy('Research assistant','研究助理'),instructions:'',avatar:'',enabled:true,
+ revision:1,created_at:NOW/1000,updated_at:NOW/1000,model_provider:'',model_id:'',model_tier:'',
+ research_allowed:true,memory_allowed:true,browser_allowed:true,files_allowed:true,shell_allowed:false,
+ tool_policy:{allow_groups:[],deny:[]},
+}];
 const deny=()=>{throw new Error('Network transport is disabled in this local demo.');};
 window.WebSocket=class{constructor(){deny();}} as any;
 window.EventSource=class{constructor(){deny();}} as any;
@@ -43,7 +49,7 @@ function turn(kind:string,text=''):Json{
 const sessions:Json[]=['research','strategy','review'].map((kind,i)=>{
  const s=scenario(kind,locale);const ts=new Date(NOW-i*1800000).toISOString();
  const clarification=copy('Use a four-hour research window. Keep opposing evidence visible and save the report to the workspace.','按 4 小时窗口研究。保留反对证据，把报告保存到工作区。');
- return {session_id:'demo-'+kind,title:s.title,meta:{title:s.title},kind,strategy_id:i===0?undefined:'btc_trend_guard',source:i===2?'strategy_evolution':'user_chat',created_at:ts,updated_at:ts,status:'completed',state:'completed',message_count:4,messages:[
+ return {session_id:'demo-'+kind,title:s.title,meta:{title:s.title},kind,assistant_id:'main',strategy_id:i===0?undefined:'btc_trend_guard',source:i===2?'strategy_evolution':'user_chat',created_at:ts,updated_at:ts,status:'completed',state:'completed',message_count:4,messages:[
  {message_id:kind+'-u0',role:'user',content:s.prompt,ts},
  {message_id:kind+'-a0',role:'assistant',content:copy('I’ll split the work between research, independent review, and risk checks. Which time horizon should the team prioritize?','我会把任务拆给研究、独立审阅与风险检查。团队优先关注哪个时间尺度？'),ts},
  {message_id:kind+'-u',role:'user',content:clarification,ts},
@@ -57,6 +63,15 @@ files['research/market-context.json']=JSON.stringify({symbol:'BTC/USDT',timefram
 const tiers=['light','medium','high'].map(tier=>({tier,provider:'workspace',model:tier==='high'?'Research model':'Fast model',has_key_ref:false,reasoning_effort:'high'}));
 const envelope=(data:Json)=>({ok:true,status:'ok',severity:'info',summary:'',primary_action:null,next_actions:[],source_refs:[],debug_refs:[],data});
 const empty={ok:true,count:0,total:0,items:[],rows:[],events:[],strategies:[],accounts:[],orders:[],positions:[],proposals:[],runs:[],tasks:[],routes:[],providers:[],reports:[],files:[],agents:[],messages:[],warnings:[],errors:[],data:{},status:'ok'};
+const englishTerms: Array<[string,string]> = [
+ ['BTC 市场结构 · 4h','BTC market structure · 4h'],['BTC 趋势跟随','BTC trend guard'],['ETH 区间均值回归','ETH range mean reversion'],['宏观与流动性观察','Macro and liquidity watch'],['仓位上限 · 提案 014','Position cap · Proposal 014'],['每日研究简报','Daily research brief'],['策略运行复盘','Strategy run review'],['更新 BTC 趋势与流动性判断','Update BTC trend and liquidity read'],['复核策略样本外窗口','Review strategy holdout window'],['检查仓位上限调整提案','Review position cap proposal'],['宏观与市场结构变化','Macro and market structure changes'],['研究资产 / FACTOR LIBRARY','Research assets / FACTOR LIBRARY'],['因子库','Factor library'],['趋势与成交量确认','Trend and volume confirmation'],['A 股质量因子','A-share quality factor'],['研究行情，写策略，跑回测','Research, build and backtest'],['市场研究','Market research'],['策略验证','Strategy validation'],['持仓复盘','Portfolio review'],['团队协作','Team collaboration'],['今天想研究什么？','What would you like to explore?'],['研究市场、验证策略，或把一个任务交给你的 Agent 团队。','Research markets, test a strategy, or work through a task with your agent team.'],['下次发送','Next send'],['运行时默认','Runtime default'],['思考 自动','Think Auto'],['从下方选择问题，或直接描述你的目标。','Choose a question below, or describe your goal.'],['推荐问题','Suggested'],['研究员','Researcher'],['审阅员','Reviewer'],['风险审查员','Risk reviewer'],['策略作者','Strategy author'],['市场研究员','Market researcher'],['独立审阅员','Independent reviewer'],['风险判断','Risk judgment'],['通过检查','Passed checks'],['模拟执行','Paper execution'],['研究组合','Research portfolio'],['风险检查','Risk check'],['趋势信号','Trend signal'],['波动率与仓位计算','Volatility and position sizing'],['市场结构与波动率','Market structure and volatility'],['4h 行情与成交量','4h market data and volume'],['趋势过滤完成，风险条件满足','Trend filter complete; risk conditions met'],['正在核查新增信号','Checking a new signal'],['加密货币','Crypto'],['预测市场','Prediction markets'],['期货','Futures'],['A 股因子轮动','A-share factor rotation'],['事件概率与证据核查','Event probability and evidence review'],['期货期限结构','Futures term structure'],['样本外审阅员','Holdout reviewer'],['结算规则审阅员','Settlement rules reviewer'],['合约研究员','Contract researcher'],['因子研究员','Factor researcher'],['会话与执行记录','Session and execution record'],['生成改进提案','Generate improvement proposal'],['样本外验证','Holdout validation'],['人工审批','Human approval'],['版本更新','Version update'],['持续观察','Ongoing observation'],['查看提案','View proposal'],['研究简报已更新','Research brief updated'],['仓位上限调整待审阅','Position cap change pending review'],['研究员与审阅员已完成交叉核查','Researcher and reviewer completed cross-check'],['波动扩张阶段的单笔仓位上限保持为 5%，需要独立审查后才能修改。','Keep the single-position cap at 5% during volatility expansion; independent review is required for changes.'],['保留研究员与审阅员的分歧，不要求人为达成一致。','Preserve researcher and reviewer disagreement; do not force consensus.'],['趋势、价格变化与组合策略','Trend, price action and portfolio strategies'],['因子变化和组合轮动','Factor changes and portfolio rotation'],['持仓变化','Position change'],['波动状态','Volatility'],['资金费率偏离','Funding skew'],['较高','High'],['持仓 / 确认','Position / confirmation'],['每次最多持有','Max position'],['确认','Confirm'],['根 K 线','bars'],['版本 02 已准备','Version two is ready'],['策略进化','Strategy evolution']
+];
+function englishize(value: any): any {
+  if (typeof value === 'string') return englishTerms.reduce((text,[zh,en]) => text.split(zh).join(en), value);
+  if (Array.isArray(value)) return value.map(englishize);
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key,item]) => [key,englishize(item)]));
+  return value;
+}
 let seq=0;const events:Json[]=[];
 
 const memberMessages=new Map<string,Json[]>();
@@ -78,6 +93,22 @@ async function api(path:string,q:URLSearchParams,body:Json,method:string,signal?
  // This public, memory-only demo has no credentials or runtime access. Match
  // AuthGate's status contract without weakening the real dashboard's gate.
  if(path==='/auth/status' && method==='GET')return {ok:true,local_access:true,mode:'isolated-demo',demo:true};
+ if(path==='/assistants'&&method==='GET')return {ok:true,assistants:assistantProfiles,channels:[],workspace:'isolated-demo'};
+ if(path==='/assistants/session'&&method==='GET'){
+  const session=sessions.find(s=>s.session_id===q.get('session_id'));
+  const assistant=assistantProfiles.find(row=>row.id===session?.assistant_id)||assistantProfiles[0];
+  return {ok:true,assistant,conversation:session?{conversation_kind:'task',parent_session_id:null}:{conversation_kind:'assistant',parent_session_id:null}};
+ }
+ if(path==='/assistants/conversations'&&method==='GET'){
+  const assistantId=q.get('assistant_id')||'main';
+  return {ok:true,sessions:sessions.filter(s=>s.assistant_id===assistantId).map(({messages,...session})=>session),count:sessions.filter(s=>s.assistant_id===assistantId).length};
+ }
+ if(path==='/assistants/conversations'&&method==='POST'){
+  const assistantId=String(body.assistant_id||'main'),id='demo-new-'+Date.now(),title=copy('New task conversation','新任务对话');
+  sessions.unshift({session_id:id,title,meta:{title},kind:'research',assistant_id:assistantId,source:'user_chat',created_at:new Date().toISOString(),updated_at:new Date().toISOString(),status:'idle',state:'idle',message_count:0,messages:[]});
+  return {ok:true,session_id:id,assistant_id:assistantId};
+ }
+ if(path==='/assistants/home'&&method==='POST')return {ok:true,session_id:'demo-research',assistant_id:String(body.assistant_id||'main')};
  const rich=richResponse(path,q,body,method);if(rich!==null)return rich;
  if(path==='/operator/nav')return envelope({primary:[['home','/dashboard','Overview'],['agent_workspace','/chat','New chat'],['runtime_library','/agents','Agents'],['strategy_lab','/strategies','Strategies'],['trading','/portfolio','Trading'],['automation','/workflows','Automation'],['inbox','/inbox','Inbox'],['settings','/settings','Settings']].map(([id,href,label])=>({id,href,label,always_visible:true})),advanced:[{id:'learning',href:'/self-evolution',label:'Memory and learning'},{id:'browser',href:'/browsers',label:'Browser'}],hidden:[],capabilities:{}});
  if(path==='/health')return {status:'ok',version:'0.1.0'};
@@ -130,7 +161,7 @@ async function api(path:string,q:URLSearchParams,body:Json,method:string,signal?
  }
  if(path==='/skills')return {ok:true,skills,count:skills.length};
  if(path==='/mcp-settings/roles')return {ok:true,roles};
- if(path==='/skills/catalog')return {ok:true,skills:skills.map(s=>({...s,source:'builtin',enabled:true,assigned:true,revision:'v1',files:['SKILL.md'],method_count:0})),count:skills.length,total:skills.length,next_offset:null,enabled_revision:'v1',binding_revision:'v1'};
+ if(path==='/skills/catalog')return {ok:true,skills:[...skills,{id:'factor_library',name:'Factor library',version:'1.0',description:'因子定义、版本与验证结果 · Factor definitions and validation',permissions:[],actions:['list','get','data','export'],source:'builtin',enabled:true,assigned:true,revision:'v1',files:['SKILL.md'],method_count:4}],count:skills.length+1,total:skills.length+1,next_offset:null,enabled_revision:'v1',binding_revision:'v1'};
  if(path==='/skills/read'){const s=skills.find(s=>s.id===q.get('skill_id'))||skills[0];return {ok:true,id:s.id,source:'builtin',file:q.get('file')||'SKILL.md',revision:'v1',text:'# '+s.name+'\n\n'+s.description+'\n\n## Workflow\n1. Confirm scope and inputs.\n2. Inspect evidence and record uncertainty.\n3. Return a structured, reviewable result.\n',next_offset:null,files:['SKILL.md']};}
  if(path==='/skills/installed')return {ok:true,installed:skills.map(s=>({id:s.id,skill_id:s.id,version:s.version,source:'workspace'}))};
  if(path==='/skills/lock/status')return {ok:true,lock:{entries:skills.map(s=>({id:s.id,version:s.version}))},drift:{changed:[],missing:[],extra:[]},signature:null};
@@ -158,11 +189,12 @@ async function api(path:string,q:URLSearchParams,body:Json,method:string,signal?
 window.fetch=(async (input:RequestInfo|URL,init:RequestInit={})=>{
  const url=new URL(typeof input==='string'?input:input instanceof URL?input.href:input.url,location.href);
  const method=(init.method||'GET').toUpperCase();
- if(url.origin!==location.origin||!url.pathname.startsWith('/api/'))throw Error('Demo blocks all external/runtime network requests.');
+ const directRuntimeInfo=url.pathname==='/runtime/info'&&method==='GET';
+ if(url.origin!==location.origin||(!url.pathname.startsWith('/api/')&&!directRuntimeInfo))throw Error('Demo blocks all external/runtime network requests.');
  const raw=typeof init.body==='string'?init.body:'{}';let body:Json={};try{body=JSON.parse(raw);}catch{}
- const path=url.pathname.replace(/^\/api\/proxy/,'').replace(/^\/api/,'');requests.push({path,method,local:true});
+ const path=directRuntimeInfo?'/runtime/info':url.pathname.replace(/^\/api\/proxy/,'').replace(/^\/api/,'');requests.push({path,method,local:true});
  const response=await api(path,url.searchParams,body,method,init.signal||undefined);
- return new Response(JSON.stringify(response),{status:200,headers:{'content-type':'application/json'}});
+ return new Response(JSON.stringify(locale==='en'?englishize(response):response),{status:200,headers:{'content-type':'application/json'}});
 }) as typeof fetch;
 window.addEventListener('message',e=>{
  if(e.source!==window.parent||e.origin!==location.origin||e.data?.type!=='nerya-demo')return;
@@ -171,7 +203,7 @@ window.addEventListener('message',e=>{
   const settings=JSON.parse(storage.getItem('nerya.ui_settings.v1')||'{}');
   storage.setItem('nerya.ui_settings.v1',JSON.stringify({...settings,language:locale,...(e.data.theme==='dark'||e.data.theme==='light'?{darkMode:e.data.theme}:{})}));dispatchEvent(new Event('nerya:ui_settings_changed'));
  }
- if(typeof e.data.route==='string'&&/^\/(?:chat(?:\/demo-(?:research|strategy|review))?|agents|strategies(?:\?strategy_id=[a-z0-9_]+)?|self-evolution|)$/.test(e.data.route))location.hash=e.data.route;
+ if(typeof e.data.route==='string'&&/^\/(?:chat(?:\/[a-z0-9_-]+)?|agents|assistants|strategies|factors|self-evolution|memory|settings|dashboard|portfolio|workflows|tasks|accounts|advanced|browsers|desktop|env-vault|gateway|inbox|incidents|orders|skills|web-search)(?:\?[A-Za-z0-9_=&%-]+)?$|^\/$/.test(e.data.route))location.hash=e.data.route;
 });
 window.addEventListener('hashchange',()=>{if(window.parent!==window)window.parent.postMessage({type:'nerya-demo-route',route:(location.hash.slice(1)||'/').split('?')[0]},location.origin);});
 window.addEventListener('keydown',e=>{if(e.key==='Escape'&&window.parent!==window)window.parent.postMessage({type:'nerya-demo-escape'},location.origin);});

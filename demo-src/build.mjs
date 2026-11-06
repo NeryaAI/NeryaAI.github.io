@@ -8,15 +8,23 @@ import rolePortraits from '../agent-avatars.js';
 const root=path.resolve(import.meta.dirname,'..');
 const source=path.resolve(process.env.NERYA_DASHBOARD_SOURCE||path.join(root,'../agent/dashboard'));
 const requireFromAgent=createRequire(path.join(source,'package.json'));
+// The landing project uses React 19, while the current Agent dashboard is on
+// React 18. Resolve every React import in the isolated demo to the dashboard's
+// single runtime; otherwise the landing entry point and dashboard hooks get
+// separate dispatchers and the embedded app fails with invalid-hook errors.
+const dashboardReact=requireFromAgent.resolve('react');
+const dashboardReactDom=requireFromAgent.resolve('react-dom');
 const out=path.join(root,'demo'); await fs.mkdir(out,{recursive:true});
 const sourceFiles=new Map();
 // The current brief explicitly restores connector/venue capability presentation.
 const routes=[];
 for(const name of await fs.readdir(path.join(source,'app'))){
-  if(['api','dev','login','setup'].includes(name))continue;
+  if(['api','dev','login','setup','tasks'].includes(name))continue;
   try{await fs.access(path.join(source,'app',name,'page.tsx'));routes.push(name);}catch{}
 }
 const plugins=[{name:'real-dashboard',setup(b){
+  b.onResolve({filter:/^react(?:\/.*)?$/},a=>({path:requireFromAgent.resolve(a.path)}));
+  b.onResolve({filter:/^react-dom(?:\/.*)?$/},a=>({path:requireFromAgent.resolve(a.path)}));
   b.onResolve({filter:/^@dashboard\//},a=>({path:path.join(source,a.path.slice(11))}));
   b.onResolve({filter:/^next\/(navigation|link|dynamic|image)$/},a=>({path:a.path,namespace:'next-shim'}));
   b.onLoad({filter:/.*/,namespace:'next-shim'},a=>({contents:a.path==='next/navigation'?`export * from ${JSON.stringify(path.join(root,'demo-src/navigation.tsx'))};`:`export {${({'next/link':'Link','next/dynamic':'dynamic','next/image':'Image'})[a.path]} as default} from ${JSON.stringify(path.join(root,'demo-src/navigation.tsx'))};`,loader:'tsx',resolveDir:root}));
@@ -56,5 +64,5 @@ for(const name of ['runtime.js','native-fixtures.js'])await fs.copyFile(path.joi
 await fs.mkdir(path.join(out,'avatars'),{recursive:true});
 for(const name of rolePortraits.roles)await fs.copyFile(path.join(root,'assets/agent-avatars',name+'.png'),path.join(out,'avatars',name+'.png'));
 await fs.copyFile(path.join(root,'assets/agent-avatars/NOTICE.md'),path.join(out,'avatars/NOTICE.md'));
-await fs.writeFile(path.join(out,'source-manifest.json'),JSON.stringify({source:'Nerya agent/dashboard working tree',builtAt:new Date().toISOString(),routes,sourceFiles:Object.fromEntries(sourceFiles),adaptations:['Next navigation -> local hash routing','authentication -> isolated public demo, no credentials','all API transport -> in-memory, deny unknown writes','provider identities retained for capability showcases','branding paths -> relative static paths','role-specific local PNG portraits in member tabs, conversations, Agent library and workflow nodes','theme preference synchronized from landing; original light/dark styles retained'],outputs:Object.keys(result.metafile.outputs).map(p=>path.basename(p))},null,2)+'\n');
+await fs.writeFile(path.join(out,'source-manifest.json'),JSON.stringify({source:'Nerya agent/dashboard working tree',builtAt:new Date().toISOString(),runtime:{react:requireFromAgent('react/package.json').version,reactDom:requireFromAgent('react-dom/package.json').version,resolvedReact:dashboardReact,resolvedReactDom:dashboardReactDom},routes,sourceFiles:Object.fromEntries(sourceFiles),adaptations:['Next navigation -> local hash routing','authentication -> isolated public demo, no credentials','all API transport -> in-memory, deny unknown writes','provider identities retained for capability showcases','branding paths -> relative static paths','role-specific local PNG portraits in member tabs, conversations, Agent library and workflow nodes','theme preference synchronized from landing; original light/dark styles retained','React and React DOM pinned to the Agent dashboard runtime to prevent duplicate hook dispatchers'],outputs:Object.keys(result.metafile.outputs).map(p=>path.basename(p))},null,2)+'\n');
 console.log(`Built the real dashboard: ${sourceFiles.size} source files, ${routes.length} page routes. Source dashboard was not edited.`);

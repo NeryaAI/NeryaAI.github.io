@@ -6,6 +6,7 @@ import './styles/showcase.css';
 import './styles/narrative.css';
 import './styles/tailwind.css';
 import './styles/effects.css';
+import './styles/rsi.css';
 const root=document.getElementById('react-root');
 if(!root)throw new Error('Missing React root');
 mountPage(root,<App/>);

@@ -31,11 +31,8 @@ export function ContainerScroll({ titleComponent, children, className }: Contain
   const scale = useTransform(progress, [0, 1], isMobile ? [1, 1] : [1.02, 1]);
   const headerTranslate = useTransform(progress, [0, 1], [0, -100]);
   const blur = useTransform(progress, [0, .32, 1], ['blur(3px)', 'blur(0px)', 'blur(0px)']);
-  // Start the Mock tucked behind the slogan, then let it settle back into
-  // its reserved document-flow position during the first part of the scroll.
-  // Once settled it stops translating, so it can never drift into the copy
-  // that follows the hero.
-  const cardTranslate = useTransform(progress, [0, .28, 1], [-240, 0, 0]);
+  // Reveal the panel behind the headline, then settle into its reserved space.
+  const cardTranslate = useTransform(progress, [0, .28, 1], [-120, 0, 0]);
   const disabled = !ready || Boolean(prefersReduced) || isMobile || paused || interactive;
   const active = useRef(false);
   active.current = !disabled;
@@ -107,6 +104,19 @@ export function ContainerScroll({ titleComponent, children, className }: Contain
       window.removeEventListener('nerya:workspaceopen', activate); window.removeEventListener('nerya:workspaceexpand', activate);
       document.removeEventListener('keydown', markKeyboard, true); card?.removeEventListener('focusin', focus);
     };
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        hold.current = false;
+        setInteractive(false);
+      }
+    }, { threshold: 0.12 });
+    observer.observe(container);
+    return () => observer.disconnect();
   }, []);
 
   return <div ref={containerRef} className={cn('container-scroll relative w-full', className)}

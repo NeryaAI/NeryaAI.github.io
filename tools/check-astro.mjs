@@ -122,9 +122,9 @@ export async function checkAstro() {
   assert.equal(home.nodes.filter(node=>node.name==='video').length,0,'The new homepage must not play screen recordings');
   for (const story of stories) {
     const descendants=home.nodes.filter(node=>inside(node,story));
-    assert.equal(descendants.filter(node=>'data-story-chapter' in node.attrs).length,3,'Each scene needs three seekable chapters');
-    assert(descendants.some(node=>node.attrs.class?.includes('story-toggle')&&node.attrs['aria-label']),'Each scene needs labeled playback controls');
+    assert.equal(descendants.filter(node=>'data-story-chapter' in node.attrs).length,0,'Scenes should not display chapter progress bars');
   }
+  assert(home.nodes.some(node=>node.attrs.id==='motion-toggle'),'Keep the global motion control');
   const hero=home.nodes.find(node=>node.attrs.id==='top');
   assert(!home.nodes.some(node=>'data-results' in node.attrs&&inside(node,hero)),'No upper-right result card in the hero');
   assert(home.nodes.some(node=>node.attrs.id==='workspace'&&inside(node,hero)),'Workspace belongs in the hero composition');

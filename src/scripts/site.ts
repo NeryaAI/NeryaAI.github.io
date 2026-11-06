@@ -1,5 +1,6 @@
 // The parent is static Astro HTML; only product controls require client code.
 export {};
+import {hero} from '../data/product';
 declare global {
   interface Window {
     NeryaTheme: { mode: string; set: (mode: string) => void };
@@ -21,19 +22,20 @@ let lastExpandFocus: HTMLElement | null = null;
 const inertBackground = new Map<HTMLElement, boolean>();
 const text = (zh: string, en: string) => lang === 'zh' ? zh : en;
 const templates = {
-  zh: '帮我适配一个新的行情接口，并为策略补上数据校验',
-  en: 'Connect a new market data API and add data validation to the strategy',
+  zh: '帮我评估接入这个行情 API 需要哪些数据字段和适配工作',
+  en: 'Identify the data fields and adapter work needed to connect this market data API',
 };
 
 function routeTabs() {
   const tabs = $$('[data-demo-route]');
-  const matched = tabs.some(tab => tab.dataset.demoRoute === currentRoute);
+  const routePath = (route: string) => route.split('?')[0];
+  const currentPath = routePath(currentRoute);
+  const matched = tabs.some(tab => routePath(tab.dataset.demoRoute || '') === currentPath);
   tabs.forEach((tab, i) => {
-    const selected = tab.dataset.demoRoute === currentRoute;
+    const selected = routePath(tab.dataset.demoRoute || '') === currentPath;
     tab.setAttribute('aria-selected', String(selected));
     tab.tabIndex = selected || (!matched && i === 0) ? 0 : -1;
   });
-  $('#standalone-demo').setAttribute('href', `/demo/index.html?lang=${lang}&theme=${window.NeryaTheme.mode}#${currentRoute}`);
 }
 function syncFrame(route?: string) {
   if (route !== undefined) currentRoute = route;
@@ -42,6 +44,10 @@ function syncFrame(route?: string) {
   // The frozen demo build predates settings in its message allowlist. Its
   // native hash router supports settings without rebuilding the app bundle.
   if (route === '/settings' && frame.contentDocument?.documentElement.dataset.demo === 'real-agent') frame.contentWindow!.location.hash = route;
+}
+function reloadFrameForLanguage() {
+  const hash = currentRoute === '/' ? '#/' : '#' + currentRoute;
+  frame.src = '/demo/index.html?lang=' + lang + '&theme=' + window.NeryaTheme.mode + hash;
 }
 function openAgent(route: string) {
   window.dispatchEvent(new Event('nerya:workspaceopen'));
@@ -119,7 +125,7 @@ $('#market-open').addEventListener('click', () => openAgent(window.__neryaMarket
 $('#integration-form').addEventListener('submit', async event => {
   event.preventDefault();
   const prompt = $<HTMLTextAreaElement>('#integration-prompt').value.trim();
-  if (prompt.length < 6) { $('#integration-status').textContent = text('请补充接口名称或需要的能力', 'Add an API name or the capability you need'); return; }
+  if (prompt.length < 6) { $('#integration-status').textContent = text('请补充数据源名称或需要的能力', 'Add a data source or the capability you need'); return; }
   openAgent('/chat');
   // Fill only the isolated, source-backed demo. No message is auto-submitted.
   let input: HTMLTextAreaElement | null = null;
@@ -265,12 +271,12 @@ reduced.addEventListener('change', event => { motionPaused = event.matches; pain
 function translate() {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   $$('[data-i18n]').forEach(el => { el.textContent = el.dataset[lang]!; });
-  document.title = text('Nerya · 你的 Agent 策略团队', 'Nerya · Your agent strategy team');
-  $('meta[name=description]').setAttribute('content', text('你提出交易逻辑，Nerya Agent 团队分工研究、编写策略。查看运行记录，再决定下一次改动。', 'Describe your trading idea. Agents research it and write the strategy. Review the runs and decide what to change next.'));
-  $('#language').textContent = lang === 'zh' ? 'EN' : '中文';
+  document.title = 'Nerya · Quant Super Agent';
+  $('meta[name=description]').setAttribute('content', text(hero.description.zh, hero.description.en));
+  $('#language').textContent = lang === 'zh' ? 'EN' : 'Chinese';
   const prompt = $<HTMLTextAreaElement>('#integration-prompt');
   if (Object.values(templates).includes(prompt.value)) prompt.value = templates[lang];
-  renderMarket(); syncFrame(); paintMotion(); films.forEach(syncFilm);
+  renderMarket(); reloadFrameForLanguage(); paintMotion(); films.forEach(syncFilm);
   if (expanded) $('#expand-agent [data-i18n]').textContent = text('收起','Close');
   window.dispatchEvent(new CustomEvent('nerya:languagechange', { detail: { lang } }));
 }

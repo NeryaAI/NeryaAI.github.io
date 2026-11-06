@@ -27,13 +27,13 @@ await check('Collaboration playback, interruption, reverse and artifacts',async(
 });
 await check('Four market workflows and distinct support boundaries',async()=>{
  await section('#markets');
- for(const [id,word] of [['crypto','CCXT'],['prediction','Polymarket'],['futures','VNpy'],['equities','Tushare']]){
+ for(const [id,word] of [['crypto','CCXT'],['prediction','Polymarket'],['futures','VNpy'],['equities','Polygon']]){
   await p.click('#market-'+id);assert((await content('#market-sources')).includes(word));assert.equal(await p.evaluate(()=>document.querySelectorAll('[data-flow-node]').length),5);
  }
  await p.click('#market-validate');assert((await content('#market-validation')).includes('5 个步骤'));
  await p.click('#market-prediction');assert((await content('#market-support')).includes('未启用实盘下单'));await theme('dark');await shot('capabilities-markets-dark');
- await p.click('#market-equities');await p.click('#market-open');await p.waitForFunction(()=>document.querySelector('#agent-frame').contentWindow.location.hash.includes('ashare_factor_rotation'),undefined,{timeout:5000});
- await p.waitForFunction(()=>document.querySelector('#agent-frame').contentDocument.body.innerText.includes('A 股因子轮动'),undefined,{timeout:5000});await shot('capabilities-ashare-native');
+ await p.click('#market-equities');await p.click('#market-open');await p.waitForFunction(()=>document.querySelector('#agent-frame').contentWindow.location.hash.includes('us_equity_factor_rotation'),undefined,{timeout:5000});
+ await p.waitForFunction(()=>document.querySelector('#agent-frame').contentDocument.body.innerText.includes('海外美股因子轮动'),undefined,{timeout:5000});await shot('capabilities-us-equities-native');
 });
 await check('Evolution requires validation and separates approval/application/rollback',async()=>{
  await section('#evolution-console');await p.click('#evolution-reset');await p.click('[data-evolution-step="4"]');
@@ -51,14 +51,14 @@ await check('Adapter reuse/new branches, error state and usable plan download',a
  const plan=JSON.parse(await fs.readFile(base+'/examplex-integration-plan.json','utf8'));assert.equal(plan.liveEnabled,false);assert.equal(plan.target,'ExampleX');assert.equal(plan.validation,'required');
 });
 await check('Bilingual state retention',async()=>{
- await p.click('#language');assert((await content('#market-sources')).includes('Tushare'));assert((await content('#adapter-target')).includes('ExampleX'));assert((await content('#evolution-status')).includes('revision'));await p.click('#language');
+ await p.click('#language');assert((await content('#market-sources')).includes('Polygon'));assert((await content('#adapter-target')).includes('ExampleX'));assert((await content('#evolution-status')).includes('revision'));await p.click('#language');
 });
-await check('Native Agent handles A-share and new-connector requests',async()=>{
+await check('Native Agent handles US equity and new-connector requests',async()=>{
  await section('#workspace');await p.click('#scenario-home');
- await p.fill('textarea[placeholder="随心输入…"]','构建一个 A 股因子轮动策略，检查样本外验证。');await p.click('button[aria-label="发送"]');
- await p.waitForFunction(()=>{const d=document.querySelector('#agent-frame').contentDocument;return d.body.innerText.includes('A 股策略工作区')&&d.body.innerText.includes('Tushare')&&!!d.querySelector('button[aria-label="发送"]')&&!d.querySelector('textarea[placeholder="给 Nerya 发消息…"]').disabled;},undefined,{timeout:15000});
+ await p.fill('textarea[placeholder="随心输入…"]','构建一个海外美股因子轮动策略，检查样本外验证。');await p.click('button[aria-label="发送"]');
+ await p.waitForFunction(()=>{const d=document.querySelector('#agent-frame').contentDocument;return d.body.innerText.includes('海外美股策略工作区')&&d.body.innerText.includes('Polygon')&&!!d.querySelector('button[aria-label="发送"]')&&!d.querySelector('textarea[placeholder="给 Nerya 发消息…"]').disabled;},undefined,{timeout:15000});
  await p.fill('textarea[placeholder="给 Nerya 发消息…"]','帮我接入 ExampleX 的行情与账户接口。');await p.click('button[aria-label="发送"]');
- await p.waitForFunction(()=>{const d=document.querySelector('#agent-frame').contentDocument;return d.body.innerText.includes('ExampleX 接入方案')&&d.body.innerText.includes('订单权限保持关闭')&&!!d.querySelector('button[aria-label="发送"]')&&!d.querySelector('textarea[placeholder="给 Nerya 发消息…"]').disabled;},undefined,{timeout:15000});
+ await p.waitForFunction(()=>{const d=document.querySelector('#agent-frame').contentDocument;return d.body.innerText.includes('ExampleX 接入方案')&&d.body.innerText.includes('接入方案停留在研究阶段')&&!!d.querySelector('button[aria-label="发送"]')&&!d.querySelector('textarea[placeholder="给 Nerya 发消息…"]').disabled;},undefined,{timeout:15000});
  await shot('capabilities-native-chat-dark');
 });
 await check('Mobile 390/320px in both themes',async()=>{

@@ -19,8 +19,8 @@ assert.equal(config.aliases.ui,'@/components/ui');assert.equal(config.tailwind.c
 const component=await read('components/ui/container-scroll-animation.tsx');
 assert(component.includes('useScroll')&&component.includes('useTransform')&&component.includes('useReducedMotion'));
 assert(!component.includes('pt-[1000px]'));
-assert(component.includes('const cardTranslate = useTransform(progress, [0, .28, 1], [-240, 0, 0])'),'Mock should begin behind the slogan without placing its own copy on top of the hero description');
-assert(component.includes("const blur = useTransform(progress, [0, .32, 1], ['blur(3px)', 'blur(0px)', 'blur(0px)'])"),'Mock should sharpen as it stands upright');
+assert(component.includes('const cardTranslate = useTransform(progress, [0, .28, 1], [-120, 0, 0])'),'Workspace should rise behind the headline, then settle into its reserved space');
+assert(component.includes("const blur = useTransform(progress, [0, .32, 1], ['blur(3px)', 'blur(0px)', 'blur(0px)'])"),'Workspace should sharpen as it unfolds');
 const index=await read('src/App.tsx');assert(index.includes('<ContainerScroll titleComponent='));assert(!index.includes('data-start'));
 assert(!index.includes('id="effects-toggle"'),'Remove the top-right AI/effects icon');
 const workspace=await read('src/components/AgentWorkspace.tsx');assert(!workspace.includes('workspace-reveal.ts'),'Only one controller may own the scroll transform');
@@ -40,7 +40,7 @@ assert(effects.includes('document.hidden')&&effects.includes('IntersectionObserv
 const css=await read('src/styles/effects.css');assert(css.includes('prefers-reduced-motion'));assert(css.includes('body.workspace-expanded .container-scroll-perspective'));
 assert(css.includes('.hero .workspace-shell{padding:0;border:1px solid var(--line);background:var(--surface)'),'Mock frame should not have a thick dark bezel');
 assert(css.includes('.container-scroll-card{position:relative;width:min(1140px,calc(100% - 104px));margin:16px auto 0'),'Mock should sit below the slogan in normal flow');
-assert(css.includes('.hero-copy:before{content:none}'),'Remove the white radial glow behind the slogan');
+assert(css.includes('.hero-copy:before{content:')&&css.includes('radial-gradient'),'Hero copy should keep a focused light field behind the headline');
 
 // Actually server-render the public component API and prove that its children
 // and headline survive without a browser. Do not execute any Agent surface.

@@ -231,7 +231,7 @@ function strategy(t) {
     group(n3, () => line([[656, 316], [656, 331], [527, 331], [527, 349]], C.purple, 1.7));
     group(n4, () => line([[656, 331], [786, 331], [786, 349]], C.purple, 1.7));
     workflowNode('Market data', 'BTC · 1h candles', 527, 159, 267, 'data', n1, t > 3.3);
-    workflowNode('Trend signal', 'EMA crossover', 527, 248, 267, 'signal', n2, t > 4.1);
+    workflowNode('Signal stack', 'OI delta + ATR regime', 527, 248, 267, 'signal', n2, t > 4.1);
     workflowNode('Risk gate', 'Sizing limits', 429, 349, 222, 'shield', n3, t > 4.8);
     workflowNode('Review', 'Independent check', 665, 349, 225, 'review', n4, t > 5.35);
     const packed = progress(t, 4.65, 5.2);

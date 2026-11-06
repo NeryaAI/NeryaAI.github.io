@@ -13,7 +13,7 @@ for(const [file,expected] of Object.entries(manifest.sourceFiles)){
 }
 const routes=[];
 for(const name of await fs.readdir(path.join(source,'app'))){
- if(['api','dev','login','setup'].includes(name))continue;
+ if(['api','dev','login','setup','tasks'].includes(name))continue;
  if(await fs.stat(path.join(source,'app',name,'page.tsx')).catch(()=>null))routes.push(name);
 }
 assert.deepEqual(manifest.routes.sort(),routes.sort(),'Page routes changed; rebuild the demo from current source');
